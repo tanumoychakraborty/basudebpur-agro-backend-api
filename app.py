@@ -1,15 +1,8 @@
 import falcon
 #from test import test
 import json
+from test import test
 
-class test(object):
-
-	def on_get(self, req, resp):
-		payload = {}
-		payload['msg'] = 'test text'
-
-		resp.body = json.dumps(payload)
-		resp.status = falcon.HTTP_200
 
 api = application = falcon.API()
 t = test()
