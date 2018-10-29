@@ -2,7 +2,7 @@ import logging
 
         
 if __name__ == "__main__":
-    logging.basicConfig(filename='example.log',filemode='a',format='%(asctime)s:%(levelname)s:%(message)s',datefmt='%d/%m/%Y %I:%M:%S %p',level=logging.DEBUG)
+    logging.basicConfig(filename='basudebpur-agro-backend-api.log',filemode='a',format='%(asctime)s:%(levelname)s:%(message)s',datefmt='%d/%m/%Y %I:%M:%S %p',level=logging.DEBUG)
     from gunicorn.app.wsgiapp import WSGIApplication
     logging.info('starting gunicorn server')
     app = WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]")
