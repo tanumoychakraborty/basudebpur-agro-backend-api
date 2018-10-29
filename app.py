@@ -1,6 +1,10 @@
 import falcon
 #from test import test
 import json
+<<<<<<< HEAD
+from test import test
+
+=======
 from sqlalchemy.orm.session import sessionmaker
 from model import test
 from dbEngine import dbEngine
