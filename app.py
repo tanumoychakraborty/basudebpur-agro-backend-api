@@ -4,6 +4,8 @@ import json
 from sqlalchemy.orm.session import sessionmaker
 from model import test
 from dbEngine import dbEngine
+from sqlalchemy.orm.scoping import scoped_session
+from dao.AccessRights import get_access_rights_by_access_id
 
 class testview(object):
 
@@ -13,12 +15,16 @@ class testview(object):
 		
 		resp.body = json.dumps(payload)
 		resp.status = falcon.HTTP_200
+		access = get_access_rights_by_access_id(10)
+		print(access)
 		
-		Session = sessionmaker(bind=dbEngine.get())
-		session = Session()
-		newtest = test.test(test='test column')
-		session.add(newtest)
-		session.commit()
+# 		session_factory = sessionmaker(bind=dbEngine.get())
+# 		Session = scoped_session(session_factory)
+# 		local_session = Session()
+# 		newtest = test.test(test='test column')
+# 		local_session.add(newtest)
+# 		local_session.commit()
+# 		local_session.remove()
 
 api = application = falcon.API()
 t = testview()
