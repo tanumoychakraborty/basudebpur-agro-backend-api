@@ -1,4 +1,0 @@
-29/10/2018 02:26:31 AM:INFO:starting gunicorn server
-29/10/2018 02:26:31 AM:INFO:loading app - %[APP_MODULE]s
-29/10/2018 02:27:38 AM:INFO:starting gunicorn server
-29/10/2018 02:27:38 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]

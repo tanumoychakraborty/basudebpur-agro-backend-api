@@ -8,18 +8,23 @@ from sqlalchemy.sql.schema import Column, Sequence
 from sqlalchemy.sql.sqltypes import String, Integer, DateTime, Date
 
 class Person (Base):
-    __tablename__ = "Person_tbl"
-    person_id = Column('Person_id', Integer, Sequence('person_id_sequence') , primary_key = True)
-    middle_name = Column('Middle_Name', String)
-    last_name = Column('Last_Name', String)
+    __tablename__ = "person_tbl"
+    __table_args__ = {'schema' : 'apps'}
+    person_id = Column('person_id', Integer, Sequence('apps.person_id_sequence') , primary_key = True)
+    employee_number = Column('employee_number', String)
+    first_name = Column('first_name', String)
+    middle_name = Column('middle_name', String)
+    last_name = Column('last_name', String)
     date_of_birth = Column('date_of_birth', Date)
-    gender = Column('Gender', String)
-    address = Column('Address', String)
-    phone_number1 = Column('Phone_number1', String)
-    phone_number2 = Column('Phone_number2', String)
+    gender = Column('gender', String)
+    address = Column('address', String)
+    phone_number1 = Column('phone_number1', String)
+    phone_number2 = Column('phone_number2', String)
     email = Column('email', String)
     effective_from = Column('effective_from', DateTime)
     effective_to = Column('effective_to', DateTime)
-    #user_tbl_user_id = Column('User_tbl_user_id', Integer)
-
+    created_by = Column('created_by', int)
+    creation_date = Column('effective_from', DateTime)
+    last_updated_by = Column('last_updated_by', int)
+    last_update_date = Column('last_update_date', DateTime)
     

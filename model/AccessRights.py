@@ -9,7 +9,8 @@ from sqlalchemy.sql.sqltypes import String, Integer, DateTime
 
 class AccessRights (Base):
     __tablename__ = "access_rights_tbl"
-    access_id = Column('access_id', Integer, Sequence('access_id_sequence') , primary_key = True)
+    __table_args__ = {'schema' : 'apps'}
+    access_id = Column('access_id', Integer, Sequence('apps.access_id_sequence') , primary_key = True)
     user_type = Column('user_type', String)
     access_area = Column('access_area', String)
     view = Column('view', String)
