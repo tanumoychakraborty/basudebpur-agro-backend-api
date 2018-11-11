@@ -8,6 +8,7 @@ from dao.Users import get_user_type_by_user_id,\
 from dao.AccessRights import get_access_rights_by_user_type
 import json
 import falcon
+import logging
 
 class AccessRights(object):
     '''
@@ -20,6 +21,7 @@ class AccessRights(object):
         payload = {}        
         if 'userName' and 'password' in params.keys():
             usertype = get_user_type_by_username_password(params['userName'], params['password'])
+            logging.info('inside on get')
             payload['access'] = get_access_rights_by_user_type(usertype)
             
         elif 'userId' in params.keys():
