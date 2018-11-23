@@ -20,16 +20,25 @@ class AccessRights(object):
         payload = {}        
         if 'userName' and 'password' in params.keys():
             usertype = get_user_type_by_username_password(params['userName'], params['password'])
+            if usertype is None:
+                resp.status = falcon.HTTP_404
+                return
             payload['access'] = get_access_rights_by_user_type(usertype)
             
         elif 'userId' in params.keys():
             userid = int(params['userId'])
             usertype = get_user_type_by_user_id(userid)
+            if usertype is None:
+                resp.status = falcon.HTTP_404
+                return
             payload['access'] = get_access_rights_by_user_type(usertype)
             
         elif 'userType' in params.keys():
-            payload['access'] = (get_access_rights_by_user_type(params['userType']))
-            
+            accessright = get_access_rights_by_user_type(params['userType'])
+            if accessright is None:
+                resp.status = falcon.HTTP_404
+                return
+            payload['access'] = accessright
         
         resp.body = json.dumps(payload, indent=4, sort_keys=True, default=str)
         resp.status = falcon.HTTP_200

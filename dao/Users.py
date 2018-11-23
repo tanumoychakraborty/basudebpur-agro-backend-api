@@ -8,8 +8,14 @@ from model.User import User
 
 @db_transaction
 def get_user_type_by_user_id(user_id, session):
-    return session.query(User).get(user_id).user_type
+    try:
+        return session.query(User).get(user_id).user_type
+    except AttributeError:
+        return None
 
 @db_transaction
 def get_user_type_by_username_password(username, password, session):
-    return session.query(User).filter_by(user_name=username, password=password).first().user_type
+    try:
+        return session.query(User).filter_by(user_name=username, password=password).first().user_type
+    except AttributeError:
+        return None

@@ -65,3 +65,560 @@ WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(p
  LIMIT %(param_1)s
 01/11/2018 12:36:09 AM:INFO:{'user_name_1': 'aritra.tewary@gmail.com', 'password_1': '1234', 'param_1': 1}
 01/11/2018 12:38:29 AM:INFO:ROLLBACK
+01/11/2018 12:48:28 AM:INFO:BEGIN (implicit)
+01/11/2018 12:48:28 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+01/11/2018 12:48:28 AM:INFO:{'user_name_1': 'aritra.tewary@gmail.com', 'password_1': '1234', 'param_1': 1}
+01/11/2018 12:50:01 AM:INFO:ROLLBACK
+01/11/2018 12:50:57 AM:INFO:BEGIN (implicit)
+01/11/2018 12:50:57 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+01/11/2018 12:50:57 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+01/11/2018 12:50:57 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+01/11/2018 12:50:57 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+01/11/2018 12:51:05 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+01/11/2018 12:51:05 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+01/11/2018 12:51:07 AM:INFO:COMMIT
+01/11/2018 12:52:01 AM:INFO:BEGIN (implicit)
+01/11/2018 12:52:01 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+01/11/2018 12:52:01 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+01/11/2018 12:53:32 AM:INFO:COMMIT
+15/11/2018 04:45:58 PM:INFO:starting gunicorn server
+15/11/2018 04:45:58 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/11/2018 04:51:27 PM:INFO:starting gunicorn server
+15/11/2018 04:51:27 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/11/2018 04:51:37 PM:INFO:select version()
+15/11/2018 04:51:37 PM:INFO:{}
+15/11/2018 04:51:37 PM:INFO:select current_schema()
+15/11/2018 04:51:37 PM:INFO:{}
+15/11/2018 04:51:37 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+15/11/2018 04:51:37 PM:INFO:{}
+15/11/2018 04:51:37 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+15/11/2018 04:51:37 PM:INFO:{}
+15/11/2018 04:51:37 PM:INFO:show standard_conforming_strings
+15/11/2018 04:51:37 PM:INFO:{}
+15/11/2018 04:51:37 PM:INFO:BEGIN (implicit)
+15/11/2018 04:51:37 PM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+15/11/2018 04:51:37 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+15/11/2018 04:51:37 PM:INFO:COMMIT
+15/11/2018 04:51:37 PM:INFO:BEGIN (implicit)
+15/11/2018 04:51:37 PM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+15/11/2018 04:51:37 PM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+15/11/2018 04:51:37 PM:INFO:COMMIT
+15/11/2018 04:54:26 PM:INFO:BEGIN (implicit)
+15/11/2018 04:54:26 PM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+15/11/2018 04:54:26 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+15/11/2018 04:54:26 PM:INFO:COMMIT
+15/11/2018 04:54:26 PM:INFO:BEGIN (implicit)
+15/11/2018 04:54:26 PM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+15/11/2018 04:54:26 PM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+15/11/2018 04:54:26 PM:INFO:COMMIT
+15/11/2018 05:13:56 PM:INFO:starting gunicorn server
+15/11/2018 05:13:56 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/11/2018 05:14:52 PM:INFO:starting gunicorn server
+15/11/2018 05:16:04 PM:INFO:starting gunicorn server
+15/11/2018 05:16:04 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/11/2018 05:16:20 PM:INFO:select version()
+15/11/2018 05:16:20 PM:INFO:{}
+15/11/2018 05:16:20 PM:INFO:select current_schema()
+15/11/2018 05:16:20 PM:INFO:{}
+15/11/2018 05:16:20 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+15/11/2018 05:16:20 PM:INFO:{}
+15/11/2018 05:16:20 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+15/11/2018 05:16:20 PM:INFO:{}
+15/11/2018 05:16:20 PM:INFO:show standard_conforming_strings
+15/11/2018 05:16:20 PM:INFO:{}
+15/11/2018 05:16:20 PM:INFO:BEGIN (implicit)
+15/11/2018 05:16:20 PM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+15/11/2018 05:16:20 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+15/11/2018 05:16:20 PM:INFO:COMMIT
+15/11/2018 05:16:20 PM:INFO:BEGIN (implicit)
+15/11/2018 05:16:20 PM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+15/11/2018 05:16:20 PM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+15/11/2018 05:16:20 PM:INFO:COMMIT
+15/11/2018 07:31:59 PM:INFO:starting gunicorn server
+15/11/2018 07:31:59 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/11/2018 07:32:33 PM:INFO:select version()
+15/11/2018 07:32:33 PM:INFO:{}
+15/11/2018 07:32:33 PM:INFO:select current_schema()
+15/11/2018 07:32:33 PM:INFO:{}
+15/11/2018 07:32:33 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+15/11/2018 07:32:33 PM:INFO:{}
+15/11/2018 07:32:33 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+15/11/2018 07:32:33 PM:INFO:{}
+15/11/2018 07:32:33 PM:INFO:show standard_conforming_strings
+15/11/2018 07:32:33 PM:INFO:{}
+15/11/2018 07:32:33 PM:INFO:BEGIN (implicit)
+15/11/2018 07:32:33 PM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+15/11/2018 07:32:33 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+15/11/2018 07:32:33 PM:INFO:COMMIT
+15/11/2018 07:32:33 PM:INFO:BEGIN (implicit)
+15/11/2018 07:32:33 PM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+15/11/2018 07:32:33 PM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+15/11/2018 07:32:33 PM:INFO:COMMIT
+15/11/2018 07:33:25 PM:INFO:BEGIN (implicit)
+15/11/2018 07:33:25 PM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+15/11/2018 07:33:25 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+15/11/2018 07:33:25 PM:INFO:COMMIT
+15/11/2018 07:33:25 PM:INFO:BEGIN (implicit)
+15/11/2018 07:33:25 PM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+15/11/2018 07:33:25 PM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+15/11/2018 07:33:25 PM:INFO:COMMIT
+15/11/2018 07:33:46 PM:INFO:BEGIN (implicit)
+15/11/2018 07:33:46 PM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+15/11/2018 07:33:46 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+15/11/2018 07:33:46 PM:INFO:COMMIT
+15/11/2018 07:33:46 PM:INFO:BEGIN (implicit)
+15/11/2018 07:33:46 PM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+15/11/2018 07:33:46 PM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+15/11/2018 07:33:46 PM:INFO:COMMIT
+19/11/2018 01:52:53 AM:INFO:starting gunicorn server
+19/11/2018 01:52:53 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+19/11/2018 01:53:31 AM:INFO:select version()
+19/11/2018 01:53:31 AM:INFO:{}
+19/11/2018 01:53:31 AM:INFO:select current_schema()
+19/11/2018 01:53:31 AM:INFO:{}
+19/11/2018 01:53:31 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+19/11/2018 01:53:31 AM:INFO:{}
+19/11/2018 01:53:31 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+19/11/2018 01:53:31 AM:INFO:{}
+19/11/2018 01:53:31 AM:INFO:show standard_conforming_strings
+19/11/2018 01:53:31 AM:INFO:{}
+19/11/2018 01:53:31 AM:INFO:BEGIN (implicit)
+19/11/2018 01:53:31 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 01:53:31 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 01:53:31 AM:INFO:COMMIT
+19/11/2018 01:53:33 AM:INFO:BEGIN (implicit)
+19/11/2018 01:53:33 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 01:53:33 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 01:53:34 AM:INFO:COMMIT
+19/11/2018 01:57:04 AM:INFO:BEGIN (implicit)
+19/11/2018 01:57:04 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 01:57:04 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 01:57:04 AM:INFO:COMMIT
+19/11/2018 01:57:04 AM:INFO:BEGIN (implicit)
+19/11/2018 01:57:04 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 01:57:04 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 01:57:04 AM:INFO:COMMIT
+19/11/2018 02:00:26 AM:INFO:BEGIN (implicit)
+19/11/2018 02:00:26 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:00:26 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:00:26 AM:INFO:COMMIT
+19/11/2018 02:00:26 AM:INFO:BEGIN (implicit)
+19/11/2018 02:00:26 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:00:26 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:00:26 AM:INFO:COMMIT
+19/11/2018 02:01:51 AM:INFO:BEGIN (implicit)
+19/11/2018 02:01:51 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:01:51 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:01:51 AM:INFO:COMMIT
+19/11/2018 02:01:51 AM:INFO:BEGIN (implicit)
+19/11/2018 02:01:51 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:01:51 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:01:51 AM:INFO:COMMIT
+19/11/2018 02:17:47 AM:INFO:BEGIN (implicit)
+19/11/2018 02:17:47 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:17:47 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:17:47 AM:INFO:COMMIT
+19/11/2018 02:17:47 AM:INFO:BEGIN (implicit)
+19/11/2018 02:17:47 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:17:47 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:17:47 AM:INFO:COMMIT
+19/11/2018 02:21:03 AM:INFO:BEGIN (implicit)
+19/11/2018 02:21:03 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:21:03 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:21:03 AM:INFO:COMMIT
+19/11/2018 02:21:03 AM:INFO:BEGIN (implicit)
+19/11/2018 02:21:03 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:21:03 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:21:03 AM:INFO:COMMIT
+19/11/2018 02:21:29 AM:INFO:BEGIN (implicit)
+19/11/2018 02:21:29 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:21:29 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:21:29 AM:INFO:COMMIT
+19/11/2018 02:21:29 AM:INFO:BEGIN (implicit)
+19/11/2018 02:21:29 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:21:29 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:21:29 AM:INFO:COMMIT
+19/11/2018 02:25:45 AM:INFO:BEGIN (implicit)
+19/11/2018 02:25:45 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:25:45 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:25:45 AM:INFO:COMMIT
+19/11/2018 02:25:45 AM:INFO:BEGIN (implicit)
+19/11/2018 02:25:45 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:25:45 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:25:45 AM:INFO:COMMIT
+19/11/2018 02:27:06 AM:INFO:BEGIN (implicit)
+19/11/2018 02:27:06 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:27:06 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:27:06 AM:INFO:COMMIT
+19/11/2018 02:27:06 AM:INFO:BEGIN (implicit)
+19/11/2018 02:27:06 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:27:06 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:27:06 AM:INFO:COMMIT
+19/11/2018 02:27:28 AM:INFO:BEGIN (implicit)
+19/11/2018 02:27:28 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:27:28 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:27:28 AM:INFO:COMMIT
+19/11/2018 02:27:28 AM:INFO:BEGIN (implicit)
+19/11/2018 02:27:28 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:27:28 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:27:28 AM:INFO:COMMIT
+19/11/2018 02:27:41 AM:INFO:BEGIN (implicit)
+19/11/2018 02:27:41 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:27:41 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:27:41 AM:INFO:COMMIT
+19/11/2018 02:27:41 AM:INFO:BEGIN (implicit)
+19/11/2018 02:27:41 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:27:41 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:27:41 AM:INFO:COMMIT
+19/11/2018 02:33:05 AM:INFO:BEGIN (implicit)
+19/11/2018 02:33:05 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:33:05 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:33:05 AM:INFO:COMMIT
+19/11/2018 02:33:05 AM:INFO:BEGIN (implicit)
+19/11/2018 02:33:05 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:33:05 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:33:05 AM:INFO:COMMIT
+19/11/2018 02:33:15 AM:INFO:BEGIN (implicit)
+19/11/2018 02:33:15 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:33:15 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:33:15 AM:INFO:COMMIT
+19/11/2018 02:33:15 AM:INFO:BEGIN (implicit)
+19/11/2018 02:33:15 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:33:15 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:33:15 AM:INFO:COMMIT
+19/11/2018 02:35:07 AM:INFO:BEGIN (implicit)
+19/11/2018 02:35:07 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:35:07 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:35:07 AM:INFO:COMMIT
+19/11/2018 02:35:07 AM:INFO:BEGIN (implicit)
+19/11/2018 02:35:07 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:35:07 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:35:07 AM:INFO:COMMIT
+19/11/2018 02:35:54 AM:INFO:BEGIN (implicit)
+19/11/2018 02:35:54 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:35:54 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:35:54 AM:INFO:COMMIT
+19/11/2018 02:35:54 AM:INFO:BEGIN (implicit)
+19/11/2018 02:35:54 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:35:54 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:35:54 AM:INFO:COMMIT
+19/11/2018 02:36:32 AM:INFO:BEGIN (implicit)
+19/11/2018 02:36:32 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:36:32 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:36:32 AM:INFO:COMMIT
+19/11/2018 02:36:32 AM:INFO:BEGIN (implicit)
+19/11/2018 02:36:32 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:36:32 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:36:32 AM:INFO:COMMIT
+19/11/2018 02:36:36 AM:INFO:BEGIN (implicit)
+19/11/2018 02:36:36 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 02:36:36 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 02:36:36 AM:INFO:COMMIT
+19/11/2018 02:36:36 AM:INFO:BEGIN (implicit)
+19/11/2018 02:36:36 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 02:36:36 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 02:36:36 AM:INFO:COMMIT
+19/11/2018 11:49:25 PM:INFO:starting gunicorn server
+19/11/2018 11:49:25 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+19/11/2018 11:49:37 PM:INFO:select version()
+19/11/2018 11:49:37 PM:INFO:{}
+19/11/2018 11:49:37 PM:INFO:select current_schema()
+19/11/2018 11:49:37 PM:INFO:{}
+19/11/2018 11:49:37 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+19/11/2018 11:49:37 PM:INFO:{}
+19/11/2018 11:49:37 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+19/11/2018 11:49:37 PM:INFO:{}
+19/11/2018 11:49:37 PM:INFO:show standard_conforming_strings
+19/11/2018 11:49:37 PM:INFO:{}
+19/11/2018 11:49:37 PM:INFO:BEGIN (implicit)
+19/11/2018 11:49:37 PM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 11:49:37 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 11:49:37 PM:INFO:COMMIT
+19/11/2018 11:49:37 PM:INFO:BEGIN (implicit)
+19/11/2018 11:49:37 PM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 11:49:37 PM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 11:49:37 PM:INFO:COMMIT
+19/11/2018 11:51:54 PM:INFO:BEGIN (implicit)
+19/11/2018 11:51:54 PM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 11:51:54 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 11:51:54 PM:INFO:COMMIT
+19/11/2018 11:51:54 PM:INFO:BEGIN (implicit)
+19/11/2018 11:51:54 PM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 11:51:54 PM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 11:51:54 PM:INFO:COMMIT
+19/11/2018 11:53:32 PM:INFO:BEGIN (implicit)
+19/11/2018 11:53:32 PM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+19/11/2018 11:53:32 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+19/11/2018 11:53:32 PM:INFO:COMMIT
+19/11/2018 11:53:32 PM:INFO:BEGIN (implicit)
+19/11/2018 11:53:32 PM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+19/11/2018 11:53:32 PM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+19/11/2018 11:53:32 PM:INFO:COMMIT
+20/11/2018 01:11:25 AM:INFO:BEGIN (implicit)
+20/11/2018 01:11:25 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+20/11/2018 01:11:25 AM:INFO:{'user_name_1': 'a', 'password_1': 'a', 'param_1': 1}
+20/11/2018 01:11:25 AM:INFO:ROLLBACK
+20/11/2018 01:20:21 AM:INFO:starting gunicorn server
+20/11/2018 01:20:21 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+20/11/2018 01:20:43 AM:INFO:select version()
+20/11/2018 01:20:43 AM:INFO:{}
+20/11/2018 01:20:43 AM:INFO:select current_schema()
+20/11/2018 01:20:43 AM:INFO:{}
+20/11/2018 01:20:43 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+20/11/2018 01:20:43 AM:INFO:{}
+20/11/2018 01:20:43 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+20/11/2018 01:20:43 AM:INFO:{}
+20/11/2018 01:20:43 AM:INFO:show standard_conforming_strings
+20/11/2018 01:20:43 AM:INFO:{}
+20/11/2018 01:20:43 AM:INFO:BEGIN (implicit)
+20/11/2018 01:20:43 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+20/11/2018 01:20:43 AM:INFO:{'user_name_1': 'a', 'password_1': 'a', 'param_1': 1}
+20/11/2018 01:20:43 AM:INFO:COMMIT
+20/11/2018 01:21:36 AM:INFO:BEGIN (implicit)
+20/11/2018 01:21:36 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+20/11/2018 01:21:36 AM:INFO:{'user_name_1': 'a', 'password_1': 'a', 'param_1': 1}
+20/11/2018 01:21:36 AM:INFO:COMMIT
+20/11/2018 01:23:16 AM:INFO:BEGIN (implicit)
+20/11/2018 01:23:16 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+20/11/2018 01:23:16 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+20/11/2018 01:23:16 AM:INFO:COMMIT
+20/11/2018 01:23:21 AM:INFO:BEGIN (implicit)
+20/11/2018 01:23:21 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+20/11/2018 01:23:21 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+20/11/2018 01:23:21 AM:INFO:COMMIT
+20/11/2018 01:24:44 AM:INFO:BEGIN (implicit)
+20/11/2018 01:24:44 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+20/11/2018 01:24:44 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+20/11/2018 01:24:44 AM:INFO:COMMIT
+20/11/2018 01:24:44 AM:INFO:BEGIN (implicit)
+20/11/2018 01:24:44 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+20/11/2018 01:24:44 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+20/11/2018 01:24:44 AM:INFO:COMMIT
+20/11/2018 01:30:52 AM:INFO:BEGIN (implicit)
+20/11/2018 01:30:52 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+20/11/2018 01:30:52 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+20/11/2018 01:30:52 AM:INFO:COMMIT
+20/11/2018 01:30:52 AM:INFO:BEGIN (implicit)
+20/11/2018 01:30:52 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+20/11/2018 01:30:52 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+20/11/2018 01:30:52 AM:INFO:COMMIT
+20/11/2018 01:34:53 AM:INFO:BEGIN (implicit)
+20/11/2018 01:34:53 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+20/11/2018 01:34:53 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+20/11/2018 01:34:53 AM:INFO:COMMIT
+20/11/2018 01:34:53 AM:INFO:BEGIN (implicit)
+20/11/2018 01:34:53 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+20/11/2018 01:34:53 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+20/11/2018 01:34:53 AM:INFO:COMMIT
+20/11/2018 01:35:45 AM:INFO:BEGIN (implicit)
+20/11/2018 01:35:45 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+20/11/2018 01:35:45 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+20/11/2018 01:35:45 AM:INFO:COMMIT
+20/11/2018 01:35:45 AM:INFO:BEGIN (implicit)
+20/11/2018 01:35:45 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+20/11/2018 01:35:45 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+20/11/2018 01:35:45 AM:INFO:COMMIT
+20/11/2018 01:42:24 AM:INFO:BEGIN (implicit)
+20/11/2018 01:42:24 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+20/11/2018 01:42:24 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+20/11/2018 01:42:24 AM:INFO:COMMIT
+20/11/2018 01:42:24 AM:INFO:BEGIN (implicit)
+20/11/2018 01:42:24 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+20/11/2018 01:42:24 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+20/11/2018 01:42:24 AM:INFO:COMMIT
+20/11/2018 03:13:14 AM:INFO:BEGIN (implicit)
+20/11/2018 03:13:14 AM:INFO:SELECT apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s AND apps.user_tbl.password = %(password_1)s 
+ LIMIT %(param_1)s
+20/11/2018 03:13:14 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'password_1': '1234', 'param_1': 1}
+20/11/2018 03:13:14 AM:INFO:COMMIT
+20/11/2018 03:13:14 AM:INFO:BEGIN (implicit)
+20/11/2018 03:13:14 AM:INFO:SELECT apps.access_rights_tbl.access_id AS apps_access_rights_tbl_access_id, apps.access_rights_tbl.user_type AS apps_access_rights_tbl_user_type, apps.access_rights_tbl.access_area AS apps_access_rights_tbl_access_area, apps.access_rights_tbl.view AS apps_access_rights_tbl_view, apps.access_rights_tbl."create" AS apps_access_rights_tbl_create, apps.access_rights_tbl.update AS apps_access_rights_tbl_update, apps.access_rights_tbl.delete AS apps_access_rights_tbl_delete, apps.access_rights_tbl.effective_from AS apps_access_rights_tbl_effective_from, apps.access_rights_tbl.effective_to AS apps_access_rights_tbl_effective_to, apps.access_rights_tbl.created_by AS apps_access_rights_tbl_created_by, apps.access_rights_tbl.creation_date AS apps_access_rights_tbl_creation_date, apps.access_rights_tbl.last_update_date AS apps_access_rights_tbl_last_update_date, apps.access_rights_tbl.last_updated_by AS apps_access_rights_tbl_last_updated_by 
+FROM apps.access_rights_tbl 
+WHERE apps.access_rights_tbl.user_type = %(user_type_1)s
+20/11/2018 03:13:14 AM:INFO:{'user_type_1': 'MANAGEMENT_REP'}
+20/11/2018 03:13:14 AM:INFO:COMMIT
