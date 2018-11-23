@@ -23,8 +23,8 @@ class Person (Base):
     email = Column('email', String)
     effective_from = Column('effective_from', DateTime)
     effective_to = Column('effective_to', DateTime)
-    created_by = Column('created_by', int)
+    created_by = Column('created_by', Integer)
     creation_date = Column('effective_from', DateTime)
-    last_updated_by = Column('last_updated_by', int)
+    last_updated_by = Column('last_updated_by', Integer)
     last_update_date = Column('last_update_date', DateTime)
     

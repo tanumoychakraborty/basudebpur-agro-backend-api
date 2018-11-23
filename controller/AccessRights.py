@@ -8,6 +8,7 @@ from dao.Users import get_user_type_by_user_id,\
 from dao.AccessRights import get_access_rights_by_user_type
 import json
 import falcon
+import logging
 
 class AccessRights(object):
     '''
@@ -23,8 +24,7 @@ class AccessRights(object):
             if usertype is None:
                 resp.status = falcon.HTTP_404
                 return
-            payload['access'] = get_access_rights_by_user_type(usertype)
-            
+                        
         elif 'userId' in params.keys():
             userid = int(params['userId'])
             usertype = get_user_type_by_user_id(userid)
