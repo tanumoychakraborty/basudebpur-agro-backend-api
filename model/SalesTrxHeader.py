@@ -7,11 +7,12 @@ Created on 11-Nov-2018
 from model import Base
 from sqlalchemy.sql.schema import Column, Sequence
 from sqlalchemy.sql.sqltypes import String, Integer, DateTime, LargeBinary
+from sqlalchemy.orm import relationship
 
 class SalesTrxHeader (Base):
     __tablename__ = "sales_trx_header_tbl"
     __table_args__ = {'schema' : 'apps'}
-    transaction_header_id = Column('transaction_header_id', Integer, Sequence('apps.sales_trx_header_sequence') , primary_key = True)
+    transaction_header_id = Column('transaction_header_id', Integer, Sequence('sales_trx_header_sequence', schema='apps') , primary_key = True)
     transaction_number = Column('transaction_number', String)
     transaction_date = Column('transaction_date', DateTime)
     order_type = Column('order_type', String)
@@ -25,3 +26,4 @@ class SalesTrxHeader (Base):
     last_update_date = Column('last_update_date', DateTime)
     last_updated_by = Column('last_updated_by', Integer)
     
+    sales_trx_lines = relationship('model.SalesTrxLines', back_populates='purchase_trx_header')

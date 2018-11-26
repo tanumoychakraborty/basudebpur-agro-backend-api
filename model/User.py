@@ -6,12 +6,13 @@ Created on 27-Oct-2018
 from model import Base
 from sqlalchemy.sql.schema import Column, Sequence
 from sqlalchemy.sql.sqltypes import String, Integer, DateTime
+from sqlalchemy.orm import relationship
 
 
 class User (Base):
     __tablename__ = "user_tbl"
     __table_args__ = {'schema' : 'apps'}
-    user_id = Column('user_id', Integer, Sequence('apps.user_id_sequence') , primary_key = True)
+    user_id = Column('user_id', Integer, Sequence('user_id_sequence', schema='apps') , primary_key = True)
     user_name = Column('user_name', String)
     description = Column('description', String)
     Phone_number1 = Column('phone_number1', String)
@@ -30,3 +31,4 @@ class User (Base):
 #     person_tbl_person_id = Column('person_tbl_person_id', Integer, ForeignKey('person_tbl.person_id'))
 # 
 #     person = relationship('model.Person.Person', foreign_keys=[person_tbl_person_id])
+    #person = relationship('model.Person', back_ref='employee')

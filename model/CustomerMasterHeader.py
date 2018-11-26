@@ -7,12 +7,13 @@ Created on 11-Nov-2018
 from model import Base
 from sqlalchemy.sql.schema import Column, Sequence
 from sqlalchemy.sql.sqltypes import String, Integer, DateTime, Date
+from sqlalchemy.orm import relationship
 
 
 class CustomerMasterHeader (Base):
     __tablename__ = "customer_master_header_tbl"
     __table_args__ = {'schema' : 'apps'}
-    customer_id = Column('customer_id', Integer, Sequence('apps.customer_id_sequence') , primary_key = True)
+    customer_id = Column('customer_id', Integer, Sequence('customer_id_sequence', schema='apps') , primary_key = True)
     customer_code = Column('customer_code', String)
     customer_name = Column('customer_name', String)
     description = Column('description', String)
@@ -25,3 +26,5 @@ class CustomerMasterHeader (Base):
     creation_date = Column('effective_from', DateTime)
     last_update_date = Column('last_update_date', DateTime)
     last_updated_by = Column('last_updated_by', int)
+    
+    sites = relationship('model.CustomerMasterSites', back_populates='customer')

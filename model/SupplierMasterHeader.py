@@ -7,11 +7,12 @@ Created on 11-Nov-2018
 from model import Base
 from sqlalchemy.sql.schema import Column, Sequence
 from sqlalchemy.sql.sqltypes import String, Integer, DateTime, Date
+from sqlalchemy.orm import relationship
 
 class SupplierMasterHeader (Base):
     __tablename__ = "supplier_master_header_tbl"
     __table_args__ = {'schema' : 'apps'}
-    supplier_id = Column('supplier_id', Integer, Sequence('apps.supplier_id_sequence') , primary_key = True)
+    supplier_id = Column('supplier_id', Integer, Sequence('supplier_id_sequence', schema='apps') , primary_key = True)
     supplier_code = Column('supplier_code', String)
     supplier_name = Column('supplier_name', String)
     description = Column('description', String)
@@ -24,3 +25,4 @@ class SupplierMasterHeader (Base):
     ship_to_location_code = Column('ship_to_location_code', String)
     bill_to_location_code = Column('bill_to_location_code', String)
     
+    sites = relationship('model.SupplierMasterSites', back_populates='supplier')

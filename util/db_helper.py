@@ -6,6 +6,9 @@ Created on 28-Oct-2018
 from sqlalchemy.orm.session import sessionmaker
 from sqlalchemy.orm.scoping import scoped_session
 from util.dbEngine import dbEngine
+import logging
+import traceback
+import sys
 
 
 def db_transaction(func):
@@ -22,7 +25,8 @@ def db_transaction(func):
             
         except Exception as e:
             Session.rollback()
-            print(e)
+            traceback.print_exc(file=sys.stdout)
+            logging.error(traceback.print_exc())
             raise e
             
         finally:

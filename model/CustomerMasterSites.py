@@ -13,7 +13,7 @@ from sqlalchemy.orm import relationship
 class CustomerMasterSites (Base):
     __tablename__ = "customer_master_sites_tbl"
     __table_args__ = {'schema' : 'apps'}
-    customer_site_id = Column('customer_site_id', Integer, Sequence('apps.customer_site_id_sequence') , primary_key = True)
+    customer_site_id = Column('customer_site_id', Integer, Sequence('customer_site_id_sequence', schema='apps') , primary_key = True)
     customer_id = Column('customer_id', Integer,ForeignKey('customer_master_header_tbl.customer_id'))
     customer_site_code = Column('customer_site_code', String)
     customer_address = Column('customer_address', String)
@@ -27,4 +27,4 @@ class CustomerMasterSites (Base):
     last_update_date = Column('last_update_date', DateTime)
     last_updated_by = Column('last_updated_by', int)
     
-    customerRelation = relationship("model.CustomerMasterHeader", backref="customer_master_sites_tbl")
+    customer = relationship('model.CustomerMasterHeader', back_populates='sites')

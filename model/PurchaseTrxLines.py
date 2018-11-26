@@ -4,7 +4,7 @@ Created on 11-Nov-2018
 @author: duttasudip89
 '''
 
-from model import Base
+from model import Base, PurchaseTrxHeader
 from sqlalchemy.sql.schema import Column, Sequence,ForeignKey
 from sqlalchemy.sql.sqltypes import String, Integer, DateTime
 from sqlalchemy.orm import relationship
@@ -12,8 +12,8 @@ from sqlalchemy.orm import relationship
 class PurchaseTrxLines (Base):
     __tablename__ = "purchase_trx_lines_tbl"
     __table_args__ = {'schema' : 'apps'}
-    transaction_line_id = Column('transaction_line_id', Integer, Sequence('apps.purchase_trx_lines_sequence') , primary_key = True)
-    transaction_header_id = Column('transaction_header_id', Integer,ForeignKey('purchase_trx_header_tbl.transaction_header_id'))
+    transaction_line_id = Column('transaction_line_id', Integer, Sequence('purchase_trx_lines_sequence', schema='apps') , primary_key = True)
+    transaction_header_id = Column('transaction_header_id', Integer,ForeignKey('apps.purchase_trx_header_tbl.transaction_header_id'))
     item_id = Column('item_id', Integer)
     item_description = Column('item_description', String)
     unit_price = Column('unit_price', Integer)
@@ -27,5 +27,5 @@ class PurchaseTrxLines (Base):
     last_update_date = Column('last_update_date', DateTime)
     last_updated_by = Column('last_updated_by', Integer)
     
-    PurchaseTrxRelation = relationship("model.PurchaseTrxHeader", backref="purchase_trx_lines_tbl")
+    purchase_trx_header = relationship("model.PurchaseTrxHeader.PurchaseTrxHeader", back_populates="purchase_trx_lines")
         

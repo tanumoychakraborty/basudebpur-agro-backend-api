@@ -12,7 +12,7 @@ from sqlalchemy.orm import relationship
 class SupplierMasterSites (Base):
     __tablename__ = "supplier_master_sites_tbl"
     __table_args__ = {'schema' : 'apps'}
-    supplier_site_id = Column('supplier_site_id', Integer, Sequence('apps.supplier_site_id_sequence') , primary_key = True)
+    supplier_site_id = Column('supplier_site_id', Integer, Sequence('supplier_site_id_sequence', schema='apps') , primary_key = True)
     supplier_id = Column('supplier_id', Integer,ForeignKey('supplier_master_header_tbl.supplier_id'))
     supplier_site_code = Column('supplier_site_code', String)
     supplier_site_address = Column('supplier_site_address', String)
@@ -32,6 +32,6 @@ class SupplierMasterSites (Base):
     last_update_date = Column('last_update_date', DateTime)
     last_updated_by = Column('last_updated_by', int)
     
-    supplierRelation = relationship("model.SupplierMasterHeader", backref="supplier_master_sites_tbl")
+    supplier = relationship("model.SupplierMasterHeader", back_populates="sites")
     
         

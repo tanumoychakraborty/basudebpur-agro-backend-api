@@ -12,7 +12,7 @@ from sqlalchemy.orm import relationship
 class SalesTrxLines (Base):
     __tablename__ = "sales_trx_lines_tbl"
     __table_args__ = {'schema' : 'apps'}
-    transaction_line_id = Column('transaction_line_id', Integer, Sequence('apps.purchase_trx_lines_sequence') , primary_key = True)
+    transaction_line_id = Column('transaction_line_id', Integer, Sequence('purchase_trx_lines_sequence', schema='apps') , primary_key = True)
     transaction_header_id = Column('transaction_header_id', Integer,ForeignKey('sales_trx_header_tbl.transaction_header_id'))    
     item_id = Column('item_id', Integer)
     item_description = Column('item_description', String)
@@ -25,4 +25,4 @@ class SalesTrxLines (Base):
     last_update_date = Column('last_update_date', DateTime)
     last_updated_by = Column('last_updated_by', Integer)
     
-    SalesTrxRelation = relationship("model.SalesTrxHeader", backref="sales_trx_lines_tbl")
+    purchase_trx_header = relationship("model.SalesTrxHeader", back_populates="sales_trx_lines")

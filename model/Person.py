@@ -6,11 +6,12 @@ Created on 27-Oct-2018
 from model import Base
 from sqlalchemy.sql.schema import Column, Sequence
 from sqlalchemy.sql.sqltypes import String, Integer, DateTime, Date
+from sqlalchemy.orm import relationship
 
 class Person (Base):
     __tablename__ = "person_tbl"
     __table_args__ = {'schema' : 'apps'}
-    person_id = Column('person_id', Integer, Sequence('apps.person_id_sequence') , primary_key = True)
+    person_id = Column('person_id', Integer, Sequence('person_id_sequence', schema='apps') , primary_key = True)
     employee_number = Column('employee_number', String)
     first_name = Column('first_name', String)
     middle_name = Column('middle_name', String)
@@ -28,3 +29,4 @@ class Person (Base):
     last_updated_by = Column('last_updated_by', Integer)
     last_update_date = Column('last_update_date', DateTime)
     
+    #employee = relationship('model.User', back_populates='person')

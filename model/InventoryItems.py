@@ -10,7 +10,7 @@ from sqlalchemy.sql.sqltypes import String, Integer, DateTime, Date
 class InventoryItems (Base):
     __tablename__ = "inventory_item_tbl"
     __table_args__ = {'schema' : 'apps'}
-    item_id = Column('item_id', Integer, Sequence('apps.item_id_sequence') , primary_key = True)
+    item_id = Column('item_id', Integer, Sequence('item_id_sequence', schema='apps') , primary_key = True)
     item_number = Column('item_number', String)
     organization_id = Column('organization_id', Integer)
     enabled_flag = Column('enabled_flag', String)
