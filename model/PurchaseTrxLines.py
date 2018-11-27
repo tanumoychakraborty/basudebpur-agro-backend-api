@@ -8,6 +8,7 @@ from model import Base, PurchaseTrxHeader
 from sqlalchemy.sql.schema import Column, Sequence,ForeignKey
 from sqlalchemy.sql.sqltypes import String, Integer, DateTime
 from sqlalchemy.orm import relationship
+import datetime
 
 class PurchaseTrxLines (Base):
     __tablename__ = "purchase_trx_lines_tbl"
@@ -23,8 +24,8 @@ class PurchaseTrxLines (Base):
     unit_of_measure = Column('unit_of_measure', String)
     line_status = Column('line_status', String)
     created_by = Column('created_by', Integer)
-    creation_date = Column('creation_date', DateTime)
-    last_update_date = Column('last_update_date', DateTime)
+    creation_date = Column('creation_date', DateTime,default=datetime.datetime.utcnow)
+    last_update_date = Column('last_update_date', DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
     last_updated_by = Column('last_updated_by', Integer)
     
     purchase_trx_header = relationship("model.PurchaseTrxHeader.PurchaseTrxHeader", back_populates="purchase_trx_lines")

@@ -29,4 +29,3 @@ class Person (Base):
     last_updated_by = Column('last_updated_by', Integer)
     last_update_date = Column('last_update_date', DateTime)
     
-    #employee = relationship('model.User', back_populates='person')

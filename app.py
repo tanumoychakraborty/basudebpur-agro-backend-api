@@ -2,9 +2,10 @@ from test import testview
 import falcon
 from controller.AccessRights import AccessRights
 from controller.PurchaseTrx import PurchaseTrx
+from util.SerializerMiddleware import SerializerMiddleware
 
 
-api = application = falcon.API()
+api = application = falcon.API(middleware=[SerializerMiddleware(),])
 t = testview()
 a = AccessRights()
 purchase_trx =PurchaseTrx()

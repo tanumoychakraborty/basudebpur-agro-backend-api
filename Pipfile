@@ -9,8 +9,12 @@ falcon = "==1.4.1"
 gunicorn = "*"
 sqlalchemy = "*"
 "psycopg2-binary" = "*"
+marshmallow = "==marshmallow-3.0"
 
 [dev-packages]
 
 [requires]
 python_version = "3.6"
+
+[pipenv]
+allow_prereleases = true

@@ -28,7 +28,3 @@ class User (Base):
     last_updated_by = Column('last_updated_by', Integer)
     password_life_span = Column('password_life_span', Integer)
     employee_id = Column('employee_id', Integer)
-#     person_tbl_person_id = Column('person_tbl_person_id', Integer, ForeignKey('person_tbl.person_id'))
-# 
-#     person = relationship('model.Person.Person', foreign_keys=[person_tbl_person_id])
-    #person = relationship('model.Person', back_ref='employee')

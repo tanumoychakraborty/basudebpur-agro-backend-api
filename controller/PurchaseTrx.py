@@ -8,21 +8,21 @@ import json
 import falcon
 import logging
 from dao.PurchaseTrx import create_purchase_trx
+from schema.PurchaseTrxSchema import PurchaseTrxHeaderSchema
 
 
 class PurchaseTrx(object):
-        
+    
+    serializers = { 'post': PurchaseTrxHeaderSchema }
+    
     def on_post(self, req, resp):
         try:
             """
             Insert Purchase Transaction data into database
             """
-            
-            raw_json = req.stream.read()
-            raw_data = json.loads(raw_json.decode("utf-8"))
-            
-            create_purchase_trx(raw_data)
-            output = {'Status': falcon.HTTP_200, 'Message': "Purchase Transaction data saved successfully for: " + raw_data['purchase_trx_number']}
+            data = req.context['serialized-data']
+            create_purchase_trx(data)
+            output = {'Status': falcon.HTTP_200, 'Message': "Purchase Transaction data saved successfully for: " + data['purchase_trx_number']}
             resp.status = falcon.HTTP_200
             resp.body = json.dumps(output)
   
