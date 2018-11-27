@@ -4,6 +4,7 @@ Created on 26-Nov-2018
 @author: tanumoy
 '''
 from model.PurchaseTrxHeader import PurchaseTrxHeader
+from model.PurchaseTrxLines import PurchaseTrxLines
 from util.db_helper import db_transaction
 from datetime import datetime
 
@@ -30,7 +31,29 @@ def create_purchase_trx(raw_data, session):
         purchasetrxheader.created_by=raw_data['created_by']
     if 'last_updated_by' in raw_data:
         purchasetrxheader.last_updated_by=raw_data['last_updated_by']
+        
+    purchasetrxLines = PurchaseTrxLines()
+    if 'item_id' in raw_data:
+        purchasetrxLines.item_id = raw_data['item_id']
+    if 'item_description' in raw_data:
+        purchasetrxLines.item_description=raw_data['item_description']
+    if 'unit_price' in raw_data:
+        purchasetrxLines.unit_price=raw_data['unit_price']
+    if 'quantity' in raw_data:
+        purchasetrxLines.quantity=raw_data['quantity']
+    if 'receipt_unit_price' in raw_data:
+        purchasetrxLines.receipt_unit_price=raw_data['receipt_unit_price']
+    if 'receipt_qty' in raw_data:
+        purchasetrxLines.receipt_qty=raw_data['receipt_qty']
+    if 'unit_of_measure' in raw_data:
+        purchasetrxLines.unit_of_measure=raw_data['unit_of_measure']
+    if 'line_status' in raw_data:
+        purchasetrxLines.line_status=raw_data['line_status']
+    if 'created_by' in raw_data:
+        purchasetrxLines.created_by=raw_data['created_by']
+    if 'last_updated_by' in raw_data:
+        purchasetrxLines.last_updated_by=raw_data['last_updated_by']   
      
-    session.add(purchasetrxheader)
+    session.add(purchasetrxLines)
     
     return purchasetrxheader
