@@ -18,9 +18,9 @@ class SerializerMiddleware(object):
             req_data = req.params
         else:
             req_data = json.loads(req.stream.read().decode("utf-8"))
-
         try:
             serializer = resource.serializers[req.method.lower()]
+            req_data = json.loads(req.stream.read().decode("utf-8")) or req.params
         except (AttributeError, IndexError, KeyError):
             return
         else:

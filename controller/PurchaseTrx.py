@@ -8,6 +8,7 @@ import json
 import falcon
 import logging
 from dao.PurchaseTrx import create_purchase_trx
+from dao.PurchaseTrx import get_purchase_transaction_details
 from schema.PurchaseTrxSchema import PurchaseTrxHeaderSchema
 
 
@@ -34,4 +35,24 @@ class PurchaseTrx(object):
         except Exception as e:
             resp.body = json.dumps({"Status": falcon.HTTP_400, 'Error':str(e)})
             resp.status = falcon.HTTP_400
-            return resp   
+            return resp  
+        
+    def on_get(self,req, resp):
+        
+        params = req.params
+        payload = {}        
+            
+        if 'purchase_trx_number' in params.keys():
+            purchase_trx_details = get_purchase_transaction_details(params)
+            if purchase_trx_details is None:
+                resp.status = falcon.HTTP_404
+                return
+            payload['purchase_trx_details'] = purchase_trx_details
+        
+            resp.body = json.dumps(payload, indent=4, sort_keys=True, default=str)
+            resp.status = falcon.HTTP_200
+        
+        else:
+            resp.body = json.dumps({"Status": falcon.HTTP_404, "Error":"Transaction Details not found: "+ params['purchase_trx_number']})
+            resp.status = falcon.HTTP_404
+            return resp 

@@ -43,3 +43,26 @@ def create_purchase_trx(raw_data, session):
     session.add(purchasetrxheader)
     
     return purchasetrxheader
+
+@db_transaction
+def get_purchase_transaction_details(params, session):
+    resultL = []
+    purchase_trx_number = params['purchase_trx_number']
+    purchaseTrxDetails = session.query(PurchaseTrxHeader).filter_by(purchase_trx_number=purchase_trx_number).all()
+    
+    for purchaseTrxDetail in purchaseTrxDetails:
+        rowdict = dict(purchaseTrxDetail.__dict__)
+        rowdict.pop('_sa_instance_state')
+        purchaseLines = purchaseTrxDetail.purchase_trx_lines
+        
+        linedict = []
+        for  purchaseLine in purchaseLines:
+            line = dict(purchaseLine.__dict__)
+            line.pop('_sa_instance_state')
+            linedict.append(line)
+        
+        rowdict['purchase_trx_lines']= linedict
+        
+        resultL.append(rowdict)
+            
+    return resultL
