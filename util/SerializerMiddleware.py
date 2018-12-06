@@ -14,7 +14,10 @@ class SerializerMiddleware(object):
     '''
 
     def process_resource(self, req, resp, resource, params):
-        req_data = json.loads(req.stream.read().decode("utf-8")) or req.params
+        if req.method == 'GET':
+            req_data = req.params
+        else:
+            req_data = json.loads(req.stream.read().decode("utf-8"))
 
         try:
             serializer = resource.serializers[req.method.lower()]

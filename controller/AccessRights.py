@@ -24,6 +24,7 @@ class AccessRights(object):
             if usertype is None:
                 resp.status = falcon.HTTP_404
                 return
+            payload['access'] = usertype
                         
         elif 'userId' in params.keys():
             userid = int(params['userId'])
