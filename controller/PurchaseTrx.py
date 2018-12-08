@@ -49,6 +49,12 @@ class PurchaseTrx(object):
         else:
             purchase_trx_details = get_purchase_transaction_details(None)
         
+        for purchase_trx_detail in purchase_trx_details:
+            for key, value in purchase_trx_detail.items():
+                if value is None:
+                    value = ''
+                    purchase_trx_detail[key] = value
+            
         payload['purchase_trx_details'] = purchase_trx_details
         resp.body = json.dumps(payload, indent=4, sort_keys=True, default=str)
         resp.status = falcon.HTTP_200
@@ -77,4 +83,3 @@ class PurchaseTrx(object):
             resp.body = json.dumps({"Status": falcon.HTTP_400, 'Error':str(e)})
             resp.status = falcon.HTTP_400
             return resp
->>>>>>> 789c999a7d1e539b538e65e3d399ce20af4fb60b
