@@ -1,0 +1,274 @@
+07/12/2018 06:37:13 PM:INFO:starting gunicorn server
+07/12/2018 06:37:13 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+07/12/2018 06:37:58 PM:INFO:select version()
+07/12/2018 06:37:58 PM:INFO:{}
+07/12/2018 06:37:58 PM:INFO:select current_schema()
+07/12/2018 06:37:58 PM:INFO:{}
+07/12/2018 06:37:58 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+07/12/2018 06:37:58 PM:INFO:{}
+07/12/2018 06:37:58 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+07/12/2018 06:37:58 PM:INFO:{}
+07/12/2018 06:37:58 PM:INFO:show standard_conforming_strings
+07/12/2018 06:37:58 PM:INFO:{}
+07/12/2018 06:37:58 PM:INFO:BEGIN (implicit)
+07/12/2018 06:37:58 PM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+07/12/2018 06:37:58 PM:INFO:{'purchase_trx_number_1': '26_11_001'}
+07/12/2018 06:37:58 PM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.unit_price AS apps_purchase_trx_lines_tbl_unit_price, apps.purchase_trx_lines_tbl.quantity AS apps_purchase_trx_lines_tbl_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_qty AS apps_purchase_trx_lines_tbl_receipt_qty, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+07/12/2018 06:37:58 PM:INFO:{'param_1': 1}
+07/12/2018 06:37:58 PM:INFO:COMMIT
+07/12/2018 06:45:59 PM:INFO:BEGIN (implicit)
+07/12/2018 06:46:00 PM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+07/12/2018 06:46:00 PM:INFO:{'purchase_trx_number_1': '26_11_001'}
+07/12/2018 06:46:00 PM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.unit_price AS apps_purchase_trx_lines_tbl_unit_price, apps.purchase_trx_lines_tbl.quantity AS apps_purchase_trx_lines_tbl_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_qty AS apps_purchase_trx_lines_tbl_receipt_qty, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+07/12/2018 06:46:00 PM:INFO:{'param_1': 1}
+07/12/2018 06:46:13 PM:INFO:COMMIT
+07/12/2018 07:01:40 PM:INFO:starting gunicorn server
+07/12/2018 07:01:40 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+07/12/2018 08:17:46 PM:INFO:starting gunicorn server
+07/12/2018 08:17:46 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+07/12/2018 08:23:50 PM:INFO:starting gunicorn server
+07/12/2018 08:23:50 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+07/12/2018 09:11:06 PM:INFO:starting gunicorn server
+07/12/2018 09:11:06 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 12:39:27 AM:INFO:starting gunicorn server
+08/12/2018 12:39:27 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 01:16:11 AM:INFO:starting gunicorn server
+08/12/2018 01:16:11 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 01:21:22 AM:INFO:starting gunicorn server
+08/12/2018 01:21:22 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 01:22:13 AM:INFO:select version()
+08/12/2018 01:22:13 AM:INFO:{}
+08/12/2018 01:22:13 AM:INFO:select current_schema()
+08/12/2018 01:22:13 AM:INFO:{}
+08/12/2018 01:22:13 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 01:22:13 AM:INFO:{}
+08/12/2018 01:22:13 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 01:22:13 AM:INFO:{}
+08/12/2018 01:22:13 AM:INFO:show standard_conforming_strings
+08/12/2018 01:22:13 AM:INFO:{}
+08/12/2018 01:22:13 AM:INFO:BEGIN (implicit)
+08/12/2018 01:22:13 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+08/12/2018 01:22:13 AM:INFO:{'purchase_trx_number_1': '26_11_001'}
+08/12/2018 01:22:13 AM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.unit_price AS apps_purchase_trx_lines_tbl_unit_price, apps.purchase_trx_lines_tbl.quantity AS apps_purchase_trx_lines_tbl_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_qty AS apps_purchase_trx_lines_tbl_receipt_qty, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+08/12/2018 01:22:13 AM:INFO:{'param_1': 1}
+08/12/2018 01:22:27 AM:INFO:COMMIT
+08/12/2018 01:23:03 AM:ERROR:None
+08/12/2018 01:50:56 AM:INFO:starting gunicorn server
+08/12/2018 01:50:56 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 01:51:32 AM:INFO:select version()
+08/12/2018 01:51:32 AM:INFO:{}
+08/12/2018 01:51:32 AM:INFO:select current_schema()
+08/12/2018 01:51:32 AM:INFO:{}
+08/12/2018 01:51:32 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 01:51:32 AM:INFO:{}
+08/12/2018 01:51:32 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 01:51:32 AM:INFO:{}
+08/12/2018 01:51:32 AM:INFO:show standard_conforming_strings
+08/12/2018 01:51:32 AM:INFO:{}
+08/12/2018 01:51:32 AM:INFO:BEGIN (implicit)
+08/12/2018 01:51:32 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+08/12/2018 01:51:32 AM:INFO:{'purchase_trx_number_1': '26_11_001'}
+08/12/2018 01:51:32 AM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.unit_price AS apps_purchase_trx_lines_tbl_unit_price, apps.purchase_trx_lines_tbl.quantity AS apps_purchase_trx_lines_tbl_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_qty AS apps_purchase_trx_lines_tbl_receipt_qty, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+08/12/2018 01:51:32 AM:INFO:{'param_1': 1}
+08/12/2018 01:51:32 AM:INFO:COMMIT
+08/12/2018 01:57:15 AM:INFO:starting gunicorn server
+08/12/2018 01:57:15 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:05:20 AM:INFO:starting gunicorn server
+08/12/2018 02:05:20 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:12:13 AM:INFO:starting gunicorn server
+08/12/2018 02:12:13 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:13:44 AM:INFO:select version()
+08/12/2018 02:13:44 AM:INFO:{}
+08/12/2018 02:13:44 AM:INFO:select current_schema()
+08/12/2018 02:13:44 AM:INFO:{}
+08/12/2018 02:13:44 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 02:13:44 AM:INFO:{}
+08/12/2018 02:13:44 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 02:13:44 AM:INFO:{}
+08/12/2018 02:13:44 AM:INFO:show standard_conforming_strings
+08/12/2018 02:13:44 AM:INFO:{}
+08/12/2018 02:13:44 AM:INFO:BEGIN (implicit)
+08/12/2018 02:13:44 AM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_type, order_status, buyer_id, suppplier_id, amount, weighting_number, ref_doc, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_type)s, %(order_status)s, %(buyer_id)s, %(suppplier_id)s, %(amount)s, %(weighting_number)s, %(ref_doc)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+08/12/2018 02:13:44 AM:INFO:{'purchase_trx_number': '26_11_001', 'transaction_date': datetime.date(2018, 10, 10), 'order_type': 'Normal', 'order_status': 'Entered', 'buyer_id': 1, 'suppplier_id': 1, 'amount': 100, 'weighting_number': 'cn001/1', 'ref_doc': <psycopg2.extensions.Binary object at 0x10a09e828>, 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 7, 20, 43, 44, 135286), 'last_update_date': datetime.datetime(2018, 12, 7, 20, 43, 44, 135337), 'last_updated_by': 1995}
+08/12/2018 02:13:44 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, unit_price, quantity, receipt_unit_price, receipt_qty, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(unit_price)s, %(quantity)s, %(receipt_unit_price)s, %(receipt_qty)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+08/12/2018 02:13:44 AM:INFO:{'transaction_header_id': 2, 'item_id': 1, 'item_description': 'Test Item', 'unit_price': 100, 'quantity': 1, 'receipt_unit_price': 100, 'receipt_qty': 100, 'unit_of_measure': 'EA', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 7, 20, 43, 44, 212001), 'last_update_date': datetime.datetime(2018, 12, 7, 20, 43, 44, 212049), 'last_updated_by': 1995}
+08/12/2018 02:13:44 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, unit_price, quantity, receipt_unit_price, receipt_qty, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(unit_price)s, %(quantity)s, %(receipt_unit_price)s, %(receipt_qty)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+08/12/2018 02:13:44 AM:INFO:{'transaction_header_id': 2, 'item_id': 2, 'item_description': 'Test Item', 'unit_price': 100, 'quantity': 1, 'receipt_unit_price': 100, 'receipt_qty': 100, 'unit_of_measure': 'EA', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 7, 20, 43, 44, 224148), 'last_update_date': datetime.datetime(2018, 12, 7, 20, 43, 44, 224177), 'last_updated_by': 1995}
+08/12/2018 02:13:44 AM:INFO:COMMIT
+08/12/2018 02:15:20 AM:INFO:starting gunicorn server
+08/12/2018 02:15:20 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:23:34 AM:INFO:starting gunicorn server
+08/12/2018 02:23:34 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:30:38 AM:INFO:starting gunicorn server
+08/12/2018 02:30:38 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:31:00 AM:INFO:select version()
+08/12/2018 02:31:00 AM:INFO:{}
+08/12/2018 02:31:00 AM:INFO:select current_schema()
+08/12/2018 02:31:00 AM:INFO:{}
+08/12/2018 02:31:00 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 02:31:00 AM:INFO:{}
+08/12/2018 02:31:00 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 02:31:00 AM:INFO:{}
+08/12/2018 02:31:00 AM:INFO:show standard_conforming_strings
+08/12/2018 02:31:00 AM:INFO:{}
+08/12/2018 02:31:00 AM:INFO:BEGIN (implicit)
+08/12/2018 02:31:00 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+08/12/2018 02:31:00 AM:INFO:{'purchase_trx_number_1': '26_11_001'}
+08/12/2018 02:31:01 AM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.unit_price AS apps_purchase_trx_lines_tbl_unit_price, apps.purchase_trx_lines_tbl.quantity AS apps_purchase_trx_lines_tbl_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_qty AS apps_purchase_trx_lines_tbl_receipt_qty, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+08/12/2018 02:31:01 AM:INFO:{'param_1': 1}
+08/12/2018 02:31:14 AM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.unit_price AS apps_purchase_trx_lines_tbl_unit_price, apps.purchase_trx_lines_tbl.quantity AS apps_purchase_trx_lines_tbl_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_qty AS apps_purchase_trx_lines_tbl_receipt_qty, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+08/12/2018 02:31:14 AM:INFO:{'param_1': 2}
+08/12/2018 02:34:09 AM:INFO:starting gunicorn server
+08/12/2018 02:34:09 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:34:51 AM:INFO:select version()
+08/12/2018 02:34:51 AM:INFO:{}
+08/12/2018 02:34:51 AM:INFO:select current_schema()
+08/12/2018 02:34:51 AM:INFO:{}
+08/12/2018 02:34:51 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 02:34:51 AM:INFO:{}
+08/12/2018 02:34:51 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 02:34:51 AM:INFO:{}
+08/12/2018 02:34:51 AM:INFO:show standard_conforming_strings
+08/12/2018 02:34:51 AM:INFO:{}
+08/12/2018 02:34:51 AM:INFO:BEGIN (implicit)
+08/12/2018 02:34:51 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+08/12/2018 02:34:51 AM:INFO:{'purchase_trx_number_1': '26_11_001'}
+08/12/2018 02:34:51 AM:INFO:ROLLBACK
+08/12/2018 02:34:51 AM:ERROR:None
+08/12/2018 02:37:55 AM:INFO:BEGIN (implicit)
+08/12/2018 02:37:55 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+08/12/2018 02:37:55 AM:INFO:{'purchase_trx_number_1': '26_11_001'}
+08/12/2018 02:38:43 AM:INFO:ROLLBACK
+08/12/2018 02:38:43 AM:ERROR:None
+08/12/2018 02:39:01 AM:INFO:starting gunicorn server
+08/12/2018 02:39:01 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:39:07 AM:INFO:select version()
+08/12/2018 02:39:07 AM:INFO:{}
+08/12/2018 02:39:07 AM:INFO:select current_schema()
+08/12/2018 02:39:07 AM:INFO:{}
+08/12/2018 02:39:07 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 02:39:07 AM:INFO:{}
+08/12/2018 02:39:07 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 02:39:07 AM:INFO:{}
+08/12/2018 02:39:07 AM:INFO:show standard_conforming_strings
+08/12/2018 02:39:07 AM:INFO:{}
+08/12/2018 02:39:07 AM:INFO:BEGIN (implicit)
+08/12/2018 02:39:07 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s 
+ LIMIT %(param_1)s
+08/12/2018 02:39:07 AM:INFO:{'purchase_trx_number_1': '26_11_001', 'param_1': 1}
+08/12/2018 02:39:27 AM:INFO:UPDATE apps.purchase_trx_header_tbl SET transaction_date=%(transaction_date)s, order_status=%(order_status)s, ref_doc=%(ref_doc)s, last_update_date=%(last_update_date)s WHERE apps.purchase_trx_header_tbl.transaction_header_id = %(apps_purchase_trx_header_tbl_transaction_header_id)s
+08/12/2018 02:39:27 AM:INFO:{'transaction_date': datetime.date(2018, 10, 10), 'order_status': 'InProcess', 'ref_doc': <psycopg2.extensions.Binary object at 0x10ac06c38>, 'last_update_date': datetime.datetime(2018, 12, 7, 21, 9, 27, 523394), 'apps_purchase_trx_header_tbl_transaction_header_id': 1}
+08/12/2018 02:39:27 AM:INFO:ROLLBACK
+08/12/2018 02:42:23 AM:INFO:starting gunicorn server
+08/12/2018 02:42:23 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:43:05 AM:INFO:starting gunicorn server
+08/12/2018 02:43:05 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:44:53 AM:INFO:starting gunicorn server
+08/12/2018 02:44:53 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:45:08 AM:INFO:starting gunicorn server
+08/12/2018 02:45:08 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:47:41 AM:INFO:starting gunicorn server
+08/12/2018 02:47:41 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:47:46 AM:INFO:select version()
+08/12/2018 02:47:46 AM:INFO:{}
+08/12/2018 02:47:46 AM:INFO:select current_schema()
+08/12/2018 02:47:46 AM:INFO:{}
+08/12/2018 02:47:46 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 02:47:46 AM:INFO:{}
+08/12/2018 02:47:46 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 02:47:46 AM:INFO:{}
+08/12/2018 02:47:46 AM:INFO:show standard_conforming_strings
+08/12/2018 02:47:46 AM:INFO:{}
+08/12/2018 02:47:46 AM:INFO:BEGIN (implicit)
+08/12/2018 02:47:46 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s 
+ LIMIT %(param_1)s
+08/12/2018 02:47:46 AM:INFO:{'purchase_trx_number_1': '26_11_001', 'param_1': 1}
+08/12/2018 02:48:02 AM:INFO:UPDATE apps.purchase_trx_header_tbl SET transaction_date=%(transaction_date)s, order_status=%(order_status)s, last_update_date=%(last_update_date)s WHERE apps.purchase_trx_header_tbl.transaction_header_id = %(apps_purchase_trx_header_tbl_transaction_header_id)s
+08/12/2018 02:48:02 AM:INFO:{'transaction_date': datetime.date(2018, 10, 10), 'order_status': 'InProcess', 'last_update_date': datetime.datetime(2018, 12, 7, 21, 18, 2, 602930), 'apps_purchase_trx_header_tbl_transaction_header_id': 1}
+08/12/2018 02:48:02 AM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.unit_price AS apps_purchase_trx_lines_tbl_unit_price, apps.purchase_trx_lines_tbl.quantity AS apps_purchase_trx_lines_tbl_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_qty AS apps_purchase_trx_lines_tbl_receipt_qty, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+08/12/2018 02:48:02 AM:INFO:{'param_1': 1}
+08/12/2018 02:48:39 AM:INFO:ROLLBACK
+08/12/2018 02:50:43 AM:INFO:starting gunicorn server
+08/12/2018 02:50:43 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:50:56 AM:INFO:select version()
+08/12/2018 02:50:56 AM:INFO:{}
+08/12/2018 02:50:56 AM:INFO:select current_schema()
+08/12/2018 02:50:56 AM:INFO:{}
+08/12/2018 02:50:56 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 02:50:56 AM:INFO:{}
+08/12/2018 02:50:56 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 02:50:56 AM:INFO:{}
+08/12/2018 02:50:56 AM:INFO:show standard_conforming_strings
+08/12/2018 02:50:56 AM:INFO:{}
+08/12/2018 02:50:56 AM:INFO:BEGIN (implicit)
+08/12/2018 02:50:56 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s 
+ LIMIT %(param_1)s
+08/12/2018 02:50:56 AM:INFO:{'purchase_trx_number_1': '26_11_001', 'param_1': 1}
+08/12/2018 02:51:04 AM:INFO:UPDATE apps.purchase_trx_header_tbl SET transaction_date=%(transaction_date)s, order_status=%(order_status)s, last_update_date=%(last_update_date)s WHERE apps.purchase_trx_header_tbl.transaction_header_id = %(apps_purchase_trx_header_tbl_transaction_header_id)s
+08/12/2018 02:51:04 AM:INFO:{'transaction_date': datetime.date(2018, 10, 10), 'order_status': 'InProcess', 'last_update_date': datetime.datetime(2018, 12, 7, 21, 21, 4, 704139), 'apps_purchase_trx_header_tbl_transaction_header_id': 1}
+08/12/2018 02:51:04 AM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.unit_price AS apps_purchase_trx_lines_tbl_unit_price, apps.purchase_trx_lines_tbl.quantity AS apps_purchase_trx_lines_tbl_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_qty AS apps_purchase_trx_lines_tbl_receipt_qty, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+08/12/2018 02:51:04 AM:INFO:{'param_1': 1}
+08/12/2018 02:51:12 AM:INFO:ROLLBACK
+08/12/2018 02:52:46 AM:INFO:starting gunicorn server
+08/12/2018 02:52:46 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/12/2018 02:52:50 AM:INFO:select version()
+08/12/2018 02:52:50 AM:INFO:{}
+08/12/2018 02:52:50 AM:INFO:select current_schema()
+08/12/2018 02:52:50 AM:INFO:{}
+08/12/2018 02:52:50 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 02:52:50 AM:INFO:{}
+08/12/2018 02:52:50 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/12/2018 02:52:50 AM:INFO:{}
+08/12/2018 02:52:50 AM:INFO:show standard_conforming_strings
+08/12/2018 02:52:50 AM:INFO:{}
+08/12/2018 02:52:50 AM:INFO:BEGIN (implicit)
+08/12/2018 02:52:50 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s 
+ LIMIT %(param_1)s
+08/12/2018 02:52:50 AM:INFO:{'purchase_trx_number_1': '26_11_001', 'param_1': 1}
+08/12/2018 02:53:00 AM:INFO:UPDATE apps.purchase_trx_header_tbl SET transaction_date=%(transaction_date)s, order_status=%(order_status)s, last_update_date=%(last_update_date)s WHERE apps.purchase_trx_header_tbl.transaction_header_id = %(apps_purchase_trx_header_tbl_transaction_header_id)s
+08/12/2018 02:53:00 AM:INFO:{'transaction_date': datetime.date(2018, 10, 10), 'order_status': 'InProcess', 'last_update_date': datetime.datetime(2018, 12, 7, 21, 23, 0, 872412), 'apps_purchase_trx_header_tbl_transaction_header_id': 1}
+08/12/2018 02:53:00 AM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.unit_price AS apps_purchase_trx_lines_tbl_unit_price, apps.purchase_trx_lines_tbl.quantity AS apps_purchase_trx_lines_tbl_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_qty AS apps_purchase_trx_lines_tbl_receipt_qty, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+08/12/2018 02:53:00 AM:INFO:{'param_1': 1}
+08/12/2018 02:53:11 AM:INFO:UPDATE apps.purchase_trx_lines_tbl SET item_description=%(item_description)s, last_update_date=%(last_update_date)s WHERE apps.purchase_trx_lines_tbl.transaction_line_id = %(apps_purchase_trx_lines_tbl_transaction_line_id)s
+08/12/2018 02:53:11 AM:INFO:({'item_description': 'Test Item 1', 'last_update_date': datetime.datetime(2018, 12, 7, 21, 23, 11, 677472), 'apps_purchase_trx_lines_tbl_transaction_line_id': 1}, {'item_description': 'Test Item 2', 'last_update_date': datetime.datetime(2018, 12, 7, 21, 23, 11, 677498), 'apps_purchase_trx_lines_tbl_transaction_line_id': 2})
+08/12/2018 02:53:11 AM:INFO:COMMIT
