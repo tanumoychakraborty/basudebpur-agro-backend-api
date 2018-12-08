@@ -44,15 +44,15 @@ class PurchaseTrx(object):
             
         if 'purchase_trx_number' in params.keys():
             purchase_trx_details = get_purchase_transaction_details(params)
-            if purchase_trx_details is None:
-                resp.status = falcon.HTTP_404
-                return
-            payload['purchase_trx_details'] = purchase_trx_details
-        
-            resp.body = json.dumps(payload, indent=4, sort_keys=True, default=str)
-            resp.status = falcon.HTTP_200
-        
         else:
-            resp.body = json.dumps({"Status": falcon.HTTP_404, "Error":"Transaction Details not found: "+ params['purchase_trx_number']})
+            purchase_trx_details = get_purchase_transaction_details(None)
+        
+        if purchase_trx_details is None:
             resp.status = falcon.HTTP_404
-            return resp 
+            return resp
+        payload['purchase_trx_details'] = purchase_trx_details
+        
+        resp.body = json.dumps(payload, indent=4, sort_keys=True, default=str)
+        resp.status = falcon.HTTP_200
+        
+        

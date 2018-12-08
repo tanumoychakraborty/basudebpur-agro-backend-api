@@ -47,8 +47,11 @@ def create_purchase_trx(raw_data, session):
 @db_transaction
 def get_purchase_transaction_details(params, session):
     resultL = []
-    purchase_trx_number = params['purchase_trx_number']
-    purchaseTrxDetails = session.query(PurchaseTrxHeader).filter_by(purchase_trx_number=purchase_trx_number).all()
+    if params is None:
+        purchaseTrxDetails = session.query(PurchaseTrxHeader).all()
+    else:
+        purchase_trx_number = params['purchase_trx_number']
+        purchaseTrxDetails = session.query(PurchaseTrxHeader).filter_by(purchase_trx_number=purchase_trx_number).all()
     
     for purchaseTrxDetail in purchaseTrxDetails:
         rowdict = dict(purchaseTrxDetail.__dict__)
