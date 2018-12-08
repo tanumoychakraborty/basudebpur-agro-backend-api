@@ -69,3 +69,38 @@ def get_purchase_transaction_details(params, session):
         resultL.append(rowdict)
             
     return resultL
+
+
+
+@db_transaction
+def update_purchase_trx(raw_data,session):
+    purchase_trx_number = raw_data['purchase_trx_number']
+    purchasetrxheader = session.query(PurchaseTrxHeader).filter_by(purchase_trx_number=purchase_trx_number).first()
+    
+    purchasetrxheader.transaction_date = raw_data['transaction_date']
+    purchasetrxheader.order_type = raw_data['order_type']
+    purchasetrxheader.order_status = raw_data['order_status']
+    purchasetrxheader.buyer_id = raw_data['buyer_id']
+    purchasetrxheader.suppplier_id = raw_data['suppplier_id']
+    purchasetrxheader.amount = raw_data['amount']
+    '''
+    do it later
+    purchasetrxheader.ref_doc = raw_data['ref_doc']
+    '''
+    purchasetrxheader.weighting_number = raw_data['weighting_number']
+    purchasetrxheader.last_updated_by = raw_data['last_updated_by']
+        
+    for purchase_trx_line in raw_data['purchase_trx_lines']:
+        for trx_line in purchasetrxheader.purchase_trx_lines:
+            if purchase_trx_line["transaction_line_id"] == trx_line.transaction_line_id:
+                trx_line.item_id = purchase_trx_line['item_id']
+                trx_line.item_description = purchase_trx_line['item_description']
+                trx_line.unit_price = purchase_trx_line['unit_price']
+                trx_line.quantity = purchase_trx_line['quantity']
+                trx_line.receipt_unit_price = purchase_trx_line['receipt_unit_price']
+                trx_line.receipt_qty = purchase_trx_line['receipt_qty']
+                trx_line.unit_of_measure = purchase_trx_line['unit_of_measure']
+                trx_line.line_status = purchase_trx_line['line_status']
+                trx_line.created_by = purchase_trx_line['created_by']
+                trx_line.last_updated_by = purchase_trx_line['last_updated_by']   
+            
