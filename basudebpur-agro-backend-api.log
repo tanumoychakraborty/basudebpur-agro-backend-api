@@ -782,3 +782,317 @@ WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1
 20/12/2018 11:56:44 PM:INFO:starting gunicorn server
 20/12/2018 11:56:44 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
 20/12/2018 11:57:19 PM:ERROR:None
+21/12/2018 12:10:32 AM:INFO:starting gunicorn server
+21/12/2018 12:10:32 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 12:11:02 AM:ERROR:None
+21/12/2018 12:15:16 AM:ERROR:None
+21/12/2018 12:16:10 AM:INFO:starting gunicorn server
+21/12/2018 12:16:10 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 12:16:38 AM:ERROR:None
+21/12/2018 12:19:52 AM:INFO:starting gunicorn server
+21/12/2018 12:19:52 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 12:20:08 AM:ERROR:None
+21/12/2018 12:21:36 AM:ERROR:None
+21/12/2018 12:23:43 AM:INFO:starting gunicorn server
+21/12/2018 12:23:43 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 12:25:45 AM:INFO:starting gunicorn server
+21/12/2018 12:25:45 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 12:26:39 AM:INFO:starting gunicorn server
+21/12/2018 12:26:39 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 12:26:58 AM:ERROR:None
+21/12/2018 12:30:00 AM:ERROR:None
+21/12/2018 12:36:15 AM:INFO:starting gunicorn server
+21/12/2018 12:36:15 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 12:36:57 AM:INFO:starting gunicorn server
+21/12/2018 12:36:57 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 12:37:04 AM:INFO:select version()
+21/12/2018 12:37:04 AM:INFO:{}
+21/12/2018 12:37:04 AM:INFO:select current_schema()
+21/12/2018 12:37:04 AM:INFO:{}
+21/12/2018 12:37:04 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 12:37:04 AM:INFO:{}
+21/12/2018 12:37:04 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 12:37:04 AM:INFO:{}
+21/12/2018 12:37:04 AM:INFO:show standard_conforming_strings
+21/12/2018 12:37:04 AM:INFO:{}
+21/12/2018 12:37:04 AM:INFO:BEGIN (implicit)
+21/12/2018 12:37:04 AM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_type, order_status, buyer_id, suppplier_id, amount, weighting_number, ref_doc, created_by, creation_date, last_update_date, last_updated_by, vehicle_number) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_type)s, %(order_status)s, %(buyer_id)s, %(suppplier_id)s, %(amount)s, %(weighting_number)s, %(ref_doc)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(vehicle_number)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+21/12/2018 12:37:04 AM:INFO:{'purchase_trx_number': 'PO_12122018/1', 'transaction_date': datetime.date(2018, 12, 12), 'order_type': 'Normal', 'order_status': 'Entered', 'buyer_id': 1, 'suppplier_id': 1, 'amount': 2000, 'weighting_number': 'cn001/1', 'ref_doc': <psycopg2.extensions.Binary object at 0x7f41700dcee0>, 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 7, 4, 899924), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 7, 4, 899973), 'last_updated_by': 1995, 'vehicle_number': 'WB-14R-5343'}
+21/12/2018 12:37:04 AM:INFO:COMMIT
+21/12/2018 12:38:56 AM:INFO:starting gunicorn server
+21/12/2018 12:38:56 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 12:39:42 AM:INFO:select version()
+21/12/2018 12:39:42 AM:INFO:{}
+21/12/2018 12:39:42 AM:INFO:select current_schema()
+21/12/2018 12:39:42 AM:INFO:{}
+21/12/2018 12:39:42 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 12:39:42 AM:INFO:{}
+21/12/2018 12:39:42 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 12:39:42 AM:INFO:{}
+21/12/2018 12:39:42 AM:INFO:show standard_conforming_strings
+21/12/2018 12:39:42 AM:INFO:{}
+21/12/2018 12:39:42 AM:INFO:BEGIN (implicit)
+21/12/2018 12:39:42 AM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_type, order_status, buyer_id, suppplier_id, amount, weighting_number, ref_doc, created_by, creation_date, last_update_date, last_updated_by, vehicle_number) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_type)s, %(order_status)s, %(buyer_id)s, %(suppplier_id)s, %(amount)s, %(weighting_number)s, %(ref_doc)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(vehicle_number)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+21/12/2018 12:39:42 AM:INFO:{'purchase_trx_number': 'PO_12122018/1', 'transaction_date': datetime.date(2018, 12, 12), 'order_type': 'Normal', 'order_status': 'Entered', 'buyer_id': 1, 'suppplier_id': 1, 'amount': 2000, 'weighting_number': 'cn001/1', 'ref_doc': <psycopg2.extensions.Binary object at 0x7f98b41544b8>, 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 9, 42, 747857), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 9, 42, 747876), 'last_updated_by': 1995, 'vehicle_number': 'WB-14R-5343'}
+21/12/2018 12:39:42 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:39:42 AM:INFO:{'transaction_header_id': 13, 'item_id': 1, 'item_description': 'Miniket Premium', 'booking_unit_price': 100, 'booking_quantity': 10, 'receipt_unit_price': 100, 'receipt_quantity': 10, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 9, 42, 753928), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 9, 42, 753960), 'last_updated_by': 1995, 'line_number': 1, 'discount': 100}
+21/12/2018 12:39:42 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:39:42 AM:INFO:{'transaction_header_id': 13, 'item_id': 2, 'item_description': 'Bashkati Regular', 'booking_unit_price': 120, 'booking_quantity': 10, 'receipt_unit_price': 120, 'receipt_quantity': 100, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 9, 42, 756696), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 9, 42, 756712), 'last_updated_by': 1995, 'line_number': 2, 'discount': 100}
+21/12/2018 12:39:42 AM:INFO:COMMIT
+21/12/2018 12:41:57 AM:INFO:BEGIN (implicit)
+21/12/2018 12:41:58 AM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_type, order_status, buyer_id, suppplier_id, amount, weighting_number, ref_doc, created_by, creation_date, last_update_date, last_updated_by, vehicle_number) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_type)s, %(order_status)s, %(buyer_id)s, %(suppplier_id)s, %(amount)s, %(weighting_number)s, %(ref_doc)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(vehicle_number)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+21/12/2018 12:41:58 AM:INFO:{'purchase_trx_number': 'PO_12122018/1', 'transaction_date': datetime.date(2018, 12, 12), 'order_type': 'Normal', 'order_status': 'Entered', 'buyer_id': 1, 'suppplier_id': 1, 'amount': 2000, 'weighting_number': 'cn001/1', 'ref_doc': <psycopg2.extensions.Binary object at 0x7f98b4154058>, 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 11, 58, 2918), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 11, 58, 2938), 'last_updated_by': 1995, 'vehicle_number': 'WB-14R-5343'}
+21/12/2018 12:41:58 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:41:58 AM:INFO:{'transaction_header_id': 14, 'item_id': 1, 'item_description': 'Miniket Premium', 'booking_unit_price': 100, 'booking_quantity': 10, 'receipt_unit_price': 100, 'receipt_quantity': 10, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 11, 58, 8681), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 11, 58, 8723), 'last_updated_by': 1995, 'line_number': 1, 'discount': 100}
+21/12/2018 12:41:58 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:41:58 AM:INFO:{'transaction_header_id': 14, 'item_id': 2, 'item_description': 'Bashkati Regular', 'booking_unit_price': 120, 'booking_quantity': 10, 'receipt_unit_price': 120, 'receipt_quantity': 100, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 11, 58, 13263), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 11, 58, 13282), 'last_updated_by': 1995, 'line_number': 2, 'discount': 100}
+21/12/2018 12:41:58 AM:INFO:COMMIT
+21/12/2018 12:42:00 AM:INFO:BEGIN (implicit)
+21/12/2018 12:42:00 AM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_type, order_status, buyer_id, suppplier_id, amount, weighting_number, ref_doc, created_by, creation_date, last_update_date, last_updated_by, vehicle_number) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_type)s, %(order_status)s, %(buyer_id)s, %(suppplier_id)s, %(amount)s, %(weighting_number)s, %(ref_doc)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(vehicle_number)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+21/12/2018 12:42:00 AM:INFO:{'purchase_trx_number': 'PO_12122018/1', 'transaction_date': datetime.date(2018, 12, 12), 'order_type': 'Normal', 'order_status': 'Entered', 'buyer_id': 1, 'suppplier_id': 1, 'amount': 2000, 'weighting_number': 'cn001/1', 'ref_doc': <psycopg2.extensions.Binary object at 0x7f98b41543f0>, 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 0, 384344), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 0, 384357), 'last_updated_by': 1995, 'vehicle_number': 'WB-14R-5343'}
+21/12/2018 12:42:00 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:42:00 AM:INFO:{'transaction_header_id': 15, 'item_id': 1, 'item_description': 'Miniket Premium', 'booking_unit_price': 100, 'booking_quantity': 10, 'receipt_unit_price': 100, 'receipt_quantity': 10, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 0, 387984), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 0, 388001), 'last_updated_by': 1995, 'line_number': 1, 'discount': 100}
+21/12/2018 12:42:00 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:42:00 AM:INFO:{'transaction_header_id': 15, 'item_id': 2, 'item_description': 'Bashkati Regular', 'booking_unit_price': 120, 'booking_quantity': 10, 'receipt_unit_price': 120, 'receipt_quantity': 100, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 0, 390231), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 0, 390250), 'last_updated_by': 1995, 'line_number': 2, 'discount': 100}
+21/12/2018 12:42:00 AM:INFO:COMMIT
+21/12/2018 12:42:02 AM:INFO:BEGIN (implicit)
+21/12/2018 12:42:02 AM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_type, order_status, buyer_id, suppplier_id, amount, weighting_number, ref_doc, created_by, creation_date, last_update_date, last_updated_by, vehicle_number) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_type)s, %(order_status)s, %(buyer_id)s, %(suppplier_id)s, %(amount)s, %(weighting_number)s, %(ref_doc)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(vehicle_number)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+21/12/2018 12:42:02 AM:INFO:{'purchase_trx_number': 'PO_12122018/1', 'transaction_date': datetime.date(2018, 12, 12), 'order_type': 'Normal', 'order_status': 'Entered', 'buyer_id': 1, 'suppplier_id': 1, 'amount': 2000, 'weighting_number': 'cn001/1', 'ref_doc': <psycopg2.extensions.Binary object at 0x7f98bc568670>, 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 2, 95306), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 2, 95318), 'last_updated_by': 1995, 'vehicle_number': 'WB-14R-5343'}
+21/12/2018 12:42:02 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:42:02 AM:INFO:{'transaction_header_id': 16, 'item_id': 1, 'item_description': 'Miniket Premium', 'booking_unit_price': 100, 'booking_quantity': 10, 'receipt_unit_price': 100, 'receipt_quantity': 10, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 2, 98393), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 2, 98412), 'last_updated_by': 1995, 'line_number': 1, 'discount': 100}
+21/12/2018 12:42:02 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:42:02 AM:INFO:{'transaction_header_id': 16, 'item_id': 2, 'item_description': 'Bashkati Regular', 'booking_unit_price': 120, 'booking_quantity': 10, 'receipt_unit_price': 120, 'receipt_quantity': 100, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 2, 100567), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 2, 100579), 'last_updated_by': 1995, 'line_number': 2, 'discount': 100}
+21/12/2018 12:42:02 AM:INFO:COMMIT
+21/12/2018 12:42:08 AM:INFO:BEGIN (implicit)
+21/12/2018 12:42:08 AM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_type, order_status, buyer_id, suppplier_id, amount, weighting_number, ref_doc, created_by, creation_date, last_update_date, last_updated_by, vehicle_number) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_type)s, %(order_status)s, %(buyer_id)s, %(suppplier_id)s, %(amount)s, %(weighting_number)s, %(ref_doc)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(vehicle_number)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+21/12/2018 12:42:08 AM:INFO:{'purchase_trx_number': 'PO_12122018/1', 'transaction_date': datetime.date(2018, 12, 12), 'order_type': 'Normal', 'order_status': 'Entered', 'buyer_id': 1, 'suppplier_id': 1, 'amount': 2000, 'weighting_number': 'cn001/1', 'ref_doc': <psycopg2.extensions.Binary object at 0x7f98b4154120>, 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 8, 972705), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 8, 972729), 'last_updated_by': 1995, 'vehicle_number': 'WB-14R-5343'}
+21/12/2018 12:42:08 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:42:08 AM:INFO:{'transaction_header_id': 17, 'item_id': 1, 'item_description': 'Miniket Premium', 'booking_unit_price': 100, 'booking_quantity': 10, 'receipt_unit_price': 100, 'receipt_quantity': 10, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 8, 976435), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 8, 976459), 'last_updated_by': 1995, 'line_number': 1, 'discount': 100}
+21/12/2018 12:42:08 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:42:08 AM:INFO:{'transaction_header_id': 17, 'item_id': 2, 'item_description': 'Bashkati Regular', 'booking_unit_price': 120, 'booking_quantity': 10, 'receipt_unit_price': 120, 'receipt_quantity': 100, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 8, 979372), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 8, 979397), 'last_updated_by': 1995, 'line_number': 2, 'discount': 100}
+21/12/2018 12:42:08 AM:INFO:COMMIT
+21/12/2018 12:42:10 AM:INFO:BEGIN (implicit)
+21/12/2018 12:42:10 AM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_type, order_status, buyer_id, suppplier_id, amount, weighting_number, ref_doc, created_by, creation_date, last_update_date, last_updated_by, vehicle_number) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_type)s, %(order_status)s, %(buyer_id)s, %(suppplier_id)s, %(amount)s, %(weighting_number)s, %(ref_doc)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(vehicle_number)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+21/12/2018 12:42:10 AM:INFO:{'purchase_trx_number': 'PO_12122018/1', 'transaction_date': datetime.date(2018, 12, 12), 'order_type': 'Normal', 'order_status': 'Entered', 'buyer_id': 1, 'suppplier_id': 1, 'amount': 2000, 'weighting_number': 'cn001/1', 'ref_doc': <psycopg2.extensions.Binary object at 0x7f98b41543a0>, 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 10, 593911), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 10, 593937), 'last_updated_by': 1995, 'vehicle_number': 'WB-14R-5343'}
+21/12/2018 12:42:10 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:42:10 AM:INFO:{'transaction_header_id': 18, 'item_id': 1, 'item_description': 'Miniket Premium', 'booking_unit_price': 100, 'booking_quantity': 10, 'receipt_unit_price': 100, 'receipt_quantity': 10, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 10, 596980), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 10, 596995), 'last_updated_by': 1995, 'line_number': 1, 'discount': 100}
+21/12/2018 12:42:10 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:42:10 AM:INFO:{'transaction_header_id': 18, 'item_id': 2, 'item_description': 'Bashkati Regular', 'booking_unit_price': 120, 'booking_quantity': 10, 'receipt_unit_price': 120, 'receipt_quantity': 100, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 10, 599066), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 10, 599084), 'last_updated_by': 1995, 'line_number': 2, 'discount': 100}
+21/12/2018 12:42:10 AM:INFO:COMMIT
+21/12/2018 12:42:14 AM:INFO:BEGIN (implicit)
+21/12/2018 12:42:14 AM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_type, order_status, buyer_id, suppplier_id, amount, weighting_number, ref_doc, created_by, creation_date, last_update_date, last_updated_by, vehicle_number) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_type)s, %(order_status)s, %(buyer_id)s, %(suppplier_id)s, %(amount)s, %(weighting_number)s, %(ref_doc)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(vehicle_number)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+21/12/2018 12:42:14 AM:INFO:{'purchase_trx_number': 'PO_12122018/1', 'transaction_date': datetime.date(2018, 12, 12), 'order_type': 'Normal', 'order_status': 'Entered', 'buyer_id': 1, 'suppplier_id': 1, 'amount': 2000, 'weighting_number': 'cn001/1', 'ref_doc': <psycopg2.extensions.Binary object at 0x7f98b4154508>, 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 14, 330927), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 14, 330939), 'last_updated_by': 1995, 'vehicle_number': 'WB-14R-5343'}
+21/12/2018 12:42:14 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:42:14 AM:INFO:{'transaction_header_id': 19, 'item_id': 1, 'item_description': 'Miniket Premium', 'booking_unit_price': 100, 'booking_quantity': 10, 'receipt_unit_price': 100, 'receipt_quantity': 10, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 14, 333585), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 14, 333597), 'last_updated_by': 1995, 'line_number': 1, 'discount': 100}
+21/12/2018 12:42:14 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:42:14 AM:INFO:{'transaction_header_id': 19, 'item_id': 2, 'item_description': 'Bashkati Regular', 'booking_unit_price': 120, 'booking_quantity': 10, 'receipt_unit_price': 120, 'receipt_quantity': 100, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 14, 335610), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 14, 335622), 'last_updated_by': 1995, 'line_number': 2, 'discount': 100}
+21/12/2018 12:42:14 AM:INFO:COMMIT
+21/12/2018 12:42:16 AM:INFO:BEGIN (implicit)
+21/12/2018 12:42:16 AM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_type, order_status, buyer_id, suppplier_id, amount, weighting_number, ref_doc, created_by, creation_date, last_update_date, last_updated_by, vehicle_number) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_type)s, %(order_status)s, %(buyer_id)s, %(suppplier_id)s, %(amount)s, %(weighting_number)s, %(ref_doc)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(vehicle_number)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+21/12/2018 12:42:16 AM:INFO:{'purchase_trx_number': 'PO_12122018/1', 'transaction_date': datetime.date(2018, 12, 12), 'order_type': 'Normal', 'order_status': 'Entered', 'buyer_id': 1, 'suppplier_id': 1, 'amount': 2000, 'weighting_number': 'cn001/1', 'ref_doc': <psycopg2.extensions.Binary object at 0x7f98b4154058>, 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 16, 496503), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 16, 496837), 'last_updated_by': 1995, 'vehicle_number': 'WB-14R-5343'}
+21/12/2018 12:42:16 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:42:16 AM:INFO:{'transaction_header_id': 20, 'item_id': 1, 'item_description': 'Miniket Premium', 'booking_unit_price': 100, 'booking_quantity': 10, 'receipt_unit_price': 100, 'receipt_quantity': 10, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 16, 499774), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 16, 499788), 'last_updated_by': 1995, 'line_number': 1, 'discount': 100}
+21/12/2018 12:42:16 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+21/12/2018 12:42:16 AM:INFO:{'transaction_header_id': 20, 'item_id': 2, 'item_description': 'Bashkati Regular', 'booking_unit_price': 120, 'booking_quantity': 10, 'receipt_unit_price': 120, 'receipt_quantity': 100, 'unit_of_measure': 'KG', 'line_status': 'ENTERED', 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 20, 19, 12, 16, 502058), 'last_update_date': datetime.datetime(2018, 12, 20, 19, 12, 16, 502069), 'last_updated_by': 1995, 'line_number': 2, 'discount': 100}
+21/12/2018 12:42:16 AM:INFO:COMMIT
+21/12/2018 12:42:50 AM:ERROR:None
+21/12/2018 12:44:40 AM:ERROR:None
+21/12/2018 12:45:48 AM:INFO:starting gunicorn server
+21/12/2018 12:45:48 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 12:46:13 AM:INFO:starting gunicorn server
+21/12/2018 12:46:13 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 12:46:42 AM:INFO:starting gunicorn server
+21/12/2018 12:46:42 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 12:46:52 AM:ERROR:None
+21/12/2018 12:48:45 AM:ERROR:None
+21/12/2018 12:50:21 AM:INFO:starting gunicorn server
+21/12/2018 12:50:21 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 12:51:09 AM:ERROR:None
+21/12/2018 12:51:38 AM:INFO:starting gunicorn server
+21/12/2018 12:51:38 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 12:51:50 AM:INFO:select version()
+21/12/2018 12:51:50 AM:INFO:{}
+21/12/2018 12:51:50 AM:INFO:select current_schema()
+21/12/2018 12:51:50 AM:INFO:{}
+21/12/2018 12:51:50 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 12:51:50 AM:INFO:{}
+21/12/2018 12:51:50 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 12:51:50 AM:INFO:{}
+21/12/2018 12:51:50 AM:INFO:show standard_conforming_strings
+21/12/2018 12:51:50 AM:INFO:{}
+21/12/2018 12:51:50 AM:INFO:BEGIN (implicit)
+21/12/2018 12:51:50 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 12:51:50 AM:INFO:{'param_1': 500}
+21/12/2018 12:51:50 AM:INFO:COMMIT
+21/12/2018 12:57:34 AM:INFO:BEGIN (implicit)
+21/12/2018 12:57:34 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 12:57:34 AM:INFO:{'param_1': 500}
+21/12/2018 12:57:34 AM:INFO:COMMIT
+21/12/2018 12:58:56 AM:INFO:BEGIN (implicit)
+21/12/2018 12:58:56 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 12:58:56 AM:INFO:{'param_1': 500}
+21/12/2018 12:58:56 AM:INFO:COMMIT
+21/12/2018 01:04:01 AM:INFO:BEGIN (implicit)
+21/12/2018 01:04:01 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 01:04:01 AM:INFO:{'param_1': 500}
+21/12/2018 01:04:01 AM:INFO:COMMIT
+21/12/2018 01:05:41 AM:INFO:BEGIN (implicit)
+21/12/2018 01:05:41 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 01:05:41 AM:INFO:{'param_1': 500}
+21/12/2018 01:05:41 AM:INFO:COMMIT
+21/12/2018 01:07:15 AM:INFO:BEGIN (implicit)
+21/12/2018 01:07:15 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 01:07:15 AM:INFO:{'param_1': 500}
+21/12/2018 01:07:15 AM:INFO:COMMIT
+21/12/2018 01:08:02 AM:INFO:BEGIN (implicit)
+21/12/2018 01:08:02 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 01:08:02 AM:INFO:{'param_1': 500}
+21/12/2018 01:08:02 AM:INFO:COMMIT
+21/12/2018 01:08:58 AM:INFO:BEGIN (implicit)
+21/12/2018 01:08:58 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 01:08:58 AM:INFO:{'param_1': 500}
+21/12/2018 01:08:58 AM:INFO:COMMIT
+21/12/2018 01:09:05 AM:INFO:BEGIN (implicit)
+21/12/2018 01:09:05 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 01:09:05 AM:INFO:{'param_1': 500}
+21/12/2018 01:09:05 AM:INFO:COMMIT
+21/12/2018 01:09:10 AM:INFO:BEGIN (implicit)
+21/12/2018 01:09:10 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 01:09:10 AM:INFO:{'param_1': 500}
+21/12/2018 01:09:10 AM:INFO:COMMIT
+21/12/2018 01:09:42 AM:INFO:BEGIN (implicit)
+21/12/2018 01:09:42 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 01:09:42 AM:INFO:{'param_1': 500}
+21/12/2018 01:09:42 AM:INFO:COMMIT
+21/12/2018 01:10:19 AM:INFO:BEGIN (implicit)
+21/12/2018 01:10:19 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 01:10:19 AM:INFO:{'param_1': 500}
+21/12/2018 01:10:19 AM:INFO:COMMIT
+21/12/2018 01:17:59 AM:INFO:BEGIN (implicit)
+21/12/2018 01:17:59 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 01:17:59 AM:INFO:{'param_1': 500}
+21/12/2018 01:17:59 AM:INFO:COMMIT
+21/12/2018 01:18:11 AM:INFO:BEGIN (implicit)
+21/12/2018 01:18:11 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 01:18:11 AM:INFO:{'param_1': 500}
+21/12/2018 01:18:11 AM:INFO:COMMIT
+21/12/2018 01:23:40 AM:INFO:starting gunicorn server
+21/12/2018 01:23:40 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 01:25:01 AM:INFO:select version()
+21/12/2018 01:25:01 AM:INFO:{}
+21/12/2018 01:25:01 AM:INFO:select current_schema()
+21/12/2018 01:25:01 AM:INFO:{}
+21/12/2018 01:25:01 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 01:25:01 AM:INFO:{}
+21/12/2018 01:25:01 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 01:25:01 AM:INFO:{}
+21/12/2018 01:25:01 AM:INFO:show standard_conforming_strings
+21/12/2018 01:25:01 AM:INFO:{}
+21/12/2018 01:25:01 AM:INFO:BEGIN (implicit)
+21/12/2018 01:25:01 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by, apps.purchase_trx_header_tbl.vehicle_number AS apps_purchase_trx_header_tbl_vehicle_number 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s 
+ LIMIT %(param_1)s
+21/12/2018 01:25:01 AM:INFO:{'purchase_trx_number_1': 'PO_12122018/1', 'param_1': 1}
+21/12/2018 01:25:01 AM:INFO:ROLLBACK
+21/12/2018 01:25:01 AM:ERROR:None
+21/12/2018 01:26:15 AM:INFO:BEGIN (implicit)
+21/12/2018 01:26:15 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by, apps.purchase_trx_header_tbl.vehicle_number AS apps_purchase_trx_header_tbl_vehicle_number 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s 
+ LIMIT %(param_1)s
+21/12/2018 01:26:15 AM:INFO:{'purchase_trx_number_1': 'PO_12122018/1', 'param_1': 1}
+21/12/2018 01:26:15 AM:INFO:ROLLBACK
+21/12/2018 01:26:15 AM:ERROR:None
+21/12/2018 01:27:21 AM:INFO:starting gunicorn server
+21/12/2018 01:27:21 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 01:29:02 AM:INFO:starting gunicorn server
+21/12/2018 01:29:02 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 01:29:10 AM:INFO:select version()
+21/12/2018 01:29:10 AM:INFO:{}
+21/12/2018 01:29:10 AM:INFO:select current_schema()
+21/12/2018 01:29:10 AM:INFO:{}
+21/12/2018 01:29:10 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 01:29:10 AM:INFO:{}
+21/12/2018 01:29:10 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 01:29:10 AM:INFO:{}
+21/12/2018 01:29:10 AM:INFO:show standard_conforming_strings
+21/12/2018 01:29:10 AM:INFO:{}
+21/12/2018 01:29:10 AM:INFO:BEGIN (implicit)
+21/12/2018 01:29:10 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by, apps.purchase_trx_header_tbl.vehicle_number AS apps_purchase_trx_header_tbl_vehicle_number 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s 
+ LIMIT %(param_1)s
+21/12/2018 01:29:10 AM:INFO:{'purchase_trx_number_1': 'PO_12122018', 'param_1': 1}
+21/12/2018 01:29:29 AM:INFO:UPDATE apps.purchase_trx_header_tbl SET transaction_date=%(transaction_date)s, amount=%(amount)s, last_update_date=%(last_update_date)s WHERE apps.purchase_trx_header_tbl.transaction_header_id = %(apps_purchase_trx_header_tbl_transaction_header_id)s
+21/12/2018 01:29:29 AM:INFO:{'transaction_date': datetime.date(2018, 12, 12), 'amount': 20, 'last_update_date': datetime.datetime(2018, 12, 20, 19, 59, 29, 708336), 'apps_purchase_trx_header_tbl_transaction_header_id': 14}
+21/12/2018 01:29:29 AM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.booking_unit_price AS apps_purchase_trx_lines_tbl_booking_unit_price, apps.purchase_trx_lines_tbl.booking_quantity AS apps_purchase_trx_lines_tbl_booking_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_quantity AS apps_purchase_trx_lines_tbl_receipt_quantity, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by, apps.purchase_trx_lines_tbl.line_number AS apps_purchase_trx_lines_tbl_line_number, apps.purchase_trx_lines_tbl.discount AS apps_purchase_trx_lines_tbl_discount 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+21/12/2018 01:29:29 AM:INFO:{'param_1': 14}
+21/12/2018 01:29:29 AM:INFO:ROLLBACK
+21/12/2018 01:29:29 AM:ERROR:None
+21/12/2018 01:36:59 AM:INFO:starting gunicorn server
+21/12/2018 01:36:59 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 01:37:34 AM:INFO:starting gunicorn server
+21/12/2018 01:37:34 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 01:39:02 AM:INFO:starting gunicorn server
+21/12/2018 01:39:02 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 01:39:52 AM:INFO:starting gunicorn server
+21/12/2018 01:39:52 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 01:41:38 AM:INFO:select version()
+21/12/2018 01:41:38 AM:INFO:{}
+21/12/2018 01:41:38 AM:INFO:select current_schema()
+21/12/2018 01:41:38 AM:INFO:{}
+21/12/2018 01:41:38 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 01:41:38 AM:INFO:{}
+21/12/2018 01:41:38 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 01:41:38 AM:INFO:{}
+21/12/2018 01:41:38 AM:INFO:show standard_conforming_strings
+21/12/2018 01:41:38 AM:INFO:{}
+21/12/2018 01:41:38 AM:INFO:BEGIN (implicit)
+21/12/2018 01:41:38 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 01:41:38 AM:INFO:{'param_1': 500}
+21/12/2018 01:41:38 AM:INFO:COMMIT
+21/12/2018 01:41:40 AM:INFO:BEGIN (implicit)
+21/12/2018 01:41:40 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 01:41:40 AM:INFO:{'param_1': 500}
+21/12/2018 01:41:40 AM:INFO:COMMIT
+21/12/2018 01:50:36 AM:INFO:BEGIN (implicit)
+21/12/2018 01:50:36 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+21/12/2018 01:50:36 AM:INFO:{'param_1': 500}
+21/12/2018 01:50:36 AM:INFO:COMMIT

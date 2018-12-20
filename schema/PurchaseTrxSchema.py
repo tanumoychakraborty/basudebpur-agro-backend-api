@@ -54,7 +54,7 @@ class PurchaseTrxHeaderUpdateSchema(Schema):
     classdocs
     '''
     
-    transaction_header_id = fields.Int(required=True)
+    transaction_header_id = fields.Int()
     purchase_trx_number = fields.Str(required=True)
     transaction_date = fields.Date('%d/%m/%Y') #fields.DateTime('%Y-%m-%dT%H:%M:%S+03:00')
     order_type = fields.Str()
@@ -76,7 +76,7 @@ class PurchaseTrxLinesUpdateSchema(Schema):
     classdocs
     '''
     transaction_line_id = fields.Int(required=True)   
-    transaction_header_id = fields.Int(required=True)
+    transaction_header_id = fields.Int()
     item_id = fields.Int()
     item_description = fields.Str(missing='')
     unit_price = fields.Int()

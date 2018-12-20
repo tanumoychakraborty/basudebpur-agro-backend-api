@@ -4,7 +4,7 @@ Created on 11-Nov-2018
 @author: duttasudip89
 '''
 
-from model import Base
+from model import Base, SupplierMasterSites
 from sqlalchemy.sql.schema import Column, Sequence
 from sqlalchemy.sql.sqltypes import String, Integer, DateTime, Date
 from sqlalchemy.orm import relationship
@@ -25,4 +25,4 @@ class SupplierMasterHeader (Base):
     ship_to_location_code = Column('ship_to_location_code', String)
     bill_to_location_code = Column('bill_to_location_code', String)
     
-    sites = relationship('model.SupplierMasterSites', back_populates='supplier')
+    sites = relationship('model.SupplierMasterSites.SupplierMasterSites', back_populates='supplier')

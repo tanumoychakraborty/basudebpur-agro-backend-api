@@ -15,7 +15,8 @@ from schema.PurchaseTrxSchema import PurchaseTrxHeaderSchema,PurchaseTrxHeaderUp
 class PurchaseTrx(object):
     
     
-    serializers = { 'post': PurchaseTrxHeaderSchema
+    serializers = { 'post': PurchaseTrxHeaderSchema,
+                    'put': PurchaseTrxHeaderUpdateSchema
                     }
                    
     
@@ -48,7 +49,7 @@ class PurchaseTrx(object):
         if 'purchase_trx_number' in params.keys():
             purchase_trx_details = get_purchase_transaction_details(params,0,None)
         else:
-            purchase_trx_details = get_purchase_transaction_details(params,0,None)
+            purchase_trx_details = get_purchase_transaction_details(None,0,None)
         
         for purchase_trx_detail in purchase_trx_details:
             for key, value in purchase_trx_detail.items():

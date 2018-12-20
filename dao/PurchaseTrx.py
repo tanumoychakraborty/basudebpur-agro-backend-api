@@ -54,22 +54,22 @@ def get_purchase_transaction_details(params,page, page_size,session):
     if params is None:
         purchaseTrxDetails = session.query(PurchaseTrxHeader.purchase_trx_number,PurchaseTrxHeader.transaction_date,
                                            SupplierMasterHeader.supplier_name,PurchaseTrxHeader.amount,PurchaseTrxHeader.order_type,PurchaseTrxHeader.order_status,
-                                           PurchaseTrxHeader.weighting_number).join(SupplierMasterHeader,PurchaseTrxHeader.suppplier_id==SupplierMasterHeader.supplier_id).limit(500).all
+                                           PurchaseTrxHeader.weighting_number).join(SupplierMasterHeader,PurchaseTrxHeader.suppplier_id==SupplierMasterHeader.supplier_id).limit(500).all()
         if page_size:
             purchaseTrxDetails = purchaseTrxDetails.limit(page_size)
         if page: 
             purchaseTrxDetails = purchaseTrxDetails.offset(page*page_size)
     else:
-        setwherecaluse1 = ''"'NA'"''
-        setwherecaluse2 = ''"'NA'"''
-        setwherecaluse = setwherecaluse1 +'='+setwherecaluse2
+#         setwherecaluse1 = ''"'NA'"''
+#         setwherecaluse2 = ''"'NA'"''
+#         setwherecaluse = setwherecaluse1 +'='+setwherecaluse2
         purchase_trx_number = params['purchase_trx_number']
-        supplier_id = params['supplier_id']
-        transaction_date = params['transaction_date']
-        weighting_number = params['weighting_number']
-        buyer_id = params['buyer_id']
-        from_creation_date = params['from_creation_date']
-        to_creation_date = params['to_creation_date']
+#         supplier_id = params['supplier_id']
+#         transaction_date = params['transaction_date']
+#         weighting_number = params['weighting_number']
+#         buyer_id = params['buyer_id']
+#         from_creation_date = params['from_creation_date']
+#         to_creation_date = params['to_creation_date']
         
                 
         
