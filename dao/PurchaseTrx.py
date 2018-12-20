@@ -5,6 +5,7 @@ Created on 26-Nov-2018
 '''
 from model.PurchaseTrxHeader import PurchaseTrxHeader
 from model.PurchaseTrxLines import PurchaseTrxLines
+from model.SupplierMasterHeader import SupplierMasterHeader
 from util.db_helper import db_transaction
 
 
@@ -20,6 +21,7 @@ def create_purchase_trx(raw_data, session):
     purchasetrxheader.amount = raw_data['amount']
     purchasetrxheader.ref_doc = raw_data['ref_doc']
     purchasetrxheader.weighting_number = raw_data['weighting_number']
+    purchasetrxheader.vehicle_number = raw_data['vehicle_number']
     purchasetrxheader.created_by = raw_data['created_by']
     purchasetrxheader.last_updated_by = raw_data['last_updated_by']
         
@@ -27,12 +29,14 @@ def create_purchase_trx(raw_data, session):
     for purchase_trx_line in raw_data['purchase_trx_lines']:
         purchasetrxLine = PurchaseTrxLines()
         purchasetrxLine.item_id = purchase_trx_line['item_id']
+        purchasetrxLine.line_number = purchase_trx_line['line_number']
         purchasetrxLine.item_description = purchase_trx_line['item_description']
-        purchasetrxLine.unit_price = purchase_trx_line['unit_price']
-        purchasetrxLine.quantity = purchase_trx_line['quantity']
+        purchasetrxLine.booking_unit_price = purchase_trx_line['booking_unit_price']
+        purchasetrxLine.booking_quantity = purchase_trx_line['booking_quantity']
         purchasetrxLine.receipt_unit_price = purchase_trx_line['receipt_unit_price']
-        purchasetrxLine.receipt_qty = purchase_trx_line['receipt_qty']
+        purchasetrxLine.receipt_quantity = purchase_trx_line['receipt_quantity']
         purchasetrxLine.unit_of_measure = purchase_trx_line['unit_of_measure']
+        purchasetrxLine.discount = purchase_trx_line['discount']
         purchasetrxLine.line_status = purchase_trx_line['line_status']
         purchasetrxLine.created_by = purchase_trx_line['created_by']
         purchasetrxLine.last_updated_by = purchase_trx_line['last_updated_by']   
@@ -45,28 +49,53 @@ def create_purchase_trx(raw_data, session):
     return purchasetrxheader
 
 @db_transaction
-def get_purchase_transaction_details(params, session):
+def get_purchase_transaction_details(params,page, page_size,session):
     resultL = []
     if params is None:
-        purchaseTrxDetails = session.query(PurchaseTrxHeader).all()
+        purchaseTrxDetails = session.query(PurchaseTrxHeader.purchase_trx_number,PurchaseTrxHeader.transaction_date,
+                                           SupplierMasterHeader.supplier_name,PurchaseTrxHeader.amount,PurchaseTrxHeader.order_type,PurchaseTrxHeader.order_status,
+                                           PurchaseTrxHeader.weighting_number).join(SupplierMasterHeader,PurchaseTrxHeader.suppplier_id==SupplierMasterHeader.supplier_id).limit(500).all
+        if page_size:
+            purchaseTrxDetails = purchaseTrxDetails.limit(page_size)
+        if page: 
+            purchaseTrxDetails = purchaseTrxDetails.offset(page*page_size)
     else:
+        setwherecaluse1 = ''"'NA'"''
+        setwherecaluse2 = ''"'NA'"''
+        setwherecaluse = setwherecaluse1 +'='+setwherecaluse2
         purchase_trx_number = params['purchase_trx_number']
-        purchaseTrxDetails = session.query(PurchaseTrxHeader).filter_by(purchase_trx_number=purchase_trx_number).all()
-    
+        supplier_id = params['supplier_id']
+        transaction_date = params['transaction_date']
+        weighting_number = params['weighting_number']
+        buyer_id = params['buyer_id']
+        from_creation_date = params['from_creation_date']
+        to_creation_date = params['to_creation_date']
+        
+                
+        
+        
+        
+        purchaseTrxDetails = session.query(PurchaseTrxHeader.purchase_trx_number,PurchaseTrxHeader.transaction_date
+                                           ,SupplierMasterHeader.supplier_name,PurchaseTrxHeader.amount,PurchaseTrxHeader.order_type,PurchaseTrxHeader.order_status
+                                           ,PurchaseTrxHeader.weighting_number).join(SupplierMasterHeader,PurchaseTrxHeader.suppplier_id==SupplierMasterHeader.supplier_id).filter(PurchaseTrxHeader.purchase_trx_number== purchase_trx_number).all()
+         
+        
+        if page_size:
+            purchaseTrxDetails = purchaseTrxDetails.limit(page_size)
+        if page: 
+            purchaseTrxDetails = purchaseTrxDetails.offset(page*page_size) 
+                  
     for purchaseTrxDetail in purchaseTrxDetails:
-        rowdict = dict(purchaseTrxDetail.__dict__)
-        rowdict.pop('_sa_instance_state')
-        purchaseLines = purchaseTrxDetail.purchase_trx_lines
+        dict ={ }
+        dict['purchase_trx_number'] = purchaseTrxDetail[0]
+        dict['transaction_date'] = purchaseTrxDetail[1]
+        dict['supplier_name'] = purchaseTrxDetail[2]
+        dict['amount'] = purchaseTrxDetail[3]
+        dict['order_status'] = purchaseTrxDetail[4]
+        dict['order_type'] = purchaseTrxDetail[5]
+        dict['weighting_number'] = purchaseTrxDetail[6]
         
-        linedict = []
-        for  purchaseLine in purchaseLines:
-            line = dict(purchaseLine.__dict__)
-            line.pop('_sa_instance_state')
-            linedict.append(line)
-        
-        rowdict['purchase_trx_lines']= linedict
-        
-        resultL.append(rowdict)
+        resultL.append(dict)    
             
     return resultL
 
@@ -88,18 +117,21 @@ def update_purchase_trx(raw_data,session):
     purchasetrxheader.ref_doc = raw_data['ref_doc']
     '''
     purchasetrxheader.weighting_number = raw_data['weighting_number']
+    purchasetrxheader.vehicle_number = raw_data['vehicle_number']
     purchasetrxheader.last_updated_by = raw_data['last_updated_by']
         
     for purchase_trx_line in raw_data['purchase_trx_lines']:
         for trx_line in purchasetrxheader.purchase_trx_lines:
             if purchase_trx_line["transaction_line_id"] == trx_line.transaction_line_id:
                 trx_line.item_id = purchase_trx_line['item_id']
+                trx_line.line_number = purchase_trx_line['line_number']
                 trx_line.item_description = purchase_trx_line['item_description']
-                trx_line.unit_price = purchase_trx_line['unit_price']
-                trx_line.quantity = purchase_trx_line['quantity']
+                trx_line.booking_unit_price = purchase_trx_line['booking_unit_price']
+                trx_line.booking_quantity = purchase_trx_line['booking_quantity']
                 trx_line.receipt_unit_price = purchase_trx_line['receipt_unit_price']
-                trx_line.receipt_qty = purchase_trx_line['receipt_qty']
+                trx_line.receipt_quantity = purchase_trx_line['receipt_quantity']
                 trx_line.unit_of_measure = purchase_trx_line['unit_of_measure']
+                trx_line.discount = purchase_trx_line['discount']
                 trx_line.line_status = purchase_trx_line['line_status']
                 trx_line.created_by = purchase_trx_line['created_by']
                 trx_line.last_updated_by = purchase_trx_line['last_updated_by']   

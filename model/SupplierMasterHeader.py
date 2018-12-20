@@ -21,7 +21,7 @@ class SupplierMasterHeader (Base):
     enabled_flag = Column('enabled_flag', String)
     effective_from = Column('effective_from', DateTime)
     effective_to = Column('effective_to', DateTime)
-    employee_id = Column('employee_id', int)
+    employee_id = Column('employee_id', Integer)
     ship_to_location_code = Column('ship_to_location_code', String)
     bill_to_location_code = Column('bill_to_location_code', String)
     

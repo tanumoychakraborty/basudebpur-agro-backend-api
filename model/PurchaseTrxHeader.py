@@ -27,7 +27,6 @@ class PurchaseTrxHeader (Base):
     creation_date = Column('creation_date', DateTime,default=datetime.datetime.utcnow)
     last_update_date = Column('last_update_date', DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
     last_updated_by = Column('last_updated_by', Integer)
+    vehicle_number  = Column('vehicle_number', String)
     
     purchase_trx_lines = relationship('model.PurchaseTrxLines.PurchaseTrxLines', back_populates='purchase_trx_header')
-    
-        

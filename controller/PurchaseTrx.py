@@ -14,9 +14,10 @@ from schema.PurchaseTrxSchema import PurchaseTrxHeaderSchema,PurchaseTrxHeaderUp
 
 class PurchaseTrx(object):
     
-    serializers = { 'post': PurchaseTrxHeaderSchema,
-                    'put': PurchaseTrxHeaderUpdateSchema
+    
+    serializers = { 'post': PurchaseTrxHeaderSchema
                     }
+                   
     
     def on_post(self, req, resp):
         try:
@@ -45,9 +46,9 @@ class PurchaseTrx(object):
         payload = {}        
             
         if 'purchase_trx_number' in params.keys():
-            purchase_trx_details = get_purchase_transaction_details(params)
+            purchase_trx_details = get_purchase_transaction_details(params,0,None)
         else:
-            purchase_trx_details = get_purchase_transaction_details(None)
+            purchase_trx_details = get_purchase_transaction_details(params,0,None)
         
         for purchase_trx_detail in purchase_trx_details:
             for key, value in purchase_trx_detail.items():

@@ -272,3 +272,513 @@ WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
 08/12/2018 02:53:11 AM:INFO:UPDATE apps.purchase_trx_lines_tbl SET item_description=%(item_description)s, last_update_date=%(last_update_date)s WHERE apps.purchase_trx_lines_tbl.transaction_line_id = %(apps_purchase_trx_lines_tbl_transaction_line_id)s
 08/12/2018 02:53:11 AM:INFO:({'item_description': 'Test Item 1', 'last_update_date': datetime.datetime(2018, 12, 7, 21, 23, 11, 677472), 'apps_purchase_trx_lines_tbl_transaction_line_id': 1}, {'item_description': 'Test Item 2', 'last_update_date': datetime.datetime(2018, 12, 7, 21, 23, 11, 677498), 'apps_purchase_trx_lines_tbl_transaction_line_id': 2})
 08/12/2018 02:53:11 AM:INFO:COMMIT
+09/12/2018 06:56:21 PM:INFO:starting gunicorn server
+09/12/2018 06:56:21 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+09/12/2018 06:56:27 PM:INFO:select version()
+09/12/2018 06:56:27 PM:INFO:{}
+09/12/2018 06:56:27 PM:INFO:select current_schema()
+09/12/2018 06:56:27 PM:INFO:{}
+09/12/2018 06:56:27 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+09/12/2018 06:56:27 PM:INFO:{}
+09/12/2018 06:56:27 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+09/12/2018 06:56:27 PM:INFO:{}
+09/12/2018 06:56:27 PM:INFO:show standard_conforming_strings
+09/12/2018 06:56:27 PM:INFO:{}
+09/12/2018 06:56:27 PM:INFO:BEGIN (implicit)
+09/12/2018 06:56:27 PM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+09/12/2018 06:56:27 PM:INFO:{'purchase_trx_number_1': '26_11_001'}
+09/12/2018 06:56:27 PM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.unit_price AS apps_purchase_trx_lines_tbl_unit_price, apps.purchase_trx_lines_tbl.quantity AS apps_purchase_trx_lines_tbl_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_qty AS apps_purchase_trx_lines_tbl_receipt_qty, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+09/12/2018 06:56:27 PM:INFO:{'param_1': 2}
+09/12/2018 06:56:27 PM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.unit_price AS apps_purchase_trx_lines_tbl_unit_price, apps.purchase_trx_lines_tbl.quantity AS apps_purchase_trx_lines_tbl_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_qty AS apps_purchase_trx_lines_tbl_receipt_qty, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+09/12/2018 06:56:27 PM:INFO:{'param_1': 1}
+09/12/2018 06:56:27 PM:INFO:COMMIT
+14/12/2018 04:24:45 PM:INFO:starting gunicorn server
+14/12/2018 04:24:45 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 04:26:02 PM:INFO:starting gunicorn server
+14/12/2018 04:26:03 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 04:28:53 PM:INFO:starting gunicorn server
+14/12/2018 04:28:53 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 04:35:50 PM:INFO:starting gunicorn server
+14/12/2018 04:35:50 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 04:37:56 PM:INFO:starting gunicorn server
+14/12/2018 04:37:56 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 05:28:31 PM:INFO:starting gunicorn server
+14/12/2018 05:28:31 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 05:29:40 PM:ERROR:None
+14/12/2018 05:31:44 PM:ERROR:None
+14/12/2018 05:34:50 PM:INFO:starting gunicorn server
+14/12/2018 05:34:50 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 05:35:04 PM:ERROR:None
+14/12/2018 05:36:22 PM:INFO:starting gunicorn server
+14/12/2018 05:36:22 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 05:38:08 PM:INFO:starting gunicorn server
+14/12/2018 05:38:08 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 05:41:31 PM:INFO:starting gunicorn server
+14/12/2018 05:41:31 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 05:41:47 PM:INFO:starting gunicorn server
+14/12/2018 05:41:47 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 05:41:59 PM:INFO:starting gunicorn server
+14/12/2018 05:41:59 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 05:42:15 PM:INFO:starting gunicorn server
+14/12/2018 05:42:15 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 05:43:40 PM:INFO:starting gunicorn server
+14/12/2018 05:43:40 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 05:55:30 PM:INFO:starting gunicorn server
+14/12/2018 05:55:31 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 05:55:54 PM:ERROR:None
+14/12/2018 05:57:42 PM:INFO:starting gunicorn server
+14/12/2018 05:57:42 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 05:58:00 PM:INFO:select version()
+14/12/2018 05:58:00 PM:INFO:{}
+14/12/2018 05:58:00 PM:INFO:select current_schema()
+14/12/2018 05:58:00 PM:INFO:{}
+14/12/2018 05:58:00 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 05:58:00 PM:INFO:{}
+14/12/2018 05:58:00 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 05:58:00 PM:INFO:{}
+14/12/2018 05:58:00 PM:INFO:show standard_conforming_strings
+14/12/2018 05:58:00 PM:INFO:{}
+14/12/2018 05:58:00 PM:INFO:BEGIN (implicit)
+14/12/2018 05:58:00 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+14/12/2018 05:58:00 PM:INFO:{'purchase_trx_number_1': '26_11_001'}
+14/12/2018 05:58:17 PM:INFO:ROLLBACK
+14/12/2018 05:58:22 PM:ERROR:None
+14/12/2018 06:04:04 PM:INFO:starting gunicorn server
+14/12/2018 06:04:04 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 06:04:19 PM:INFO:select version()
+14/12/2018 06:04:19 PM:INFO:{}
+14/12/2018 06:04:19 PM:INFO:select current_schema()
+14/12/2018 06:04:19 PM:INFO:{}
+14/12/2018 06:04:19 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 06:04:19 PM:INFO:{}
+14/12/2018 06:04:19 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 06:04:19 PM:INFO:{}
+14/12/2018 06:04:19 PM:INFO:show standard_conforming_strings
+14/12/2018 06:04:19 PM:INFO:{}
+14/12/2018 06:04:19 PM:INFO:BEGIN (implicit)
+14/12/2018 06:04:19 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+14/12/2018 06:04:19 PM:INFO:{'purchase_trx_number_1': '26_11_001'}
+14/12/2018 06:19:05 PM:INFO:starting gunicorn server
+14/12/2018 06:19:05 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 06:19:22 PM:INFO:select version()
+14/12/2018 06:19:22 PM:INFO:{}
+14/12/2018 06:19:22 PM:INFO:select current_schema()
+14/12/2018 06:19:22 PM:INFO:{}
+14/12/2018 06:19:22 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 06:19:22 PM:INFO:{}
+14/12/2018 06:19:22 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 06:19:22 PM:INFO:{}
+14/12/2018 06:19:22 PM:INFO:show standard_conforming_strings
+14/12/2018 06:19:22 PM:INFO:{}
+14/12/2018 06:19:22 PM:INFO:BEGIN (implicit)
+14/12/2018 06:19:22 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+14/12/2018 06:19:22 PM:INFO:{'purchase_trx_number_1': '26_11_001'}
+14/12/2018 06:19:33 PM:INFO:ROLLBACK
+14/12/2018 06:59:34 PM:INFO:starting gunicorn server
+14/12/2018 06:59:34 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 06:59:42 PM:INFO:select version()
+14/12/2018 06:59:42 PM:INFO:{}
+14/12/2018 06:59:42 PM:INFO:select current_schema()
+14/12/2018 06:59:42 PM:INFO:{}
+14/12/2018 06:59:42 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 06:59:42 PM:INFO:{}
+14/12/2018 06:59:42 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 06:59:42 PM:INFO:{}
+14/12/2018 06:59:42 PM:INFO:show standard_conforming_strings
+14/12/2018 06:59:42 PM:INFO:{}
+14/12/2018 06:59:42 PM:INFO:BEGIN (implicit)
+14/12/2018 06:59:42 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+14/12/2018 06:59:42 PM:INFO:{'purchase_trx_number_1': '26_11_001'}
+14/12/2018 07:14:23 PM:INFO:starting gunicorn server
+14/12/2018 07:14:23 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 07:14:52 PM:INFO:select version()
+14/12/2018 07:14:52 PM:INFO:{}
+14/12/2018 07:14:52 PM:INFO:select current_schema()
+14/12/2018 07:14:52 PM:INFO:{}
+14/12/2018 07:14:52 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 07:14:52 PM:INFO:{}
+14/12/2018 07:14:52 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 07:14:52 PM:INFO:{}
+14/12/2018 07:14:52 PM:INFO:show standard_conforming_strings
+14/12/2018 07:14:52 PM:INFO:{}
+14/12/2018 07:14:52 PM:INFO:BEGIN (implicit)
+14/12/2018 07:14:52 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+14/12/2018 07:14:52 PM:INFO:{'purchase_trx_number_1': '26_11_001'}
+14/12/2018 07:15:01 PM:INFO:ROLLBACK
+14/12/2018 07:15:08 PM:ERROR:None
+14/12/2018 07:17:39 PM:INFO:starting gunicorn server
+14/12/2018 07:17:39 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 07:17:47 PM:INFO:select version()
+14/12/2018 07:17:47 PM:INFO:{}
+14/12/2018 07:17:47 PM:INFO:select current_schema()
+14/12/2018 07:17:47 PM:INFO:{}
+14/12/2018 07:17:47 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 07:17:47 PM:INFO:{}
+14/12/2018 07:17:47 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 07:17:47 PM:INFO:{}
+14/12/2018 07:17:47 PM:INFO:show standard_conforming_strings
+14/12/2018 07:17:47 PM:INFO:{}
+14/12/2018 07:17:47 PM:INFO:BEGIN (implicit)
+14/12/2018 07:17:47 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.suppplier_id AS apps_purchase_trx_header_tbl_suppplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+14/12/2018 07:17:47 PM:INFO:{'purchase_trx_number_1': '26_11_001'}
+14/12/2018 07:18:00 PM:INFO:COMMIT
+14/12/2018 07:26:49 PM:INFO:starting gunicorn server
+14/12/2018 07:26:49 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 07:26:55 PM:INFO:select version()
+14/12/2018 07:26:55 PM:INFO:{}
+14/12/2018 07:26:55 PM:INFO:select current_schema()
+14/12/2018 07:26:55 PM:INFO:{}
+14/12/2018 07:26:55 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 07:26:55 PM:INFO:{}
+14/12/2018 07:26:55 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 07:26:55 PM:INFO:{}
+14/12/2018 07:26:55 PM:INFO:show standard_conforming_strings
+14/12/2018 07:26:55 PM:INFO:{}
+14/12/2018 07:26:55 PM:INFO:BEGIN (implicit)
+14/12/2018 07:26:55 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+14/12/2018 07:26:55 PM:INFO:{'purchase_trx_number_1': '26_11_001'}
+14/12/2018 07:26:55 PM:INFO:COMMIT
+14/12/2018 07:44:44 PM:INFO:starting gunicorn server
+14/12/2018 07:44:44 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 07:46:12 PM:ERROR:None
+14/12/2018 07:52:18 PM:INFO:starting gunicorn server
+14/12/2018 07:52:18 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 07:56:14 PM:INFO:starting gunicorn server
+14/12/2018 07:56:14 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 07:59:27 PM:INFO:starting gunicorn server
+14/12/2018 07:59:27 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:00:38 PM:INFO:select version()
+14/12/2018 08:00:39 PM:INFO:{}
+14/12/2018 08:00:39 PM:INFO:select current_schema()
+14/12/2018 08:00:39 PM:INFO:{}
+14/12/2018 08:00:39 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:00:39 PM:INFO:{}
+14/12/2018 08:00:39 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:00:39 PM:INFO:{}
+14/12/2018 08:00:39 PM:INFO:show standard_conforming_strings
+14/12/2018 08:00:39 PM:INFO:{}
+14/12/2018 08:00:39 PM:INFO:BEGIN (implicit)
+14/12/2018 08:00:39 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE 1=1,PurchaseTrxHeader.purchase_trx_number ==26_11_001,PurchaseTrxHeader.supplier_id ==NA,PurchaseTrxHeader.transaction_date ==NA,PurchaseTrxHeader.weighting_number ==NA,PurchaseTrxHeader.buyer_id ==NA
+14/12/2018 08:00:39 PM:INFO:{}
+14/12/2018 08:00:43 PM:INFO:ROLLBACK
+14/12/2018 08:00:55 PM:ERROR:None
+14/12/2018 08:07:26 PM:INFO:starting gunicorn server
+14/12/2018 08:07:26 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:07:41 PM:INFO:starting gunicorn server
+14/12/2018 08:07:41 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:08:04 PM:INFO:starting gunicorn server
+14/12/2018 08:08:04 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:08:27 PM:INFO:select version()
+14/12/2018 08:08:27 PM:INFO:{}
+14/12/2018 08:08:27 PM:INFO:select current_schema()
+14/12/2018 08:08:27 PM:INFO:{}
+14/12/2018 08:08:27 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:08:27 PM:INFO:{}
+14/12/2018 08:08:27 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:08:27 PM:INFO:{}
+14/12/2018 08:08:27 PM:INFO:show standard_conforming_strings
+14/12/2018 08:08:27 PM:INFO:{}
+14/12/2018 08:08:27 PM:INFO:BEGIN (implicit)
+14/12/2018 08:08:27 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE 1==1,PurchaseTrxHeader.purchase_trx_number ==26_11_001,PurchaseTrxHeader.supplier_id ==NA
+14/12/2018 08:08:27 PM:INFO:{}
+14/12/2018 08:08:30 PM:INFO:ROLLBACK
+14/12/2018 08:08:31 PM:ERROR:None
+14/12/2018 08:10:43 PM:INFO:starting gunicorn server
+14/12/2018 08:10:43 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:11:03 PM:INFO:select version()
+14/12/2018 08:11:03 PM:INFO:{}
+14/12/2018 08:11:03 PM:INFO:select current_schema()
+14/12/2018 08:11:03 PM:INFO:{}
+14/12/2018 08:11:03 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:11:03 PM:INFO:{}
+14/12/2018 08:11:03 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:11:03 PM:INFO:{}
+14/12/2018 08:11:03 PM:INFO:show standard_conforming_strings
+14/12/2018 08:11:03 PM:INFO:{}
+14/12/2018 08:11:03 PM:INFO:BEGIN (implicit)
+14/12/2018 08:11:03 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE 1==1 , PurchaseTrxHeader.purchase_trx_number ==26_11_001
+14/12/2018 08:11:03 PM:INFO:{}
+14/12/2018 08:11:11 PM:INFO:ROLLBACK
+14/12/2018 08:14:55 PM:INFO:starting gunicorn server
+14/12/2018 08:14:55 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:15:25 PM:INFO:select version()
+14/12/2018 08:15:25 PM:INFO:{}
+14/12/2018 08:15:25 PM:INFO:select current_schema()
+14/12/2018 08:15:25 PM:INFO:{}
+14/12/2018 08:15:25 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:15:25 PM:INFO:{}
+14/12/2018 08:15:25 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:15:25 PM:INFO:{}
+14/12/2018 08:15:25 PM:INFO:show standard_conforming_strings
+14/12/2018 08:15:25 PM:INFO:{}
+14/12/2018 08:15:25 PM:INFO:BEGIN (implicit)
+14/12/2018 08:15:25 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE and_(1==1 , PurchaseTrxHeader.purchase_trx_number ==26_11_001)
+14/12/2018 08:15:25 PM:INFO:{}
+14/12/2018 08:15:32 PM:INFO:ROLLBACK
+14/12/2018 08:19:51 PM:INFO:starting gunicorn server
+14/12/2018 08:19:51 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:20:12 PM:INFO:select version()
+14/12/2018 08:20:12 PM:INFO:{}
+14/12/2018 08:20:12 PM:INFO:select current_schema()
+14/12/2018 08:20:12 PM:INFO:{}
+14/12/2018 08:20:12 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:20:12 PM:INFO:{}
+14/12/2018 08:20:12 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:20:12 PM:INFO:{}
+14/12/2018 08:20:12 PM:INFO:show standard_conforming_strings
+14/12/2018 08:20:12 PM:INFO:{}
+14/12/2018 08:20:12 PM:INFO:BEGIN (implicit)
+14/12/2018 08:20:12 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE and_(1==1 , PurchaseTrxHeader.purchase_trx_number =='26_11_001')
+14/12/2018 08:20:12 PM:INFO:{}
+14/12/2018 08:20:16 PM:INFO:ROLLBACK
+14/12/2018 08:39:21 PM:INFO:starting gunicorn server
+14/12/2018 08:39:21 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:39:45 PM:INFO:starting gunicorn server
+14/12/2018 08:39:45 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:40:01 PM:INFO:starting gunicorn server
+14/12/2018 08:40:01 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:40:31 PM:INFO:starting gunicorn server
+14/12/2018 08:40:31 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:45:28 PM:INFO:starting gunicorn server
+14/12/2018 08:45:28 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:45:42 PM:ERROR:None
+14/12/2018 08:47:52 PM:INFO:starting gunicorn server
+14/12/2018 08:47:52 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:48:12 PM:INFO:select version()
+14/12/2018 08:48:12 PM:INFO:{}
+14/12/2018 08:48:12 PM:INFO:select current_schema()
+14/12/2018 08:48:12 PM:INFO:{}
+14/12/2018 08:48:12 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:48:12 PM:INFO:{}
+14/12/2018 08:48:12 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:48:12 PM:INFO:{}
+14/12/2018 08:48:12 PM:INFO:show standard_conforming_strings
+14/12/2018 08:48:12 PM:INFO:{}
+14/12/2018 08:48:12 PM:INFO:BEGIN (implicit)
+14/12/2018 08:48:12 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE and_("1=1 , PurchaseTrxHeader.purchase_trx_number =='26_11_001')
+14/12/2018 08:48:12 PM:INFO:{}
+14/12/2018 08:48:24 PM:INFO:ROLLBACK
+14/12/2018 08:49:38 PM:INFO:starting gunicorn server
+14/12/2018 08:49:39 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:49:55 PM:INFO:select version()
+14/12/2018 08:49:55 PM:INFO:{}
+14/12/2018 08:49:55 PM:INFO:select current_schema()
+14/12/2018 08:49:55 PM:INFO:{}
+14/12/2018 08:49:55 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:49:55 PM:INFO:{}
+14/12/2018 08:49:55 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:49:55 PM:INFO:{}
+14/12/2018 08:49:55 PM:INFO:show standard_conforming_strings
+14/12/2018 08:49:55 PM:INFO:{}
+14/12/2018 08:49:55 PM:INFO:BEGIN (implicit)
+14/12/2018 08:49:55 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE and_(1=1 , PurchaseTrxHeader.purchase_trx_number =='26_11_001')
+14/12/2018 08:49:55 PM:INFO:{}
+14/12/2018 08:50:05 PM:INFO:ROLLBACK
+14/12/2018 08:53:15 PM:INFO:starting gunicorn server
+14/12/2018 08:53:15 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 08:53:26 PM:INFO:select version()
+14/12/2018 08:53:26 PM:INFO:{}
+14/12/2018 08:53:26 PM:INFO:select current_schema()
+14/12/2018 08:53:26 PM:INFO:{}
+14/12/2018 08:53:26 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:53:26 PM:INFO:{}
+14/12/2018 08:53:26 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 08:53:26 PM:INFO:{}
+14/12/2018 08:53:26 PM:INFO:show standard_conforming_strings
+14/12/2018 08:53:26 PM:INFO:{}
+14/12/2018 08:53:26 PM:INFO:BEGIN (implicit)
+14/12/2018 08:53:26 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE and_(NA=NA , PurchaseTrxHeader.purchase_trx_number =='26_11_001')
+14/12/2018 08:53:26 PM:INFO:{}
+14/12/2018 08:53:30 PM:INFO:ROLLBACK
+14/12/2018 09:01:37 PM:INFO:starting gunicorn server
+14/12/2018 09:01:37 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 09:02:25 PM:ERROR:None
+14/12/2018 09:06:46 PM:INFO:starting gunicorn server
+14/12/2018 09:06:46 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 09:07:06 PM:INFO:select version()
+14/12/2018 09:07:06 PM:INFO:{}
+14/12/2018 09:07:06 PM:INFO:select current_schema()
+14/12/2018 09:07:06 PM:INFO:{}
+14/12/2018 09:07:06 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 09:07:06 PM:INFO:{}
+14/12/2018 09:07:06 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 09:07:06 PM:INFO:{}
+14/12/2018 09:07:06 PM:INFO:show standard_conforming_strings
+14/12/2018 09:07:06 PM:INFO:{}
+14/12/2018 09:07:06 PM:INFO:BEGIN (implicit)
+14/12/2018 09:07:06 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE and_(NA==NA , PurchaseTrxHeader.purchase_trx_number =='26_11_001')
+14/12/2018 09:07:06 PM:INFO:{}
+14/12/2018 09:08:55 PM:INFO:starting gunicorn server
+14/12/2018 09:08:55 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 09:09:10 PM:INFO:select version()
+14/12/2018 09:09:10 PM:INFO:{}
+14/12/2018 09:09:10 PM:INFO:select current_schema()
+14/12/2018 09:09:10 PM:INFO:{}
+14/12/2018 09:09:10 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 09:09:10 PM:INFO:{}
+14/12/2018 09:09:10 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 09:09:10 PM:INFO:{}
+14/12/2018 09:09:10 PM:INFO:show standard_conforming_strings
+14/12/2018 09:09:10 PM:INFO:{}
+14/12/2018 09:09:10 PM:INFO:BEGIN (implicit)
+14/12/2018 09:09:10 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE and_('NA'=='NA' , PurchaseTrxHeader.purchase_trx_number =='26_11_001')
+14/12/2018 09:09:10 PM:INFO:{}
+14/12/2018 09:09:15 PM:INFO:ROLLBACK
+14/12/2018 09:09:15 PM:ERROR:None
+14/12/2018 09:18:19 PM:INFO:starting gunicorn server
+14/12/2018 09:18:19 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 09:18:54 PM:INFO:select version()
+14/12/2018 09:18:54 PM:INFO:{}
+14/12/2018 09:18:54 PM:INFO:select current_schema()
+14/12/2018 09:18:54 PM:INFO:{}
+14/12/2018 09:18:54 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 09:18:54 PM:INFO:{}
+14/12/2018 09:18:54 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 09:18:54 PM:INFO:{}
+14/12/2018 09:18:54 PM:INFO:show standard_conforming_strings
+14/12/2018 09:18:54 PM:INFO:{}
+14/12/2018 09:18:54 PM:INFO:BEGIN (implicit)
+14/12/2018 09:18:54 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE 'NA'='NA' , PurchaseTrxHeader.purchase_trx_number =='26_11_001'
+14/12/2018 09:18:54 PM:INFO:{}
+14/12/2018 09:18:58 PM:INFO:ROLLBACK
+14/12/2018 09:22:42 PM:INFO:starting gunicorn server
+14/12/2018 09:22:42 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 09:22:57 PM:INFO:starting gunicorn server
+14/12/2018 09:22:57 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 09:23:18 PM:INFO:select version()
+14/12/2018 09:23:18 PM:INFO:{}
+14/12/2018 09:23:18 PM:INFO:select current_schema()
+14/12/2018 09:23:18 PM:INFO:{}
+14/12/2018 09:23:18 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 09:23:18 PM:INFO:{}
+14/12/2018 09:23:18 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 09:23:18 PM:INFO:{}
+14/12/2018 09:23:18 PM:INFO:show standard_conforming_strings
+14/12/2018 09:23:18 PM:INFO:{}
+14/12/2018 09:23:18 PM:INFO:BEGIN (implicit)
+14/12/2018 09:23:18 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE PurchaseTrxHeader.purchase_trx_number =='26_11_001'
+14/12/2018 09:23:18 PM:INFO:{}
+14/12/2018 09:23:20 PM:INFO:ROLLBACK
+14/12/2018 09:24:33 PM:INFO:starting gunicorn server
+14/12/2018 09:24:33 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 09:24:47 PM:INFO:select version()
+14/12/2018 09:24:47 PM:INFO:{}
+14/12/2018 09:24:47 PM:INFO:select current_schema()
+14/12/2018 09:24:47 PM:INFO:{}
+14/12/2018 09:24:47 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 09:24:47 PM:INFO:{}
+14/12/2018 09:24:47 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 09:24:47 PM:INFO:{}
+14/12/2018 09:24:47 PM:INFO:show standard_conforming_strings
+14/12/2018 09:24:47 PM:INFO:{}
+14/12/2018 09:24:47 PM:INFO:BEGIN (implicit)
+14/12/2018 09:24:47 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE purchase_trx_number =='26_11_001'
+14/12/2018 09:24:47 PM:INFO:{}
+14/12/2018 09:24:51 PM:INFO:ROLLBACK
+14/12/2018 09:24:52 PM:ERROR:None
+14/12/2018 11:32:16 PM:INFO:starting gunicorn server
+14/12/2018 11:32:16 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+14/12/2018 11:32:37 PM:INFO:select version()
+14/12/2018 11:32:37 PM:INFO:{}
+14/12/2018 11:32:37 PM:INFO:select current_schema()
+14/12/2018 11:32:37 PM:INFO:{}
+14/12/2018 11:32:37 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 11:32:37 PM:INFO:{}
+14/12/2018 11:32:37 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+14/12/2018 11:32:37 PM:INFO:{}
+14/12/2018 11:32:37 PM:INFO:show standard_conforming_strings
+14/12/2018 11:32:37 PM:INFO:{}
+14/12/2018 11:32:37 PM:INFO:BEGIN (implicit)
+14/12/2018 11:32:37 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.suppplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s
+14/12/2018 11:32:37 PM:INFO:{'purchase_trx_number_1': '26_11_001'}
+14/12/2018 11:32:45 PM:INFO:COMMIT
+14/12/2018 11:58:35 PM:INFO:starting gunicorn server
+14/12/2018 11:58:35 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/12/2018 12:02:58 AM:INFO:starting gunicorn server
+15/12/2018 12:02:58 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/12/2018 12:05:06 AM:INFO:starting gunicorn server
+15/12/2018 12:05:06 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/12/2018 12:12:09 AM:INFO:starting gunicorn server
+15/12/2018 12:12:09 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/12/2018 12:13:14 AM:ERROR:None
+15/12/2018 12:18:24 AM:INFO:starting gunicorn server
+15/12/2018 12:18:24 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/12/2018 12:24:54 AM:INFO:starting gunicorn server
+15/12/2018 12:24:54 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/12/2018 12:33:43 AM:INFO:starting gunicorn server
+15/12/2018 12:33:43 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/12/2018 12:40:26 AM:INFO:starting gunicorn server
+15/12/2018 12:40:26 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/12/2018 12:49:32 AM:INFO:starting gunicorn server
+15/12/2018 12:49:32 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/12/2018 12:49:52 AM:ERROR:None
+15/12/2018 12:54:54 AM:INFO:starting gunicorn server
+15/12/2018 12:54:54 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/12/2018 12:59:28 AM:INFO:starting gunicorn server
+15/12/2018 12:59:28 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/12/2018 01:11:33 AM:INFO:starting gunicorn server
+15/12/2018 01:11:33 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/12/2018 01:13:03 AM:INFO:starting gunicorn server
+15/12/2018 01:13:03 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+15/12/2018 01:13:18 AM:ERROR:None
+20/12/2018 10:23:59 PM:INFO:starting gunicorn server
+20/12/2018 10:23:59 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+20/12/2018 10:24:25 PM:ERROR:None
+20/12/2018 10:31:40 PM:INFO:starting gunicorn server
+20/12/2018 10:31:40 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+20/12/2018 10:32:10 PM:ERROR:None
+20/12/2018 10:41:33 PM:INFO:starting gunicorn server
+20/12/2018 10:41:33 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+20/12/2018 10:48:14 PM:INFO:starting gunicorn server
+20/12/2018 10:48:14 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+20/12/2018 11:56:44 PM:INFO:starting gunicorn server
+20/12/2018 11:56:44 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+20/12/2018 11:57:19 PM:ERROR:None
