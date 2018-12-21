@@ -1131,3 +1131,90 @@ WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
 21/12/2018 10:49:30 AM:INFO:UPDATE apps.purchase_trx_lines_tbl SET item_description=%(item_description)s, last_update_date=%(last_update_date)s WHERE apps.purchase_trx_lines_tbl.transaction_line_id = %(apps_purchase_trx_lines_tbl_transaction_line_id)s
 21/12/2018 10:49:30 AM:INFO:{'item_description': 'Bashkati Regular New', 'last_update_date': datetime.datetime(2018, 12, 21, 5, 19, 30, 41406), 'apps_purchase_trx_lines_tbl_transaction_line_id': 6}
 21/12/2018 10:49:30 AM:INFO:COMMIT
+21/12/2018 06:45:52 PM:INFO:starting gunicorn server
+21/12/2018 06:45:52 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 09:53:29 PM:INFO:starting gunicorn server
+21/12/2018 09:53:29 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 09:54:01 PM:INFO:select version()
+21/12/2018 09:54:01 PM:INFO:{}
+21/12/2018 09:54:01 PM:INFO:select current_schema()
+21/12/2018 09:54:01 PM:INFO:{}
+21/12/2018 09:54:01 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 09:54:01 PM:INFO:{}
+21/12/2018 09:54:01 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 09:54:01 PM:INFO:{}
+21/12/2018 09:54:01 PM:INFO:show standard_conforming_strings
+21/12/2018 09:54:01 PM:INFO:{}
+21/12/2018 09:54:01 PM:INFO:BEGIN (implicit)
+21/12/2018 09:54:01 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning 
+FROM apps.common_lookup_tbl
+21/12/2018 09:54:01 PM:INFO:{}
+21/12/2018 09:54:01 PM:INFO:ROLLBACK
+21/12/2018 09:54:01 PM:ERROR:None
+21/12/2018 09:57:21 PM:INFO:starting gunicorn server
+21/12/2018 09:57:21 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 09:57:30 PM:INFO:select version()
+21/12/2018 09:57:30 PM:INFO:{}
+21/12/2018 09:57:30 PM:INFO:select current_schema()
+21/12/2018 09:57:30 PM:INFO:{}
+21/12/2018 09:57:30 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 09:57:30 PM:INFO:{}
+21/12/2018 09:57:30 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 09:57:30 PM:INFO:{}
+21/12/2018 09:57:31 PM:INFO:show standard_conforming_strings
+21/12/2018 09:57:31 PM:INFO:{}
+21/12/2018 09:57:31 PM:INFO:BEGIN (implicit)
+21/12/2018 09:57:31 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning 
+FROM apps.common_lookup_tbl
+21/12/2018 09:57:31 PM:INFO:{}
+21/12/2018 09:57:31 PM:INFO:COMMIT
+21/12/2018 10:01:23 PM:INFO:starting gunicorn server
+21/12/2018 10:01:23 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 10:01:34 PM:INFO:select version()
+21/12/2018 10:01:34 PM:INFO:{}
+21/12/2018 10:01:34 PM:INFO:select current_schema()
+21/12/2018 10:01:34 PM:INFO:{}
+21/12/2018 10:01:34 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 10:01:34 PM:INFO:{}
+21/12/2018 10:01:34 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 10:01:34 PM:INFO:{}
+21/12/2018 10:01:34 PM:INFO:show standard_conforming_strings
+21/12/2018 10:01:34 PM:INFO:{}
+21/12/2018 10:01:34 PM:INFO:BEGIN (implicit)
+21/12/2018 10:01:34 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning 
+FROM apps.common_lookup_tbl
+21/12/2018 10:01:34 PM:INFO:{}
+21/12/2018 10:01:34 PM:INFO:COMMIT
+21/12/2018 10:02:35 PM:INFO:starting gunicorn server
+21/12/2018 10:02:35 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 10:02:48 PM:INFO:select version()
+21/12/2018 10:02:48 PM:INFO:{}
+21/12/2018 10:02:48 PM:INFO:select current_schema()
+21/12/2018 10:02:48 PM:INFO:{}
+21/12/2018 10:02:48 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 10:02:48 PM:INFO:{}
+21/12/2018 10:02:48 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 10:02:48 PM:INFO:{}
+21/12/2018 10:02:48 PM:INFO:show standard_conforming_strings
+21/12/2018 10:02:48 PM:INFO:{}
+21/12/2018 10:02:48 PM:INFO:BEGIN (implicit)
+21/12/2018 10:02:48 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning 
+FROM apps.common_lookup_tbl
+21/12/2018 10:02:48 PM:INFO:{}
+21/12/2018 10:05:17 PM:INFO:starting gunicorn server
+21/12/2018 10:05:17 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+21/12/2018 10:05:26 PM:INFO:select version()
+21/12/2018 10:05:26 PM:INFO:{}
+21/12/2018 10:05:26 PM:INFO:select current_schema()
+21/12/2018 10:05:26 PM:INFO:{}
+21/12/2018 10:05:26 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 10:05:26 PM:INFO:{}
+21/12/2018 10:05:26 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+21/12/2018 10:05:26 PM:INFO:{}
+21/12/2018 10:05:26 PM:INFO:show standard_conforming_strings
+21/12/2018 10:05:26 PM:INFO:{}
+21/12/2018 10:05:26 PM:INFO:BEGIN (implicit)
+21/12/2018 10:05:26 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning 
+FROM apps.common_lookup_tbl
+21/12/2018 10:05:26 PM:INFO:{}
+21/12/2018 10:05:36 PM:INFO:COMMIT
