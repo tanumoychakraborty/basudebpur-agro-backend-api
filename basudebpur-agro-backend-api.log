@@ -1218,3 +1218,110 @@ FROM apps.common_lookup_tbl
 FROM apps.common_lookup_tbl
 21/12/2018 10:05:26 PM:INFO:{}
 21/12/2018 10:05:36 PM:INFO:COMMIT
+22/12/2018 01:10:47 PM:INFO:starting gunicorn server
+22/12/2018 01:10:48 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+22/12/2018 01:11:17 PM:INFO:select version()
+22/12/2018 01:11:17 PM:INFO:{}
+22/12/2018 01:11:17 PM:INFO:select current_schema()
+22/12/2018 01:11:17 PM:INFO:{}
+22/12/2018 01:11:17 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+22/12/2018 01:11:17 PM:INFO:{}
+22/12/2018 01:11:17 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+22/12/2018 01:11:17 PM:INFO:{}
+22/12/2018 01:11:17 PM:INFO:show standard_conforming_strings
+22/12/2018 01:11:17 PM:INFO:{}
+22/12/2018 01:11:17 PM:INFO:BEGIN (implicit)
+22/12/2018 01:11:17 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+22/12/2018 01:11:17 PM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_HEADER_STATUS', 'enabled_1': 'Y'}
+22/12/2018 01:11:27 PM:INFO:COMMIT
+22/12/2018 01:19:53 PM:INFO:starting gunicorn server
+22/12/2018 01:19:53 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+22/12/2018 01:20:09 PM:INFO:select version()
+22/12/2018 01:20:09 PM:INFO:{}
+22/12/2018 01:20:09 PM:INFO:select current_schema()
+22/12/2018 01:20:09 PM:INFO:{}
+22/12/2018 01:20:09 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+22/12/2018 01:20:09 PM:INFO:{}
+22/12/2018 01:20:09 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+22/12/2018 01:20:09 PM:INFO:{}
+22/12/2018 01:20:09 PM:INFO:show standard_conforming_strings
+22/12/2018 01:20:09 PM:INFO:{}
+22/12/2018 01:20:09 PM:INFO:BEGIN (implicit)
+22/12/2018 01:20:09 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+22/12/2018 01:20:09 PM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_LINES_STATUS', 'enabled_1': 'Y'}
+22/12/2018 01:20:09 PM:INFO:COMMIT
+22/12/2018 01:24:30 PM:INFO:BEGIN (implicit)
+22/12/2018 01:24:30 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+22/12/2018 01:24:30 PM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_TYPE', 'enabled_1': 'Y'}
+22/12/2018 01:24:30 PM:INFO:COMMIT
+22/12/2018 01:27:58 PM:INFO:BEGIN (implicit)
+22/12/2018 01:27:58 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+22/12/2018 01:27:58 PM:INFO:{'lookup_name_1': 'UNIT_OF_MEASURE', 'enabled_1': 'Y'}
+22/12/2018 01:27:58 PM:INFO:COMMIT
+22/12/2018 01:58:42 PM:INFO:BEGIN (implicit)
+22/12/2018 01:58:43 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+22/12/2018 01:58:43 PM:INFO:{'lookup_name_1': 'UNIT_OF_MEASURE', 'enabled_1': 'Y'}
+22/12/2018 01:58:43 PM:INFO:COMMIT
+22/12/2018 02:03:37 PM:INFO:starting gunicorn server
+22/12/2018 02:03:37 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+22/12/2018 02:05:22 PM:ERROR:None
+22/12/2018 02:08:44 PM:INFO:starting gunicorn server
+22/12/2018 02:08:44 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+22/12/2018 02:11:10 PM:INFO:starting gunicorn server
+22/12/2018 02:11:10 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+22/12/2018 02:11:30 PM:INFO:starting gunicorn server
+22/12/2018 02:11:30 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+22/12/2018 02:11:41 PM:INFO:select version()
+22/12/2018 02:11:41 PM:INFO:{}
+22/12/2018 02:11:41 PM:INFO:select current_schema()
+22/12/2018 02:11:41 PM:INFO:{}
+22/12/2018 02:11:41 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+22/12/2018 02:11:41 PM:INFO:{}
+22/12/2018 02:11:41 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+22/12/2018 02:11:41 PM:INFO:{}
+22/12/2018 02:11:41 PM:INFO:show standard_conforming_strings
+22/12/2018 02:11:41 PM:INFO:{}
+22/12/2018 02:11:41 PM:INFO:BEGIN (implicit)
+22/12/2018 02:11:41 PM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_sites_tbl.supplier_site_id AS apps_supplier_master_sites_tbl_supplier_site_id, apps.supplier_master_sites_tbl.supplier_site_code AS apps_supplier_master_sites_tbl_supplier_site_code 
+FROM apps.supplier_master_header_tbl JOIN apps.supplier_master_sites_tbl ON apps.supplier_master_header_tbl.enabled_flag = %(enabled_flag_1)s
+22/12/2018 02:11:41 PM:INFO:{'enabled_flag_1': 'Y'}
+22/12/2018 02:11:50 PM:INFO:COMMIT
+22/12/2018 07:53:48 PM:INFO:starting gunicorn server
+22/12/2018 07:53:48 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+22/12/2018 07:54:54 PM:INFO:select version()
+22/12/2018 07:54:54 PM:INFO:{}
+22/12/2018 07:54:54 PM:INFO:select current_schema()
+22/12/2018 07:54:54 PM:INFO:{}
+22/12/2018 07:54:54 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+22/12/2018 07:54:54 PM:INFO:{}
+22/12/2018 07:54:54 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+22/12/2018 07:54:54 PM:INFO:{}
+22/12/2018 07:54:54 PM:INFO:show standard_conforming_strings
+22/12/2018 07:54:54 PM:INFO:{}
+22/12/2018 07:54:54 PM:INFO:BEGIN (implicit)
+22/12/2018 07:54:54 PM:INFO:SELECT apps.inventory_item_tbl.item_id AS apps_inventory_item_tbl_item_id, apps.inventory_item_tbl.item_number AS apps_inventory_item_tbl_item_number, apps.inventory_item_tbl.item_type AS apps_inventory_item_tbl_item_type, apps.inventory_item_tbl.description AS apps_inventory_item_tbl_description, apps.inventory_item_tbl.long_description AS apps_inventory_item_tbl_long_description 
+FROM apps.inventory_item_tbl 
+WHERE apps.inventory_item_tbl.enabled_flag = %(enabled_flag_1)s
+22/12/2018 07:54:54 PM:INFO:{'enabled_flag_1': 'Y'}
+22/12/2018 07:54:54 PM:INFO:COMMIT
+22/12/2018 08:02:19 PM:INFO:BEGIN (implicit)
+22/12/2018 08:02:19 PM:INFO:SELECT apps.inventory_item_tbl.item_id AS apps_inventory_item_tbl_item_id, apps.inventory_item_tbl.item_number AS apps_inventory_item_tbl_item_number, apps.inventory_item_tbl.item_type AS apps_inventory_item_tbl_item_type, apps.inventory_item_tbl.description AS apps_inventory_item_tbl_description, apps.inventory_item_tbl.long_description AS apps_inventory_item_tbl_long_description 
+FROM apps.inventory_item_tbl 
+WHERE apps.inventory_item_tbl.enabled_flag = %(enabled_flag_1)s
+22/12/2018 08:02:19 PM:INFO:{'enabled_flag_1': 'Y'}
+22/12/2018 08:02:19 PM:INFO:COMMIT
+22/12/2018 08:02:32 PM:INFO:BEGIN (implicit)
+22/12/2018 08:02:32 PM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_sites_tbl.supplier_site_id AS apps_supplier_master_sites_tbl_supplier_site_id, apps.supplier_master_sites_tbl.supplier_site_code AS apps_supplier_master_sites_tbl_supplier_site_code 
+FROM apps.supplier_master_header_tbl JOIN apps.supplier_master_sites_tbl ON apps.supplier_master_header_tbl.enabled_flag = %(enabled_flag_1)s
+22/12/2018 08:02:32 PM:INFO:{'enabled_flag_1': 'Y'}
+22/12/2018 08:02:32 PM:INFO:COMMIT
