@@ -19,7 +19,7 @@ class PurchaseTrxHeader (Base):
     order_type = Column('order_type', String)
     order_status = Column('order_status', String)
     buyer_id = Column('buyer_id', Integer)
-    suppplier_id = Column('suppplier_id', Integer)
+    supplier_id = Column('supplier_id', Integer)
     amount = Column('amount', Integer)
     weighting_number = Column('weighting_number', String)
     ref_doc = Column('ref_doc', LargeBinary)

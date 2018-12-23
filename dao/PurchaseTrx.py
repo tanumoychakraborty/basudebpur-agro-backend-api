@@ -7,6 +7,7 @@ from model.PurchaseTrxHeader import PurchaseTrxHeader
 from model.PurchaseTrxLines import PurchaseTrxLines
 from model.SupplierMasterHeader import SupplierMasterHeader
 from util.db_helper import db_transaction
+from sqlalchemy.sql.expression import and_
 
 
 @db_transaction
@@ -17,7 +18,7 @@ def create_purchase_trx(raw_data, session):
     purchasetrxheader.order_type = raw_data['order_type']
     purchasetrxheader.order_status = raw_data['order_status']
     purchasetrxheader.buyer_id = raw_data['buyer_id']
-    purchasetrxheader.suppplier_id = raw_data['suppplier_id']
+    purchasetrxheader.supplier_id = raw_data['supplier_id']
     purchasetrxheader.amount = raw_data['amount']
     purchasetrxheader.ref_doc = raw_data['ref_doc']
     purchasetrxheader.weighting_number = raw_data['weighting_number']
@@ -54,31 +55,43 @@ def get_purchase_transaction_details(params,page, page_size,session):
     if params is None:
         purchaseTrxDetails = session.query(PurchaseTrxHeader.purchase_trx_number,PurchaseTrxHeader.transaction_date,
                                            SupplierMasterHeader.supplier_name,PurchaseTrxHeader.amount,PurchaseTrxHeader.order_type,PurchaseTrxHeader.order_status,
-                                           PurchaseTrxHeader.weighting_number).join(SupplierMasterHeader,PurchaseTrxHeader.suppplier_id==SupplierMasterHeader.supplier_id).limit(500).all()
+                                           PurchaseTrxHeader.weighting_number).join(SupplierMasterHeader,PurchaseTrxHeader.supplier_id==SupplierMasterHeader.supplier_id).limit(500).all()
         if page_size:
             purchaseTrxDetails = purchaseTrxDetails.limit(page_size)
         if page: 
             purchaseTrxDetails = purchaseTrxDetails.offset(page*page_size)
     else:
-#         setwherecaluse1 = ''"'NA'"''
-#         setwherecaluse2 = ''"'NA'"''
-#         setwherecaluse = setwherecaluse1 +'='+setwherecaluse2
-        purchase_trx_number = params['purchase_trx_number']
-#         supplier_id = params['supplier_id']
-#         transaction_date = params['transaction_date']
-#         weighting_number = params['weighting_number']
-#         buyer_id = params['buyer_id']
-#         from_creation_date = params['from_creation_date']
-#         to_creation_date = params['to_creation_date']
-        
-                
-        
-        
+        purchase_trx_number = params.get('purchase_trx_number',None)
+        supplier_id = params.get('supplier_id',None)
+        transaction_date = params.get('transaction_date',None)
+        weighting_number = params.get('weighting_number',None)
+        buyer_id = params.get('buyer_id',None)
+        from_creation_date = params.get('from_creation_date',None)
+        to_creation_date = params.get('to_creation_date',None)
         
         purchaseTrxDetails = session.query(PurchaseTrxHeader.purchase_trx_number,PurchaseTrxHeader.transaction_date
                                            ,SupplierMasterHeader.supplier_name,PurchaseTrxHeader.amount,PurchaseTrxHeader.order_type,PurchaseTrxHeader.order_status
-                                           ,PurchaseTrxHeader.weighting_number).join(SupplierMasterHeader,PurchaseTrxHeader.suppplier_id==SupplierMasterHeader.supplier_id).filter(PurchaseTrxHeader.purchase_trx_number== purchase_trx_number).all()
+                                           ,PurchaseTrxHeader.weighting_number).join(SupplierMasterHeader,PurchaseTrxHeader.supplier_id==SupplierMasterHeader.supplier_id)
          
+        conditions = []
+        if purchase_trx_number:
+            conditions.append(PurchaseTrxHeader.purchase_trx_number == purchase_trx_number)
+        if supplier_id:
+            conditions.append(PurchaseTrxHeader.supplier_id == supplier_id)
+        if transaction_date:
+            conditions.append(PurchaseTrxHeader.transaction_date == transaction_date)
+        if weighting_number:
+            conditions.append(PurchaseTrxHeader.weighting_number == weighting_number)
+        if buyer_id:
+            conditions.append(PurchaseTrxHeader.buyer_id == buyer_id)
+        if from_creation_date:
+            conditions.append(PurchaseTrxHeader.creation_date >= from_creation_date)
+        if to_creation_date:
+            conditions.append(PurchaseTrxHeader.creation_date <= to_creation_date)                
+                
+            
+                
+        purchaseTrxDetails = purchaseTrxDetails.filter(and_(*conditions)).all()   
         
         if page_size:
             purchaseTrxDetails = purchaseTrxDetails.limit(page_size)
@@ -110,7 +123,7 @@ def update_purchase_trx(raw_data,session):
     purchasetrxheader.order_type = raw_data['order_type']
     purchasetrxheader.order_status = raw_data['order_status']
     purchasetrxheader.buyer_id = raw_data['buyer_id']
-    purchasetrxheader.suppplier_id = raw_data['suppplier_id']
+    purchasetrxheader.supplier_id = raw_data['supplier_id']
     purchasetrxheader.amount = raw_data['amount']
     '''
     do it later
