@@ -1550,3 +1550,232 @@ FROM apps.purchase_trx_lines_tbl
 WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
 24/12/2018 12:29:57 AM:INFO:{'param_1': 3}
 24/12/2018 12:29:57 AM:INFO:COMMIT
+25/12/2018 11:45:53 AM:INFO:starting gunicorn server
+25/12/2018 11:45:53 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 11:46:12 AM:INFO:select version()
+25/12/2018 11:46:12 AM:INFO:{}
+25/12/2018 11:46:12 AM:INFO:select current_schema()
+25/12/2018 11:46:12 AM:INFO:{}
+25/12/2018 11:46:12 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+25/12/2018 11:46:12 AM:INFO:{}
+25/12/2018 11:46:12 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+25/12/2018 11:46:12 AM:INFO:{}
+25/12/2018 11:46:12 AM:INFO:show standard_conforming_strings
+25/12/2018 11:46:12 AM:INFO:{}
+25/12/2018 11:46:12 AM:INFO:BEGIN (implicit)
+25/12/2018 11:46:12 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.supplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s AND apps.purchase_trx_header_tbl.supplier_id = %(supplier_id_1)s AND apps.purchase_trx_header_tbl.transaction_date = %(transaction_date_1)s AND apps.purchase_trx_header_tbl.weighting_number = %(weighting_number_1)s AND apps.purchase_trx_header_tbl.buyer_id = %(buyer_id_1)s AND apps.purchase_trx_header_tbl.creation_date >= %(creation_date_1)s AND apps.purchase_trx_header_tbl.creation_date <= %(creation_date_2)s
+25/12/2018 11:46:12 AM:INFO:{'purchase_trx_number_1': 'PO_12122018', 'supplier_id_1': '1', 'transaction_date_1': '2018-12-12 00:00:00', 'weighting_number_1': 'cn001/1', 'buyer_id_1': '1', 'creation_date_1': '2018-12-21 00:00:00', 'creation_date_2': '2018-12-28 00:00:00'}
+25/12/2018 11:46:12 AM:INFO:COMMIT
+25/12/2018 11:46:41 AM:INFO:BEGIN (implicit)
+25/12/2018 11:46:41 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.supplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s AND apps.purchase_trx_header_tbl.supplier_id = %(supplier_id_1)s AND apps.purchase_trx_header_tbl.transaction_date = %(transaction_date_1)s AND apps.purchase_trx_header_tbl.weighting_number = %(weighting_number_1)s AND apps.purchase_trx_header_tbl.buyer_id = %(buyer_id_1)s AND apps.purchase_trx_header_tbl.creation_date >= %(creation_date_1)s AND apps.purchase_trx_header_tbl.creation_date <= %(creation_date_2)s
+25/12/2018 11:46:41 AM:INFO:{'purchase_trx_number_1': 'PO_12122018', 'supplier_id_1': '1', 'transaction_date_1': '2018-12-12 00:00:00', 'weighting_number_1': 'cn001/1', 'buyer_id_1': '1', 'creation_date_1': '2018-12-11 00:00:00', 'creation_date_2': '2018-12-28 00:00:00'}
+25/12/2018 11:46:41 AM:INFO:COMMIT
+25/12/2018 11:47:09 AM:INFO:BEGIN (implicit)
+25/12/2018 11:47:09 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.supplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s AND apps.purchase_trx_header_tbl.supplier_id = %(supplier_id_1)s AND apps.purchase_trx_header_tbl.transaction_date = %(transaction_date_1)s AND apps.purchase_trx_header_tbl.weighting_number = %(weighting_number_1)s AND apps.purchase_trx_header_tbl.buyer_id = %(buyer_id_1)s AND apps.purchase_trx_header_tbl.creation_date >= %(creation_date_1)s AND apps.purchase_trx_header_tbl.creation_date <= %(creation_date_2)s
+25/12/2018 11:47:09 AM:INFO:{'purchase_trx_number_1': 'PO_12122018', 'supplier_id_1': '1', 'transaction_date_1': '2018-12-13 00:00:00', 'weighting_number_1': 'cn001/1', 'buyer_id_1': '1', 'creation_date_1': '2018-12-11 00:00:00', 'creation_date_2': '2018-12-28 00:00:00'}
+25/12/2018 11:47:09 AM:INFO:COMMIT
+25/12/2018 12:53:27 PM:INFO:starting gunicorn server
+25/12/2018 12:53:27 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 12:53:30 PM:INFO:select version()
+25/12/2018 12:53:30 PM:INFO:{}
+25/12/2018 12:53:30 PM:INFO:select current_schema()
+25/12/2018 12:53:30 PM:INFO:{}
+25/12/2018 12:53:30 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+25/12/2018 12:53:30 PM:INFO:{}
+25/12/2018 12:53:30 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+25/12/2018 12:53:30 PM:INFO:{}
+25/12/2018 12:53:30 PM:INFO:show standard_conforming_strings
+25/12/2018 12:53:30 PM:INFO:{}
+25/12/2018 12:53:30 PM:INFO:BEGIN (implicit)
+25/12/2018 12:53:30 PM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.supplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+25/12/2018 12:53:30 PM:INFO:{'param_1': 500}
+25/12/2018 12:53:30 PM:INFO:COMMIT
+25/12/2018 04:59:29 PM:INFO:starting gunicorn server
+25/12/2018 04:59:29 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 05:00:08 PM:INFO:starting gunicorn server
+25/12/2018 05:00:08 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 05:00:34 PM:INFO:starting gunicorn server
+25/12/2018 05:00:34 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 05:02:32 PM:INFO:starting gunicorn server
+25/12/2018 05:02:32 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 05:02:47 PM:INFO:starting gunicorn server
+25/12/2018 05:02:47 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 05:03:03 PM:INFO:starting gunicorn server
+25/12/2018 05:03:03 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 07:06:00 PM:INFO:starting gunicorn server
+25/12/2018 07:06:00 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 07:06:58 PM:INFO:starting gunicorn server
+25/12/2018 07:06:58 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 07:09:15 PM:INFO:starting gunicorn server
+25/12/2018 07:09:15 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 07:09:54 PM:INFO:starting gunicorn server
+25/12/2018 07:09:54 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 07:10:22 PM:INFO:starting gunicorn server
+25/12/2018 07:10:22 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 07:10:42 PM:INFO:starting gunicorn server
+25/12/2018 07:10:42 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 07:12:14 PM:INFO:starting gunicorn server
+25/12/2018 07:12:14 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 07:14:21 PM:INFO:starting gunicorn server
+25/12/2018 07:14:21 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 07:16:36 PM:INFO:starting gunicorn server
+25/12/2018 07:16:36 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 07:17:01 PM:ERROR:None
+25/12/2018 07:20:01 PM:INFO:starting gunicorn server
+25/12/2018 07:20:01 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 07:23:05 PM:INFO:starting gunicorn server
+25/12/2018 07:23:05 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 07:23:15 PM:ERROR:None
+25/12/2018 07:25:52 PM:INFO:starting gunicorn server
+25/12/2018 07:25:52 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 07:47:05 PM:INFO:starting gunicorn server
+25/12/2018 07:47:05 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 09:09:33 PM:INFO:starting gunicorn server
+25/12/2018 09:09:33 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/12/2018 09:10:47 PM:ERROR:None
+25/12/2018 09:17:39 PM:INFO:starting gunicorn server
+25/12/2018 09:17:39 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+26/12/2018 09:37:42 PM:INFO:starting gunicorn server
+26/12/2018 09:37:42 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+26/12/2018 09:38:50 PM:ERROR:None
+26/12/2018 09:46:58 PM:INFO:starting gunicorn server
+26/12/2018 09:46:58 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+26/12/2018 09:48:40 PM:INFO:starting gunicorn server
+26/12/2018 09:48:40 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+26/12/2018 09:49:01 PM:ERROR:None
+26/12/2018 09:54:13 PM:INFO:starting gunicorn server
+26/12/2018 09:54:13 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+26/12/2018 09:54:54 PM:INFO:select version()
+26/12/2018 09:54:54 PM:INFO:{}
+26/12/2018 09:54:54 PM:INFO:select current_schema()
+26/12/2018 09:54:54 PM:INFO:{}
+26/12/2018 09:54:54 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+26/12/2018 09:54:54 PM:INFO:{}
+26/12/2018 09:54:54 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+26/12/2018 09:54:54 PM:INFO:{}
+26/12/2018 09:54:54 PM:INFO:show standard_conforming_strings
+26/12/2018 09:54:54 PM:INFO:{}
+26/12/2018 09:54:54 PM:INFO:BEGIN (implicit)
+26/12/2018 09:54:54 PM:INFO:INSERT INTO apps.supplier_master_header_tbl (supplier_id, supplier_code, supplier_name, description, supplier_type, remarks, enabled_flag, effective_from, effective_to, employee_id, ship_to_location_code, bill_to_location_code, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.supplier_id_sequence'), %(supplier_code)s, %(supplier_name)s, %(description)s, %(supplier_type)s, %(remarks)s, %(enabled_flag)s, %(effective_from)s, %(effective_to)s, %(employee_id)s, %(ship_to_location_code)s, %(bill_to_location_code)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.supplier_master_header_tbl.supplier_id
+26/12/2018 09:54:54 PM:INFO:{'supplier_code': 'KAMALA001', 'supplier_name': 'Kamala Tradders', 'description': 'Kamala Paddy Supplier', 'supplier_type': 'PADDY', 'remarks': 'Demo supplier', 'enabled_flag': 'Y', 'effective_from': datetime.date(2018, 12, 13), 'effective_to': datetime.date(2049, 12, 13), 'employee_id': None, 'ship_to_location_code': None, 'bill_to_location_code': None, 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 26, 16, 24, 54, 241519), 'last_update_date': datetime.datetime(2018, 12, 26, 16, 24, 54, 241602), 'last_updated_by': 1995}
+26/12/2018 09:54:54 PM:INFO:INSERT INTO apps.supplier_master_sites_tbl (supplier_site_id, supplier_id, supplier_site_code, supplier_site_address, phone_number1, phone_number2, email, payment_method_lookup_code, gstin_number, pay_group_lookup_code, payment_term, purchasing_site_flag, rfq_only_site, tax_registration_number, inactive_date, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.supplier_site_id_sequence'), %(supplier_id)s, %(supplier_site_code)s, %(supplier_site_address)s, %(phone_number1)s, %(phone_number2)s, %(email)s, %(payment_method_lookup_code)s, %(gstin_number)s, %(pay_group_lookup_code)s, %(payment_term)s, %(purchasing_site_flag)s, %(rfq_only_site)s, %(tax_registration_number)s, %(inactive_date)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.supplier_master_sites_tbl.supplier_site_id
+26/12/2018 09:54:54 PM:INFO:{'supplier_id': 1, 'supplier_site_code': 'KAMALA001', 'supplier_site_address': 'Arambagh', 'phone_number1': '9830071399', 'phone_number2': '', 'email': 'xyz@gmail.com', 'payment_method_lookup_code': None, 'gstin_number': None, 'pay_group_lookup_code': None, 'payment_term': None, 'purchasing_site_flag': None, 'rfq_only_site': None, 'tax_registration_number': None, 'inactive_date': datetime.date(2049, 12, 13), 'created_by': 1995, 'creation_date': datetime.datetime(2018, 12, 26, 16, 24, 54, 297161), 'last_update_date': datetime.datetime(2018, 12, 26, 16, 24, 54, 297212), 'last_updated_by': 1995}
+26/12/2018 09:54:54 PM:INFO:COMMIT
+26/12/2018 10:39:49 PM:INFO:starting gunicorn server
+26/12/2018 10:39:49 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+26/12/2018 10:42:22 PM:INFO:starting gunicorn server
+26/12/2018 10:42:22 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+26/12/2018 10:44:32 PM:INFO:starting gunicorn server
+26/12/2018 10:44:32 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+26/12/2018 10:45:34 PM:INFO:starting gunicorn server
+26/12/2018 10:45:34 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+26/12/2018 10:45:42 PM:INFO:select version()
+26/12/2018 10:45:42 PM:INFO:{}
+26/12/2018 10:45:42 PM:INFO:select current_schema()
+26/12/2018 10:45:42 PM:INFO:{}
+26/12/2018 10:45:42 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+26/12/2018 10:45:42 PM:INFO:{}
+26/12/2018 10:45:42 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+26/12/2018 10:45:42 PM:INFO:{}
+26/12/2018 10:45:42 PM:INFO:show standard_conforming_strings
+26/12/2018 10:45:42 PM:INFO:{}
+26/12/2018 10:45:42 PM:INFO:BEGIN (implicit)
+26/12/2018 10:45:42 PM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl 
+WHERE apps.supplier_master_header_tbl.supplier_code = %(supplier_code_1)s 
+ LIMIT %(param_1)s
+26/12/2018 10:45:42 PM:INFO:{'supplier_code_1': 'KAMALA001', 'param_1': 1}
+26/12/2018 10:45:51 PM:INFO:UPDATE apps.supplier_master_header_tbl SET remarks=%(remarks)s, effective_from=%(effective_from)s, effective_to=%(effective_to)s, last_update_date=%(last_update_date)s WHERE apps.supplier_master_header_tbl.supplier_id = %(apps_supplier_master_header_tbl_supplier_id)s
+26/12/2018 10:45:51 PM:INFO:{'remarks': 'Paddy Supplier update for demo.', 'effective_from': datetime.date(2018, 12, 13), 'effective_to': datetime.date(2049, 12, 13), 'last_update_date': datetime.datetime(2018, 12, 26, 17, 15, 51, 321039), 'apps_supplier_master_header_tbl_supplier_id': 1}
+26/12/2018 10:45:51 PM:INFO:SELECT apps.supplier_master_sites_tbl.supplier_site_id AS apps_supplier_master_sites_tbl_supplier_site_id, apps.supplier_master_sites_tbl.supplier_id AS apps_supplier_master_sites_tbl_supplier_id, apps.supplier_master_sites_tbl.supplier_site_code AS apps_supplier_master_sites_tbl_supplier_site_code, apps.supplier_master_sites_tbl.supplier_site_address AS apps_supplier_master_sites_tbl_supplier_site_address, apps.supplier_master_sites_tbl.phone_number1 AS apps_supplier_master_sites_tbl_phone_number1, apps.supplier_master_sites_tbl.phone_number2 AS apps_supplier_master_sites_tbl_phone_number2, apps.supplier_master_sites_tbl.email AS apps_supplier_master_sites_tbl_email, apps.supplier_master_sites_tbl.payment_method_lookup_code AS apps_supplier_master_sites_tbl_payment_method_lookup_code, apps.supplier_master_sites_tbl.gstin_number AS apps_supplier_master_sites_tbl_gstin_number, apps.supplier_master_sites_tbl.pay_group_lookup_code AS apps_supplier_master_sites_tbl_pay_group_lookup_code, apps.supplier_master_sites_tbl.payment_term AS apps_supplier_master_sites_tbl_payment_term, apps.supplier_master_sites_tbl.purchasing_site_flag AS apps_supplier_master_sites_tbl_purchasing_site_flag, apps.supplier_master_sites_tbl.rfq_only_site AS apps_supplier_master_sites_tbl_rfq_only_site, apps.supplier_master_sites_tbl.tax_registration_number AS apps_supplier_master_sites_tbl_tax_registration_number, apps.supplier_master_sites_tbl.inactive_date AS apps_supplier_master_sites_tbl_inactive_date, apps.supplier_master_sites_tbl.created_by AS apps_supplier_master_sites_tbl_created_by, apps.supplier_master_sites_tbl.creation_date AS apps_supplier_master_sites_tbl_creation_date, apps.supplier_master_sites_tbl.last_update_date AS apps_supplier_master_sites_tbl_last_update_date, apps.supplier_master_sites_tbl.last_updated_by AS apps_supplier_master_sites_tbl_last_updated_by 
+FROM apps.supplier_master_sites_tbl 
+WHERE %(param_1)s = apps.supplier_master_sites_tbl.supplier_id
+26/12/2018 10:45:51 PM:INFO:{'param_1': 1}
+26/12/2018 10:45:59 PM:INFO:UPDATE apps.supplier_master_sites_tbl SET supplier_site_code=%(supplier_site_code)s, last_update_date=%(last_update_date)s WHERE apps.supplier_master_sites_tbl.supplier_site_id = %(apps_supplier_master_sites_tbl_supplier_site_id)s
+26/12/2018 10:45:59 PM:INFO:{'supplier_site_code': 'KAMALAS001', 'last_update_date': datetime.datetime(2018, 12, 26, 17, 15, 59, 254390), 'apps_supplier_master_sites_tbl_supplier_site_id': 1}
+26/12/2018 10:45:59 PM:INFO:COMMIT
+26/12/2018 11:03:36 PM:INFO:BEGIN (implicit)
+26/12/2018 11:03:36 PM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl 
+WHERE apps.supplier_master_header_tbl.supplier_code = %(supplier_code_1)s 
+ LIMIT %(param_1)s
+26/12/2018 11:03:36 PM:INFO:{'supplier_code_1': 'KAMALA001', 'param_1': 1}
+26/12/2018 11:12:39 PM:INFO:starting gunicorn server
+26/12/2018 11:12:39 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+26/12/2018 11:13:10 PM:INFO:select version()
+26/12/2018 11:13:10 PM:INFO:{}
+26/12/2018 11:13:10 PM:INFO:select current_schema()
+26/12/2018 11:13:10 PM:INFO:{}
+26/12/2018 11:13:10 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+26/12/2018 11:13:10 PM:INFO:{}
+26/12/2018 11:13:10 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+26/12/2018 11:13:10 PM:INFO:{}
+26/12/2018 11:13:10 PM:INFO:show standard_conforming_strings
+26/12/2018 11:13:10 PM:INFO:{}
+26/12/2018 11:13:10 PM:INFO:BEGIN (implicit)
+26/12/2018 11:13:10 PM:INFO:SELECT apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag 
+FROM apps.supplier_master_header_tbl
+26/12/2018 11:13:10 PM:INFO:{}
+26/12/2018 11:13:21 PM:INFO:COMMIT
+26/12/2018 11:14:17 PM:INFO:BEGIN (implicit)
+26/12/2018 11:14:17 PM:INFO:SELECT apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag 
+FROM apps.supplier_master_header_tbl 
+WHERE apps.supplier_master_header_tbl.supplier_code = %(supplier_code_1)s
+26/12/2018 11:14:17 PM:INFO:{'supplier_code_1': 'KAMALA001'}
+26/12/2018 11:14:23 PM:INFO:COMMIT
+26/12/2018 11:16:22 PM:INFO:BEGIN (implicit)
+26/12/2018 11:16:22 PM:INFO:SELECT apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag 
+FROM apps.supplier_master_header_tbl 
+WHERE apps.supplier_master_header_tbl.supplier_code = %(supplier_code_1)s
+26/12/2018 11:16:22 PM:INFO:{'supplier_code_1': 'KAMALA001'}
+26/12/2018 11:16:22 PM:INFO:COMMIT
+26/12/2018 11:28:18 PM:INFO:BEGIN (implicit)
+26/12/2018 11:28:18 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+26/12/2018 11:28:18 PM:INFO:{'lookup_name_1': 'SUPPLIER_TYPE', 'enabled_1': 'Y'}
+26/12/2018 11:28:18 PM:INFO:COMMIT
+26/12/2018 11:28:41 PM:INFO:BEGIN (implicit)
+26/12/2018 11:28:41 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+26/12/2018 11:28:41 PM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_TYPE', 'enabled_1': 'Y'}
+26/12/2018 11:28:41 PM:INFO:COMMIT
+26/12/2018 11:28:41 PM:INFO:BEGIN (implicit)
+26/12/2018 11:28:41 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+26/12/2018 11:28:41 PM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_TYPE', 'enabled_1': 'Y'}
+26/12/2018 11:28:41 PM:INFO:COMMIT
+26/12/2018 11:29:12 PM:INFO:BEGIN (implicit)
+26/12/2018 11:29:12 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+26/12/2018 11:29:12 PM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_TYPE', 'enabled_1': 'Y'}
+26/12/2018 11:29:12 PM:INFO:COMMIT
+26/12/2018 11:29:12 PM:INFO:BEGIN (implicit)
+26/12/2018 11:29:12 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+26/12/2018 11:29:12 PM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_TYPE', 'enabled_1': 'Y'}
+26/12/2018 11:29:12 PM:INFO:COMMIT
+26/12/2018 11:30:09 PM:INFO:BEGIN (implicit)
+26/12/2018 11:30:09 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+26/12/2018 11:30:09 PM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_TYPE', 'enabled_1': 'Y'}
+26/12/2018 11:30:09 PM:INFO:COMMIT
+26/12/2018 11:31:14 PM:INFO:BEGIN (implicit)
+26/12/2018 11:31:14 PM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+26/12/2018 11:31:14 PM:INFO:{'lookup_name_1': 'SUPPLIER_TYPE', 'enabled_1': 'Y'}
+26/12/2018 11:31:14 PM:INFO:COMMIT

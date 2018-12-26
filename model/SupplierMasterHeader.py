@@ -8,6 +8,7 @@ from model import Base, SupplierMasterSites
 from sqlalchemy.sql.schema import Column, Sequence
 from sqlalchemy.sql.sqltypes import String, Integer, DateTime, Date
 from sqlalchemy.orm import relationship
+import datetime
 
 class SupplierMasterHeader (Base):
     __tablename__ = "supplier_master_header_tbl"
@@ -24,5 +25,9 @@ class SupplierMasterHeader (Base):
     employee_id = Column('employee_id', Integer)
     ship_to_location_code = Column('ship_to_location_code', String)
     bill_to_location_code = Column('bill_to_location_code', String)
+    created_by = Column('created_by', Integer)
+    creation_date = Column('creation_date', DateTime,default=datetime.datetime.utcnow)
+    last_update_date = Column('last_update_date',DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
+    last_updated_by = Column('last_updated_by', Integer)
     
     sites = relationship('model.SupplierMasterSites.SupplierMasterSites', back_populates='supplier')

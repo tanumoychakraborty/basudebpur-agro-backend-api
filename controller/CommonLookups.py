@@ -24,27 +24,33 @@ class CommonLookups(object):
                 resp.status = falcon.HTTP_404
                 return
             payload['purchaseOrderHeaderStatus'] = headerStatus
-            
-        if lookupName == "PURCHASE_ORDER_LINES_STATUS":
+        elif lookupName == "PURCHASE_ORDER_LINES_STATUS":
             lineStatus = get_lookup_values(lookupName)
             if lineStatus is None:
                 resp.status = falcon.HTTP_404
                 return
             payload['purchaseOrderLineStatus'] = lineStatus
             
-        if lookupName == "PURCHASE_ORDER_TYPE":
+        elif lookupName == "PURCHASE_ORDER_TYPE":
             poType = get_lookup_values(lookupName)
             if poType is None:
                 resp.status = falcon.HTTP_404
                 return
             payload['purchaseOrderType'] = poType
             
-        if lookupName == "UNIT_OF_MEASURE":
+        elif lookupName == "UNIT_OF_MEASURE":
             uom = get_lookup_values(lookupName)
             if uom is None:
                 resp.status = falcon.HTTP_404
                 return
-            payload['UnitOfMeasure'] = uom          
+            payload['UnitOfMeasure'] = uom 
+            
+        else:
+            lookup_details = get_lookup_values(lookupName)
+            if lookup_details is None:
+                resp.status = falcon.HTTP_404
+                return
+            payload['lookup_details'] = lookup_details             
               
             
                     
