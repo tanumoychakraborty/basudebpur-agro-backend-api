@@ -7,9 +7,11 @@ Created on 23-Nov-2018
 import json
 import falcon
 import logging
-from dao.PurchaseTrx import create_purchase_trx, update_purchase_trx
+from dao.PurchaseTrx import create_purchase_trx, update_purchase_trx,\
+    get_purchase_trx_detail
 from dao.PurchaseTrx import get_purchase_transaction_details
 from schema.PurchaseTrxSchema import PurchaseTrxHeaderSchema,PurchaseTrxHeaderUpdateSchema
+from dao.Users import get_user_id_by_user_name
 
 
 class PurchaseTrx(object):
@@ -26,6 +28,13 @@ class PurchaseTrx(object):
             Insert Purchase Transaction data into database
             """
             data = req.context['serialized-data']
+            data['buyer_id'] = get_user_id_by_user_name(data['buyer_id'])
+            user = get_user_id_by_user_name(data['created_by'])
+            data['last_updated_by'] = user
+            data['created_by'] = user
+            for line in data['purchase_trx_lines']:
+                line['last_updated_by'] = user
+                line['created_by'] = user
             create_purchase_trx(data)
             output = {'Status': falcon.HTTP_200, 'Message': "Purchase Transaction data saved successfully for: " + data['purchase_trx_number']}
             resp.status = falcon.HTTP_200
@@ -46,8 +55,11 @@ class PurchaseTrx(object):
         params = req.params
         payload = {}        
             
-        if 'purchase_trx_number' in params.keys():
-            purchase_trx_details = get_purchase_transaction_details(params,0,None)
+        if params.keys():
+            if list(params.keys()) == ['transaction_number']:
+                purchase_trx_details = [get_purchase_trx_detail(params['transaction_number'])]
+            else:
+                purchase_trx_details = get_purchase_transaction_details(params,0,None)
         else:
             purchase_trx_details = get_purchase_transaction_details(None,0,None)
         
@@ -69,7 +81,9 @@ class PurchaseTrx(object):
             update Purchase Transaction data into database
             """ 
             data = req.context['serialized-data']  
-                
+            data['last_updated_by'] = get_user_id_by_user_name(data['last_updated_by'])
+            for line in data['purchase_trx_lines']:
+                line['last_updated_by'] = get_user_id_by_user_name(line['last_updated_by'])
             update_purchase_trx(data)
             output = {'Status': falcon.HTTP_200, 'Message': "Purchase Transaction data updated successfully for: " + data['purchase_trx_number']}
             resp.status = falcon.HTTP_200

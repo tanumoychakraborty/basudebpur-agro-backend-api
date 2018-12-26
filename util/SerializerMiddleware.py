@@ -17,7 +17,15 @@ class SerializerMiddleware(object):
         if req.method == 'GET':
             req_data = req.params
         else:
-            req_data = json.loads(req.stream.read().decode("utf-8"))
+            '''
+            for post man
+            '''
+            #req_data = json.loads(req.stream.read().decode("utf-8"))
+            '''
+            for django
+            '''
+            req_data = json.loads(req.media)
+            
         try:
             serializer = resource.serializers[req.method.lower()]
         except (AttributeError, IndexError, KeyError):

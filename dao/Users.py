@@ -14,6 +14,13 @@ def get_user_type_by_user_id(user_id, session):
         return None
 
 @db_transaction
+def get_user_id_by_user_name(user_name, session):
+    try:
+        return session.query(User).filter_by(user_name=user_name).first().user_id
+    except AttributeError:
+        return None
+
+@db_transaction
 def get_user_type_by_username_password(username, password, session):
     try:
         return session.query(User).filter_by(user_name=username, password=password).first().user_type
