@@ -68,6 +68,7 @@ def get_purchase_transaction_details(params,page, page_size,session):
         buyer_id = params.get('buyer_id',None)
         from_creation_date = params.get('from_creation_date',None)
         to_creation_date = params.get('to_creation_date',None)
+        order_status = params.get('order_status',None)
         
         purchaseTrxDetails = session.query(PurchaseTrxHeader.purchase_trx_number,PurchaseTrxHeader.transaction_date
                                            ,SupplierMasterHeader.supplier_name,PurchaseTrxHeader.amount,PurchaseTrxHeader.order_type,PurchaseTrxHeader.order_status
@@ -87,7 +88,9 @@ def get_purchase_transaction_details(params,page, page_size,session):
         if from_creation_date:
             conditions.append(PurchaseTrxHeader.creation_date >= from_creation_date)
         if to_creation_date:
-            conditions.append(PurchaseTrxHeader.creation_date <= to_creation_date)                
+            conditions.append(PurchaseTrxHeader.creation_date <= to_creation_date)    
+        if order_status:
+            conditions.append(PurchaseTrxHeader.order_status == order_status)            
                 
             
                 
@@ -149,3 +152,18 @@ def update_purchase_trx(raw_data,session):
                 trx_line.created_by = purchase_trx_line['created_by']
                 trx_line.last_updated_by = purchase_trx_line['last_updated_by']   
             
+
+@db_transaction
+def get_purchase_trx_detail(purchase_trx_number,session):
+    purchasetrxheader = session.query(PurchaseTrxHeader).filter_by(purchase_trx_number=purchase_trx_number).first()
+    result = dict(purchasetrxheader.__dict__)
+    result.pop('_sa_instance_state')
+    line_dicts = []
+    for line in purchasetrxheader.purchase_trx_lines:
+        line_dict = dict(line.__dict__)
+        line_dict.pop('_sa_instance_state')
+        line_dicts.append(line_dict)
+    result['purchase_trx_lines'] = line_dicts
+    return result
+                
+    

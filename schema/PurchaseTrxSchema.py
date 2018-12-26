@@ -10,23 +10,19 @@ class PurchaseTrxHeaderSchema(Schema):
     '''
     classdocs
     '''
-    
-    purchase_trx_number = fields.Str(required=True, missing='')
-    transaction_date = fields.Date('%d/%m/%Y')#fields.DateTime('%Y-%m-%dT%H:%M:%S+03:00')
+    purchase_trx_number = fields.Str(required=True)
+    transaction_date = fields.DateTime('%Y/%m/%dT%H:%M')#fields.DateTime('%Y-%m-%dT%H:%M:%S+03:00')
     order_type = fields.Str(required=True)
     order_status = fields.Str(required=True)
-    buyer_id = fields.Int(required=True)
+    buyer_id = fields.Str(required=True)
     supplier_id = fields.Int(required=True)
     amount = fields.Int(required=True)
     weighting_number = fields.Str(missing='')
     vehicle_number = fields.Str(missing='')
     ref_doc = fields.Raw(missing=bytearray())
-    created_by = fields.Int(required=True)
-    last_updated_by = fields.Int(required=True)
+    created_by = fields.Str(required=True)
+    last_updated_by = fields.Str(required=True)
     purchase_trx_lines = fields.Nested('schema.PurchaseTrxSchema.PurchaseTrxLinesSchema', many=True, required=True)
-    
-    
-    
     
     
     
@@ -45,8 +41,8 @@ class PurchaseTrxLinesSchema(Schema):
     unit_of_measure = fields.Str(missing='')
     discount = fields.Int(missing='')
     line_status = fields.Str(missing='')
-    created_by = fields.Int(required=True)
-    last_updated_by = fields.Int(required=True)
+    created_by = fields.Str(required=True)
+    last_updated_by = fields.Str(required=True)
     
 
 class PurchaseTrxHeaderUpdateSchema(Schema):
@@ -56,7 +52,7 @@ class PurchaseTrxHeaderUpdateSchema(Schema):
     
     transaction_header_id = fields.Int()
     purchase_trx_number = fields.Str(required=True)
-    transaction_date = fields.Date('%d/%m/%Y') #fields.DateTime('%Y-%m-%dT%H:%M:%S+03:00')
+    transaction_date = fields.DateTime('%Y/%m/%dT%H:%M')#:%S+03:00
     order_type = fields.Str()
     order_status = fields.Str()
     buyer_id = fields.Int()
@@ -66,9 +62,9 @@ class PurchaseTrxHeaderUpdateSchema(Schema):
     vehicle_number = fields.Str(missing='')
     ref_doc = fields.Raw(missing=bytearray())
     created_by = fields.Int()
-    creation_date = fields.Str()
-    last_updated_by = fields.Int()
-    last_update_date = fields.Str()
+    #creation_date = fields.Str()
+    last_updated_by = fields.Str(required=True)
+    #last_update_date = fields.Str()
     purchase_trx_lines = fields.Nested('schema.PurchaseTrxSchema.PurchaseTrxLinesUpdateSchema', many=True, required=True)
     
 
@@ -76,7 +72,7 @@ class PurchaseTrxLinesUpdateSchema(Schema):
     '''
     classdocs
     '''
-    transaction_line_id = fields.Int(required=True)   
+    transaction_line_id = fields.Int()   
     transaction_header_id = fields.Int()
     item_id = fields.Int(required=True)
     line_number = fields.Int(required=True)
@@ -89,4 +85,4 @@ class PurchaseTrxLinesUpdateSchema(Schema):
     discount = fields.Int()
     line_status = fields.Str(required=True)
     created_by = fields.Int(required=True)
-    last_updated_by = fields.Int(required=True)
+    last_updated_by = fields.Str(required=True)
