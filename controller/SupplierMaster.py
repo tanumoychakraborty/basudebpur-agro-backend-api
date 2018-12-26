@@ -4,7 +4,7 @@ Created on 22-Dec-2018
 @author: duttasudip89
 '''
 from dao.SupplierMaster import get_supplier_details
-from dao.SupplierMaster import create_supplier,update_supplier,search_supplier_details
+from dao.SupplierMaster import create_supplier,update_supplier,search_supplier_details,get_supplier_detail
 import json
 import falcon
 import logging
@@ -41,7 +41,7 @@ class SupplierMaster(object):
     def on_get(self,req, resp):
         params= req.params
         payload = {}
-        OperationType =params['OperationType']
+        OperationType = params.get('OperationType',None)
         if OperationType == "SUPPLIER_LIST":
             supplierLists = get_supplier_details()
             if supplierLists is None:
@@ -49,14 +49,16 @@ class SupplierMaster(object):
                 return
             payload['supplierLists'] = supplierLists
         if OperationType == "SUPPLIER_MASTER_SEARCH":
-            supplier_details = search_supplier_details(params,0,None)
+                supplier_details = search_supplier_details(params,0,None)
+        if list(params.keys()) == ['supplier_code']:
+                supplier_details = [get_supplier_detail(params['supplier_code'])]        
 
             
-            for supplier_detail in supplier_details:
-                for key, value in supplier_detail.items():
-                    if value is None:
-                        value = ''
-                        supplier_detail[key] = value
+        for supplier_detail in supplier_details:
+            for key, value in supplier_detail.items():
+                if value is None:
+                    value = ''
+                    supplier_detail[key] = value
                 
             payload['supplier_details'] = supplier_details   
             

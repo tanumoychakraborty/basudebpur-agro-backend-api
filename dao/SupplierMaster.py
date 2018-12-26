@@ -145,4 +145,17 @@ def search_supplier_details(params,page, page_size,session):
             
             resultL.append(dict)    
                 
-        return resultL                 
+        return resultL 
+    
+@db_transaction
+def get_supplier_detail(supplier_code,session):
+    supplierheader = session.query(SupplierMasterHeader).filter_by(supplier_code=supplier_code).first()
+    result = dict(supplierheader.__dict__)
+    result.pop('_sa_instance_state')
+    line_dicts = []
+    for line in supplierheader.sites:
+        line_dict = dict(line.__dict__)
+        line_dict.pop('_sa_instance_state')
+        line_dicts.append(line_dict)
+    result['supplier_master_sites'] = line_dicts
+    return result                    
