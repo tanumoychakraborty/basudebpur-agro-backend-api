@@ -12,21 +12,22 @@ from sqlalchemy.sql.expression import and_
 @db_transaction
 def get_supplier_details(session):
     resultL = []
-    supplierDetails = session.query(SupplierMasterHeader.supplier_id,SupplierMasterHeader.supplier_name,SupplierMasterHeader.description,SupplierMasterHeader.supplier_code
-                                           ,SupplierMasterHeader.supplier_type,SupplierMasterSites.supplier_site_id,SupplierMasterSites.supplier_site_code
-                                           ).join(SupplierMasterSites,SupplierMasterHeader.enabled_flag=='Y').all()
+#     supplierDetails = session.query(SupplierMasterHeader.supplier_id,SupplierMasterHeader.supplier_name,SupplierMasterHeader.description,SupplierMasterHeader.supplier_code
+#                                            ,SupplierMasterHeader.supplier_type,SupplierMasterSites.supplier_site_id,SupplierMasterSites.supplier_site_code
+#                                            ).join(SupplierMasterSites,SupplierMasterHeader.enabled_flag=='Y').all()
+    supplierDetails = session.query(SupplierMasterHeader).all()
                   
     for supplierDetail in supplierDetails:
-        dict ={ }
-        dict['supplier_id'] = supplierDetail[0]
-        dict['supplier_name'] = supplierDetail[1]
-        dict['description'] = supplierDetail[2]
-        dict['supplier_code'] = supplierDetail[3]
-        dict['supplier_type'] = supplierDetail[4]
-        dict['supplier_site_id'] = supplierDetail[5]
-        dict['supplier_site_code'] = supplierDetail[6]
-        
-        resultL.append(dict)    
+        dict = { }
+        dict['supplier_id'] = supplierDetail.supplier_id
+        dict['supplier_name'] = supplierDetail.supplier_name
+        dict['description'] = supplierDetail.description
+        dict['supplier_code'] = supplierDetail.supplier_code
+        dict['supplier_type'] = supplierDetail.supplier_type
+#         dict['supplier_site_id'] = supplierDetail[5]
+#         dict['supplier_site_code'] = supplierDetail[6]
+        resultL.append(dict) 
+
             
     return resultL
 
@@ -88,7 +89,7 @@ def update_supplier(raw_data,session):
 #    supplierMasterHeader.employee_id = raw_data['employee_id'] future use
 #    supplierMasterHeader.ship_to_location_code = raw_data['ship_to_location_code']
 #    SupplierMasterHeader.bill_to_location_code = raw_data['bill_to_location_code']
-    supplierMasterHeader.created_by = raw_data['created_by']
+    #supplierMasterHeader.created_by = raw_data['created_by']
     supplierMasterHeader.last_updated_by = raw_data['last_updated_by']
         
     for supplier_master_site in raw_data['supplier_master_sites']:
@@ -106,7 +107,7 @@ def update_supplier(raw_data,session):
                 other fields also need to include
                 '''
                 supplier_site.inactive_date = supplier_master_site['inactive_date']
-                supplier_site.created_by = supplier_master_site['created_by']
+                #supplier_site.created_by = supplier_master_site['created_by']
                 supplier_site.last_updated_by = supplier_master_site['last_updated_by'] 
                 
 @db_transaction

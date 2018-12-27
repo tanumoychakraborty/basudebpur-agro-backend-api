@@ -9,6 +9,7 @@ import json
 import falcon
 import logging
 from schema.SupplierMasterSchema import SupplierMasterHeaderSchema,SupplierMasterHeaderUpdateSchema
+from dao.Users import get_user_id_by_user_name
 
 
 class SupplierMaster(object):
@@ -22,6 +23,12 @@ class SupplierMaster(object):
             Insert Purchase Transaction data into database
             """
             data = req.context['serialized-data']
+            user = get_user_id_by_user_name(data['created_by'])
+            data['last_updated_by'] = user
+            data['created_by'] = user
+            for line in data['supplier_master_sites']:
+                line['last_updated_by'] = user
+                line['created_by'] = user
             create_supplier(data)
             output = {'Status': falcon.HTTP_200, 'Message': "Supplier Details saved successfully for: " + data['supplier_name']}
             resp.status = falcon.HTTP_200
@@ -50,17 +57,15 @@ class SupplierMaster(object):
             payload['supplierLists'] = supplierLists
         if OperationType == "SUPPLIER_MASTER_SEARCH":
                 supplier_details = search_supplier_details(params,0,None)
+                payload['supplier_details'] = supplier_details
         if list(params.keys()) == ['supplier_code']:
                 supplier_details = [get_supplier_detail(params['supplier_code'])]        
-
-            
-        for supplier_detail in supplier_details:
-            for key, value in supplier_detail.items():
-                if value is None:
-                    value = ''
-                    supplier_detail[key] = value
-                
-            payload['supplier_details'] = supplier_details   
+                for supplier_detail in supplier_details:
+                    for key, value in supplier_detail.items():
+                        if value is None:
+                            supplier_detail[key] = ''
+                        
+                payload['supplier_details'] = supplier_details   
             
         resp.body = json.dumps(payload, indent=4, sort_keys=True, default=str)
         resp.status = falcon.HTTP_200
@@ -71,7 +76,10 @@ class SupplierMaster(object):
             update supplier data into database
             """ 
             data = req.context['serialized-data']  
-                
+            user = get_user_id_by_user_name(data['last_updated_by'])
+            data['last_updated_by'] = user
+            for line in data['supplier_master_sites']:
+                line['last_updated_by'] = user
             update_supplier(data)
             output = {'Status': falcon.HTTP_200, 'Message': "Supplier data updated successfully for: " + data['supplier_code']}
             resp.status = falcon.HTTP_200
