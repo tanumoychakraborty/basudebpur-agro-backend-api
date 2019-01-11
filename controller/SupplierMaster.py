@@ -76,7 +76,7 @@ class SupplierMaster(object):
             update supplier data into database
             """ 
             data = req.context['serialized-data']  
-            data['last_updated_by'] = get_user_id_by_user_name(data['last_updated_by'])
+            data['last_updated_by'] = get_user_id_by_user_name(data['user_name'])
             for line in data['supplier_master_sites']:
                 line['last_updated_by'] = get_user_id_by_user_name(line['last_updated_by'])
                 if 'supplier_site_id' not in line.keys():
