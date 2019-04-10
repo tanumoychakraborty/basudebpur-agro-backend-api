@@ -37,5 +37,5 @@ class SerializerMiddleware(object):
                     data=req_data
                 )
             except ValidationError as err:
-                print('error in validation >>>>>>>>> '+err.messages)
+                print('error in validation >>>>>>>>> '+str(err.messages))
                 raise HTTPError(status=status_codes.HTTP_422, errors=err.messages)
