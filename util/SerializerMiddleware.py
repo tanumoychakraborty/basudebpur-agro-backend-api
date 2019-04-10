@@ -29,7 +29,6 @@ class SerializerMiddleware(object):
         try:
             serializer = resource.serializers[req.method.lower()]
         except (AttributeError, IndexError, KeyError):
-            print('error while getting serializers >>>>>'+str(resource.serializers))
             return
         else:
             try:
