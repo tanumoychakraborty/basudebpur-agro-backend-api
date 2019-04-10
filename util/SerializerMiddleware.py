@@ -20,12 +20,12 @@ class SerializerMiddleware(object):
             '''
             for post man
             '''
-            #req_data = json.loads(req.stream.read().decode("utf-8"))
+            req_data = json.loads(req.stream.read().decode("utf-8"))
             '''
             for django
             '''
-            print('incoming >>>>>>>'+str(req.media))
-            req_data = req.media
+            #print('incoming >>>>>>>'+str(req.media))
+            #req_data = req.media
             
         try:
             serializer = resource.serializers[req.method.lower()]
