@@ -24,7 +24,7 @@ class SerializerMiddleware(object):
             '''
             for django
             '''
-            print('incoming >>>>>>>'+json.loads(req))
+            print('incoming >>>>>>>'+str(req))
             req_data = json.loads(req.media)
             
         try:
