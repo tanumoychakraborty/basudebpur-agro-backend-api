@@ -21,7 +21,7 @@ class SupplierMasterHeaderSchema(Schema):
     effective_to = fields.Date('%Y-%m-%d')
     created_by = fields.Str(required=True)
     last_updated_by = fields.Str(required=True)
-    supplier_master_sites = fields.Nested('schema.SupplierMasterSchema.SupplierMasterLinesSchema', many=True, required=True)
+    #supplier_master_sites = fields.Nested('schema.SupplierMasterSchema.SupplierMasterLinesSchema', many=True, required=True)
     
     
     
