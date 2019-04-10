@@ -28,7 +28,8 @@ class SerializerMiddleware(object):
             
         try:
             serializer = resource.serializers[req.method.lower()]
-        except (AttributeError, IndexError, KeyError):
+        except (AttributeError, IndexError, KeyError as err):
+            print('error while getting serializers >>>>>'+str(err.messages))
             return
         else:
             try:
@@ -36,5 +37,5 @@ class SerializerMiddleware(object):
                     data=req_data
                 )
             except ValidationError as err:
-                print(str(err.messages))
+                print(str('validation error >>>>>>>>>>'+err.messages))
                 raise HTTPError(status=status_codes.HTTP_422, errors=err.messages)
