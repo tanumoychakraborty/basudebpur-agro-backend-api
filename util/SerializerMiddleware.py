@@ -20,7 +20,8 @@ class SerializerMiddleware(object):
             '''
             for post man
             '''
-            req_data = json.loads(req.stream.read().decode("utf-8"))
+            #req_data = json.loads(req.stream.read().decode("utf-8"))
+            req_data = json.loads(req.bounded_stream)
             '''
             for django
             '''
