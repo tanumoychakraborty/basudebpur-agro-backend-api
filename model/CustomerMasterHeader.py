@@ -8,6 +8,7 @@ from model import Base
 from sqlalchemy.sql.schema import Column, Sequence
 from sqlalchemy.sql.sqltypes import String, Integer, DateTime, Date
 from sqlalchemy.orm import relationship
+import datetime
 
 
 class CustomerMasterHeader (Base):
@@ -22,9 +23,11 @@ class CustomerMasterHeader (Base):
     enabled_flag = Column('enabled_flag', String)
     effective_from = Column('effective_from', DateTime)
     effective_to = Column('effective_to', DateTime)
-    created_by = Column('created_by', int)  
-    creation_date = Column('effective_from', DateTime)
-    last_update_date = Column('last_update_date', DateTime)
-    last_updated_by = Column('last_updated_by', int)
+    created_by = Column('created_by', Integer)  
+    creation_date = Column('creation_date', DateTime,default=datetime.datetime.utcnow)
+    last_update_date = Column('last_update_date',DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
+    last_updated_by = Column('last_updated_by', Integer)
     
-    sites = relationship('model.CustomerMasterSites', back_populates='customer')
+    sites = relationship('model.CustomerMasterSites.CustomerMasterSites', back_populates='customer')
+    
+    

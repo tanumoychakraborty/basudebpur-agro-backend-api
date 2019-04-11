@@ -3157,3 +3157,859 @@ WHERE apps.user_tbl.user_name = %(user_name_1)s
  LIMIT %(param_1)s
 11/01/2019 05:04:52 PM:INFO:{'user_name_1': 'SIKHATEWARY', 'param_1': 1}
 11/01/2019 05:04:52 PM:INFO:COMMIT
+06/04/2019 07:47:59 AM:INFO:starting gunicorn server
+06/04/2019 07:47:59 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+06/04/2019 07:48:29 AM:INFO:select version()
+06/04/2019 07:48:29 AM:INFO:{}
+06/04/2019 07:48:30 AM:INFO:select current_schema()
+06/04/2019 07:48:30 AM:INFO:{}
+06/04/2019 07:48:30 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+06/04/2019 07:48:30 AM:INFO:{}
+06/04/2019 07:48:30 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+06/04/2019 07:48:30 AM:INFO:{}
+06/04/2019 07:48:30 AM:INFO:show standard_conforming_strings
+06/04/2019 07:48:30 AM:INFO:{}
+06/04/2019 07:48:30 AM:INFO:BEGIN (implicit)
+06/04/2019 07:48:30 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+06/04/2019 07:48:30 AM:INFO:{'user_name_1': 'SIKHATEWARY', 'param_1': 1}
+06/04/2019 07:48:30 AM:INFO:COMMIT
+06/04/2019 07:48:39 AM:INFO:BEGIN (implicit)
+06/04/2019 07:48:39 AM:INFO:SELECT apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1 
+FROM apps.user_tbl
+06/04/2019 07:48:39 AM:INFO:{}
+06/04/2019 07:48:39 AM:INFO:COMMIT
+06/04/2019 11:31:02 PM:INFO:starting gunicorn server
+06/04/2019 11:31:02 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+07/04/2019 11:51:41 PM:INFO:starting gunicorn server
+07/04/2019 11:51:41 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+07/04/2019 11:53:09 PM:INFO:starting gunicorn server
+07/04/2019 11:53:09 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+07/04/2019 11:58:01 PM:INFO:starting gunicorn server
+07/04/2019 11:58:01 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+07/04/2019 11:59:09 PM:INFO:starting gunicorn server
+07/04/2019 11:59:09 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+07/04/2019 11:59:20 PM:INFO:starting gunicorn server
+07/04/2019 11:59:20 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+07/04/2019 11:59:37 PM:INFO:starting gunicorn server
+07/04/2019 11:59:37 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 12:00:36 AM:INFO:starting gunicorn server
+08/04/2019 12:00:36 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 12:00:56 AM:ERROR:None
+08/04/2019 12:01:13 AM:INFO:select version()
+08/04/2019 12:01:13 AM:INFO:{}
+08/04/2019 12:01:13 AM:INFO:select current_schema()
+08/04/2019 12:01:13 AM:INFO:{}
+08/04/2019 12:01:13 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 12:01:13 AM:INFO:{}
+08/04/2019 12:01:13 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 12:01:13 AM:INFO:{}
+08/04/2019 12:01:13 AM:INFO:show standard_conforming_strings
+08/04/2019 12:01:13 AM:INFO:{}
+08/04/2019 12:01:13 AM:INFO:BEGIN (implicit)
+08/04/2019 12:01:13 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.supplier_id = apps.supplier_master_header_tbl.supplier_id 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s AND apps.purchase_trx_header_tbl.supplier_id = %(supplier_id_1)s AND apps.purchase_trx_header_tbl.transaction_date = %(transaction_date_1)s AND apps.purchase_trx_header_tbl.weighting_number = %(weighting_number_1)s AND apps.purchase_trx_header_tbl.buyer_id = %(buyer_id_1)s AND apps.purchase_trx_header_tbl.creation_date >= %(creation_date_1)s AND apps.purchase_trx_header_tbl.creation_date <= %(creation_date_2)s
+08/04/2019 12:01:13 AM:INFO:{'purchase_trx_number_1': '26_11_001', 'supplier_id_1': 'NA', 'transaction_date_1': 'NA', 'weighting_number_1': 'NA', 'buyer_id_1': 'NA', 'creation_date_1': 'NA', 'creation_date_2': 'NA'}
+08/04/2019 12:01:13 AM:INFO:ROLLBACK
+08/04/2019 12:01:13 AM:ERROR:None
+08/04/2019 12:02:35 AM:ERROR:None
+08/04/2019 12:09:33 AM:INFO:starting gunicorn server
+08/04/2019 12:09:33 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 12:09:37 AM:ERROR:None
+08/04/2019 12:10:38 AM:INFO:starting gunicorn server
+08/04/2019 12:10:38 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 12:10:41 AM:INFO:select version()
+08/04/2019 12:10:41 AM:INFO:{}
+08/04/2019 12:10:41 AM:INFO:select current_schema()
+08/04/2019 12:10:41 AM:INFO:{}
+08/04/2019 12:10:41 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 12:10:41 AM:INFO:{}
+08/04/2019 12:10:41 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 12:10:41 AM:INFO:{}
+08/04/2019 12:10:41 AM:INFO:show standard_conforming_strings
+08/04/2019 12:10:41 AM:INFO:{}
+08/04/2019 12:10:41 AM:INFO:BEGIN (implicit)
+08/04/2019 12:10:41 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:10:41 AM:INFO:{'user_name_1': 'SIKHATEWARY', 'param_1': 1}
+08/04/2019 12:10:41 AM:INFO:COMMIT
+08/04/2019 12:13:48 AM:INFO:BEGIN (implicit)
+08/04/2019 12:13:48 AM:INFO:SELECT apps.customer_master_header_tbl.customer_id AS apps_customer_master_header_tbl_customer_id, apps.customer_master_header_tbl.customer_code AS apps_customer_master_header_tbl_customer_code, apps.customer_master_header_tbl.customer_name AS apps_customer_master_header_tbl_customer_name, apps.customer_master_header_tbl.description AS apps_customer_master_header_tbl_description, apps.customer_master_header_tbl.customer_type AS apps_customer_master_header_tbl_customer_type, apps.customer_master_header_tbl.remarks AS apps_customer_master_header_tbl_remarks, apps.customer_master_header_tbl.enabled_flag AS apps_customer_master_header_tbl_enabled_flag, apps.customer_master_header_tbl.effective_from AS apps_customer_master_header_tbl_effective_from, apps.customer_master_header_tbl.effective_to AS apps_customer_master_header_tbl_effective_to, apps.customer_master_header_tbl.created_by AS apps_customer_master_header_tbl_created_by, apps.customer_master_header_tbl.creation_date AS apps_customer_master_header_tbl_creation_date, apps.customer_master_header_tbl.last_update_date AS apps_customer_master_header_tbl_last_update_date, apps.customer_master_header_tbl.last_updated_by AS apps_customer_master_header_tbl_last_updated_by 
+FROM apps.customer_master_header_tbl
+08/04/2019 12:13:48 AM:INFO:{}
+08/04/2019 12:13:48 AM:INFO:COMMIT
+08/04/2019 12:15:15 AM:INFO:BEGIN (implicit)
+08/04/2019 12:15:15 AM:INFO:SELECT apps.customer_master_header_tbl.customer_code AS apps_customer_master_header_tbl_customer_code, apps.customer_master_header_tbl.customer_name AS apps_customer_master_header_tbl_customer_name, apps.customer_master_header_tbl.description AS apps_customer_master_header_tbl_description, apps.customer_master_header_tbl.customer_type AS apps_customer_master_header_tbl_customer_type, apps.customer_master_header_tbl.enabled_flag AS apps_customer_master_header_tbl_enabled_flag 
+FROM apps.customer_master_header_tbl
+08/04/2019 12:15:15 AM:INFO:{}
+08/04/2019 12:15:15 AM:INFO:COMMIT
+08/04/2019 01:04:54 AM:INFO:starting gunicorn server
+08/04/2019 01:04:54 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 01:04:58 AM:INFO:select version()
+08/04/2019 01:04:58 AM:INFO:{}
+08/04/2019 01:04:58 AM:INFO:select current_schema()
+08/04/2019 01:04:58 AM:INFO:{}
+08/04/2019 01:04:58 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 01:04:58 AM:INFO:{}
+08/04/2019 01:04:58 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 01:04:58 AM:INFO:{}
+08/04/2019 01:04:58 AM:INFO:show standard_conforming_strings
+08/04/2019 01:04:58 AM:INFO:{}
+08/04/2019 01:04:58 AM:INFO:BEGIN (implicit)
+08/04/2019 01:04:58 AM:INFO:SELECT apps.customer_master_header_tbl.customer_code AS apps_customer_master_header_tbl_customer_code, apps.customer_master_header_tbl.customer_name AS apps_customer_master_header_tbl_customer_name, apps.customer_master_header_tbl.description AS apps_customer_master_header_tbl_description, apps.customer_master_header_tbl.customer_type AS apps_customer_master_header_tbl_customer_type, apps.customer_master_header_tbl.enabled_flag AS apps_customer_master_header_tbl_enabled_flag 
+FROM apps.customer_master_header_tbl 
+WHERE apps.customer_master_header_tbl.customer_code = %(customer_code_1)s
+08/04/2019 01:04:58 AM:INFO:{'customer_code_1': 'TOWNSERVICE001'}
+08/04/2019 01:04:58 AM:INFO:COMMIT
+08/04/2019 01:08:42 AM:INFO:BEGIN (implicit)
+08/04/2019 01:08:42 AM:INFO:SELECT apps.customer_master_header_tbl.customer_id AS apps_customer_master_header_tbl_customer_id, apps.customer_master_header_tbl.customer_code AS apps_customer_master_header_tbl_customer_code, apps.customer_master_header_tbl.customer_name AS apps_customer_master_header_tbl_customer_name, apps.customer_master_header_tbl.description AS apps_customer_master_header_tbl_description, apps.customer_master_header_tbl.customer_type AS apps_customer_master_header_tbl_customer_type, apps.customer_master_header_tbl.remarks AS apps_customer_master_header_tbl_remarks, apps.customer_master_header_tbl.enabled_flag AS apps_customer_master_header_tbl_enabled_flag, apps.customer_master_header_tbl.effective_from AS apps_customer_master_header_tbl_effective_from, apps.customer_master_header_tbl.effective_to AS apps_customer_master_header_tbl_effective_to, apps.customer_master_header_tbl.created_by AS apps_customer_master_header_tbl_created_by, apps.customer_master_header_tbl.creation_date AS apps_customer_master_header_tbl_creation_date, apps.customer_master_header_tbl.last_update_date AS apps_customer_master_header_tbl_last_update_date, apps.customer_master_header_tbl.last_updated_by AS apps_customer_master_header_tbl_last_updated_by 
+FROM apps.customer_master_header_tbl 
+WHERE apps.customer_master_header_tbl.customer_code = %(customer_code_1)s 
+ LIMIT %(param_1)s
+08/04/2019 01:08:42 AM:INFO:{'customer_code_1': 'TOWNSERVICE001', 'param_1': 1}
+08/04/2019 01:08:42 AM:INFO:SELECT apps.customer_master_sites_tbl.customer_site_id AS apps_customer_master_sites_tbl_customer_site_id, apps.customer_master_sites_tbl.customer_id AS apps_customer_master_sites_tbl_customer_id, apps.customer_master_sites_tbl.customer_site_code AS apps_customer_master_sites_tbl_customer_site_code, apps.customer_master_sites_tbl.customer_address AS apps_customer_master_sites_tbl_customer_address, apps.customer_master_sites_tbl.phone_number1 AS apps_customer_master_sites_tbl_phone_number1, apps.customer_master_sites_tbl.phone_number2 AS apps_customer_master_sites_tbl_phone_number2, apps.customer_master_sites_tbl.email AS apps_customer_master_sites_tbl_email, apps.customer_master_sites_tbl.effective_from AS apps_customer_master_sites_tbl_effective_from, apps.customer_master_sites_tbl.effective_to AS apps_customer_master_sites_tbl_effective_to, apps.customer_master_sites_tbl.created_by AS apps_customer_master_sites_tbl_created_by, apps.customer_master_sites_tbl.creation_date AS apps_customer_master_sites_tbl_creation_date, apps.customer_master_sites_tbl.last_update_date AS apps_customer_master_sites_tbl_last_update_date, apps.customer_master_sites_tbl.last_updated_by AS apps_customer_master_sites_tbl_last_updated_by 
+FROM apps.customer_master_sites_tbl 
+WHERE %(param_1)s = apps.customer_master_sites_tbl.customer_id
+08/04/2019 01:08:42 AM:INFO:{'param_1': 1}
+08/04/2019 01:08:42 AM:INFO:COMMIT
+08/04/2019 01:17:46 AM:INFO:starting gunicorn server
+08/04/2019 01:17:46 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 01:26:44 AM:INFO:starting gunicorn server
+08/04/2019 01:26:44 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 01:31:33 AM:INFO:starting gunicorn server
+08/04/2019 01:31:33 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 01:33:48 AM:INFO:starting gunicorn server
+08/04/2019 01:33:48 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 01:33:56 AM:INFO:select version()
+08/04/2019 01:33:56 AM:INFO:{}
+08/04/2019 01:33:56 AM:INFO:select current_schema()
+08/04/2019 01:33:56 AM:INFO:{}
+08/04/2019 01:33:56 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 01:33:56 AM:INFO:{}
+08/04/2019 01:33:56 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 01:33:56 AM:INFO:{}
+08/04/2019 01:33:56 AM:INFO:show standard_conforming_strings
+08/04/2019 01:33:56 AM:INFO:{}
+08/04/2019 01:33:56 AM:INFO:BEGIN (implicit)
+08/04/2019 01:33:56 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 01:33:56 AM:INFO:{'user_name_1': 'ATEWARY', 'param_1': 1}
+08/04/2019 01:33:56 AM:INFO:COMMIT
+08/04/2019 01:33:56 AM:ERROR:None
+08/04/2019 01:34:59 AM:INFO:BEGIN (implicit)
+08/04/2019 01:34:59 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 01:34:59 AM:INFO:{'user_name_1': 'ATEWARY', 'param_1': 1}
+08/04/2019 01:34:59 AM:INFO:COMMIT
+08/04/2019 01:34:59 AM:ERROR:None
+08/04/2019 01:35:16 AM:INFO:starting gunicorn server
+08/04/2019 01:35:16 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 01:35:19 AM:INFO:select version()
+08/04/2019 01:35:19 AM:INFO:{}
+08/04/2019 01:35:19 AM:INFO:select current_schema()
+08/04/2019 01:35:19 AM:INFO:{}
+08/04/2019 01:35:19 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 01:35:19 AM:INFO:{}
+08/04/2019 01:35:19 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 01:35:19 AM:INFO:{}
+08/04/2019 01:35:19 AM:INFO:show standard_conforming_strings
+08/04/2019 01:35:20 AM:INFO:{}
+08/04/2019 01:35:20 AM:INFO:BEGIN (implicit)
+08/04/2019 01:35:20 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 01:35:20 AM:INFO:{'user_name_1': 'ATEWARY', 'param_1': 1}
+08/04/2019 01:35:20 AM:INFO:COMMIT
+08/04/2019 01:35:20 AM:ERROR:None
+08/04/2019 01:36:34 AM:INFO:starting gunicorn server
+08/04/2019 01:36:34 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 01:36:38 AM:INFO:select version()
+08/04/2019 01:36:38 AM:INFO:{}
+08/04/2019 01:36:38 AM:INFO:select current_schema()
+08/04/2019 01:36:38 AM:INFO:{}
+08/04/2019 01:36:38 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 01:36:38 AM:INFO:{}
+08/04/2019 01:36:38 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 01:36:38 AM:INFO:{}
+08/04/2019 01:36:38 AM:INFO:show standard_conforming_strings
+08/04/2019 01:36:38 AM:INFO:{}
+08/04/2019 01:36:38 AM:INFO:BEGIN (implicit)
+08/04/2019 01:36:38 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 01:36:38 AM:INFO:{'user_name_1': 'ATEWARY', 'param_1': 1}
+08/04/2019 01:36:38 AM:INFO:COMMIT
+08/04/2019 01:36:38 AM:INFO:BEGIN (implicit)
+08/04/2019 01:36:38 AM:INFO:INSERT INTO apps.customer_master_header_tbl (customer_id, customer_code, customer_name, description, customer_type, remarks, enabled_flag, effective_from, effective_to, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.customer_id_sequence'), %(customer_code)s, %(customer_name)s, %(description)s, %(customer_type)s, %(remarks)s, %(enabled_flag)s, %(effective_from)s, %(effective_to)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.customer_master_header_tbl.customer_id
+08/04/2019 01:36:38 AM:INFO:{'customer_code': 'BAZARHAT001', 'customer_name': 'Bazar Hat', 'description': 'Bazar Hat Bappa', 'customer_type': 'RICE', 'remarks': 'Test Data', 'enabled_flag': 'Y', 'effective_from': datetime.date(2018, 12, 12), 'effective_to': datetime.date(2020, 12, 12), 'created_by': None, 'creation_date': None, 'last_update_date': None, 'last_updated_by': None}
+08/04/2019 01:36:38 AM:INFO:ROLLBACK
+08/04/2019 01:36:38 AM:ERROR:None
+08/04/2019 01:37:50 AM:INFO:BEGIN (implicit)
+08/04/2019 01:37:50 AM:INFO:SELECT apps.customer_master_header_tbl.customer_id AS apps_customer_master_header_tbl_customer_id, apps.customer_master_header_tbl.customer_code AS apps_customer_master_header_tbl_customer_code, apps.customer_master_header_tbl.customer_name AS apps_customer_master_header_tbl_customer_name, apps.customer_master_header_tbl.description AS apps_customer_master_header_tbl_description, apps.customer_master_header_tbl.customer_type AS apps_customer_master_header_tbl_customer_type, apps.customer_master_header_tbl.remarks AS apps_customer_master_header_tbl_remarks, apps.customer_master_header_tbl.enabled_flag AS apps_customer_master_header_tbl_enabled_flag, apps.customer_master_header_tbl.effective_from AS apps_customer_master_header_tbl_effective_from, apps.customer_master_header_tbl.effective_to AS apps_customer_master_header_tbl_effective_to, apps.customer_master_header_tbl.created_by AS apps_customer_master_header_tbl_created_by, apps.customer_master_header_tbl.creation_date AS apps_customer_master_header_tbl_creation_date, apps.customer_master_header_tbl.last_update_date AS apps_customer_master_header_tbl_last_update_date, apps.customer_master_header_tbl.last_updated_by AS apps_customer_master_header_tbl_last_updated_by 
+FROM apps.customer_master_header_tbl 
+WHERE apps.customer_master_header_tbl.customer_code = %(customer_code_1)s 
+ LIMIT %(param_1)s
+08/04/2019 01:37:50 AM:INFO:{'customer_code_1': 'TOWNSERVICE001', 'param_1': 1}
+08/04/2019 01:37:50 AM:INFO:SELECT apps.customer_master_sites_tbl.customer_site_id AS apps_customer_master_sites_tbl_customer_site_id, apps.customer_master_sites_tbl.customer_id AS apps_customer_master_sites_tbl_customer_id, apps.customer_master_sites_tbl.customer_site_code AS apps_customer_master_sites_tbl_customer_site_code, apps.customer_master_sites_tbl.customer_address AS apps_customer_master_sites_tbl_customer_address, apps.customer_master_sites_tbl.phone_number1 AS apps_customer_master_sites_tbl_phone_number1, apps.customer_master_sites_tbl.phone_number2 AS apps_customer_master_sites_tbl_phone_number2, apps.customer_master_sites_tbl.email AS apps_customer_master_sites_tbl_email, apps.customer_master_sites_tbl.effective_from AS apps_customer_master_sites_tbl_effective_from, apps.customer_master_sites_tbl.effective_to AS apps_customer_master_sites_tbl_effective_to, apps.customer_master_sites_tbl.created_by AS apps_customer_master_sites_tbl_created_by, apps.customer_master_sites_tbl.creation_date AS apps_customer_master_sites_tbl_creation_date, apps.customer_master_sites_tbl.last_update_date AS apps_customer_master_sites_tbl_last_update_date, apps.customer_master_sites_tbl.last_updated_by AS apps_customer_master_sites_tbl_last_updated_by 
+FROM apps.customer_master_sites_tbl 
+WHERE %(param_1)s = apps.customer_master_sites_tbl.customer_id
+08/04/2019 01:37:50 AM:INFO:{'param_1': 1}
+08/04/2019 01:37:50 AM:INFO:COMMIT
+08/04/2019 01:41:07 AM:INFO:BEGIN (implicit)
+08/04/2019 01:41:07 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 01:41:07 AM:INFO:{'user_name_1': 'ATEWARY', 'param_1': 1}
+08/04/2019 01:41:07 AM:INFO:COMMIT
+08/04/2019 01:41:22 AM:INFO:BEGIN (implicit)
+08/04/2019 01:41:22 AM:INFO:INSERT INTO apps.customer_master_header_tbl (customer_id, customer_code, customer_name, description, customer_type, remarks, enabled_flag, effective_from, effective_to, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.customer_id_sequence'), %(customer_code)s, %(customer_name)s, %(description)s, %(customer_type)s, %(remarks)s, %(enabled_flag)s, %(effective_from)s, %(effective_to)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.customer_master_header_tbl.customer_id
+08/04/2019 01:41:22 AM:INFO:{'customer_code': 'BAZARHAT001', 'customer_name': 'Bazar Hat ', 'description': 'Bazar Hat Bappa', 'customer_type': 'RICE', 'remarks': 'Test Data', 'enabled_flag': 'Y', 'effective_from': datetime.date(2018, 12, 12), 'effective_to': datetime.date(2020, 12, 12), 'created_by': None, 'creation_date': None, 'last_update_date': None, 'last_updated_by': None}
+08/04/2019 01:41:22 AM:INFO:ROLLBACK
+08/04/2019 01:41:22 AM:ERROR:None
+08/04/2019 01:42:41 AM:INFO:BEGIN (implicit)
+08/04/2019 01:42:41 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 01:42:41 AM:INFO:{'user_name_1': 'ATEWARY', 'param_1': 1}
+08/04/2019 01:42:41 AM:INFO:COMMIT
+08/04/2019 01:42:45 AM:INFO:BEGIN (implicit)
+08/04/2019 01:42:45 AM:INFO:INSERT INTO apps.customer_master_header_tbl (customer_id, customer_code, customer_name, description, customer_type, remarks, enabled_flag, effective_from, effective_to, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.customer_id_sequence'), %(customer_code)s, %(customer_name)s, %(description)s, %(customer_type)s, %(remarks)s, %(enabled_flag)s, %(effective_from)s, %(effective_to)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.customer_master_header_tbl.customer_id
+08/04/2019 01:42:45 AM:INFO:{'customer_code': 'BAZARHAT001', 'customer_name': 'Bazar Hat ', 'description': 'Bazar Hat Bappa', 'customer_type': 'RICE', 'remarks': 'Test Data', 'enabled_flag': 'Y', 'effective_from': datetime.date(2018, 12, 12), 'effective_to': datetime.date(2020, 12, 12), 'created_by': None, 'creation_date': None, 'last_update_date': None, 'last_updated_by': None}
+08/04/2019 01:42:45 AM:INFO:ROLLBACK
+08/04/2019 01:42:45 AM:ERROR:None
+08/04/2019 01:44:12 AM:INFO:starting gunicorn server
+08/04/2019 01:44:12 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 01:44:23 AM:INFO:select version()
+08/04/2019 01:44:23 AM:INFO:{}
+08/04/2019 01:44:23 AM:INFO:select current_schema()
+08/04/2019 01:44:23 AM:INFO:{}
+08/04/2019 01:44:23 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 01:44:23 AM:INFO:{}
+08/04/2019 01:44:23 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 01:44:23 AM:INFO:{}
+08/04/2019 01:44:23 AM:INFO:show standard_conforming_strings
+08/04/2019 01:44:23 AM:INFO:{}
+08/04/2019 01:44:23 AM:INFO:BEGIN (implicit)
+08/04/2019 01:44:23 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 01:44:23 AM:INFO:{'user_name_1': 'ATEWARY', 'param_1': 1}
+08/04/2019 01:44:23 AM:INFO:COMMIT
+08/04/2019 01:46:45 AM:INFO:starting gunicorn server
+08/04/2019 01:46:45 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 01:46:52 AM:INFO:select version()
+08/04/2019 01:46:52 AM:INFO:{}
+08/04/2019 01:46:52 AM:INFO:select current_schema()
+08/04/2019 01:46:52 AM:INFO:{}
+08/04/2019 01:46:52 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 01:46:52 AM:INFO:{}
+08/04/2019 01:46:52 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 01:46:52 AM:INFO:{}
+08/04/2019 01:46:52 AM:INFO:show standard_conforming_strings
+08/04/2019 01:46:52 AM:INFO:{}
+08/04/2019 01:46:52 AM:INFO:BEGIN (implicit)
+08/04/2019 01:46:52 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 01:46:52 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 01:46:52 AM:INFO:COMMIT
+08/04/2019 01:46:52 AM:INFO:BEGIN (implicit)
+08/04/2019 01:46:52 AM:INFO:INSERT INTO apps.customer_master_header_tbl (customer_id, customer_code, customer_name, description, customer_type, remarks, enabled_flag, effective_from, effective_to, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.customer_id_sequence'), %(customer_code)s, %(customer_name)s, %(description)s, %(customer_type)s, %(remarks)s, %(enabled_flag)s, %(effective_from)s, %(effective_to)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.customer_master_header_tbl.customer_id
+08/04/2019 01:46:52 AM:INFO:{'customer_code': 'BAZARHAT001', 'customer_name': 'Bazar Hat ', 'description': 'Bazar Hat Bappa', 'customer_type': 'RICE', 'remarks': 'Test Data', 'enabled_flag': 'Y', 'effective_from': datetime.date(2018, 12, 12), 'effective_to': datetime.date(2020, 12, 12), 'created_by': 6, 'creation_date': None, 'last_update_date': None, 'last_updated_by': 6}
+08/04/2019 01:46:52 AM:INFO:ROLLBACK
+08/04/2019 01:46:52 AM:ERROR:None
+08/04/2019 01:47:13 AM:INFO:BEGIN (implicit)
+08/04/2019 01:47:13 AM:INFO:SELECT apps.customer_master_header_tbl.customer_id AS apps_customer_master_header_tbl_customer_id, apps.customer_master_header_tbl.customer_code AS apps_customer_master_header_tbl_customer_code, apps.customer_master_header_tbl.customer_name AS apps_customer_master_header_tbl_customer_name, apps.customer_master_header_tbl.description AS apps_customer_master_header_tbl_description, apps.customer_master_header_tbl.customer_type AS apps_customer_master_header_tbl_customer_type, apps.customer_master_header_tbl.remarks AS apps_customer_master_header_tbl_remarks, apps.customer_master_header_tbl.enabled_flag AS apps_customer_master_header_tbl_enabled_flag, apps.customer_master_header_tbl.effective_from AS apps_customer_master_header_tbl_effective_from, apps.customer_master_header_tbl.effective_to AS apps_customer_master_header_tbl_effective_to, apps.customer_master_header_tbl.created_by AS apps_customer_master_header_tbl_created_by, apps.customer_master_header_tbl.creation_date AS apps_customer_master_header_tbl_creation_date, apps.customer_master_header_tbl.last_update_date AS apps_customer_master_header_tbl_last_update_date, apps.customer_master_header_tbl.last_updated_by AS apps_customer_master_header_tbl_last_updated_by 
+FROM apps.customer_master_header_tbl 
+WHERE apps.customer_master_header_tbl.customer_code = %(customer_code_1)s 
+ LIMIT %(param_1)s
+08/04/2019 01:47:13 AM:INFO:{'customer_code_1': 'BAZARHAT001', 'param_1': 1}
+08/04/2019 01:47:13 AM:INFO:ROLLBACK
+08/04/2019 01:47:13 AM:ERROR:None
+08/04/2019 01:50:27 AM:INFO:starting gunicorn server
+08/04/2019 01:50:27 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 01:51:12 AM:INFO:starting gunicorn server
+08/04/2019 01:51:12 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 01:51:30 AM:INFO:select version()
+08/04/2019 01:51:30 AM:INFO:{}
+08/04/2019 01:51:30 AM:INFO:select current_schema()
+08/04/2019 01:51:30 AM:INFO:{}
+08/04/2019 01:51:30 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 01:51:30 AM:INFO:{}
+08/04/2019 01:51:30 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 01:51:30 AM:INFO:{}
+08/04/2019 01:51:30 AM:INFO:show standard_conforming_strings
+08/04/2019 01:51:30 AM:INFO:{}
+08/04/2019 01:51:30 AM:INFO:BEGIN (implicit)
+08/04/2019 01:51:30 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 01:51:30 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 01:51:30 AM:INFO:COMMIT
+08/04/2019 01:51:35 AM:INFO:BEGIN (implicit)
+08/04/2019 01:51:35 AM:INFO:INSERT INTO apps.customer_master_header_tbl (customer_id, customer_code, customer_name, description, customer_type, remarks, enabled_flag, effective_from, effective_to, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.customer_id_sequence'), %(customer_code)s, %(customer_name)s, %(description)s, %(customer_type)s, %(remarks)s, %(enabled_flag)s, %(effective_from)s, %(effective_to)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.customer_master_header_tbl.customer_id
+08/04/2019 01:51:35 AM:INFO:{'customer_code': 'BAZARHAT001', 'customer_name': 'Bazar Hat ', 'description': 'Bazar Hat Bappa', 'customer_type': 'RICE', 'remarks': 'Test Data', 'enabled_flag': 'Y', 'effective_from': datetime.date(2018, 12, 12), 'effective_to': datetime.date(2020, 12, 12), 'created_by': 6, 'creation_date': datetime.datetime(2019, 4, 7, 20, 21, 35, 694844), 'last_update_date': datetime.datetime(2019, 4, 7, 20, 21, 35, 694872), 'last_updated_by': 6}
+08/04/2019 01:51:35 AM:INFO:INSERT INTO apps.customer_master_sites_tbl (customer_site_id, customer_id, customer_site_code, customer_address, phone_number1, phone_number2, email, effective_from, effective_to, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.customer_site_id_sequence'), %(customer_id)s, %(customer_site_code)s, %(customer_address)s, %(phone_number1)s, %(phone_number2)s, %(email)s, %(effective_from)s, %(effective_to)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.customer_master_sites_tbl.customer_site_id
+08/04/2019 01:51:35 AM:INFO:{'customer_id': 3, 'customer_site_code': 'BAZARHAT001-S001', 'customer_address': None, 'phone_number1': '9830456789', 'phone_number2': '9681678456', 'email': 'townservice@gmail.com', 'effective_from': datetime.date(2018, 12, 12), 'effective_to': datetime.date(2020, 12, 12), 'created_by': 6, 'creation_date': datetime.datetime(2019, 4, 7, 20, 21, 35, 720373), 'last_update_date': datetime.datetime(2019, 4, 7, 20, 21, 35, 720399), 'last_updated_by': 6}
+08/04/2019 01:51:35 AM:INFO:ROLLBACK
+08/04/2019 01:51:35 AM:ERROR:None
+08/04/2019 01:53:06 AM:INFO:BEGIN (implicit)
+08/04/2019 01:53:06 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 01:53:06 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 01:53:06 AM:INFO:COMMIT
+08/04/2019 01:53:11 AM:INFO:BEGIN (implicit)
+08/04/2019 01:53:11 AM:INFO:INSERT INTO apps.customer_master_header_tbl (customer_id, customer_code, customer_name, description, customer_type, remarks, enabled_flag, effective_from, effective_to, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.customer_id_sequence'), %(customer_code)s, %(customer_name)s, %(description)s, %(customer_type)s, %(remarks)s, %(enabled_flag)s, %(effective_from)s, %(effective_to)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.customer_master_header_tbl.customer_id
+08/04/2019 01:53:11 AM:INFO:{'customer_code': 'BAZARHAT001', 'customer_name': 'Bazar Hat ', 'description': 'Bazar Hat Bappa', 'customer_type': 'RICE', 'remarks': 'Test Data', 'enabled_flag': 'Y', 'effective_from': datetime.date(2018, 12, 12), 'effective_to': datetime.date(2020, 12, 12), 'created_by': 6, 'creation_date': datetime.datetime(2019, 4, 7, 20, 23, 11, 67884), 'last_update_date': datetime.datetime(2019, 4, 7, 20, 23, 11, 67939), 'last_updated_by': 6}
+08/04/2019 01:53:11 AM:INFO:INSERT INTO apps.customer_master_sites_tbl (customer_site_id, customer_id, customer_site_code, customer_address, phone_number1, phone_number2, email, effective_from, effective_to, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.customer_site_id_sequence'), %(customer_id)s, %(customer_site_code)s, %(customer_address)s, %(phone_number1)s, %(phone_number2)s, %(email)s, %(effective_from)s, %(effective_to)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.customer_master_sites_tbl.customer_site_id
+08/04/2019 01:53:11 AM:INFO:{'customer_id': 4, 'customer_site_code': 'BAZARHAT001-S001', 'customer_address': None, 'phone_number1': '9830456789', 'phone_number2': '9681678456', 'email': 'townservice@gmail.com', 'effective_from': datetime.date(2018, 12, 12), 'effective_to': datetime.date(2020, 12, 12), 'created_by': 6, 'creation_date': datetime.datetime(2019, 4, 7, 20, 23, 11, 73477), 'last_update_date': datetime.datetime(2019, 4, 7, 20, 23, 11, 73497), 'last_updated_by': 6}
+08/04/2019 01:53:11 AM:INFO:COMMIT
+08/04/2019 11:41:16 AM:INFO:starting gunicorn server
+08/04/2019 11:41:16 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 11:41:20 AM:INFO:select version()
+08/04/2019 11:41:20 AM:INFO:{}
+08/04/2019 11:41:20 AM:INFO:select current_schema()
+08/04/2019 11:41:20 AM:INFO:{}
+08/04/2019 11:41:20 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 11:41:20 AM:INFO:{}
+08/04/2019 11:41:20 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 11:41:20 AM:INFO:{}
+08/04/2019 11:41:20 AM:INFO:show standard_conforming_strings
+08/04/2019 11:41:20 AM:INFO:{}
+08/04/2019 11:41:20 AM:INFO:BEGIN (implicit)
+08/04/2019 11:41:20 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:41:20 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:41:20 AM:INFO:COMMIT
+08/04/2019 11:43:52 AM:INFO:starting gunicorn server
+08/04/2019 11:43:52 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 11:43:57 AM:INFO:select version()
+08/04/2019 11:43:57 AM:INFO:{}
+08/04/2019 11:43:57 AM:INFO:select current_schema()
+08/04/2019 11:43:57 AM:INFO:{}
+08/04/2019 11:43:57 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 11:43:57 AM:INFO:{}
+08/04/2019 11:43:57 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 11:43:57 AM:INFO:{}
+08/04/2019 11:43:57 AM:INFO:show standard_conforming_strings
+08/04/2019 11:43:57 AM:INFO:{}
+08/04/2019 11:43:57 AM:INFO:BEGIN (implicit)
+08/04/2019 11:43:57 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:43:57 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:43:57 AM:INFO:COMMIT
+08/04/2019 11:43:57 AM:INFO:BEGIN (implicit)
+08/04/2019 11:43:57 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:43:57 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:43:57 AM:INFO:COMMIT
+08/04/2019 11:43:57 AM:INFO:BEGIN (implicit)
+08/04/2019 11:43:57 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:43:57 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:43:57 AM:INFO:COMMIT
+08/04/2019 11:43:57 AM:INFO:BEGIN (implicit)
+08/04/2019 11:43:57 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:43:57 AM:INFO:{'user_name_1': 6, 'param_1': 1}
+08/04/2019 11:43:57 AM:INFO:ROLLBACK
+08/04/2019 11:43:57 AM:ERROR:None
+08/04/2019 11:46:54 AM:INFO:BEGIN (implicit)
+08/04/2019 11:46:54 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:46:54 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:46:54 AM:INFO:COMMIT
+08/04/2019 11:46:54 AM:INFO:BEGIN (implicit)
+08/04/2019 11:46:54 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:46:54 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:46:54 AM:INFO:COMMIT
+08/04/2019 11:46:54 AM:INFO:BEGIN (implicit)
+08/04/2019 11:46:54 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:46:54 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:46:54 AM:INFO:COMMIT
+08/04/2019 11:46:54 AM:INFO:BEGIN (implicit)
+08/04/2019 11:46:54 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:46:54 AM:INFO:{'user_name_1': 6, 'param_1': 1}
+08/04/2019 11:46:54 AM:INFO:ROLLBACK
+08/04/2019 11:46:54 AM:ERROR:None
+08/04/2019 11:48:01 AM:INFO:starting gunicorn server
+08/04/2019 11:48:01 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 11:48:05 AM:INFO:select version()
+08/04/2019 11:48:05 AM:INFO:{}
+08/04/2019 11:48:05 AM:INFO:select current_schema()
+08/04/2019 11:48:05 AM:INFO:{}
+08/04/2019 11:48:05 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 11:48:05 AM:INFO:{}
+08/04/2019 11:48:05 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 11:48:05 AM:INFO:{}
+08/04/2019 11:48:05 AM:INFO:show standard_conforming_strings
+08/04/2019 11:48:05 AM:INFO:{}
+08/04/2019 11:48:05 AM:INFO:BEGIN (implicit)
+08/04/2019 11:48:05 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:48:05 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:48:05 AM:INFO:COMMIT
+08/04/2019 11:48:05 AM:INFO:BEGIN (implicit)
+08/04/2019 11:48:05 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:48:05 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:48:05 AM:INFO:COMMIT
+08/04/2019 11:48:05 AM:INFO:BEGIN (implicit)
+08/04/2019 11:48:05 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:48:05 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:48:05 AM:INFO:COMMIT
+08/04/2019 11:48:05 AM:INFO:BEGIN (implicit)
+08/04/2019 11:48:05 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:48:05 AM:INFO:{'user_name_1': 6, 'param_1': 1}
+08/04/2019 11:48:05 AM:INFO:ROLLBACK
+08/04/2019 11:48:05 AM:ERROR:None
+08/04/2019 11:48:56 AM:INFO:starting gunicorn server
+08/04/2019 11:48:56 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 11:49:09 AM:INFO:select version()
+08/04/2019 11:49:09 AM:INFO:{}
+08/04/2019 11:49:09 AM:INFO:select current_schema()
+08/04/2019 11:49:09 AM:INFO:{}
+08/04/2019 11:49:09 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 11:49:09 AM:INFO:{}
+08/04/2019 11:49:09 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 11:49:09 AM:INFO:{}
+08/04/2019 11:49:09 AM:INFO:show standard_conforming_strings
+08/04/2019 11:49:09 AM:INFO:{}
+08/04/2019 11:49:09 AM:INFO:BEGIN (implicit)
+08/04/2019 11:49:09 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:49:09 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:49:09 AM:INFO:COMMIT
+08/04/2019 11:49:13 AM:INFO:BEGIN (implicit)
+08/04/2019 11:49:13 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:49:13 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:49:13 AM:INFO:COMMIT
+08/04/2019 11:49:17 AM:INFO:BEGIN (implicit)
+08/04/2019 11:49:17 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:49:17 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:49:17 AM:INFO:COMMIT
+08/04/2019 11:49:18 AM:INFO:BEGIN (implicit)
+08/04/2019 11:49:18 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:49:18 AM:INFO:{'user_name_1': 6, 'param_1': 1}
+08/04/2019 11:49:18 AM:INFO:ROLLBACK
+08/04/2019 11:49:18 AM:ERROR:None
+08/04/2019 11:53:47 AM:INFO:starting gunicorn server
+08/04/2019 11:53:47 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 11:54:59 AM:INFO:starting gunicorn server
+08/04/2019 11:54:59 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 11:55:22 AM:INFO:starting gunicorn server
+08/04/2019 11:55:22 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 11:56:03 AM:INFO:starting gunicorn server
+08/04/2019 11:56:03 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 11:56:18 AM:INFO:starting gunicorn server
+08/04/2019 11:56:18 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 11:59:48 AM:INFO:starting gunicorn server
+08/04/2019 11:59:48 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 11:59:54 AM:INFO:select version()
+08/04/2019 11:59:54 AM:INFO:{}
+08/04/2019 11:59:54 AM:INFO:select current_schema()
+08/04/2019 11:59:54 AM:INFO:{}
+08/04/2019 11:59:54 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 11:59:54 AM:INFO:{}
+08/04/2019 11:59:54 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 11:59:54 AM:INFO:{}
+08/04/2019 11:59:54 AM:INFO:show standard_conforming_strings
+08/04/2019 11:59:54 AM:INFO:{}
+08/04/2019 11:59:54 AM:INFO:BEGIN (implicit)
+08/04/2019 11:59:54 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:59:54 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:59:54 AM:INFO:COMMIT
+08/04/2019 11:59:54 AM:INFO:BEGIN (implicit)
+08/04/2019 11:59:54 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:59:54 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 11:59:54 AM:INFO:COMMIT
+08/04/2019 11:59:54 AM:INFO:BEGIN (implicit)
+08/04/2019 11:59:54 AM:INFO:SELECT apps.customer_master_header_tbl.customer_id AS apps_customer_master_header_tbl_customer_id, apps.customer_master_header_tbl.customer_code AS apps_customer_master_header_tbl_customer_code, apps.customer_master_header_tbl.customer_name AS apps_customer_master_header_tbl_customer_name, apps.customer_master_header_tbl.description AS apps_customer_master_header_tbl_description, apps.customer_master_header_tbl.customer_type AS apps_customer_master_header_tbl_customer_type, apps.customer_master_header_tbl.remarks AS apps_customer_master_header_tbl_remarks, apps.customer_master_header_tbl.enabled_flag AS apps_customer_master_header_tbl_enabled_flag, apps.customer_master_header_tbl.effective_from AS apps_customer_master_header_tbl_effective_from, apps.customer_master_header_tbl.effective_to AS apps_customer_master_header_tbl_effective_to, apps.customer_master_header_tbl.created_by AS apps_customer_master_header_tbl_created_by, apps.customer_master_header_tbl.creation_date AS apps_customer_master_header_tbl_creation_date, apps.customer_master_header_tbl.last_update_date AS apps_customer_master_header_tbl_last_update_date, apps.customer_master_header_tbl.last_updated_by AS apps_customer_master_header_tbl_last_updated_by 
+FROM apps.customer_master_header_tbl 
+WHERE apps.customer_master_header_tbl.customer_code = %(customer_code_1)s 
+ LIMIT %(param_1)s
+08/04/2019 11:59:54 AM:INFO:{'customer_code_1': 'BAZARHAT001', 'param_1': 1}
+08/04/2019 11:59:54 AM:INFO:UPDATE apps.customer_master_header_tbl SET customer_name=%(customer_name)s, effective_from=%(effective_from)s, effective_to=%(effective_to)s, last_update_date=%(last_update_date)s WHERE apps.customer_master_header_tbl.customer_id = %(apps_customer_master_header_tbl_customer_id)s
+08/04/2019 11:59:54 AM:INFO:{'customer_name': 'Bazar Hat arambagh ', 'effective_from': datetime.date(2018, 12, 13), 'effective_to': datetime.date(2020, 12, 12), 'last_update_date': datetime.datetime(2019, 4, 8, 6, 29, 54, 432401), 'apps_customer_master_header_tbl_customer_id': 4}
+08/04/2019 11:59:54 AM:INFO:SELECT apps.customer_master_sites_tbl.customer_site_id AS apps_customer_master_sites_tbl_customer_site_id, apps.customer_master_sites_tbl.customer_id AS apps_customer_master_sites_tbl_customer_id, apps.customer_master_sites_tbl.customer_site_code AS apps_customer_master_sites_tbl_customer_site_code, apps.customer_master_sites_tbl.customer_address AS apps_customer_master_sites_tbl_customer_address, apps.customer_master_sites_tbl.phone_number1 AS apps_customer_master_sites_tbl_phone_number1, apps.customer_master_sites_tbl.phone_number2 AS apps_customer_master_sites_tbl_phone_number2, apps.customer_master_sites_tbl.email AS apps_customer_master_sites_tbl_email, apps.customer_master_sites_tbl.effective_from AS apps_customer_master_sites_tbl_effective_from, apps.customer_master_sites_tbl.effective_to AS apps_customer_master_sites_tbl_effective_to, apps.customer_master_sites_tbl.created_by AS apps_customer_master_sites_tbl_created_by, apps.customer_master_sites_tbl.creation_date AS apps_customer_master_sites_tbl_creation_date, apps.customer_master_sites_tbl.last_update_date AS apps_customer_master_sites_tbl_last_update_date, apps.customer_master_sites_tbl.last_updated_by AS apps_customer_master_sites_tbl_last_updated_by 
+FROM apps.customer_master_sites_tbl 
+WHERE %(param_1)s = apps.customer_master_sites_tbl.customer_id
+08/04/2019 11:59:54 AM:INFO:{'param_1': 4}
+08/04/2019 11:59:54 AM:INFO:COMMIT
+08/04/2019 12:02:32 PM:INFO:BEGIN (implicit)
+08/04/2019 12:02:32 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:02:32 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:02:32 PM:INFO:COMMIT
+08/04/2019 12:02:32 PM:INFO:BEGIN (implicit)
+08/04/2019 12:02:32 PM:INFO:INSERT INTO apps.customer_master_header_tbl (customer_id, customer_code, customer_name, description, customer_type, remarks, enabled_flag, effective_from, effective_to, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.customer_id_sequence'), %(customer_code)s, %(customer_name)s, %(description)s, %(customer_type)s, %(remarks)s, %(enabled_flag)s, %(effective_from)s, %(effective_to)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.customer_master_header_tbl.customer_id
+08/04/2019 12:02:32 PM:INFO:{'customer_code': 'BAZARHAT001', 'customer_name': 'Bazar Hat ', 'description': 'Bazar Hat Bappa', 'customer_type': 'RICE', 'remarks': 'Test Data', 'enabled_flag': 'Y', 'effective_from': datetime.date(2018, 12, 12), 'effective_to': datetime.date(2020, 12, 12), 'created_by': 6, 'creation_date': datetime.datetime(2019, 4, 8, 6, 32, 32, 390257), 'last_update_date': datetime.datetime(2019, 4, 8, 6, 32, 32, 390265), 'last_updated_by': 6}
+08/04/2019 12:02:32 PM:INFO:INSERT INTO apps.customer_master_sites_tbl (customer_site_id, customer_id, customer_site_code, customer_address, phone_number1, phone_number2, email, effective_from, effective_to, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.customer_site_id_sequence'), %(customer_id)s, %(customer_site_code)s, %(customer_address)s, %(phone_number1)s, %(phone_number2)s, %(email)s, %(effective_from)s, %(effective_to)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.customer_master_sites_tbl.customer_site_id
+08/04/2019 12:02:32 PM:INFO:{'customer_id': 5, 'customer_site_code': 'BAZARHAT001-S001', 'customer_address': None, 'phone_number1': '9830456789', 'phone_number2': '9681678456', 'email': 'townservice@gmail.com', 'effective_from': datetime.date(2018, 12, 12), 'effective_to': datetime.date(2020, 12, 12), 'created_by': 6, 'creation_date': datetime.datetime(2019, 4, 8, 6, 32, 32, 396107), 'last_update_date': datetime.datetime(2019, 4, 8, 6, 32, 32, 396116), 'last_updated_by': 6}
+08/04/2019 12:02:32 PM:INFO:COMMIT
+08/04/2019 12:02:37 PM:INFO:BEGIN (implicit)
+08/04/2019 12:02:37 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:02:37 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:02:37 PM:INFO:COMMIT
+08/04/2019 12:02:37 PM:INFO:BEGIN (implicit)
+08/04/2019 12:02:37 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:02:37 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:02:37 PM:INFO:COMMIT
+08/04/2019 12:02:37 PM:INFO:BEGIN (implicit)
+08/04/2019 12:02:37 PM:INFO:SELECT apps.customer_master_header_tbl.customer_id AS apps_customer_master_header_tbl_customer_id, apps.customer_master_header_tbl.customer_code AS apps_customer_master_header_tbl_customer_code, apps.customer_master_header_tbl.customer_name AS apps_customer_master_header_tbl_customer_name, apps.customer_master_header_tbl.description AS apps_customer_master_header_tbl_description, apps.customer_master_header_tbl.customer_type AS apps_customer_master_header_tbl_customer_type, apps.customer_master_header_tbl.remarks AS apps_customer_master_header_tbl_remarks, apps.customer_master_header_tbl.enabled_flag AS apps_customer_master_header_tbl_enabled_flag, apps.customer_master_header_tbl.effective_from AS apps_customer_master_header_tbl_effective_from, apps.customer_master_header_tbl.effective_to AS apps_customer_master_header_tbl_effective_to, apps.customer_master_header_tbl.created_by AS apps_customer_master_header_tbl_created_by, apps.customer_master_header_tbl.creation_date AS apps_customer_master_header_tbl_creation_date, apps.customer_master_header_tbl.last_update_date AS apps_customer_master_header_tbl_last_update_date, apps.customer_master_header_tbl.last_updated_by AS apps_customer_master_header_tbl_last_updated_by 
+FROM apps.customer_master_header_tbl 
+WHERE apps.customer_master_header_tbl.customer_code = %(customer_code_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:02:37 PM:INFO:{'customer_code_1': 'BAZARHAT001', 'param_1': 1}
+08/04/2019 12:02:37 PM:INFO:UPDATE apps.customer_master_header_tbl SET customer_name=%(customer_name)s, effective_from=%(effective_from)s, effective_to=%(effective_to)s, last_update_date=%(last_update_date)s WHERE apps.customer_master_header_tbl.customer_id = %(apps_customer_master_header_tbl_customer_id)s
+08/04/2019 12:02:37 PM:INFO:{'customer_name': 'Bazar Hat arambagh ', 'effective_from': datetime.date(2018, 12, 13), 'effective_to': datetime.date(2020, 12, 12), 'last_update_date': datetime.datetime(2019, 4, 8, 6, 32, 37, 686264), 'apps_customer_master_header_tbl_customer_id': 5}
+08/04/2019 12:02:37 PM:INFO:SELECT apps.customer_master_sites_tbl.customer_site_id AS apps_customer_master_sites_tbl_customer_site_id, apps.customer_master_sites_tbl.customer_id AS apps_customer_master_sites_tbl_customer_id, apps.customer_master_sites_tbl.customer_site_code AS apps_customer_master_sites_tbl_customer_site_code, apps.customer_master_sites_tbl.customer_address AS apps_customer_master_sites_tbl_customer_address, apps.customer_master_sites_tbl.phone_number1 AS apps_customer_master_sites_tbl_phone_number1, apps.customer_master_sites_tbl.phone_number2 AS apps_customer_master_sites_tbl_phone_number2, apps.customer_master_sites_tbl.email AS apps_customer_master_sites_tbl_email, apps.customer_master_sites_tbl.effective_from AS apps_customer_master_sites_tbl_effective_from, apps.customer_master_sites_tbl.effective_to AS apps_customer_master_sites_tbl_effective_to, apps.customer_master_sites_tbl.created_by AS apps_customer_master_sites_tbl_created_by, apps.customer_master_sites_tbl.creation_date AS apps_customer_master_sites_tbl_creation_date, apps.customer_master_sites_tbl.last_update_date AS apps_customer_master_sites_tbl_last_update_date, apps.customer_master_sites_tbl.last_updated_by AS apps_customer_master_sites_tbl_last_updated_by 
+FROM apps.customer_master_sites_tbl 
+WHERE %(param_1)s = apps.customer_master_sites_tbl.customer_id
+08/04/2019 12:02:37 PM:INFO:{'param_1': 5}
+08/04/2019 12:02:37 PM:INFO:COMMIT
+08/04/2019 12:03:14 PM:INFO:BEGIN (implicit)
+08/04/2019 12:03:14 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:03:14 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:03:14 PM:INFO:COMMIT
+08/04/2019 12:03:14 PM:INFO:BEGIN (implicit)
+08/04/2019 12:03:14 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:03:14 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:03:14 PM:INFO:COMMIT
+08/04/2019 12:03:14 PM:INFO:BEGIN (implicit)
+08/04/2019 12:03:14 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:03:14 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:03:14 PM:INFO:COMMIT
+08/04/2019 12:03:14 PM:INFO:BEGIN (implicit)
+08/04/2019 12:03:14 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:03:14 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:03:14 PM:INFO:COMMIT
+08/04/2019 12:03:14 PM:INFO:BEGIN (implicit)
+08/04/2019 12:03:14 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:03:14 PM:INFO:{'user_name_1': 6, 'param_1': 1}
+08/04/2019 12:03:14 PM:INFO:ROLLBACK
+08/04/2019 12:03:14 PM:ERROR:None
+08/04/2019 12:04:28 PM:INFO:BEGIN (implicit)
+08/04/2019 12:04:28 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:04:28 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:04:28 PM:INFO:COMMIT
+08/04/2019 12:04:28 PM:INFO:BEGIN (implicit)
+08/04/2019 12:04:28 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:04:28 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:04:28 PM:INFO:COMMIT
+08/04/2019 12:04:28 PM:INFO:BEGIN (implicit)
+08/04/2019 12:04:28 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:04:28 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:04:28 PM:INFO:COMMIT
+08/04/2019 12:04:28 PM:INFO:BEGIN (implicit)
+08/04/2019 12:04:28 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:04:28 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:04:28 PM:INFO:COMMIT
+08/04/2019 12:04:28 PM:INFO:BEGIN (implicit)
+08/04/2019 12:04:28 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:04:28 PM:INFO:{'user_name_1': 6, 'param_1': 1}
+08/04/2019 12:04:28 PM:INFO:ROLLBACK
+08/04/2019 12:04:28 PM:ERROR:None
+08/04/2019 12:04:50 PM:INFO:BEGIN (implicit)
+08/04/2019 12:04:50 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:04:50 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:04:50 PM:INFO:COMMIT
+08/04/2019 12:04:50 PM:INFO:BEGIN (implicit)
+08/04/2019 12:04:50 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:04:50 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:04:50 PM:INFO:COMMIT
+08/04/2019 12:04:50 PM:INFO:BEGIN (implicit)
+08/04/2019 12:04:50 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:04:50 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:04:50 PM:INFO:COMMIT
+08/04/2019 12:04:50 PM:INFO:BEGIN (implicit)
+08/04/2019 12:04:50 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:04:50 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:04:50 PM:INFO:COMMIT
+08/04/2019 12:04:50 PM:INFO:BEGIN (implicit)
+08/04/2019 12:04:50 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:04:50 PM:INFO:{'user_name_1': 6, 'param_1': 1}
+08/04/2019 12:04:50 PM:INFO:ROLLBACK
+08/04/2019 12:04:50 PM:ERROR:None
+08/04/2019 12:09:04 PM:INFO:starting gunicorn server
+08/04/2019 12:09:04 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 12:09:16 PM:INFO:select version()
+08/04/2019 12:09:16 PM:INFO:{}
+08/04/2019 12:09:16 PM:INFO:select current_schema()
+08/04/2019 12:09:16 PM:INFO:{}
+08/04/2019 12:09:16 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 12:09:16 PM:INFO:{}
+08/04/2019 12:09:16 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 12:09:16 PM:INFO:{}
+08/04/2019 12:09:16 PM:INFO:show standard_conforming_strings
+08/04/2019 12:09:16 PM:INFO:{}
+08/04/2019 12:09:16 PM:INFO:BEGIN (implicit)
+08/04/2019 12:09:16 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:09:16 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:09:16 PM:INFO:COMMIT
+08/04/2019 12:09:22 PM:INFO:BEGIN (implicit)
+08/04/2019 12:09:22 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:09:22 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:09:22 PM:INFO:COMMIT
+08/04/2019 12:09:25 PM:INFO:BEGIN (implicit)
+08/04/2019 12:09:25 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:09:25 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:09:25 PM:INFO:COMMIT
+08/04/2019 12:09:29 PM:INFO:BEGIN (implicit)
+08/04/2019 12:09:29 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:09:29 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:09:29 PM:INFO:COMMIT
+08/04/2019 12:09:52 PM:INFO:BEGIN (implicit)
+08/04/2019 12:09:52 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:09:52 PM:INFO:{'user_name_1': 6, 'param_1': 1}
+08/04/2019 12:09:52 PM:INFO:ROLLBACK
+08/04/2019 12:09:52 PM:ERROR:None
+08/04/2019 12:21:45 PM:INFO:select version()
+08/04/2019 12:21:45 PM:INFO:{}
+08/04/2019 12:21:45 PM:INFO:select current_schema()
+08/04/2019 12:21:45 PM:INFO:{}
+08/04/2019 12:21:45 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 12:21:45 PM:INFO:{}
+08/04/2019 12:21:45 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 12:21:45 PM:INFO:{}
+08/04/2019 12:21:45 PM:INFO:show standard_conforming_strings
+08/04/2019 12:21:45 PM:INFO:{}
+08/04/2019 12:21:45 PM:INFO:BEGIN (implicit)
+08/04/2019 12:21:45 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:21:45 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:21:45 PM:INFO:COMMIT
+08/04/2019 12:21:47 PM:INFO:BEGIN (implicit)
+08/04/2019 12:21:47 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:21:47 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:21:47 PM:INFO:COMMIT
+08/04/2019 12:21:50 PM:INFO:BEGIN (implicit)
+08/04/2019 12:21:50 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:21:50 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:21:50 PM:INFO:COMMIT
+08/04/2019 12:21:51 PM:INFO:BEGIN (implicit)
+08/04/2019 12:21:51 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:21:51 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:21:51 PM:INFO:COMMIT
+08/04/2019 12:21:51 PM:INFO:BEGIN (implicit)
+08/04/2019 12:21:51 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:21:51 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:21:51 PM:INFO:COMMIT
+08/04/2019 12:21:54 PM:INFO:BEGIN (implicit)
+08/04/2019 12:21:54 PM:INFO:SELECT apps.customer_master_header_tbl.customer_id AS apps_customer_master_header_tbl_customer_id, apps.customer_master_header_tbl.customer_code AS apps_customer_master_header_tbl_customer_code, apps.customer_master_header_tbl.customer_name AS apps_customer_master_header_tbl_customer_name, apps.customer_master_header_tbl.description AS apps_customer_master_header_tbl_description, apps.customer_master_header_tbl.customer_type AS apps_customer_master_header_tbl_customer_type, apps.customer_master_header_tbl.remarks AS apps_customer_master_header_tbl_remarks, apps.customer_master_header_tbl.enabled_flag AS apps_customer_master_header_tbl_enabled_flag, apps.customer_master_header_tbl.effective_from AS apps_customer_master_header_tbl_effective_from, apps.customer_master_header_tbl.effective_to AS apps_customer_master_header_tbl_effective_to, apps.customer_master_header_tbl.created_by AS apps_customer_master_header_tbl_created_by, apps.customer_master_header_tbl.creation_date AS apps_customer_master_header_tbl_creation_date, apps.customer_master_header_tbl.last_update_date AS apps_customer_master_header_tbl_last_update_date, apps.customer_master_header_tbl.last_updated_by AS apps_customer_master_header_tbl_last_updated_by 
+FROM apps.customer_master_header_tbl 
+WHERE apps.customer_master_header_tbl.customer_code = %(customer_code_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:21:54 PM:INFO:{'customer_code_1': 'BAZARHAT001', 'param_1': 1}
+08/04/2019 12:21:54 PM:INFO:UPDATE apps.customer_master_header_tbl SET effective_from=%(effective_from)s, effective_to=%(effective_to)s, last_update_date=%(last_update_date)s WHERE apps.customer_master_header_tbl.customer_id = %(apps_customer_master_header_tbl_customer_id)s
+08/04/2019 12:21:54 PM:INFO:{'effective_from': datetime.date(2018, 12, 13), 'effective_to': datetime.date(2020, 12, 12), 'last_update_date': datetime.datetime(2019, 4, 8, 6, 51, 54, 620849), 'apps_customer_master_header_tbl_customer_id': 5}
+08/04/2019 12:21:54 PM:INFO:SELECT apps.customer_master_sites_tbl.customer_site_id AS apps_customer_master_sites_tbl_customer_site_id, apps.customer_master_sites_tbl.customer_id AS apps_customer_master_sites_tbl_customer_id, apps.customer_master_sites_tbl.customer_site_code AS apps_customer_master_sites_tbl_customer_site_code, apps.customer_master_sites_tbl.customer_address AS apps_customer_master_sites_tbl_customer_address, apps.customer_master_sites_tbl.phone_number1 AS apps_customer_master_sites_tbl_phone_number1, apps.customer_master_sites_tbl.phone_number2 AS apps_customer_master_sites_tbl_phone_number2, apps.customer_master_sites_tbl.email AS apps_customer_master_sites_tbl_email, apps.customer_master_sites_tbl.effective_from AS apps_customer_master_sites_tbl_effective_from, apps.customer_master_sites_tbl.effective_to AS apps_customer_master_sites_tbl_effective_to, apps.customer_master_sites_tbl.created_by AS apps_customer_master_sites_tbl_created_by, apps.customer_master_sites_tbl.creation_date AS apps_customer_master_sites_tbl_creation_date, apps.customer_master_sites_tbl.last_update_date AS apps_customer_master_sites_tbl_last_update_date, apps.customer_master_sites_tbl.last_updated_by AS apps_customer_master_sites_tbl_last_updated_by 
+FROM apps.customer_master_sites_tbl 
+WHERE %(param_1)s = apps.customer_master_sites_tbl.customer_id
+08/04/2019 12:21:54 PM:INFO:{'param_1': 5}
+08/04/2019 12:21:54 PM:INFO:ROLLBACK
+08/04/2019 12:21:54 PM:ERROR:None
+08/04/2019 12:25:09 PM:INFO:starting gunicorn server
+08/04/2019 12:25:09 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 12:28:05 PM:INFO:starting gunicorn server
+08/04/2019 12:28:05 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 12:28:16 PM:INFO:starting gunicorn server
+08/04/2019 12:28:16 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 12:28:31 PM:INFO:starting gunicorn server
+08/04/2019 12:28:31 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 12:28:41 PM:INFO:starting gunicorn server
+08/04/2019 12:28:41 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+08/04/2019 12:28:44 PM:INFO:select version()
+08/04/2019 12:28:44 PM:INFO:{}
+08/04/2019 12:28:44 PM:INFO:select current_schema()
+08/04/2019 12:28:44 PM:INFO:{}
+08/04/2019 12:28:44 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 12:28:44 PM:INFO:{}
+08/04/2019 12:28:44 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+08/04/2019 12:28:44 PM:INFO:{}
+08/04/2019 12:28:44 PM:INFO:show standard_conforming_strings
+08/04/2019 12:28:44 PM:INFO:{}
+08/04/2019 12:28:44 PM:INFO:BEGIN (implicit)
+08/04/2019 12:28:44 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:28:44 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:28:44 PM:INFO:COMMIT
+08/04/2019 12:28:44 PM:INFO:BEGIN (implicit)
+08/04/2019 12:28:44 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:28:44 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:28:44 PM:INFO:COMMIT
+08/04/2019 12:28:44 PM:INFO:BEGIN (implicit)
+08/04/2019 12:28:44 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:28:44 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:28:44 PM:INFO:COMMIT
+08/04/2019 12:28:44 PM:INFO:BEGIN (implicit)
+08/04/2019 12:28:44 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:28:44 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+08/04/2019 12:28:44 PM:INFO:COMMIT
+08/04/2019 12:28:44 PM:INFO:BEGIN (implicit)
+08/04/2019 12:28:44 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+08/04/2019 12:28:44 PM:INFO:{'user_name_1': 6, 'param_1': 1}
+08/04/2019 12:28:44 PM:INFO:ROLLBACK
+08/04/2019 12:28:44 PM:ERROR:None

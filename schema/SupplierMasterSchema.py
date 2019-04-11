@@ -21,6 +21,7 @@ class SupplierMasterHeaderSchema(Schema):
     effective_to = fields.Date('%Y-%m-%d')
     created_by = fields.Str(required=True)
     last_updated_by = fields.Str(required=True)
+    user_name = fields.Str(required=True)
     supplier_master_sites = fields.Nested('schema.SupplierMasterSchema.SupplierMasterLinesSchema', many=True, required=True)
     
     
@@ -52,7 +53,7 @@ class SupplierMasterHeaderUpdateSchema(Schema):
     supplier_name = fields.Str(required=True)
     description = fields.Str(missing='')
     supplier_type = fields.Str(required=True)
-    remarks = fields.Str(required=True)
+    remarks = fields.Str(missing='')
     enabled_flag = fields.Str(required=True)
     effective_from = fields.Date('%Y-%m-%d')
     effective_to = fields.Date('%Y-%m-%d')
