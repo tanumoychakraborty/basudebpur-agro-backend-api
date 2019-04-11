@@ -37,9 +37,9 @@ class SerializerMiddleware(object):
                 req.context['serialized-data'] = serializer().load(
                     data=req_data
                 )
-                print('serialized data type >>>>>>>>>>'+type(req.context['serialized-data']))
-                print('serialized data string >>>>>>>>>>'+str(req.context['serialized-data']))
-                print('serialized data >>>>>>>>>>'+req.context['serialized-data'])
+                print('serialized data type >>>>>>>>>>' , type(req.context['serialized-data']))
+                print('serialized data string >>>>>>>>>>' , str(req.context['serialized-data']))
+                print('serialized data >>>>>>>>>>' , req.context['serialized-data'])
             except ValidationError as err:
                 print('validation error >>>>>>>>>>'+str(err.messages))
                 raise HTTPError(status=status_codes.HTTP_422, errors=err.messages)
