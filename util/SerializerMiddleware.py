@@ -34,9 +34,10 @@ class SerializerMiddleware(object):
             return
         else:
             try:
-                req.context['serialized-data'] = serializer().load(
+                serialized_data = serializer().load(
                     data=req_data
                 )
+                req.context['serialized-data'] = str(serialized_data)
                 print('serialized data type >>>>>>>>>>' , type(req.context['serialized-data']))
                 print('serialized data string >>>>>>>>>>' , str(req.context['serialized-data']))
                 print('serialized data >>>>>>>>>>' , req.context['serialized-data'])
