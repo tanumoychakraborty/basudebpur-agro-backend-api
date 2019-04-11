@@ -38,3 +38,6 @@ class SerializerMiddleware(object):
             except ValidationError as err:
                 print('validation error >>>>>>>>>>'+str(err.messages))
                 raise HTTPError(status=status_codes.HTTP_422, errors=err.messages)
+            except:
+                print("Unexpected error >>>>>>>>>>>>>", sys.exc_info()[0])
+                raise
