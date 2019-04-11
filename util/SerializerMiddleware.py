@@ -7,6 +7,7 @@ from marshmallow.exceptions import ValidationError
 from util.HTTPError import HTTPError
 from falcon import status_codes
 import json
+import sys
 
 class SerializerMiddleware(object):
     '''
