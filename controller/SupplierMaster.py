@@ -22,8 +22,9 @@ class SupplierMaster(object):
             """
             Insert Purchase Transaction data into database
             """
+            print('inside supplier controller')
             data = req.context['serialized-data']
-            print('SupplierMaster data >>>>>>>>>>>>>>>>>>>>>'+data)
+            print('SupplierMaster data >>>>>>>>>>>>>>>>>>>>>',data)
             user = get_user_id_by_user_name(data['created_by'])
             data['last_updated_by'] = user
             data['created_by'] = user
