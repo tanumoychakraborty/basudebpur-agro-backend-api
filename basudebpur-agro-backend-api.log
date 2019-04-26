@@ -4567,3 +4567,444 @@ FROM apps.common_lookup_tbl
 WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
 25/04/2019 02:11:59 AM:INFO:{'lookup_name_1': 'SUPPLIER_TYPE', 'enabled_1': 'Y'}
 25/04/2019 02:11:59 AM:INFO:COMMIT
+25/04/2019 03:37:58 AM:INFO:starting gunicorn server
+25/04/2019 03:37:58 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/04/2019 03:38:22 AM:INFO:select version()
+25/04/2019 03:38:22 AM:INFO:{}
+25/04/2019 03:38:22 AM:INFO:select current_schema()
+25/04/2019 03:38:22 AM:INFO:{}
+25/04/2019 03:38:22 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+25/04/2019 03:38:22 AM:INFO:{}
+25/04/2019 03:38:22 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+25/04/2019 03:38:22 AM:INFO:{}
+25/04/2019 03:38:22 AM:INFO:show standard_conforming_strings
+25/04/2019 03:38:22 AM:INFO:{}
+25/04/2019 03:38:22 AM:INFO:BEGIN (implicit)
+25/04/2019 03:38:22 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+25/04/2019 03:38:22 AM:INFO:{'lookup_name_1': 'SUPPLIER_TYPE', 'enabled_1': 'Y'}
+25/04/2019 03:38:22 AM:INFO:COMMIT
+25/04/2019 03:38:22 AM:INFO:BEGIN (implicit)
+25/04/2019 03:38:22 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag 
+FROM apps.supplier_master_header_tbl
+25/04/2019 03:38:22 AM:INFO:{}
+25/04/2019 03:38:22 AM:INFO:COMMIT
+25/04/2019 03:38:26 AM:INFO:BEGIN (implicit)
+25/04/2019 03:38:26 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl 
+WHERE apps.supplier_master_header_tbl.supplier_code = %(supplier_code_1)s 
+ LIMIT %(param_1)s
+25/04/2019 03:38:26 AM:INFO:{'supplier_code_1': 'GOPAL001', 'param_1': 1}
+25/04/2019 03:38:26 AM:INFO:SELECT apps.supplier_master_sites_tbl.supplier_site_id AS apps_supplier_master_sites_tbl_supplier_site_id, apps.supplier_master_sites_tbl.supplier_id AS apps_supplier_master_sites_tbl_supplier_id, apps.supplier_master_sites_tbl.supplier_site_code AS apps_supplier_master_sites_tbl_supplier_site_code, apps.supplier_master_sites_tbl.supplier_site_address AS apps_supplier_master_sites_tbl_supplier_site_address, apps.supplier_master_sites_tbl.phone_number1 AS apps_supplier_master_sites_tbl_phone_number1, apps.supplier_master_sites_tbl.phone_number2 AS apps_supplier_master_sites_tbl_phone_number2, apps.supplier_master_sites_tbl.email AS apps_supplier_master_sites_tbl_email, apps.supplier_master_sites_tbl.payment_method_lookup_code AS apps_supplier_master_sites_tbl_payment_method_lookup_code, apps.supplier_master_sites_tbl.gstin_number AS apps_supplier_master_sites_tbl_gstin_number, apps.supplier_master_sites_tbl.pay_group_lookup_code AS apps_supplier_master_sites_tbl_pay_group_lookup_code, apps.supplier_master_sites_tbl.payment_term AS apps_supplier_master_sites_tbl_payment_term, apps.supplier_master_sites_tbl.purchasing_site_flag AS apps_supplier_master_sites_tbl_purchasing_site_flag, apps.supplier_master_sites_tbl.rfq_only_site AS apps_supplier_master_sites_tbl_rfq_only_site, apps.supplier_master_sites_tbl.tax_registration_number AS apps_supplier_master_sites_tbl_tax_registration_number, apps.supplier_master_sites_tbl.inactive_date AS apps_supplier_master_sites_tbl_inactive_date, apps.supplier_master_sites_tbl.created_by AS apps_supplier_master_sites_tbl_created_by, apps.supplier_master_sites_tbl.creation_date AS apps_supplier_master_sites_tbl_creation_date, apps.supplier_master_sites_tbl.last_update_date AS apps_supplier_master_sites_tbl_last_update_date, apps.supplier_master_sites_tbl.last_updated_by AS apps_supplier_master_sites_tbl_last_updated_by 
+FROM apps.supplier_master_sites_tbl 
+WHERE %(param_1)s = apps.supplier_master_sites_tbl.supplier_id
+25/04/2019 03:38:26 AM:INFO:{'param_1': 1}
+25/04/2019 03:38:26 AM:INFO:COMMIT
+25/04/2019 03:38:26 AM:INFO:BEGIN (implicit)
+25/04/2019 03:38:26 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+25/04/2019 03:38:26 AM:INFO:{'lookup_name_1': 'SUPPLIER_TYPE', 'enabled_1': 'Y'}
+25/04/2019 03:38:26 AM:INFO:COMMIT
+25/04/2019 03:39:06 AM:INFO:BEGIN (implicit)
+25/04/2019 03:39:06 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl 
+WHERE apps.supplier_master_header_tbl.supplier_code = %(supplier_code_1)s 
+ LIMIT %(param_1)s
+25/04/2019 03:39:06 AM:INFO:{'supplier_code_1': 'GOPAL001', 'param_1': 1}
+25/04/2019 03:39:06 AM:INFO:SELECT apps.supplier_master_sites_tbl.supplier_site_id AS apps_supplier_master_sites_tbl_supplier_site_id, apps.supplier_master_sites_tbl.supplier_id AS apps_supplier_master_sites_tbl_supplier_id, apps.supplier_master_sites_tbl.supplier_site_code AS apps_supplier_master_sites_tbl_supplier_site_code, apps.supplier_master_sites_tbl.supplier_site_address AS apps_supplier_master_sites_tbl_supplier_site_address, apps.supplier_master_sites_tbl.phone_number1 AS apps_supplier_master_sites_tbl_phone_number1, apps.supplier_master_sites_tbl.phone_number2 AS apps_supplier_master_sites_tbl_phone_number2, apps.supplier_master_sites_tbl.email AS apps_supplier_master_sites_tbl_email, apps.supplier_master_sites_tbl.payment_method_lookup_code AS apps_supplier_master_sites_tbl_payment_method_lookup_code, apps.supplier_master_sites_tbl.gstin_number AS apps_supplier_master_sites_tbl_gstin_number, apps.supplier_master_sites_tbl.pay_group_lookup_code AS apps_supplier_master_sites_tbl_pay_group_lookup_code, apps.supplier_master_sites_tbl.payment_term AS apps_supplier_master_sites_tbl_payment_term, apps.supplier_master_sites_tbl.purchasing_site_flag AS apps_supplier_master_sites_tbl_purchasing_site_flag, apps.supplier_master_sites_tbl.rfq_only_site AS apps_supplier_master_sites_tbl_rfq_only_site, apps.supplier_master_sites_tbl.tax_registration_number AS apps_supplier_master_sites_tbl_tax_registration_number, apps.supplier_master_sites_tbl.inactive_date AS apps_supplier_master_sites_tbl_inactive_date, apps.supplier_master_sites_tbl.created_by AS apps_supplier_master_sites_tbl_created_by, apps.supplier_master_sites_tbl.creation_date AS apps_supplier_master_sites_tbl_creation_date, apps.supplier_master_sites_tbl.last_update_date AS apps_supplier_master_sites_tbl_last_update_date, apps.supplier_master_sites_tbl.last_updated_by AS apps_supplier_master_sites_tbl_last_updated_by 
+FROM apps.supplier_master_sites_tbl 
+WHERE %(param_1)s = apps.supplier_master_sites_tbl.supplier_id
+25/04/2019 03:39:06 AM:INFO:{'param_1': 1}
+25/04/2019 03:39:06 AM:INFO:COMMIT
+25/04/2019 03:39:06 AM:INFO:BEGIN (implicit)
+25/04/2019 03:39:06 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+25/04/2019 03:39:06 AM:INFO:{'lookup_name_1': 'SUPPLIER_TYPE', 'enabled_1': 'Y'}
+25/04/2019 03:39:06 AM:INFO:COMMIT
+25/04/2019 03:40:59 AM:INFO:BEGIN (implicit)
+25/04/2019 03:40:59 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl 
+WHERE apps.supplier_master_header_tbl.supplier_code = %(supplier_code_1)s 
+ LIMIT %(param_1)s
+25/04/2019 03:40:59 AM:INFO:{'supplier_code_1': 'GOPAL001', 'param_1': 1}
+25/04/2019 03:40:59 AM:INFO:SELECT apps.supplier_master_sites_tbl.supplier_site_id AS apps_supplier_master_sites_tbl_supplier_site_id, apps.supplier_master_sites_tbl.supplier_id AS apps_supplier_master_sites_tbl_supplier_id, apps.supplier_master_sites_tbl.supplier_site_code AS apps_supplier_master_sites_tbl_supplier_site_code, apps.supplier_master_sites_tbl.supplier_site_address AS apps_supplier_master_sites_tbl_supplier_site_address, apps.supplier_master_sites_tbl.phone_number1 AS apps_supplier_master_sites_tbl_phone_number1, apps.supplier_master_sites_tbl.phone_number2 AS apps_supplier_master_sites_tbl_phone_number2, apps.supplier_master_sites_tbl.email AS apps_supplier_master_sites_tbl_email, apps.supplier_master_sites_tbl.payment_method_lookup_code AS apps_supplier_master_sites_tbl_payment_method_lookup_code, apps.supplier_master_sites_tbl.gstin_number AS apps_supplier_master_sites_tbl_gstin_number, apps.supplier_master_sites_tbl.pay_group_lookup_code AS apps_supplier_master_sites_tbl_pay_group_lookup_code, apps.supplier_master_sites_tbl.payment_term AS apps_supplier_master_sites_tbl_payment_term, apps.supplier_master_sites_tbl.purchasing_site_flag AS apps_supplier_master_sites_tbl_purchasing_site_flag, apps.supplier_master_sites_tbl.rfq_only_site AS apps_supplier_master_sites_tbl_rfq_only_site, apps.supplier_master_sites_tbl.tax_registration_number AS apps_supplier_master_sites_tbl_tax_registration_number, apps.supplier_master_sites_tbl.inactive_date AS apps_supplier_master_sites_tbl_inactive_date, apps.supplier_master_sites_tbl.created_by AS apps_supplier_master_sites_tbl_created_by, apps.supplier_master_sites_tbl.creation_date AS apps_supplier_master_sites_tbl_creation_date, apps.supplier_master_sites_tbl.last_update_date AS apps_supplier_master_sites_tbl_last_update_date, apps.supplier_master_sites_tbl.last_updated_by AS apps_supplier_master_sites_tbl_last_updated_by 
+FROM apps.supplier_master_sites_tbl 
+WHERE %(param_1)s = apps.supplier_master_sites_tbl.supplier_id
+25/04/2019 03:40:59 AM:INFO:{'param_1': 1}
+25/04/2019 03:40:59 AM:INFO:COMMIT
+25/04/2019 03:40:59 AM:INFO:BEGIN (implicit)
+25/04/2019 03:40:59 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+25/04/2019 03:40:59 AM:INFO:{'lookup_name_1': 'SUPPLIER_TYPE', 'enabled_1': 'Y'}
+25/04/2019 03:40:59 AM:INFO:COMMIT
+25/04/2019 03:43:39 AM:INFO:starting gunicorn server
+25/04/2019 03:43:39 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+25/04/2019 03:44:24 AM:INFO:select version()
+25/04/2019 03:44:24 AM:INFO:{}
+25/04/2019 03:44:24 AM:INFO:select current_schema()
+25/04/2019 03:44:24 AM:INFO:{}
+25/04/2019 03:44:24 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+25/04/2019 03:44:24 AM:INFO:{}
+25/04/2019 03:44:24 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+25/04/2019 03:44:24 AM:INFO:{}
+25/04/2019 03:44:24 AM:INFO:show standard_conforming_strings
+25/04/2019 03:44:24 AM:INFO:{}
+25/04/2019 03:44:24 AM:INFO:BEGIN (implicit)
+25/04/2019 03:44:24 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+25/04/2019 03:44:24 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+25/04/2019 03:44:26 AM:INFO:COMMIT
+25/04/2019 03:45:22 AM:INFO:BEGIN (implicit)
+25/04/2019 03:45:22 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+25/04/2019 03:45:22 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+25/04/2019 03:45:22 AM:INFO:COMMIT
+25/04/2019 03:46:56 AM:INFO:BEGIN (implicit)
+25/04/2019 03:46:56 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl 
+WHERE apps.supplier_master_header_tbl.supplier_code = %(supplier_code_1)s 
+ LIMIT %(param_1)s
+25/04/2019 03:46:56 AM:INFO:{'supplier_code_1': 'GOPAL001', 'param_1': 1}
+25/04/2019 03:47:00 AM:INFO:ROLLBACK
+25/04/2019 03:47:28 AM:ERROR:None
+25/04/2019 03:53:24 AM:INFO:BEGIN (implicit)
+25/04/2019 03:53:24 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+25/04/2019 03:53:24 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+25/04/2019 03:53:24 AM:INFO:COMMIT
+25/04/2019 03:53:26 AM:INFO:BEGIN (implicit)
+25/04/2019 03:53:26 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+25/04/2019 03:53:26 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+25/04/2019 03:53:26 AM:INFO:COMMIT
+25/04/2019 03:53:28 AM:INFO:BEGIN (implicit)
+25/04/2019 03:53:28 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+25/04/2019 03:53:28 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+25/04/2019 03:53:28 AM:INFO:COMMIT
+25/04/2019 03:53:39 AM:INFO:BEGIN (implicit)
+25/04/2019 03:53:39 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl 
+WHERE apps.supplier_master_header_tbl.supplier_code = %(supplier_code_1)s 
+ LIMIT %(param_1)s
+25/04/2019 03:53:39 AM:INFO:{'supplier_code_1': 'GOPAL001', 'param_1': 1}
+25/04/2019 03:53:39 AM:INFO:ROLLBACK
+25/04/2019 03:53:39 AM:ERROR:None
+27/04/2019 12:57:19 AM:INFO:starting gunicorn server
+27/04/2019 12:57:19 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+27/04/2019 12:58:50 AM:INFO:select version()
+27/04/2019 12:58:50 AM:INFO:{}
+27/04/2019 12:58:50 AM:INFO:select current_schema()
+27/04/2019 12:58:50 AM:INFO:{}
+27/04/2019 12:58:50 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+27/04/2019 12:58:50 AM:INFO:{}
+27/04/2019 12:58:50 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+27/04/2019 12:58:50 AM:INFO:{}
+27/04/2019 12:58:50 AM:INFO:show standard_conforming_strings
+27/04/2019 12:58:50 AM:INFO:{}
+27/04/2019 12:58:50 AM:INFO:BEGIN (implicit)
+27/04/2019 12:58:50 AM:INFO:SELECT apps.inventory_item_tbl.item_id AS apps_inventory_item_tbl_item_id, apps.inventory_item_tbl.item_number AS apps_inventory_item_tbl_item_number, apps.inventory_item_tbl.item_type AS apps_inventory_item_tbl_item_type, apps.inventory_item_tbl.description AS apps_inventory_item_tbl_description, apps.inventory_item_tbl.long_description AS apps_inventory_item_tbl_long_description 
+FROM apps.inventory_item_tbl 
+WHERE apps.inventory_item_tbl.enabled_flag = %(enabled_flag_1)s
+27/04/2019 12:58:50 AM:INFO:{'enabled_flag_1': 'Y'}
+27/04/2019 12:58:50 AM:INFO:COMMIT
+27/04/2019 12:58:50 AM:INFO:BEGIN (implicit)
+27/04/2019 12:58:50 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 12:58:50 AM:INFO:{'lookup_name_1': 'UNIT_OF_MEASURE', 'enabled_1': 'Y'}
+27/04/2019 12:58:50 AM:INFO:COMMIT
+27/04/2019 12:59:00 AM:INFO:BEGIN (implicit)
+27/04/2019 12:59:00 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 12:59:00 AM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_TYPE', 'enabled_1': 'Y'}
+27/04/2019 12:59:00 AM:INFO:COMMIT
+27/04/2019 12:59:00 AM:INFO:BEGIN (implicit)
+27/04/2019 12:59:00 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl
+27/04/2019 12:59:00 AM:INFO:{}
+27/04/2019 12:59:00 AM:INFO:COMMIT
+27/04/2019 01:05:51 AM:INFO:BEGIN (implicit)
+27/04/2019 01:05:51 AM:INFO:SELECT apps.inventory_item_tbl.item_id AS apps_inventory_item_tbl_item_id, apps.inventory_item_tbl.item_number AS apps_inventory_item_tbl_item_number, apps.inventory_item_tbl.item_type AS apps_inventory_item_tbl_item_type, apps.inventory_item_tbl.description AS apps_inventory_item_tbl_description, apps.inventory_item_tbl.long_description AS apps_inventory_item_tbl_long_description 
+FROM apps.inventory_item_tbl 
+WHERE apps.inventory_item_tbl.enabled_flag = %(enabled_flag_1)s
+27/04/2019 01:05:51 AM:INFO:{'enabled_flag_1': 'Y'}
+27/04/2019 01:05:51 AM:INFO:COMMIT
+27/04/2019 01:05:51 AM:INFO:BEGIN (implicit)
+27/04/2019 01:05:51 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:05:51 AM:INFO:{'lookup_name_1': 'UNIT_OF_MEASURE', 'enabled_1': 'Y'}
+27/04/2019 01:05:51 AM:INFO:COMMIT
+27/04/2019 01:05:56 AM:INFO:BEGIN (implicit)
+27/04/2019 01:05:56 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:05:56 AM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_TYPE', 'enabled_1': 'Y'}
+27/04/2019 01:05:56 AM:INFO:COMMIT
+27/04/2019 01:05:56 AM:INFO:BEGIN (implicit)
+27/04/2019 01:05:56 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl
+27/04/2019 01:05:56 AM:INFO:{}
+27/04/2019 01:05:56 AM:INFO:COMMIT
+27/04/2019 01:12:41 AM:INFO:BEGIN (implicit)
+27/04/2019 01:12:41 AM:INFO:SELECT apps.inventory_item_tbl.item_id AS apps_inventory_item_tbl_item_id, apps.inventory_item_tbl.item_number AS apps_inventory_item_tbl_item_number, apps.inventory_item_tbl.item_type AS apps_inventory_item_tbl_item_type, apps.inventory_item_tbl.description AS apps_inventory_item_tbl_description, apps.inventory_item_tbl.long_description AS apps_inventory_item_tbl_long_description 
+FROM apps.inventory_item_tbl 
+WHERE apps.inventory_item_tbl.enabled_flag = %(enabled_flag_1)s
+27/04/2019 01:12:41 AM:INFO:{'enabled_flag_1': 'Y'}
+27/04/2019 01:12:41 AM:INFO:COMMIT
+27/04/2019 01:12:41 AM:INFO:BEGIN (implicit)
+27/04/2019 01:12:41 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:12:41 AM:INFO:{'lookup_name_1': 'UNIT_OF_MEASURE', 'enabled_1': 'Y'}
+27/04/2019 01:12:41 AM:INFO:COMMIT
+27/04/2019 01:12:43 AM:INFO:BEGIN (implicit)
+27/04/2019 01:12:43 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:12:43 AM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_TYPE', 'enabled_1': 'Y'}
+27/04/2019 01:12:43 AM:INFO:COMMIT
+27/04/2019 01:12:43 AM:INFO:BEGIN (implicit)
+27/04/2019 01:12:43 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl
+27/04/2019 01:12:43 AM:INFO:{}
+27/04/2019 01:12:43 AM:INFO:COMMIT
+27/04/2019 01:17:20 AM:INFO:starting gunicorn server
+27/04/2019 01:17:20 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+27/04/2019 01:17:41 AM:INFO:starting gunicorn server
+27/04/2019 01:17:41 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+27/04/2019 01:17:49 AM:INFO:select version()
+27/04/2019 01:17:49 AM:INFO:{}
+27/04/2019 01:17:49 AM:INFO:select current_schema()
+27/04/2019 01:17:49 AM:INFO:{}
+27/04/2019 01:17:49 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+27/04/2019 01:17:49 AM:INFO:{}
+27/04/2019 01:17:49 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+27/04/2019 01:17:49 AM:INFO:{}
+27/04/2019 01:17:49 AM:INFO:show standard_conforming_strings
+27/04/2019 01:17:49 AM:INFO:{}
+27/04/2019 01:17:49 AM:INFO:BEGIN (implicit)
+27/04/2019 01:17:49 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+27/04/2019 01:17:49 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+27/04/2019 01:17:49 AM:INFO:COMMIT
+27/04/2019 01:17:49 AM:INFO:BEGIN (implicit)
+27/04/2019 01:17:49 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+27/04/2019 01:17:49 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+27/04/2019 01:17:49 AM:INFO:COMMIT
+27/04/2019 01:17:49 AM:INFO:BEGIN (implicit)
+27/04/2019 01:17:49 AM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_type, order_status, buyer_id, supplier_id, amount, weighting_number, ref_doc, created_by, creation_date, last_update_date, last_updated_by, vehicle_number) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_type)s, %(order_status)s, %(buyer_id)s, %(supplier_id)s, %(amount)s, %(weighting_number)s, %(ref_doc)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(vehicle_number)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+27/04/2019 01:17:49 AM:INFO:{'purchase_trx_number': '9899898', 'transaction_date': datetime.datetime(2019, 4, 9, 0, 0), 'order_type': 'STANDARD', 'order_status': 'BOOKED', 'buyer_id': 1, 'supplier_id': 1, 'amount': 9889, 'weighting_number': '9898', 'ref_doc': <psycopg2.extensions.Binary object at 0x7fc4c9367670>, 'created_by': 1, 'creation_date': datetime.datetime(2019, 4, 26, 19, 47, 49, 736301), 'last_update_date': datetime.datetime(2019, 4, 26, 19, 47, 49, 736319), 'last_updated_by': 1, 'vehicle_number': '89989'}
+27/04/2019 01:17:49 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, item_description, booking_unit_price, booking_quantity, receipt_unit_price, receipt_quantity, unit_of_measure, line_status, created_by, creation_date, last_update_date, last_updated_by, line_number, discount) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(item_description)s, %(booking_unit_price)s, %(booking_quantity)s, %(receipt_unit_price)s, %(receipt_quantity)s, %(unit_of_measure)s, %(line_status)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s, %(discount)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+27/04/2019 01:17:49 AM:INFO:{'transaction_header_id': 1, 'item_id': 1, 'item_description': 'kjk', 'booking_unit_price': 787, 'booking_quantity': 7878, 'receipt_unit_price': 787878, 'receipt_quantity': 787878, 'unit_of_measure': 'KG', 'line_status': 'BOOKED', 'created_by': 1, 'creation_date': datetime.datetime(2019, 4, 26, 19, 47, 49, 840435), 'last_update_date': datetime.datetime(2019, 4, 26, 19, 47, 49, 840463), 'last_updated_by': 1, 'line_number': 1, 'discount': 787878}
+27/04/2019 01:17:51 AM:INFO:COMMIT
+27/04/2019 01:17:53 AM:INFO:BEGIN (implicit)
+27/04/2019 01:17:53 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl
+27/04/2019 01:17:53 AM:INFO:{}
+27/04/2019 01:17:53 AM:INFO:COMMIT
+27/04/2019 01:17:53 AM:INFO:BEGIN (implicit)
+27/04/2019 01:17:53 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:17:53 AM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_HEADER_STATUS', 'enabled_1': 'Y'}
+27/04/2019 01:17:53 AM:INFO:COMMIT
+27/04/2019 01:17:53 AM:INFO:BEGIN (implicit)
+27/04/2019 01:17:53 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.supplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+27/04/2019 01:17:53 AM:INFO:{'param_1': 500}
+27/04/2019 01:17:53 AM:INFO:COMMIT
+27/04/2019 01:18:08 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:08 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl
+27/04/2019 01:18:08 AM:INFO:{}
+27/04/2019 01:18:08 AM:INFO:COMMIT
+27/04/2019 01:18:08 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:08 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:18:08 AM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_HEADER_STATUS', 'enabled_1': 'Y'}
+27/04/2019 01:18:08 AM:INFO:COMMIT
+27/04/2019 01:18:08 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:08 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.supplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+27/04/2019 01:18:08 AM:INFO:{'param_1': 500}
+27/04/2019 01:18:08 AM:INFO:COMMIT
+27/04/2019 01:18:11 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:11 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.supplier_id AS apps_purchase_trx_header_tbl_supplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by, apps.purchase_trx_header_tbl.vehicle_number AS apps_purchase_trx_header_tbl_vehicle_number 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s 
+ LIMIT %(param_1)s
+27/04/2019 01:18:11 AM:INFO:{'purchase_trx_number_1': '9899898', 'param_1': 1}
+27/04/2019 01:18:11 AM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.booking_unit_price AS apps_purchase_trx_lines_tbl_booking_unit_price, apps.purchase_trx_lines_tbl.booking_quantity AS apps_purchase_trx_lines_tbl_booking_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_quantity AS apps_purchase_trx_lines_tbl_receipt_quantity, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by, apps.purchase_trx_lines_tbl.line_number AS apps_purchase_trx_lines_tbl_line_number, apps.purchase_trx_lines_tbl.discount AS apps_purchase_trx_lines_tbl_discount 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+27/04/2019 01:18:11 AM:INFO:{'param_1': 1}
+27/04/2019 01:18:11 AM:INFO:COMMIT
+27/04/2019 01:18:11 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:11 AM:INFO:SELECT apps.inventory_item_tbl.item_id AS apps_inventory_item_tbl_item_id, apps.inventory_item_tbl.item_number AS apps_inventory_item_tbl_item_number, apps.inventory_item_tbl.item_type AS apps_inventory_item_tbl_item_type, apps.inventory_item_tbl.description AS apps_inventory_item_tbl_description, apps.inventory_item_tbl.long_description AS apps_inventory_item_tbl_long_description 
+FROM apps.inventory_item_tbl 
+WHERE apps.inventory_item_tbl.enabled_flag = %(enabled_flag_1)s
+27/04/2019 01:18:11 AM:INFO:{'enabled_flag_1': 'Y'}
+27/04/2019 01:18:11 AM:INFO:COMMIT
+27/04/2019 01:18:11 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:11 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:18:11 AM:INFO:{'lookup_name_1': 'UNIT_OF_MEASURE', 'enabled_1': 'Y'}
+27/04/2019 01:18:11 AM:INFO:COMMIT
+27/04/2019 01:18:11 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:11 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:18:11 AM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_LINES_STATUS', 'enabled_1': 'Y'}
+27/04/2019 01:18:11 AM:INFO:COMMIT
+27/04/2019 01:18:11 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:11 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:18:11 AM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_HEADER_STATUS', 'enabled_1': 'Y'}
+27/04/2019 01:18:11 AM:INFO:COMMIT
+27/04/2019 01:18:11 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:11 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:18:11 AM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_TYPE', 'enabled_1': 'Y'}
+27/04/2019 01:18:11 AM:INFO:COMMIT
+27/04/2019 01:18:11 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:11 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl
+27/04/2019 01:18:11 AM:INFO:{}
+27/04/2019 01:18:11 AM:INFO:COMMIT
+27/04/2019 01:18:28 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:28 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+27/04/2019 01:18:28 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+27/04/2019 01:18:28 AM:INFO:COMMIT
+27/04/2019 01:18:28 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:28 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+27/04/2019 01:18:28 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+27/04/2019 01:18:28 AM:INFO:COMMIT
+27/04/2019 01:18:28 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:28 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.supplier_id AS apps_purchase_trx_header_tbl_supplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by, apps.purchase_trx_header_tbl.vehicle_number AS apps_purchase_trx_header_tbl_vehicle_number 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s 
+ LIMIT %(param_1)s
+27/04/2019 01:18:28 AM:INFO:{'purchase_trx_number_1': '9899898', 'param_1': 1}
+27/04/2019 01:18:28 AM:INFO:UPDATE apps.purchase_trx_header_tbl SET order_status=%(order_status)s, last_update_date=%(last_update_date)s WHERE apps.purchase_trx_header_tbl.transaction_header_id = %(apps_purchase_trx_header_tbl_transaction_header_id)s
+27/04/2019 01:18:28 AM:INFO:{'order_status': 'CLOSED', 'last_update_date': datetime.datetime(2019, 4, 26, 19, 48, 28, 515713), 'apps_purchase_trx_header_tbl_transaction_header_id': 1}
+27/04/2019 01:18:28 AM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.booking_unit_price AS apps_purchase_trx_lines_tbl_booking_unit_price, apps.purchase_trx_lines_tbl.booking_quantity AS apps_purchase_trx_lines_tbl_booking_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_quantity AS apps_purchase_trx_lines_tbl_receipt_quantity, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by, apps.purchase_trx_lines_tbl.line_number AS apps_purchase_trx_lines_tbl_line_number, apps.purchase_trx_lines_tbl.discount AS apps_purchase_trx_lines_tbl_discount 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+27/04/2019 01:18:28 AM:INFO:{'param_1': 1}
+27/04/2019 01:18:28 AM:INFO:UPDATE apps.purchase_trx_lines_tbl SET created_by=%(created_by)s, last_update_date=%(last_update_date)s WHERE apps.purchase_trx_lines_tbl.transaction_line_id = %(apps_purchase_trx_lines_tbl_transaction_line_id)s
+27/04/2019 01:18:28 AM:INFO:{'created_by': '1', 'last_update_date': datetime.datetime(2019, 4, 26, 19, 48, 28, 520044), 'apps_purchase_trx_lines_tbl_transaction_line_id': 1}
+27/04/2019 01:18:28 AM:INFO:COMMIT
+27/04/2019 01:18:28 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:28 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl
+27/04/2019 01:18:28 AM:INFO:{}
+27/04/2019 01:18:28 AM:INFO:COMMIT
+27/04/2019 01:18:28 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:28 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:18:28 AM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_HEADER_STATUS', 'enabled_1': 'Y'}
+27/04/2019 01:18:28 AM:INFO:COMMIT
+27/04/2019 01:18:28 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:28 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.supplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+27/04/2019 01:18:28 AM:INFO:{'param_1': 500}
+27/04/2019 01:18:28 AM:INFO:COMMIT
+27/04/2019 01:18:45 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:45 AM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.supplier_id AS apps_purchase_trx_header_tbl_supplier_id, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number, apps.purchase_trx_header_tbl.ref_doc AS apps_purchase_trx_header_tbl_ref_doc, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by, apps.purchase_trx_header_tbl.vehicle_number AS apps_purchase_trx_header_tbl_vehicle_number 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s 
+ LIMIT %(param_1)s
+27/04/2019 01:18:45 AM:INFO:{'purchase_trx_number_1': '9899898', 'param_1': 1}
+27/04/2019 01:18:45 AM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.item_description AS apps_purchase_trx_lines_tbl_item_description, apps.purchase_trx_lines_tbl.booking_unit_price AS apps_purchase_trx_lines_tbl_booking_unit_price, apps.purchase_trx_lines_tbl.booking_quantity AS apps_purchase_trx_lines_tbl_booking_quantity, apps.purchase_trx_lines_tbl.receipt_unit_price AS apps_purchase_trx_lines_tbl_receipt_unit_price, apps.purchase_trx_lines_tbl.receipt_quantity AS apps_purchase_trx_lines_tbl_receipt_quantity, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.line_status AS apps_purchase_trx_lines_tbl_line_status, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by, apps.purchase_trx_lines_tbl.line_number AS apps_purchase_trx_lines_tbl_line_number, apps.purchase_trx_lines_tbl.discount AS apps_purchase_trx_lines_tbl_discount 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+27/04/2019 01:18:45 AM:INFO:{'param_1': 1}
+27/04/2019 01:18:45 AM:INFO:COMMIT
+27/04/2019 01:18:45 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:45 AM:INFO:SELECT apps.inventory_item_tbl.item_id AS apps_inventory_item_tbl_item_id, apps.inventory_item_tbl.item_number AS apps_inventory_item_tbl_item_number, apps.inventory_item_tbl.item_type AS apps_inventory_item_tbl_item_type, apps.inventory_item_tbl.description AS apps_inventory_item_tbl_description, apps.inventory_item_tbl.long_description AS apps_inventory_item_tbl_long_description 
+FROM apps.inventory_item_tbl 
+WHERE apps.inventory_item_tbl.enabled_flag = %(enabled_flag_1)s
+27/04/2019 01:18:45 AM:INFO:{'enabled_flag_1': 'Y'}
+27/04/2019 01:18:45 AM:INFO:COMMIT
+27/04/2019 01:18:45 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:45 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:18:45 AM:INFO:{'lookup_name_1': 'UNIT_OF_MEASURE', 'enabled_1': 'Y'}
+27/04/2019 01:18:45 AM:INFO:COMMIT
+27/04/2019 01:18:45 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:45 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:18:45 AM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_LINES_STATUS', 'enabled_1': 'Y'}
+27/04/2019 01:18:45 AM:INFO:COMMIT
+27/04/2019 01:18:45 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:45 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:18:45 AM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_HEADER_STATUS', 'enabled_1': 'Y'}
+27/04/2019 01:18:45 AM:INFO:COMMIT
+27/04/2019 01:18:45 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:45 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:18:45 AM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_TYPE', 'enabled_1': 'Y'}
+27/04/2019 01:18:45 AM:INFO:COMMIT
+27/04/2019 01:18:45 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:45 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl
+27/04/2019 01:18:45 AM:INFO:{}
+27/04/2019 01:18:45 AM:INFO:COMMIT
+27/04/2019 01:18:49 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:49 AM:INFO:SELECT apps.supplier_master_header_tbl.supplier_id AS apps_supplier_master_header_tbl_supplier_id, apps.supplier_master_header_tbl.supplier_code AS apps_supplier_master_header_tbl_supplier_code, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.supplier_master_header_tbl.description AS apps_supplier_master_header_tbl_description, apps.supplier_master_header_tbl.supplier_type AS apps_supplier_master_header_tbl_supplier_type, apps.supplier_master_header_tbl.remarks AS apps_supplier_master_header_tbl_remarks, apps.supplier_master_header_tbl.enabled_flag AS apps_supplier_master_header_tbl_enabled_flag, apps.supplier_master_header_tbl.effective_from AS apps_supplier_master_header_tbl_effective_from, apps.supplier_master_header_tbl.effective_to AS apps_supplier_master_header_tbl_effective_to, apps.supplier_master_header_tbl.employee_id AS apps_supplier_master_header_tbl_employee_id, apps.supplier_master_header_tbl.ship_to_location_code AS apps_supplier_master_header_tbl_ship_to_location_code, apps.supplier_master_header_tbl.bill_to_location_code AS apps_supplier_master_header_tbl_bill_to_location_code, apps.supplier_master_header_tbl.created_by AS apps_supplier_master_header_tbl_created_by, apps.supplier_master_header_tbl.creation_date AS apps_supplier_master_header_tbl_creation_date, apps.supplier_master_header_tbl.last_update_date AS apps_supplier_master_header_tbl_last_update_date, apps.supplier_master_header_tbl.last_updated_by AS apps_supplier_master_header_tbl_last_updated_by 
+FROM apps.supplier_master_header_tbl
+27/04/2019 01:18:49 AM:INFO:{}
+27/04/2019 01:18:49 AM:INFO:COMMIT
+27/04/2019 01:18:49 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:49 AM:INFO:SELECT apps.common_lookup_tbl.meaning AS apps_common_lookup_tbl_meaning, apps.common_lookup_tbl.lookup_code AS apps_common_lookup_tbl_lookup_code 
+FROM apps.common_lookup_tbl 
+WHERE apps.common_lookup_tbl.lookup_name = %(lookup_name_1)s AND apps.common_lookup_tbl.enabled = %(enabled_1)s
+27/04/2019 01:18:49 AM:INFO:{'lookup_name_1': 'PURCHASE_ORDER_HEADER_STATUS', 'enabled_1': 'Y'}
+27/04/2019 01:18:49 AM:INFO:COMMIT
+27/04/2019 01:18:49 AM:INFO:BEGIN (implicit)
+27/04/2019 01:18:49 AM:INFO:SELECT apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.supplier_master_header_tbl.supplier_name AS apps_supplier_master_header_tbl_supplier_name, apps.purchase_trx_header_tbl.amount AS apps_purchase_trx_header_tbl_amount, apps.purchase_trx_header_tbl.order_type AS apps_purchase_trx_header_tbl_order_type, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.weighting_number AS apps_purchase_trx_header_tbl_weighting_number 
+FROM apps.purchase_trx_header_tbl JOIN apps.supplier_master_header_tbl ON apps.purchase_trx_header_tbl.supplier_id = apps.supplier_master_header_tbl.supplier_id 
+ LIMIT %(param_1)s
+27/04/2019 01:18:49 AM:INFO:{'param_1': 500}
+27/04/2019 01:18:49 AM:INFO:COMMIT

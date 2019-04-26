@@ -51,7 +51,7 @@ class SupplierMasterHeaderUpdateSchema(Schema):
     supplier_code = fields.Str(required=True)
     supplier_name = fields.Str(required=True)
     description = fields.Str(missing='')
-    supplier_type = fields.Str(required=True)
+    supplier_type = fields.Str(required=False)
     remarks = fields.Str(required=True)
     enabled_flag = fields.Str(required=True)
     effective_from = fields.Date('%Y-%m-%d')
