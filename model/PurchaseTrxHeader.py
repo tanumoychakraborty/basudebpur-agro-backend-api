@@ -6,7 +6,8 @@ Created on 11-Nov-2018
 
 from model import Base, PurchaseTrxLines
 from sqlalchemy.sql.schema import Column, Sequence
-from sqlalchemy.sql.sqltypes import String, Integer, DateTime, LargeBinary
+from sqlalchemy.sql.sqltypes import String, Integer, DateTime, LargeBinary,\
+    Float
 import datetime
 from sqlalchemy.orm import relationship
 
@@ -20,13 +21,10 @@ class PurchaseTrxHeader (Base):
     order_status = Column('order_status', String)
     buyer_id = Column('buyer_id', Integer)
     supplier_id = Column('supplier_id', Integer)
-    amount = Column('amount', Integer)
-    weighting_number = Column('weighting_number', String)
-    ref_doc = Column('ref_doc', LargeBinary)
+    amount = Column('amount', Float)
     created_by = Column('created_by', Integer)
     creation_date = Column('creation_date', DateTime,default=datetime.datetime.utcnow)
     last_update_date = Column('last_update_date', DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
     last_updated_by = Column('last_updated_by', Integer)
-    vehicle_number  = Column('vehicle_number', String)
     
     purchase_trx_lines = relationship('model.PurchaseTrxLines.PurchaseTrxLines', back_populates='purchase_trx_header')

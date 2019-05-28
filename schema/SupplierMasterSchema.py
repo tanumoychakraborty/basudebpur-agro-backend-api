@@ -22,7 +22,7 @@ class SupplierMasterHeaderSchema(Schema):
     created_by = fields.Str(required=True)
     last_updated_by = fields.Str(required=True)
     user_name = fields.Str(required=True)
-    supplier_master_sites = fields.Nested('schema.SupplierMasterSchema.SupplierMasterLinesSchema', many=True, required=True)
+    supplier_master_sites = fields.List(fields.Nested('schema.SupplierMasterSchema.SupplierMasterLinesSchema'))
     
     
     

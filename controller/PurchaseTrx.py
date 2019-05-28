@@ -82,6 +82,7 @@ class PurchaseTrx(object):
             """ 
             data = req.context['serialized-data']  
             data['last_updated_by'] = get_user_id_by_user_name(data['last_updated_by'])
+            data['buyer_id'] = get_user_id_by_user_name(data['buyer_id'])
             for line in data['purchase_trx_lines']:
                 if 'transaction_line_id' not in line.keys():
                     line['created_by'] = get_user_id_by_user_name(line['last_updated_by'])
