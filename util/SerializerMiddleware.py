@@ -7,6 +7,7 @@ from marshmallow.exceptions import ValidationError
 from util.HTTPError import HTTPError
 from falcon import status_codes
 import json
+import sys
 
 class SerializerMiddleware(object):
     '''
@@ -36,5 +37,4 @@ class SerializerMiddleware(object):
                     data=req_data
                 )
             except ValidationError as err:
-                print('validation error >>>>>>>>>>'+str(err.messages))
                 raise HTTPError(status=status_codes.HTTP_422, errors=err.messages)
