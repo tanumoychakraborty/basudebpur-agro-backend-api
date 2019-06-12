@@ -16,7 +16,6 @@ class PurchaseTrxLines (Base):
     transaction_line_id = Column('transaction_line_id', Integer, Sequence('purchase_trx_lines_sequence', schema='apps') , primary_key = True)
     transaction_header_id = Column('transaction_header_id', Integer,ForeignKey('apps.purchase_trx_header_tbl.transaction_header_id'))
     item_id = Column('item_id', Integer)
-    item_description = Column('item_description', String)
     booking_unit_price = Column('booking_unit_price', Float)
     booking_quantity = Column('booking_quantity', Float)
     unit_of_measure = Column('unit_of_measure', String)
@@ -25,6 +24,5 @@ class PurchaseTrxLines (Base):
     last_update_date = Column('last_update_date', DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
     last_updated_by = Column('last_updated_by', Integer)
     line_number = Column('line_number', Integer ,nullable=False)
-    discount = Column('discount',Float)
     
     purchase_trx_header = relationship("model.PurchaseTrxHeader.PurchaseTrxHeader", back_populates="purchase_trx_lines")

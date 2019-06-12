@@ -86,7 +86,7 @@ class PurchaseTrx(object):
             for line in data['purchase_trx_lines']:
                 if 'transaction_line_id' not in line.keys():
                     line['created_by'] = get_user_id_by_user_name(line['last_updated_by'])
-                line['last_updated_by'] = get_user_id_by_user_name(line['last_updated_by'])
+                    line['last_updated_by'] = get_user_id_by_user_name(line['last_updated_by'])
             update_purchase_trx(data)
             output = {'Status': falcon.HTTP_200, 'Message': "Purchase Transaction data updated successfully for: " + data['purchase_trx_number']}
             resp.status = falcon.HTTP_200

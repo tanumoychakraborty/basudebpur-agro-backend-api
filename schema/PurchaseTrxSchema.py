@@ -12,11 +12,9 @@ class PurchaseTrxHeaderSchema(Schema):
     '''
     purchase_trx_number = fields.Str(required=True)
     transaction_date = fields.DateTime('%Y/%m/%d')#fields.DateTime('%Y-%m-%dT%H:%M:%S+03:00')
-    order_type = fields.Str(required=True)
     order_status = fields.Str(required=True)
     buyer_id = fields.Str(required=True)
     supplier_id = fields.Int(required=True)
-    amount = fields.Float(required=True)
     created_by = fields.Str(required=True)
     last_updated_by = fields.Str(required=True)
     purchase_trx_lines = fields.Nested('schema.PurchaseTrxSchema.PurchaseTrxLinesSchema', many=True, required=True)
@@ -34,7 +32,6 @@ class PurchaseTrxLinesSchema(Schema):
     booking_unit_price = fields.Float(missing=0)
     booking_quantity = fields.Float(missing=0)
     unit_of_measure = fields.Str(missing='')
-    discount = fields.Float(missing=0)
     created_by = fields.Str(required=True)
     last_updated_by = fields.Str(required=True)
     
@@ -47,7 +44,6 @@ class PurchaseTrxHeaderUpdateSchema(Schema):
     transaction_header_id = fields.Int()
     purchase_trx_number = fields.Str(required=True)
     transaction_date = fields.DateTime('%Y/%m/%d')#:%S+03:00
-    order_type = fields.Str()
     order_status = fields.Str()
     buyer_id = fields.Str()
     supplier_id = fields.Int()
@@ -67,10 +63,8 @@ class PurchaseTrxLinesUpdateSchema(Schema):
     transaction_header_id = fields.Int()
     item_id = fields.Int(required=True)
     line_number = fields.Int(required=True)
-    item_description = fields.Str(missing='')
     booking_unit_price = fields.Float(missing=0)
     booking_quantity = fields.Float(missing=0)
     unit_of_measure = fields.Str()
-    discount = fields.Float(missing=0)
     created_by = fields.Str()
     last_updated_by = fields.Str(required=True)

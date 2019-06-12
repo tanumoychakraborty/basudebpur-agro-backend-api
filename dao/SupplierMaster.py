@@ -78,6 +78,8 @@ def update_supplier(raw_data,session):
     supplier_code = raw_data['supplier_code']
  #   supplier_id = raw_data['supplier_id']
     supplierMasterHeader = session.query(SupplierMasterHeader).filter_by(supplier_code=supplier_code).first()
+    if supplierMasterHeader is None:
+        raise HTTPError(status=status_codes.HTTP_404, errors="Supplier does not exist")
     
     supplierMasterHeader.supplier_name = raw_data['supplier_name']
     supplierMasterHeader.description = raw_data['description']

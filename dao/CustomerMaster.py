@@ -8,6 +8,8 @@ from model.CustomerMasterHeader import CustomerMasterHeader
 from model.CustomerMasterSites import CustomerMasterSites
 from util.db_helper import db_transaction
 from sqlalchemy.sql.expression import and_
+from falcon.http_error import HTTPError
+from falcon import status_codes
 
 @db_transaction
 def get_customer_details(session):
@@ -107,6 +109,8 @@ def update_customer(raw_data,session):
     customer_code = raw_data['customer_code']
     
     customerMasterHeader = session.query(CustomerMasterHeader).filter_by(customer_code=customer_code).first()
+    if customerMasterHeader is None:
+        raise HTTPError(status=status_codes.HTTP_404, errors="Customer does not exist")
     
     customerMasterHeader.customer_name = raw_data['customer_name']
     customerMasterHeader.description = raw_data['description']
