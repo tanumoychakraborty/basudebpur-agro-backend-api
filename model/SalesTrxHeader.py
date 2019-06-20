@@ -19,7 +19,7 @@ class SalesTrxHeader (Base):
     order_status = Column('order_status', String)
     customer_id = Column('customer_id', Integer)
     amount = Column('Amount', Integer)
-    weighting_number = Column('weighting_Number', String)
+    #weighting_number = Column('weighting_Number', String)
     ref_doc = Column('ref_doc', LargeBinary)
     created_by = Column('created_by', Integer)
     creation_date = Column('creation_date', DateTime)

@@ -6,6 +6,8 @@ Created on 30-Oct-2018
 from util.db_helper import db_transaction
 from model.User import User
 from sqlalchemy.sql.expression import and_
+from falcon.http_error import HTTPError
+from falcon import status_codes
 
 @db_transaction
 def get_user_type_by_user_id(user_id, session):
@@ -52,6 +54,8 @@ def create_user(raw_data, session):
 def update_user(raw_data,session):
     user_name = raw_data['user_name']
     userObj = session.query(User).filter_by(user_name=user_name).first()
+    if userObj is None:
+        raise HTTPError(status=status_codes.HTTP_404, errors="User Details does not exist")
     
     userObj.description = raw_data['description']
     userObj.phone_number1 = raw_data['phone_number1']
