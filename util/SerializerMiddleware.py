@@ -27,7 +27,7 @@ class SerializerMiddleware(object):
             try:
                 req_data = json.loads(req.media)
             except TypeError:
-                req_data = json.loads(req.stream.read().decode("utf-8"))
+                req_data = req.media#json.loads(req.stream.read().decode("utf-8"))
             
         try:
             serializer = resource.serializers[req.method.lower()]
