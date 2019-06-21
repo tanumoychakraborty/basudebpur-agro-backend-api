@@ -7,7 +7,6 @@ from marshmallow.exceptions import ValidationError
 from util.HTTPError import HTTPError
 from falcon import status_codes
 import json
-import sys
 
 class SerializerMiddleware(object):
     '''
@@ -25,7 +24,10 @@ class SerializerMiddleware(object):
             '''
             for django
             '''
-            req_data = json.loads(req.media)
+            try:
+                req_data = json.loads(req.media)
+            except TypeError:
+                req_data = json.loads(req.stream.read().decode("utf-8"))
             
         try:
             serializer = resource.serializers[req.method.lower()]
