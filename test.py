@@ -1,9 +1,6 @@
 import falcon
 import json
 
-from sqlalchemy.orm.session import sessionmaker
-from model import test
-from util.dbEngine import dbEngine
 
 class testview(object):
 
