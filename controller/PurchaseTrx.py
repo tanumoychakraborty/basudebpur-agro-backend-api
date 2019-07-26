@@ -11,7 +11,7 @@ from dao.PurchaseTrx import create_purchase_trx, update_purchase_trx,\
     get_purchase_trx_detail
 from dao.PurchaseTrx import get_purchase_transaction_details
 from schema.PurchaseTrxSchema import PurchaseTrxHeaderSchema,PurchaseTrxHeaderUpdateSchema
-from dao.Users import get_user_id_by_user_name
+from dao.Users import get_user_id_by_user_name, get_user_name_by_user_id
 
 
 class PurchaseTrx(object):
@@ -58,6 +58,7 @@ class PurchaseTrx(object):
         if params.keys():
             if list(params.keys()) == ['transaction_number']:
                 purchase_trx_details = [get_purchase_trx_detail(params['transaction_number'])]
+                purchase_trx_details[0]['buyer_name'] = get_user_name_by_user_id(purchase_trx_details[0]['buyer_id'])
             else:
                 purchase_trx_details = get_purchase_transaction_details(params,0,None)
         else:
@@ -82,11 +83,11 @@ class PurchaseTrx(object):
             """ 
             data = req.context['serialized-data']  
             data['last_updated_by'] = get_user_id_by_user_name(data['last_updated_by'])
-            data['buyer_id'] = get_user_id_by_user_name(data['buyer_id'])
+            #data['buyer_id'] = get_user_id_by_user_name(data['buyer_id'])
             for line in data['purchase_trx_lines']:
+                line['last_updated_by'] = get_user_id_by_user_name(line['last_updated_by'])
                 if 'transaction_line_id' not in line.keys():
-                    line['created_by'] = get_user_id_by_user_name(line['last_updated_by'])
-                    line['last_updated_by'] = get_user_id_by_user_name(line['last_updated_by'])
+                    line['created_by'] = line['last_updated_by']
             update_purchase_trx(data)
             output = {'Status': falcon.HTTP_200, 'Message': "Purchase Transaction data updated successfully for: " + data['purchase_trx_number']}
             resp.status = falcon.HTTP_200
