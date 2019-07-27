@@ -114,16 +114,21 @@ def get_receipt_details(params,page, page_size,session):
         if page: 
             receiptDetails = receiptDetails.offset(page*page_size)
     else:
+        receipt_header_id = params.get('receipt_header_id',None)
         receipt_number = params.get('receipt_number',None)
         challan_number = params.get('challan_number',None)
         receipt_date = params.get('receipt_date',None)
         challan_date = params.get('challan_date',None)
         from_receipt_date = params.get('from_receipt_date',None)
         to_receipt_date = params.get('to_receipt_date',None)
+        source_transaction_header_id = params.get('source_transaction_header_id',None)
+        source_transaction_type = params.get('source_transaction_type',None)
         
-        receiptDetails = session.query(ReceiptHeader.receipt_number,ReceiptHeader.challan_number,
-                                           ReceiptHeader.receipt_date,ReceiptHeader.challan_date)
+        receiptDetails = session.query(ReceiptHeader.receipt_header_id,ReceiptHeader.receipt_number,ReceiptHeader.challan_number,
+                                           ReceiptHeader.receipt_date,ReceiptHeader.challan_date, ReceiptHeader.vehicle_number)
         conditions = []
+        if receipt_header_id:
+            conditions.append(ReceiptHeader.receipt_header_id == receipt_header_id)
         if receipt_number:
             conditions.append(ReceiptHeader.receipt_number == receipt_number)
         if challan_number:
@@ -135,7 +140,11 @@ def get_receipt_details(params,page, page_size,session):
         if from_receipt_date:
             conditions.append(ReceiptHeader.creation_date >= from_receipt_date)
         if to_receipt_date:
-            conditions.append(ReceiptHeader.creation_date <= to_receipt_date)          
+            conditions.append(ReceiptHeader.creation_date <= to_receipt_date)   
+        if source_transaction_header_id:
+            conditions.append(ReceiptHeader.source_transaction_header_id <= source_transaction_header_id)   
+        if source_transaction_type:
+            conditions.append(ReceiptHeader.source_transaction_type <= source_transaction_type)          
                 
             
                 
@@ -148,10 +157,12 @@ def get_receipt_details(params,page, page_size,session):
                   
     for receiptDetail in receiptDetails:
         dict ={ }
-        dict['receipt_number'] = receiptDetail[0]
-        dict['challan_number'] = receiptDetail[1]
-        dict['receipt_date'] = receiptDetail[2]
-        dict['challan_date'] = receiptDetail[3]
+        dict['receipt_header_id'] = receiptDetail[0]
+        dict['receipt_number'] = receiptDetail[1]
+        dict['challan_number'] = receiptDetail[2]
+        dict['receipt_date'] = receiptDetail[3]
+        dict['challan_date'] = receiptDetail[4]
+        dict['vehicle_number'] = receiptDetail[5]
         
         resultL.append(dict)    
             
@@ -165,6 +176,19 @@ def get_receipt_details(params,page, page_size,session):
 @db_transaction
 def get_receipt_detail(receipt_number,session):
     receiptheader = session.query(ReceiptHeader).filter_by(receipt_number=receipt_number).first()
+    result = dict(receiptheader.__dict__)
+    result.pop('_sa_instance_state')
+    line_dicts = []
+    for line in receiptheader.receipt_lines:
+        line_dict = dict(line.__dict__)
+        line_dict.pop('_sa_instance_state')
+        line_dicts.append(line_dict)
+    result['receipt_lines'] = line_dicts
+    return result
+
+@db_transaction
+def get_receipt_detail_by_receipt_header_id(receipt_header_id,session):
+    receiptheader = session.query(ReceiptHeader).filter_by(receipt_header_id=receipt_header_id).first()
     result = dict(receiptheader.__dict__)
     result.pop('_sa_instance_state')
     line_dicts = []

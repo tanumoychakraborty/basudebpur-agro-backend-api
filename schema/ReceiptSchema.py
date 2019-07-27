@@ -11,11 +11,11 @@ class ReceiptHeaderSchema(Schema):
     '''
     classdocs
     '''
-    receipt_number = fields.Str(required=True)
+    receipt_number = fields.Str(required=False)
     challan_number = fields.Str()
     receipt_date = fields.DateTime('%Y-%m-%d')
     challan_date = fields.DateTime('%Y-%m-%d')
-    source_transaction_header_id = fields.Int(required=True)
+    source_transaction_header_id = fields.Str(required=True)
     source_transaction_type = fields.Str(required=True)
     vehicle_number = fields.Str(required=True)
     created_by = fields.Str(required=True)
@@ -35,7 +35,7 @@ class ReceiptLinesSchema(Schema):
     load_unload_number = fields.Str(missing='')
     load_unload_area = fields.Str(missing='')
     weighting_number = fields.Str(missing='')
-    unit_of_measure  = fields.Str(required=True)
+    unit_of_measure  = fields.Str(required=False)
     receipt_line_status = fields.Str(missing='')
     quantity = fields.Float(missing=0)
     unit_price = fields.Float(missing=0)

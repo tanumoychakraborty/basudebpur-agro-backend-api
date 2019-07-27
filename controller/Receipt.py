@@ -8,7 +8,8 @@ import json
 import falcon
 import logging
 from dao.Receipt import create_receipt, update_receipt,\
-    get_receipt_details,get_receipt_detail
+    get_receipt_details,get_receipt_detail,\
+    get_receipt_detail_by_receipt_header_id
 from schema.ReceiptSchema import ReceiptHeaderSchema,ReceiptHeaderUpdateSchema,ReceiptLinesSchema,ReceiptLinesUpdateSchema
 from dao.Users import get_user_id_by_user_name
 
@@ -56,6 +57,8 @@ class Receipt(object):
         if params.keys():
             if list(params.keys()) == ['receipt_number']:
                 receipt_details = [get_receipt_detail(params['receipt_number'])]
+            elif list(params.keys()) == ['receipt_header_id']:
+                receipt_details = [get_receipt_detail_by_receipt_header_id(params['receipt_header_id'])]
             else:
                 receipt_details = get_receipt_details(params,0,None)
         else:
