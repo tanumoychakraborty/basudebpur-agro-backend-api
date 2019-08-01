@@ -37,7 +37,7 @@ class PurchaseTrx(object):
                 line['last_updated_by'] = user
                 line['created_by'] = user
             create_purchase_trx(data)
-            output = {'Status': falcon.HTTP_200, 'Message': "Purchase Transaction data saved successfully for: " + data['purchase_trx_number']}
+            output = {'Status': falcon.HTTP_200, 'Message': "Purchase Transaction data saved successfully."}
             resp.status = falcon.HTTP_200
             resp.body = json.dumps(output)
   

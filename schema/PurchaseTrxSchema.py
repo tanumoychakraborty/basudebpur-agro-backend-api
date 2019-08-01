@@ -10,7 +10,7 @@ class PurchaseTrxHeaderSchema(Schema):
     '''
     classdocs
     '''
-    purchase_trx_number = fields.Str(required=True)
+    
     transaction_date = fields.DateTime('%Y-%m-%d')#fields.DateTime('%Y-%m-%dT%H:%M:%S+03:00')
     order_status = fields.Str(required=True)
     buyer_id = fields.Str(required=True)
@@ -49,7 +49,7 @@ class PurchaseTrxHeaderUpdateSchema(Schema):
     buyer_name = fields.Str()
     supplier_id = fields.Int()
     amount = fields.Float()
-    created_by = fields.Int()
+    #created_by = fields.Int()
     #creation_date = fields.Str()
     last_updated_by = fields.Str(required=True)
     #last_update_date = fields.Str()

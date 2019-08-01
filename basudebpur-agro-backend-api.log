@@ -13081,3 +13081,924 @@ FROM apps.receipt_lines_tbl
 WHERE %(param_1)s = apps.receipt_lines_tbl.receipt_header_id
 28/07/2019 01:52:35 AM:INFO:{'param_1': 1}
 28/07/2019 01:52:35 AM:INFO:COMMIT
+31/07/2019 09:28:38 PM:INFO:starting gunicorn server
+31/07/2019 09:28:38 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+31/07/2019 09:34:00 PM:INFO:starting gunicorn server
+31/07/2019 09:34:00 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+31/07/2019 09:34:34 PM:INFO:select version()
+31/07/2019 09:34:34 PM:INFO:{}
+31/07/2019 09:34:34 PM:INFO:select current_schema()
+31/07/2019 09:34:34 PM:INFO:{}
+31/07/2019 09:34:34 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+31/07/2019 09:34:34 PM:INFO:{}
+31/07/2019 09:34:34 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+31/07/2019 09:34:34 PM:INFO:{}
+31/07/2019 09:34:34 PM:INFO:show standard_conforming_strings
+31/07/2019 09:34:34 PM:INFO:{}
+31/07/2019 09:34:34 PM:INFO:BEGIN (implicit)
+31/07/2019 09:34:34 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 09:34:34 PM:INFO:{'user_name_1': '1', 'param_1': 1}
+31/07/2019 09:34:34 PM:INFO:COMMIT
+31/07/2019 09:34:34 PM:INFO:BEGIN (implicit)
+31/07/2019 09:34:34 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 09:34:34 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 09:34:34 PM:INFO:COMMIT
+31/07/2019 09:34:34 PM:INFO:BEGIN (implicit)
+31/07/2019 09:34:34 PM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_status, buyer_id, supplier_id, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_status)s, %(buyer_id)s, %(supplier_id)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+31/07/2019 09:34:34 PM:INFO:{'purchase_trx_number': None, 'transaction_date': datetime.datetime(2019, 5, 28, 0, 0), 'order_status': 'BOOKED', 'buyer_id': None, 'supplier_id': 1, 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 16, 4, 34, 919165), 'last_update_date': datetime.datetime(2019, 7, 31, 16, 4, 34, 919188), 'last_updated_by': 6}
+31/07/2019 09:34:34 PM:INFO:ROLLBACK
+31/07/2019 09:34:34 PM:ERROR:None
+31/07/2019 09:37:53 PM:INFO:BEGIN (implicit)
+31/07/2019 09:37:53 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 09:37:53 PM:INFO:{'user_name_1': '1', 'param_1': 1}
+31/07/2019 09:37:53 PM:INFO:COMMIT
+31/07/2019 09:37:53 PM:INFO:BEGIN (implicit)
+31/07/2019 09:37:53 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 09:37:53 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 09:37:53 PM:INFO:COMMIT
+31/07/2019 09:37:53 PM:INFO:BEGIN (implicit)
+31/07/2019 09:37:53 PM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_status, buyer_id, supplier_id, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_status)s, %(buyer_id)s, %(supplier_id)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+31/07/2019 09:37:53 PM:INFO:{'purchase_trx_number': None, 'transaction_date': datetime.datetime(2019, 5, 28, 0, 0), 'order_status': 'BOOKED', 'buyer_id': None, 'supplier_id': 1, 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 16, 7, 53, 651879), 'last_update_date': datetime.datetime(2019, 7, 31, 16, 7, 53, 651895), 'last_updated_by': 6}
+31/07/2019 09:37:53 PM:INFO:ROLLBACK
+31/07/2019 09:37:53 PM:ERROR:None
+31/07/2019 09:38:20 PM:INFO:BEGIN (implicit)
+31/07/2019 09:38:20 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 09:38:20 PM:INFO:{'user_name_1': '1', 'param_1': 1}
+31/07/2019 09:38:20 PM:INFO:COMMIT
+31/07/2019 09:38:20 PM:INFO:BEGIN (implicit)
+31/07/2019 09:38:20 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 09:38:20 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 09:38:20 PM:INFO:COMMIT
+31/07/2019 09:38:20 PM:INFO:BEGIN (implicit)
+31/07/2019 09:38:20 PM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_status, buyer_id, supplier_id, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_status)s, %(buyer_id)s, %(supplier_id)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+31/07/2019 09:38:20 PM:INFO:{'purchase_trx_number': None, 'transaction_date': datetime.datetime(2019, 5, 28, 0, 0), 'order_status': 'BOOKED', 'buyer_id': None, 'supplier_id': 1, 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 16, 8, 20, 864311), 'last_update_date': datetime.datetime(2019, 7, 31, 16, 8, 20, 864326), 'last_updated_by': 6}
+31/07/2019 09:38:20 PM:INFO:ROLLBACK
+31/07/2019 09:38:20 PM:ERROR:None
+31/07/2019 09:41:16 PM:INFO:starting gunicorn server
+31/07/2019 09:41:16 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+31/07/2019 09:41:21 PM:INFO:select version()
+31/07/2019 09:41:21 PM:INFO:{}
+31/07/2019 09:41:21 PM:INFO:select current_schema()
+31/07/2019 09:41:21 PM:INFO:{}
+31/07/2019 09:41:21 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+31/07/2019 09:41:21 PM:INFO:{}
+31/07/2019 09:41:21 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+31/07/2019 09:41:21 PM:INFO:{}
+31/07/2019 09:41:21 PM:INFO:show standard_conforming_strings
+31/07/2019 09:41:21 PM:INFO:{}
+31/07/2019 09:41:21 PM:INFO:BEGIN (implicit)
+31/07/2019 09:41:21 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 09:41:21 PM:INFO:{'user_name_1': '1', 'param_1': 1}
+31/07/2019 09:41:21 PM:INFO:COMMIT
+31/07/2019 09:41:21 PM:INFO:BEGIN (implicit)
+31/07/2019 09:41:21 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 09:41:21 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 09:41:21 PM:INFO:COMMIT
+31/07/2019 09:41:21 PM:INFO:BEGIN (implicit)
+31/07/2019 09:41:21 PM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_status, buyer_id, supplier_id, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_status)s, %(buyer_id)s, %(supplier_id)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+31/07/2019 09:41:21 PM:INFO:{'purchase_trx_number': None, 'transaction_date': datetime.datetime(2019, 5, 28, 0, 0), 'order_status': 'BOOKED', 'buyer_id': None, 'supplier_id': 1, 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 16, 11, 21, 610962), 'last_update_date': datetime.datetime(2019, 7, 31, 16, 11, 21, 610985), 'last_updated_by': 6}
+31/07/2019 09:41:21 PM:INFO:ROLLBACK
+31/07/2019 09:41:21 PM:ERROR:None
+31/07/2019 09:44:17 PM:INFO:starting gunicorn server
+31/07/2019 09:44:17 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+31/07/2019 09:44:23 PM:INFO:select version()
+31/07/2019 09:44:23 PM:INFO:{}
+31/07/2019 09:44:23 PM:INFO:select current_schema()
+31/07/2019 09:44:23 PM:INFO:{}
+31/07/2019 09:44:23 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+31/07/2019 09:44:23 PM:INFO:{}
+31/07/2019 09:44:23 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+31/07/2019 09:44:23 PM:INFO:{}
+31/07/2019 09:44:23 PM:INFO:show standard_conforming_strings
+31/07/2019 09:44:23 PM:INFO:{}
+31/07/2019 09:44:23 PM:INFO:BEGIN (implicit)
+31/07/2019 09:44:23 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 09:44:23 PM:INFO:{'user_name_1': '1', 'param_1': 1}
+31/07/2019 09:44:23 PM:INFO:COMMIT
+31/07/2019 09:44:23 PM:INFO:BEGIN (implicit)
+31/07/2019 09:44:23 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 09:44:23 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 09:44:23 PM:INFO:COMMIT
+31/07/2019 09:44:23 PM:INFO:BEGIN (implicit)
+31/07/2019 09:44:23 PM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_status, buyer_id, supplier_id, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_status)s, %(buyer_id)s, %(supplier_id)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+31/07/2019 09:44:23 PM:INFO:{'purchase_trx_number': None, 'transaction_date': datetime.datetime(2019, 5, 28, 0, 0), 'order_status': 'BOOKED', 'buyer_id': None, 'supplier_id': 1, 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 16, 14, 23, 520834), 'last_update_date': datetime.datetime(2019, 7, 31, 16, 14, 23, 520857), 'last_updated_by': 6}
+31/07/2019 09:44:23 PM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, booking_unit_price, booking_quantity, unit_of_measure, created_by, creation_date, last_update_date, last_updated_by, line_number) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(booking_unit_price)s, %(booking_quantity)s, %(unit_of_measure)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+31/07/2019 09:44:23 PM:INFO:{'transaction_header_id': 85, 'item_id': 1, 'booking_unit_price': 100.0, 'booking_quantity': 10.0, 'unit_of_measure': 'KG', 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 16, 14, 23, 534060), 'last_update_date': datetime.datetime(2019, 7, 31, 16, 14, 23, 534081), 'last_updated_by': 6, 'line_number': 1}
+31/07/2019 09:44:23 PM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, booking_unit_price, booking_quantity, unit_of_measure, created_by, creation_date, last_update_date, last_updated_by, line_number) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(booking_unit_price)s, %(booking_quantity)s, %(unit_of_measure)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+31/07/2019 09:44:23 PM:INFO:{'transaction_header_id': 85, 'item_id': 2, 'booking_unit_price': 120.0, 'booking_quantity': 10.0, 'unit_of_measure': 'KG', 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 16, 14, 23, 542223), 'last_update_date': datetime.datetime(2019, 7, 31, 16, 14, 23, 542243), 'last_updated_by': 6, 'line_number': 2}
+31/07/2019 09:44:23 PM:INFO:COMMIT
+31/07/2019 09:45:49 PM:INFO:BEGIN (implicit)
+31/07/2019 09:45:49 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 09:45:49 PM:INFO:{'user_name_1': '1', 'param_1': 1}
+31/07/2019 09:45:49 PM:INFO:COMMIT
+31/07/2019 09:45:49 PM:INFO:BEGIN (implicit)
+31/07/2019 09:45:49 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 09:45:49 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 09:45:49 PM:INFO:COMMIT
+31/07/2019 09:45:49 PM:INFO:BEGIN (implicit)
+31/07/2019 09:45:49 PM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_status, buyer_id, supplier_id, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_status)s, %(buyer_id)s, %(supplier_id)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+31/07/2019 09:45:49 PM:INFO:{'purchase_trx_number': None, 'transaction_date': datetime.datetime(2019, 7, 31, 0, 0), 'order_status': 'BOOKED', 'buyer_id': None, 'supplier_id': 1, 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 16, 15, 49, 113008), 'last_update_date': datetime.datetime(2019, 7, 31, 16, 15, 49, 113036), 'last_updated_by': 6}
+31/07/2019 09:45:49 PM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, booking_unit_price, booking_quantity, unit_of_measure, created_by, creation_date, last_update_date, last_updated_by, line_number) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(booking_unit_price)s, %(booking_quantity)s, %(unit_of_measure)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+31/07/2019 09:45:49 PM:INFO:{'transaction_header_id': 86, 'item_id': 1, 'booking_unit_price': 100.0, 'booking_quantity': 10.0, 'unit_of_measure': 'KG', 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 16, 15, 49, 117320), 'last_update_date': datetime.datetime(2019, 7, 31, 16, 15, 49, 117339), 'last_updated_by': 6, 'line_number': 1}
+31/07/2019 09:45:49 PM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, booking_unit_price, booking_quantity, unit_of_measure, created_by, creation_date, last_update_date, last_updated_by, line_number) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(booking_unit_price)s, %(booking_quantity)s, %(unit_of_measure)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+31/07/2019 09:45:49 PM:INFO:{'transaction_header_id': 86, 'item_id': 2, 'booking_unit_price': 120.0, 'booking_quantity': 10.0, 'unit_of_measure': 'KG', 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 16, 15, 49, 119847), 'last_update_date': datetime.datetime(2019, 7, 31, 16, 15, 49, 119861), 'last_updated_by': 6, 'line_number': 2}
+31/07/2019 09:45:49 PM:INFO:COMMIT
+31/07/2019 09:56:00 PM:INFO:starting gunicorn server
+31/07/2019 09:56:00 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+31/07/2019 10:07:48 PM:INFO:starting gunicorn server
+31/07/2019 10:07:48 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+31/07/2019 10:09:39 PM:INFO:select version()
+31/07/2019 10:09:39 PM:INFO:{}
+31/07/2019 10:09:39 PM:INFO:select current_schema()
+31/07/2019 10:09:39 PM:INFO:{}
+31/07/2019 10:09:39 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+31/07/2019 10:09:39 PM:INFO:{}
+31/07/2019 10:09:39 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+31/07/2019 10:09:39 PM:INFO:{}
+31/07/2019 10:09:39 PM:INFO:show standard_conforming_strings
+31/07/2019 10:09:39 PM:INFO:{}
+31/07/2019 10:09:39 PM:INFO:BEGIN (implicit)
+31/07/2019 10:09:39 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 10:09:39 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 10:09:39 PM:INFO:COMMIT
+31/07/2019 10:09:39 PM:INFO:BEGIN (implicit)
+31/07/2019 10:09:39 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 10:09:39 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 10:09:39 PM:INFO:COMMIT
+31/07/2019 10:09:39 PM:INFO:BEGIN (implicit)
+31/07/2019 10:09:39 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 10:09:39 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 10:09:39 PM:INFO:COMMIT
+31/07/2019 10:09:39 PM:INFO:BEGIN (implicit)
+31/07/2019 10:09:39 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 10:09:39 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 10:09:39 PM:INFO:COMMIT
+31/07/2019 10:09:39 PM:INFO:BEGIN (implicit)
+31/07/2019 10:09:39 PM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.supplier_id AS apps_purchase_trx_header_tbl_supplier_id, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s 
+ LIMIT %(param_1)s
+31/07/2019 10:09:39 PM:INFO:{'purchase_trx_number_1': 'PO_1908000001', 'param_1': 1}
+31/07/2019 10:09:39 PM:INFO:UPDATE apps.purchase_trx_header_tbl SET transaction_date=%(transaction_date)s, buyer_id=%(buyer_id)s, last_update_date=%(last_update_date)s WHERE apps.purchase_trx_header_tbl.transaction_header_id = %(apps_purchase_trx_header_tbl_transaction_header_id)s
+31/07/2019 10:09:39 PM:INFO:{'transaction_date': datetime.datetime(2019, 6, 6, 0, 0), 'buyer_id': '1', 'last_update_date': datetime.datetime(2019, 7, 31, 16, 39, 39, 867082), 'apps_purchase_trx_header_tbl_transaction_header_id': 86}
+31/07/2019 10:09:39 PM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.booking_unit_price AS apps_purchase_trx_lines_tbl_booking_unit_price, apps.purchase_trx_lines_tbl.booking_quantity AS apps_purchase_trx_lines_tbl_booking_quantity, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by, apps.purchase_trx_lines_tbl.line_number AS apps_purchase_trx_lines_tbl_line_number 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+31/07/2019 10:09:39 PM:INFO:{'param_1': 86}
+31/07/2019 10:09:39 PM:INFO:ROLLBACK
+31/07/2019 10:09:39 PM:ERROR:None
+31/07/2019 10:16:28 PM:INFO:starting gunicorn server
+31/07/2019 10:16:28 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+31/07/2019 10:16:35 PM:INFO:select version()
+31/07/2019 10:16:35 PM:INFO:{}
+31/07/2019 10:16:35 PM:INFO:select current_schema()
+31/07/2019 10:16:35 PM:INFO:{}
+31/07/2019 10:16:35 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+31/07/2019 10:16:35 PM:INFO:{}
+31/07/2019 10:16:35 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+31/07/2019 10:16:35 PM:INFO:{}
+31/07/2019 10:16:35 PM:INFO:show standard_conforming_strings
+31/07/2019 10:16:35 PM:INFO:{}
+31/07/2019 10:16:35 PM:INFO:BEGIN (implicit)
+31/07/2019 10:16:35 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 10:16:35 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 10:16:35 PM:INFO:COMMIT
+31/07/2019 10:16:35 PM:INFO:BEGIN (implicit)
+31/07/2019 10:16:35 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 10:16:35 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 10:16:35 PM:INFO:COMMIT
+31/07/2019 10:16:35 PM:INFO:BEGIN (implicit)
+31/07/2019 10:16:35 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 10:16:35 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 10:16:35 PM:INFO:COMMIT
+31/07/2019 10:16:36 PM:INFO:BEGIN (implicit)
+31/07/2019 10:16:36 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 10:16:36 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 10:16:36 PM:INFO:COMMIT
+31/07/2019 10:16:36 PM:INFO:BEGIN (implicit)
+31/07/2019 10:16:36 PM:INFO:SELECT apps.purchase_trx_header_tbl.transaction_header_id AS apps_purchase_trx_header_tbl_transaction_header_id, apps.purchase_trx_header_tbl.purchase_trx_number AS apps_purchase_trx_header_tbl_purchase_trx_number, apps.purchase_trx_header_tbl.transaction_date AS apps_purchase_trx_header_tbl_transaction_date, apps.purchase_trx_header_tbl.order_status AS apps_purchase_trx_header_tbl_order_status, apps.purchase_trx_header_tbl.buyer_id AS apps_purchase_trx_header_tbl_buyer_id, apps.purchase_trx_header_tbl.supplier_id AS apps_purchase_trx_header_tbl_supplier_id, apps.purchase_trx_header_tbl.created_by AS apps_purchase_trx_header_tbl_created_by, apps.purchase_trx_header_tbl.creation_date AS apps_purchase_trx_header_tbl_creation_date, apps.purchase_trx_header_tbl.last_update_date AS apps_purchase_trx_header_tbl_last_update_date, apps.purchase_trx_header_tbl.last_updated_by AS apps_purchase_trx_header_tbl_last_updated_by 
+FROM apps.purchase_trx_header_tbl 
+WHERE apps.purchase_trx_header_tbl.purchase_trx_number = %(purchase_trx_number_1)s 
+ LIMIT %(param_1)s
+31/07/2019 10:16:36 PM:INFO:{'purchase_trx_number_1': 'PO_1908000001', 'param_1': 1}
+31/07/2019 10:16:36 PM:INFO:UPDATE apps.purchase_trx_header_tbl SET transaction_date=%(transaction_date)s, buyer_id=%(buyer_id)s, last_update_date=%(last_update_date)s WHERE apps.purchase_trx_header_tbl.transaction_header_id = %(apps_purchase_trx_header_tbl_transaction_header_id)s
+31/07/2019 10:16:36 PM:INFO:{'transaction_date': datetime.datetime(2019, 6, 6, 0, 0), 'buyer_id': '1', 'last_update_date': datetime.datetime(2019, 7, 31, 16, 46, 36, 52569), 'apps_purchase_trx_header_tbl_transaction_header_id': 86}
+31/07/2019 10:16:36 PM:INFO:SELECT apps.purchase_trx_lines_tbl.transaction_line_id AS apps_purchase_trx_lines_tbl_transaction_line_id, apps.purchase_trx_lines_tbl.transaction_header_id AS apps_purchase_trx_lines_tbl_transaction_header_id, apps.purchase_trx_lines_tbl.item_id AS apps_purchase_trx_lines_tbl_item_id, apps.purchase_trx_lines_tbl.booking_unit_price AS apps_purchase_trx_lines_tbl_booking_unit_price, apps.purchase_trx_lines_tbl.booking_quantity AS apps_purchase_trx_lines_tbl_booking_quantity, apps.purchase_trx_lines_tbl.unit_of_measure AS apps_purchase_trx_lines_tbl_unit_of_measure, apps.purchase_trx_lines_tbl.created_by AS apps_purchase_trx_lines_tbl_created_by, apps.purchase_trx_lines_tbl.creation_date AS apps_purchase_trx_lines_tbl_creation_date, apps.purchase_trx_lines_tbl.last_update_date AS apps_purchase_trx_lines_tbl_last_update_date, apps.purchase_trx_lines_tbl.last_updated_by AS apps_purchase_trx_lines_tbl_last_updated_by, apps.purchase_trx_lines_tbl.line_number AS apps_purchase_trx_lines_tbl_line_number 
+FROM apps.purchase_trx_lines_tbl 
+WHERE %(param_1)s = apps.purchase_trx_lines_tbl.transaction_header_id
+31/07/2019 10:16:36 PM:INFO:{'param_1': 86}
+31/07/2019 10:16:36 PM:INFO:UPDATE apps.purchase_trx_lines_tbl SET booking_quantity=%(booking_quantity)s, last_update_date=%(last_update_date)s WHERE apps.purchase_trx_lines_tbl.transaction_line_id = %(apps_purchase_trx_lines_tbl_transaction_line_id)s
+31/07/2019 10:16:36 PM:INFO:{'booking_quantity': 20.0, 'last_update_date': datetime.datetime(2019, 7, 31, 16, 46, 36, 99412), 'apps_purchase_trx_lines_tbl_transaction_line_id': 36}
+31/07/2019 10:16:36 PM:INFO:UPDATE apps.purchase_trx_lines_tbl SET booking_unit_price=%(booking_unit_price)s, booking_quantity=%(booking_quantity)s, last_update_date=%(last_update_date)s WHERE apps.purchase_trx_lines_tbl.transaction_line_id = %(apps_purchase_trx_lines_tbl_transaction_line_id)s
+31/07/2019 10:16:36 PM:INFO:{'booking_unit_price': 130.0, 'booking_quantity': 20.0, 'last_update_date': datetime.datetime(2019, 7, 31, 16, 46, 36, 108682), 'apps_purchase_trx_lines_tbl_transaction_line_id': 37}
+31/07/2019 10:16:36 PM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, booking_unit_price, booking_quantity, unit_of_measure, created_by, creation_date, last_update_date, last_updated_by, line_number) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(booking_unit_price)s, %(booking_quantity)s, %(unit_of_measure)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+31/07/2019 10:16:36 PM:INFO:{'transaction_header_id': 86, 'item_id': 2, 'booking_unit_price': 120.0, 'booking_quantity': 10.0, 'unit_of_measure': 'KG', 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 16, 46, 36, 115844), 'last_update_date': datetime.datetime(2019, 7, 31, 16, 46, 36, 115922), 'last_updated_by': 6, 'line_number': 3}
+31/07/2019 10:16:36 PM:INFO:COMMIT
+31/07/2019 11:36:23 PM:INFO:starting gunicorn server
+31/07/2019 11:36:23 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+31/07/2019 11:39:32 PM:INFO:starting gunicorn server
+31/07/2019 11:39:32 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+31/07/2019 11:41:33 PM:INFO:starting gunicorn server
+31/07/2019 11:41:33 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+31/07/2019 11:41:46 PM:INFO:starting gunicorn server
+31/07/2019 11:41:46 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+31/07/2019 11:46:26 PM:INFO:starting gunicorn server
+31/07/2019 11:46:26 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+31/07/2019 11:46:39 PM:INFO:starting gunicorn server
+31/07/2019 11:46:39 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+31/07/2019 11:46:44 PM:INFO:select version()
+31/07/2019 11:46:44 PM:INFO:{}
+31/07/2019 11:46:44 PM:INFO:select current_schema()
+31/07/2019 11:46:44 PM:INFO:{}
+31/07/2019 11:46:44 PM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+31/07/2019 11:46:44 PM:INFO:{}
+31/07/2019 11:46:44 PM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+31/07/2019 11:46:44 PM:INFO:{}
+31/07/2019 11:46:44 PM:INFO:show standard_conforming_strings
+31/07/2019 11:46:44 PM:INFO:{}
+31/07/2019 11:46:44 PM:INFO:BEGIN (implicit)
+31/07/2019 11:46:44 PM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+31/07/2019 11:46:44 PM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+31/07/2019 11:46:44 PM:INFO:COMMIT
+31/07/2019 11:46:44 PM:INFO:BEGIN (implicit)
+31/07/2019 11:46:44 PM:INFO:INSERT INTO apps.receipt_header_tbl (receipt_header_id, receipt_number, challan_number, receipt_date, challan_date, source_transaction_header_id, source_transaction_type, vehicle_number, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.receipt_header_sequence'), %(receipt_number)s, %(challan_number)s, %(receipt_date)s, %(challan_date)s, %(source_transaction_header_id)s, %(source_transaction_type)s, %(vehicle_number)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.receipt_header_tbl.receipt_header_id
+31/07/2019 11:46:44 PM:INFO:{'receipt_number': None, 'challan_number': None, 'receipt_date': datetime.datetime(2019, 7, 31, 18, 16, 44, 382825), 'challan_date': datetime.datetime(2019, 7, 31, 18, 16, 44, 382852), 'source_transaction_header_id': None, 'source_transaction_type': None, 'vehicle_number': 'WB-16A-9161', 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 18, 16, 44, 382872), 'last_update_date': datetime.datetime(2019, 7, 31, 18, 16, 44, 382890), 'last_updated_by': 6}
+31/07/2019 11:46:44 PM:INFO:COMMIT
+01/08/2019 12:24:28 AM:INFO:starting gunicorn server
+01/08/2019 12:24:28 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 12:25:47 AM:INFO:select version()
+01/08/2019 12:25:47 AM:INFO:{}
+01/08/2019 12:25:47 AM:INFO:select current_schema()
+01/08/2019 12:25:47 AM:INFO:{}
+01/08/2019 12:25:47 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 12:25:47 AM:INFO:{}
+01/08/2019 12:25:47 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 12:25:47 AM:INFO:{}
+01/08/2019 12:25:47 AM:INFO:show standard_conforming_strings
+01/08/2019 12:25:47 AM:INFO:{}
+01/08/2019 12:25:47 AM:INFO:BEGIN (implicit)
+01/08/2019 12:25:47 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 12:25:47 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 12:25:47 AM:INFO:COMMIT
+01/08/2019 12:25:47 AM:INFO:BEGIN (implicit)
+01/08/2019 12:25:47 AM:INFO:SELECT apps.generate_challan_number() AS generate_challan_number_1
+01/08/2019 12:25:47 AM:INFO:{}
+01/08/2019 12:25:47 AM:INFO:ROLLBACK
+01/08/2019 12:25:47 AM:ERROR:None
+01/08/2019 12:26:55 AM:INFO:starting gunicorn server
+01/08/2019 12:26:55 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 12:26:59 AM:INFO:select version()
+01/08/2019 12:26:59 AM:INFO:{}
+01/08/2019 12:26:59 AM:INFO:select current_schema()
+01/08/2019 12:26:59 AM:INFO:{}
+01/08/2019 12:26:59 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 12:26:59 AM:INFO:{}
+01/08/2019 12:26:59 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 12:26:59 AM:INFO:{}
+01/08/2019 12:26:59 AM:INFO:show standard_conforming_strings
+01/08/2019 12:26:59 AM:INFO:{}
+01/08/2019 12:26:59 AM:INFO:BEGIN (implicit)
+01/08/2019 12:26:59 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 12:26:59 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 12:26:59 AM:INFO:COMMIT
+01/08/2019 12:26:59 AM:INFO:BEGIN (implicit)
+01/08/2019 12:26:59 AM:INFO:SELECT apps.generate_challan_number() AS generate_challan_number_1
+01/08/2019 12:26:59 AM:INFO:{}
+01/08/2019 12:26:59 AM:INFO:INSERT INTO apps.receipt_header_tbl (receipt_header_id, receipt_number, challan_number, receipt_date, challan_date, source_transaction_header_id, source_transaction_type, vehicle_number, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.receipt_header_sequence'), %(receipt_number)s, %(challan_number)s, %(receipt_date)s, %(challan_date)s, %(source_transaction_header_id)s, %(source_transaction_type)s, %(vehicle_number)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.receipt_header_tbl.receipt_header_id
+01/08/2019 12:26:59 AM:INFO:{'receipt_number': None, 'challan_number': [('CHALLAN_1908000001',)], 'receipt_date': datetime.datetime(2019, 7, 31, 18, 56, 59, 638176), 'challan_date': datetime.datetime(2019, 7, 31, 18, 56, 59, 638199), 'source_transaction_header_id': None, 'source_transaction_type': None, 'vehicle_number': 'WB-16A-9162', 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 18, 56, 59, 638218), 'last_update_date': datetime.datetime(2019, 7, 31, 18, 56, 59, 638237), 'last_updated_by': 6}
+01/08/2019 12:26:59 AM:INFO:COMMIT
+01/08/2019 01:08:06 AM:INFO:starting gunicorn server
+01/08/2019 01:08:06 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:09:52 AM:INFO:starting gunicorn server
+01/08/2019 01:09:52 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:10:05 AM:INFO:starting gunicorn server
+01/08/2019 01:10:05 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:10:25 AM:INFO:starting gunicorn server
+01/08/2019 01:10:25 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:11:18 AM:INFO:starting gunicorn server
+01/08/2019 01:11:18 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:12:03 AM:INFO:starting gunicorn server
+01/08/2019 01:12:03 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:13:08 AM:INFO:select version()
+01/08/2019 01:13:08 AM:INFO:{}
+01/08/2019 01:13:08 AM:INFO:select current_schema()
+01/08/2019 01:13:08 AM:INFO:{}
+01/08/2019 01:13:08 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:13:08 AM:INFO:{}
+01/08/2019 01:13:08 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:13:08 AM:INFO:{}
+01/08/2019 01:13:08 AM:INFO:show standard_conforming_strings
+01/08/2019 01:13:08 AM:INFO:{}
+01/08/2019 01:13:08 AM:INFO:BEGIN (implicit)
+01/08/2019 01:13:08 AM:INFO:SELECT apps.receipt_header_tbl.receipt_header_id AS apps_receipt_header_tbl_receipt_header_id, apps.receipt_header_tbl.receipt_number AS apps_receipt_header_tbl_receipt_number, apps.receipt_header_tbl.challan_number AS apps_receipt_header_tbl_challan_number, apps.receipt_header_tbl.receipt_date AS apps_receipt_header_tbl_receipt_date, apps.receipt_header_tbl.challan_date AS apps_receipt_header_tbl_challan_date, apps.receipt_header_tbl.source_transaction_header_id AS apps_receipt_header_tbl_source_transaction_header_id, apps.receipt_header_tbl.source_transaction_type AS apps_receipt_header_tbl_source_transaction_type, apps.receipt_header_tbl.vehicle_number AS apps_receipt_header_tbl_vehicle_number, apps.receipt_header_tbl.created_by AS apps_receipt_header_tbl_created_by, apps.receipt_header_tbl.creation_date AS apps_receipt_header_tbl_creation_date, apps.receipt_header_tbl.last_update_date AS apps_receipt_header_tbl_last_update_date, apps.receipt_header_tbl.last_updated_by AS apps_receipt_header_tbl_last_updated_by 
+FROM apps.receipt_header_tbl 
+WHERE apps.receipt_header_tbl.challan_number = %(challan_number_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:13:08 AM:INFO:{'challan_number_1': 'CHALLAN_1907000000', 'param_1': 1}
+01/08/2019 01:13:15 AM:INFO:BEGIN (implicit)
+01/08/2019 01:13:15 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:13:15 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 01:13:15 AM:INFO:COMMIT
+01/08/2019 01:13:21 AM:INFO:ROLLBACK
+01/08/2019 01:13:27 AM:ERROR:None
+01/08/2019 01:14:53 AM:INFO:starting gunicorn server
+01/08/2019 01:14:53 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:19:24 AM:INFO:starting gunicorn server
+01/08/2019 01:19:24 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:20:24 AM:INFO:select version()
+01/08/2019 01:20:24 AM:INFO:{}
+01/08/2019 01:20:24 AM:INFO:select current_schema()
+01/08/2019 01:20:24 AM:INFO:{}
+01/08/2019 01:20:24 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:20:24 AM:INFO:{}
+01/08/2019 01:20:24 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:20:24 AM:INFO:{}
+01/08/2019 01:20:24 AM:INFO:show standard_conforming_strings
+01/08/2019 01:20:24 AM:INFO:{}
+01/08/2019 01:20:24 AM:INFO:BEGIN (implicit)
+01/08/2019 01:20:24 AM:INFO:SELECT apps.receipt_header_tbl.receipt_header_id AS apps_receipt_header_tbl_receipt_header_id, apps.receipt_header_tbl.receipt_number AS apps_receipt_header_tbl_receipt_number, apps.receipt_header_tbl.challan_number AS apps_receipt_header_tbl_challan_number, apps.receipt_header_tbl.receipt_date AS apps_receipt_header_tbl_receipt_date, apps.receipt_header_tbl.challan_date AS apps_receipt_header_tbl_challan_date, apps.receipt_header_tbl.source_transaction_header_id AS apps_receipt_header_tbl_source_transaction_header_id, apps.receipt_header_tbl.source_transaction_type AS apps_receipt_header_tbl_source_transaction_type, apps.receipt_header_tbl.vehicle_number AS apps_receipt_header_tbl_vehicle_number, apps.receipt_header_tbl.created_by AS apps_receipt_header_tbl_created_by, apps.receipt_header_tbl.creation_date AS apps_receipt_header_tbl_creation_date, apps.receipt_header_tbl.last_update_date AS apps_receipt_header_tbl_last_update_date, apps.receipt_header_tbl.last_updated_by AS apps_receipt_header_tbl_last_updated_by 
+FROM apps.receipt_header_tbl 
+WHERE apps.receipt_header_tbl.challan_number = %(challan_number_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:20:24 AM:INFO:{'challan_number_1': 'CHALLAN_1907000000', 'param_1': 1}
+01/08/2019 01:20:30 AM:INFO:BEGIN (implicit)
+01/08/2019 01:20:30 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:20:30 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 01:20:30 AM:INFO:COMMIT
+01/08/2019 01:20:37 AM:INFO:ROLLBACK
+01/08/2019 01:20:37 AM:ERROR:None
+01/08/2019 01:23:46 AM:INFO:starting gunicorn server
+01/08/2019 01:23:46 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:24:16 AM:INFO:select version()
+01/08/2019 01:24:16 AM:INFO:{}
+01/08/2019 01:24:16 AM:INFO:select current_schema()
+01/08/2019 01:24:16 AM:INFO:{}
+01/08/2019 01:24:16 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:24:16 AM:INFO:{}
+01/08/2019 01:24:16 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:24:16 AM:INFO:{}
+01/08/2019 01:24:16 AM:INFO:show standard_conforming_strings
+01/08/2019 01:24:16 AM:INFO:{}
+01/08/2019 01:24:16 AM:INFO:BEGIN (implicit)
+01/08/2019 01:24:16 AM:INFO:SELECT apps.receipt_header_tbl.receipt_header_id AS apps_receipt_header_tbl_receipt_header_id, apps.receipt_header_tbl.receipt_number AS apps_receipt_header_tbl_receipt_number, apps.receipt_header_tbl.challan_number AS apps_receipt_header_tbl_challan_number, apps.receipt_header_tbl.receipt_date AS apps_receipt_header_tbl_receipt_date, apps.receipt_header_tbl.challan_date AS apps_receipt_header_tbl_challan_date, apps.receipt_header_tbl.source_transaction_header_id AS apps_receipt_header_tbl_source_transaction_header_id, apps.receipt_header_tbl.source_transaction_type AS apps_receipt_header_tbl_source_transaction_type, apps.receipt_header_tbl.vehicle_number AS apps_receipt_header_tbl_vehicle_number, apps.receipt_header_tbl.created_by AS apps_receipt_header_tbl_created_by, apps.receipt_header_tbl.creation_date AS apps_receipt_header_tbl_creation_date, apps.receipt_header_tbl.last_update_date AS apps_receipt_header_tbl_last_update_date, apps.receipt_header_tbl.last_updated_by AS apps_receipt_header_tbl_last_updated_by 
+FROM apps.receipt_header_tbl 
+WHERE apps.receipt_header_tbl.challan_number = %(challan_number_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:24:16 AM:INFO:{'challan_number_1': 'CHALLAN_1907000000', 'param_1': 1}
+01/08/2019 01:24:16 AM:INFO:BEGIN (implicit)
+01/08/2019 01:24:16 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:24:16 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 01:24:17 AM:INFO:COMMIT
+01/08/2019 01:24:17 AM:INFO:BEGIN (implicit)
+01/08/2019 01:24:17 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:24:17 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 01:24:17 AM:INFO:COMMIT
+01/08/2019 01:24:17 AM:INFO:BEGIN (implicit)
+01/08/2019 01:24:17 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:24:17 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 01:24:17 AM:INFO:COMMIT
+01/08/2019 01:24:17 AM:INFO:UPDATE apps.receipt_header_tbl SET challan_date=%(challan_date)s, source_transaction_header_id=%(source_transaction_header_id)s, source_transaction_type=%(source_transaction_type)s, vehicle_number=%(vehicle_number)s, last_update_date=%(last_update_date)s WHERE apps.receipt_header_tbl.receipt_header_id = %(apps_receipt_header_tbl_receipt_header_id)s
+01/08/2019 01:24:17 AM:INFO:{'challan_date': datetime.datetime(2019, 7, 31, 0, 0), 'source_transaction_header_id': 28, 'source_transaction_type': 'PURCHASE', 'vehicle_number': 'WB-18W-9162', 'last_update_date': datetime.datetime(2019, 7, 31, 19, 54, 17, 73261), 'apps_receipt_header_tbl_receipt_header_id': 3}
+01/08/2019 01:24:17 AM:INFO:SELECT apps.receipt_lines_tbl.weighing_number AS apps_receipt_lines_tbl_weighing_number, apps.receipt_lines_tbl.receipt_line_id AS apps_receipt_lines_tbl_receipt_line_id, apps.receipt_lines_tbl.receipt_header_id AS apps_receipt_lines_tbl_receipt_header_id, apps.receipt_lines_tbl.line_number AS apps_receipt_lines_tbl_line_number, apps.receipt_lines_tbl.item_id AS apps_receipt_lines_tbl_item_id, apps.receipt_lines_tbl.load_unload_number AS apps_receipt_lines_tbl_load_unload_number, apps.receipt_lines_tbl.load_unload_area AS apps_receipt_lines_tbl_load_unload_area, apps.receipt_lines_tbl.receipt_line_status AS apps_receipt_lines_tbl_receipt_line_status, apps.receipt_lines_tbl.quantity AS apps_receipt_lines_tbl_quantity, apps.receipt_lines_tbl.unit_price AS apps_receipt_lines_tbl_unit_price, apps.receipt_lines_tbl.unit_of_measure AS apps_receipt_lines_tbl_unit_of_measure, apps.receipt_lines_tbl.discount AS apps_receipt_lines_tbl_discount, apps.receipt_lines_tbl.created_by AS apps_receipt_lines_tbl_created_by, apps.receipt_lines_tbl.creation_date AS apps_receipt_lines_tbl_creation_date, apps.receipt_lines_tbl.last_update_date AS apps_receipt_lines_tbl_last_update_date, apps.receipt_lines_tbl.last_updated_by AS apps_receipt_lines_tbl_last_updated_by 
+FROM apps.receipt_lines_tbl 
+WHERE %(param_1)s = apps.receipt_lines_tbl.receipt_header_id
+01/08/2019 01:24:17 AM:INFO:{'param_1': 3}
+01/08/2019 01:24:19 AM:INFO:INSERT INTO apps.receipt_lines_tbl (receipt_line_id, receipt_header_id, line_number, item_id, load_unload_number, load_unload_area, weighing_number, receipt_line_status, quantity, unit_price, unit_of_measure, discount, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.receipt_lines_sequence'), %(receipt_header_id)s, %(line_number)s, %(item_id)s, %(load_unload_number)s, %(load_unload_area)s, %(weighing_number)s, %(receipt_line_status)s, %(quantity)s, %(unit_price)s, %(unit_of_measure)s, %(discount)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.receipt_lines_tbl.receipt_line_id
+01/08/2019 01:24:19 AM:INFO:{'receipt_header_id': 3, 'line_number': 2, 'item_id': 2, 'load_unload_number': '10288384', 'load_unload_area': 'PRIMARY WBAY1', 'weighing_number': None, 'receipt_line_status': 'WEIGHING', 'quantity': 20.0, 'unit_price': 150.0, 'unit_of_measure': 'KG', 'discount': 10.0, 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 19, 54, 19, 846340), 'last_update_date': datetime.datetime(2019, 7, 31, 19, 54, 19, 846430), 'last_updated_by': 6}
+01/08/2019 01:24:19 AM:INFO:COMMIT
+01/08/2019 01:31:03 AM:INFO:select version()
+01/08/2019 01:31:03 AM:INFO:{}
+01/08/2019 01:31:03 AM:INFO:select current_schema()
+01/08/2019 01:31:03 AM:INFO:{}
+01/08/2019 01:31:03 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:31:03 AM:INFO:{}
+01/08/2019 01:31:03 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:31:03 AM:INFO:{}
+01/08/2019 01:31:03 AM:INFO:show standard_conforming_strings
+01/08/2019 01:31:03 AM:INFO:{}
+01/08/2019 01:31:03 AM:INFO:BEGIN (implicit)
+01/08/2019 01:31:03 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:31:03 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 01:31:03 AM:INFO:COMMIT
+01/08/2019 01:31:03 AM:INFO:BEGIN (implicit)
+01/08/2019 01:31:03 AM:INFO:SELECT apps.generate_challan_number() AS generate_challan_number_1
+01/08/2019 01:31:03 AM:INFO:{}
+01/08/2019 01:31:03 AM:INFO:INSERT INTO apps.receipt_header_tbl (receipt_header_id, receipt_number, challan_number, receipt_date, challan_date, source_transaction_header_id, source_transaction_type, vehicle_number, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.receipt_header_sequence'), %(receipt_number)s, %(challan_number)s, %(receipt_date)s, %(challan_date)s, %(source_transaction_header_id)s, %(source_transaction_type)s, %(vehicle_number)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.receipt_header_tbl.receipt_header_id
+01/08/2019 01:31:03 AM:INFO:{'receipt_number': None, 'challan_number': [('CHALLAN_1908000002',)], 'receipt_date': None, 'challan_date': None, 'source_transaction_header_id': None, 'source_transaction_type': None, 'vehicle_number': 'WB-16A-9161', 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 20, 1, 3, 522468), 'last_update_date': datetime.datetime(2019, 7, 31, 20, 1, 3, 522493), 'last_updated_by': 6}
+01/08/2019 01:31:03 AM:INFO:COMMIT
+01/08/2019 01:38:12 AM:INFO:starting gunicorn server
+01/08/2019 01:38:12 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:38:16 AM:INFO:select version()
+01/08/2019 01:38:16 AM:INFO:{}
+01/08/2019 01:38:16 AM:INFO:select current_schema()
+01/08/2019 01:38:16 AM:INFO:{}
+01/08/2019 01:38:16 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:38:16 AM:INFO:{}
+01/08/2019 01:38:16 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:38:16 AM:INFO:{}
+01/08/2019 01:38:16 AM:INFO:show standard_conforming_strings
+01/08/2019 01:38:16 AM:INFO:{}
+01/08/2019 01:38:16 AM:INFO:BEGIN (implicit)
+01/08/2019 01:38:16 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:38:16 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 01:38:16 AM:INFO:COMMIT
+01/08/2019 01:38:16 AM:ERROR:None
+01/08/2019 01:40:22 AM:INFO:starting gunicorn server
+01/08/2019 01:40:22 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:40:28 AM:INFO:select version()
+01/08/2019 01:40:28 AM:INFO:{}
+01/08/2019 01:40:28 AM:INFO:select current_schema()
+01/08/2019 01:40:28 AM:INFO:{}
+01/08/2019 01:40:28 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:40:28 AM:INFO:{}
+01/08/2019 01:40:28 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:40:28 AM:INFO:{}
+01/08/2019 01:40:28 AM:INFO:show standard_conforming_strings
+01/08/2019 01:40:28 AM:INFO:{}
+01/08/2019 01:40:28 AM:INFO:BEGIN (implicit)
+01/08/2019 01:40:28 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:40:28 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 01:40:28 AM:INFO:COMMIT
+01/08/2019 01:45:58 AM:INFO:starting gunicorn server
+01/08/2019 01:45:58 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:46:03 AM:INFO:select version()
+01/08/2019 01:46:03 AM:INFO:{}
+01/08/2019 01:46:03 AM:INFO:select current_schema()
+01/08/2019 01:46:03 AM:INFO:{}
+01/08/2019 01:46:03 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:46:03 AM:INFO:{}
+01/08/2019 01:46:03 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:46:03 AM:INFO:{}
+01/08/2019 01:46:03 AM:INFO:show standard_conforming_strings
+01/08/2019 01:46:03 AM:INFO:{}
+01/08/2019 01:46:03 AM:INFO:BEGIN (implicit)
+01/08/2019 01:46:03 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:46:03 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 01:46:03 AM:INFO:COMMIT
+01/08/2019 01:48:53 AM:INFO:starting gunicorn server
+01/08/2019 01:48:53 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:48:59 AM:INFO:select version()
+01/08/2019 01:48:59 AM:INFO:{}
+01/08/2019 01:48:59 AM:INFO:select current_schema()
+01/08/2019 01:48:59 AM:INFO:{}
+01/08/2019 01:48:59 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:48:59 AM:INFO:{}
+01/08/2019 01:48:59 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:48:59 AM:INFO:{}
+01/08/2019 01:48:59 AM:INFO:show standard_conforming_strings
+01/08/2019 01:48:59 AM:INFO:{}
+01/08/2019 01:48:59 AM:INFO:BEGIN (implicit)
+01/08/2019 01:48:59 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:48:59 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 01:48:59 AM:INFO:COMMIT
+01/08/2019 01:48:59 AM:INFO:BEGIN (implicit)
+01/08/2019 01:48:59 AM:INFO:SELECT apps.generate_challan_number() AS generate_challan_number_1 
+ LIMIT %(param_1)s
+01/08/2019 01:48:59 AM:INFO:{'param_1': 1}
+01/08/2019 01:53:59 AM:INFO:ROLLBACK
+01/08/2019 01:54:11 AM:INFO:starting gunicorn server
+01/08/2019 01:54:11 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:54:17 AM:INFO:select version()
+01/08/2019 01:54:17 AM:INFO:{}
+01/08/2019 01:54:17 AM:INFO:select current_schema()
+01/08/2019 01:54:17 AM:INFO:{}
+01/08/2019 01:54:17 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:54:17 AM:INFO:{}
+01/08/2019 01:54:17 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:54:17 AM:INFO:{}
+01/08/2019 01:54:17 AM:INFO:show standard_conforming_strings
+01/08/2019 01:54:17 AM:INFO:{}
+01/08/2019 01:54:17 AM:INFO:BEGIN (implicit)
+01/08/2019 01:54:17 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:54:17 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 01:54:17 AM:INFO:COMMIT
+01/08/2019 01:54:17 AM:INFO:BEGIN (implicit)
+01/08/2019 01:54:17 AM:INFO:SELECT apps.generate_challan_number() AS generate_challan_number_1 
+ LIMIT %(param_1)s
+01/08/2019 01:54:17 AM:INFO:{'param_1': 1}
+01/08/2019 01:54:25 AM:INFO:INSERT INTO apps.receipt_header_tbl (receipt_header_id, receipt_number, challan_number, receipt_date, challan_date, source_transaction_header_id, source_transaction_type, vehicle_number, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.receipt_header_sequence'), %(receipt_number)s, %(challan_number)s, %(receipt_date)s, %(challan_date)s, %(source_transaction_header_id)s, %(source_transaction_type)s, %(vehicle_number)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.receipt_header_tbl.receipt_header_id
+01/08/2019 01:54:25 AM:INFO:{'receipt_number': None, 'challan_number': 'CHALLAN_1908000004', 'receipt_date': None, 'challan_date': None, 'source_transaction_header_id': None, 'source_transaction_type': None, 'vehicle_number': 'WB-16A-9161', 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 20, 24, 25, 736426), 'last_update_date': datetime.datetime(2019, 7, 31, 20, 24, 25, 736474), 'last_updated_by': 6}
+01/08/2019 01:54:25 AM:INFO:COMMIT
+01/08/2019 01:59:39 AM:INFO:starting gunicorn server
+01/08/2019 01:59:39 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 01:59:51 AM:INFO:select version()
+01/08/2019 01:59:51 AM:INFO:{}
+01/08/2019 01:59:51 AM:INFO:select current_schema()
+01/08/2019 01:59:51 AM:INFO:{}
+01/08/2019 01:59:51 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:59:51 AM:INFO:{}
+01/08/2019 01:59:51 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 01:59:51 AM:INFO:{}
+01/08/2019 01:59:51 AM:INFO:show standard_conforming_strings
+01/08/2019 01:59:51 AM:INFO:{}
+01/08/2019 01:59:51 AM:INFO:BEGIN (implicit)
+01/08/2019 01:59:51 AM:INFO:SELECT apps.receipt_header_tbl.receipt_header_id AS apps_receipt_header_tbl_receipt_header_id, apps.receipt_header_tbl.receipt_number AS apps_receipt_header_tbl_receipt_number, apps.receipt_header_tbl.challan_number AS apps_receipt_header_tbl_challan_number, apps.receipt_header_tbl.receipt_date AS apps_receipt_header_tbl_receipt_date, apps.receipt_header_tbl.challan_date AS apps_receipt_header_tbl_challan_date, apps.receipt_header_tbl.source_transaction_header_id AS apps_receipt_header_tbl_source_transaction_header_id, apps.receipt_header_tbl.source_transaction_type AS apps_receipt_header_tbl_source_transaction_type, apps.receipt_header_tbl.vehicle_number AS apps_receipt_header_tbl_vehicle_number, apps.receipt_header_tbl.created_by AS apps_receipt_header_tbl_created_by, apps.receipt_header_tbl.creation_date AS apps_receipt_header_tbl_creation_date, apps.receipt_header_tbl.last_update_date AS apps_receipt_header_tbl_last_update_date, apps.receipt_header_tbl.last_updated_by AS apps_receipt_header_tbl_last_updated_by 
+FROM apps.receipt_header_tbl 
+WHERE apps.receipt_header_tbl.challan_number = %(challan_number_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:59:51 AM:INFO:{'challan_number_1': 'CHALLAN_1908000004', 'param_1': 1}
+01/08/2019 01:59:55 AM:INFO:BEGIN (implicit)
+01/08/2019 01:59:55 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 01:59:55 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 01:59:55 AM:INFO:COMMIT
+01/08/2019 02:00:01 AM:INFO:BEGIN (implicit)
+01/08/2019 02:00:01 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 02:00:01 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 02:00:01 AM:INFO:COMMIT
+01/08/2019 02:00:01 AM:INFO:BEGIN (implicit)
+01/08/2019 02:00:01 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 02:00:01 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 02:00:01 AM:INFO:COMMIT
+01/08/2019 02:00:02 AM:INFO:UPDATE apps.receipt_header_tbl SET challan_date=%(challan_date)s, source_transaction_header_id=%(source_transaction_header_id)s, source_transaction_type=%(source_transaction_type)s, vehicle_number=%(vehicle_number)s, last_update_date=%(last_update_date)s WHERE apps.receipt_header_tbl.receipt_header_id = %(apps_receipt_header_tbl_receipt_header_id)s
+01/08/2019 02:00:02 AM:INFO:{'challan_date': datetime.datetime(2019, 7, 31, 0, 0), 'source_transaction_header_id': 28, 'source_transaction_type': 'PURCHASE', 'vehicle_number': 'WB-18W-9162', 'last_update_date': datetime.datetime(2019, 7, 31, 20, 30, 2, 712164), 'apps_receipt_header_tbl_receipt_header_id': 6}
+01/08/2019 02:00:02 AM:INFO:SELECT apps.receipt_lines_tbl.weighing_number AS apps_receipt_lines_tbl_weighing_number, apps.receipt_lines_tbl.receipt_line_id AS apps_receipt_lines_tbl_receipt_line_id, apps.receipt_lines_tbl.receipt_header_id AS apps_receipt_lines_tbl_receipt_header_id, apps.receipt_lines_tbl.line_number AS apps_receipt_lines_tbl_line_number, apps.receipt_lines_tbl.item_id AS apps_receipt_lines_tbl_item_id, apps.receipt_lines_tbl.load_unload_number AS apps_receipt_lines_tbl_load_unload_number, apps.receipt_lines_tbl.load_unload_area AS apps_receipt_lines_tbl_load_unload_area, apps.receipt_lines_tbl.receipt_line_status AS apps_receipt_lines_tbl_receipt_line_status, apps.receipt_lines_tbl.quantity AS apps_receipt_lines_tbl_quantity, apps.receipt_lines_tbl.unit_price AS apps_receipt_lines_tbl_unit_price, apps.receipt_lines_tbl.unit_of_measure AS apps_receipt_lines_tbl_unit_of_measure, apps.receipt_lines_tbl.discount AS apps_receipt_lines_tbl_discount, apps.receipt_lines_tbl.created_by AS apps_receipt_lines_tbl_created_by, apps.receipt_lines_tbl.creation_date AS apps_receipt_lines_tbl_creation_date, apps.receipt_lines_tbl.last_update_date AS apps_receipt_lines_tbl_last_update_date, apps.receipt_lines_tbl.last_updated_by AS apps_receipt_lines_tbl_last_updated_by 
+FROM apps.receipt_lines_tbl 
+WHERE %(param_1)s = apps.receipt_lines_tbl.receipt_header_id
+01/08/2019 02:00:02 AM:INFO:{'param_1': 6}
+01/08/2019 02:00:03 AM:INFO:INSERT INTO apps.receipt_lines_tbl (receipt_line_id, receipt_header_id, line_number, item_id, load_unload_number, load_unload_area, weighing_number, receipt_line_status, quantity, unit_price, unit_of_measure, discount, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.receipt_lines_sequence'), %(receipt_header_id)s, %(line_number)s, %(item_id)s, %(load_unload_number)s, %(load_unload_area)s, %(weighing_number)s, %(receipt_line_status)s, %(quantity)s, %(unit_price)s, %(unit_of_measure)s, %(discount)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.receipt_lines_tbl.receipt_line_id
+01/08/2019 02:00:03 AM:INFO:{'receipt_header_id': 6, 'line_number': 1, 'item_id': 1, 'load_unload_number': '10288384', 'load_unload_area': 'PRIMARY WBAY1', 'weighing_number': None, 'receipt_line_status': 'WEIGHING', 'quantity': 20.0, 'unit_price': 150.0, 'unit_of_measure': 'KG', 'discount': 10.0, 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 20, 30, 3, 838318), 'last_update_date': datetime.datetime(2019, 7, 31, 20, 30, 3, 838394), 'last_updated_by': 6}
+01/08/2019 02:00:03 AM:INFO:COMMIT
+01/08/2019 02:05:52 AM:INFO:starting gunicorn server
+01/08/2019 02:05:52 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 02:05:58 AM:INFO:select version()
+01/08/2019 02:05:58 AM:INFO:{}
+01/08/2019 02:05:58 AM:INFO:select current_schema()
+01/08/2019 02:05:58 AM:INFO:{}
+01/08/2019 02:05:58 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 02:05:58 AM:INFO:{}
+01/08/2019 02:05:58 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 02:05:58 AM:INFO:{}
+01/08/2019 02:05:58 AM:INFO:show standard_conforming_strings
+01/08/2019 02:05:58 AM:INFO:{}
+01/08/2019 02:05:58 AM:INFO:BEGIN (implicit)
+01/08/2019 02:05:58 AM:INFO:SELECT apps.receipt_header_tbl.receipt_header_id AS apps_receipt_header_tbl_receipt_header_id, apps.receipt_header_tbl.receipt_number AS apps_receipt_header_tbl_receipt_number, apps.receipt_header_tbl.challan_number AS apps_receipt_header_tbl_challan_number, apps.receipt_header_tbl.receipt_date AS apps_receipt_header_tbl_receipt_date, apps.receipt_header_tbl.challan_date AS apps_receipt_header_tbl_challan_date, apps.receipt_header_tbl.source_transaction_header_id AS apps_receipt_header_tbl_source_transaction_header_id, apps.receipt_header_tbl.source_transaction_type AS apps_receipt_header_tbl_source_transaction_type, apps.receipt_header_tbl.vehicle_number AS apps_receipt_header_tbl_vehicle_number, apps.receipt_header_tbl.created_by AS apps_receipt_header_tbl_created_by, apps.receipt_header_tbl.creation_date AS apps_receipt_header_tbl_creation_date, apps.receipt_header_tbl.last_update_date AS apps_receipt_header_tbl_last_update_date, apps.receipt_header_tbl.last_updated_by AS apps_receipt_header_tbl_last_updated_by 
+FROM apps.receipt_header_tbl 
+WHERE apps.receipt_header_tbl.challan_number = %(challan_number_1)s 
+ LIMIT %(param_1)s
+01/08/2019 02:05:58 AM:INFO:{'challan_number_1': 'CHALLAN_1908000004', 'param_1': 1}
+01/08/2019 02:05:58 AM:INFO:BEGIN (implicit)
+01/08/2019 02:05:58 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 02:05:58 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 02:05:58 AM:INFO:COMMIT
+01/08/2019 02:05:58 AM:INFO:SELECT apps.receipt_lines_tbl.receipt_line_id AS apps_receipt_lines_tbl_receipt_line_id, apps.receipt_lines_tbl.receipt_header_id AS apps_receipt_lines_tbl_receipt_header_id, apps.receipt_lines_tbl.line_number AS apps_receipt_lines_tbl_line_number, apps.receipt_lines_tbl.item_id AS apps_receipt_lines_tbl_item_id, apps.receipt_lines_tbl.load_unload_number AS apps_receipt_lines_tbl_load_unload_number, apps.receipt_lines_tbl.load_unload_area AS apps_receipt_lines_tbl_load_unload_area, apps.receipt_lines_tbl.weighing_number AS apps_receipt_lines_tbl_weighing_number, apps.receipt_lines_tbl.receipt_line_status AS apps_receipt_lines_tbl_receipt_line_status, apps.receipt_lines_tbl.quantity AS apps_receipt_lines_tbl_quantity, apps.receipt_lines_tbl.unit_price AS apps_receipt_lines_tbl_unit_price, apps.receipt_lines_tbl.unit_of_measure AS apps_receipt_lines_tbl_unit_of_measure, apps.receipt_lines_tbl.discount AS apps_receipt_lines_tbl_discount, apps.receipt_lines_tbl.created_by AS apps_receipt_lines_tbl_created_by, apps.receipt_lines_tbl.creation_date AS apps_receipt_lines_tbl_creation_date, apps.receipt_lines_tbl.last_update_date AS apps_receipt_lines_tbl_last_update_date, apps.receipt_lines_tbl.last_updated_by AS apps_receipt_lines_tbl_last_updated_by 
+FROM apps.receipt_lines_tbl 
+WHERE %(param_1)s = apps.receipt_lines_tbl.receipt_header_id
+01/08/2019 02:05:58 AM:INFO:{'param_1': 6}
+01/08/2019 02:05:58 AM:INFO:BEGIN (implicit)
+01/08/2019 02:05:58 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 02:05:58 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 02:05:58 AM:INFO:COMMIT
+01/08/2019 02:05:58 AM:INFO:UPDATE apps.receipt_lines_tbl SET item_id=%(item_id)s, weighing_number=%(weighing_number)s, last_update_date=%(last_update_date)s WHERE apps.receipt_lines_tbl.receipt_line_id = %(apps_receipt_lines_tbl_receipt_line_id)s
+01/08/2019 02:05:58 AM:INFO:{'item_id': 1, 'weighing_number': 'WEIGHTING NUMBER2', 'last_update_date': datetime.datetime(2019, 7, 31, 20, 35, 58, 738385), 'apps_receipt_lines_tbl_receipt_line_id': 6}
+01/08/2019 02:05:58 AM:INFO:COMMIT
+01/08/2019 02:18:39 AM:INFO:starting gunicorn server
+01/08/2019 02:18:39 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 02:18:52 AM:INFO:starting gunicorn server
+01/08/2019 02:18:52 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 02:18:56 AM:INFO:select version()
+01/08/2019 02:18:56 AM:INFO:{}
+01/08/2019 02:18:56 AM:INFO:select current_schema()
+01/08/2019 02:18:56 AM:INFO:{}
+01/08/2019 02:18:56 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 02:18:56 AM:INFO:{}
+01/08/2019 02:18:56 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 02:18:56 AM:INFO:{}
+01/08/2019 02:18:56 AM:INFO:show standard_conforming_strings
+01/08/2019 02:18:56 AM:INFO:{}
+01/08/2019 02:18:56 AM:INFO:BEGIN (implicit)
+01/08/2019 02:18:56 AM:INFO:SELECT apps.receipt_header_tbl.receipt_header_id AS apps_receipt_header_tbl_receipt_header_id, apps.receipt_header_tbl.receipt_number AS apps_receipt_header_tbl_receipt_number, apps.receipt_header_tbl.challan_number AS apps_receipt_header_tbl_challan_number, apps.receipt_header_tbl.receipt_date AS apps_receipt_header_tbl_receipt_date, apps.receipt_header_tbl.challan_date AS apps_receipt_header_tbl_challan_date, apps.receipt_header_tbl.source_transaction_header_id AS apps_receipt_header_tbl_source_transaction_header_id, apps.receipt_header_tbl.source_transaction_type AS apps_receipt_header_tbl_source_transaction_type, apps.receipt_header_tbl.vehicle_number AS apps_receipt_header_tbl_vehicle_number, apps.receipt_header_tbl.created_by AS apps_receipt_header_tbl_created_by, apps.receipt_header_tbl.creation_date AS apps_receipt_header_tbl_creation_date, apps.receipt_header_tbl.last_update_date AS apps_receipt_header_tbl_last_update_date, apps.receipt_header_tbl.last_updated_by AS apps_receipt_header_tbl_last_updated_by 
+FROM apps.receipt_header_tbl 
+WHERE apps.receipt_header_tbl.challan_number = %(challan_number_1)s 
+ LIMIT %(param_1)s
+01/08/2019 02:18:56 AM:INFO:{'challan_number_1': 'CHALLAN_1908000004', 'param_1': 1}
+01/08/2019 02:18:56 AM:INFO:SELECT apps.generate_receipt_number() AS generate_receipt_number_1 
+ LIMIT %(param_1)s
+01/08/2019 02:18:56 AM:INFO:{'param_1': 1}
+01/08/2019 02:18:56 AM:INFO:BEGIN (implicit)
+01/08/2019 02:18:56 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 02:18:56 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 02:18:56 AM:INFO:COMMIT
+01/08/2019 02:18:56 AM:INFO:UPDATE apps.receipt_header_tbl SET receipt_number=%(receipt_number)s, receipt_date=%(receipt_date)s, last_update_date=%(last_update_date)s WHERE apps.receipt_header_tbl.receipt_header_id = %(apps_receipt_header_tbl_receipt_header_id)s
+01/08/2019 02:18:56 AM:INFO:{'receipt_number': 'RCPT_1908000000', 'receipt_date': datetime.datetime(2019, 8, 1, 0, 0), 'last_update_date': datetime.datetime(2019, 7, 31, 20, 48, 56, 756825), 'apps_receipt_header_tbl_receipt_header_id': 6}
+01/08/2019 02:18:56 AM:INFO:SELECT apps.receipt_lines_tbl.receipt_line_id AS apps_receipt_lines_tbl_receipt_line_id, apps.receipt_lines_tbl.receipt_header_id AS apps_receipt_lines_tbl_receipt_header_id, apps.receipt_lines_tbl.line_number AS apps_receipt_lines_tbl_line_number, apps.receipt_lines_tbl.item_id AS apps_receipt_lines_tbl_item_id, apps.receipt_lines_tbl.load_unload_number AS apps_receipt_lines_tbl_load_unload_number, apps.receipt_lines_tbl.load_unload_area AS apps_receipt_lines_tbl_load_unload_area, apps.receipt_lines_tbl.weighing_number AS apps_receipt_lines_tbl_weighing_number, apps.receipt_lines_tbl.receipt_line_status AS apps_receipt_lines_tbl_receipt_line_status, apps.receipt_lines_tbl.quantity AS apps_receipt_lines_tbl_quantity, apps.receipt_lines_tbl.unit_price AS apps_receipt_lines_tbl_unit_price, apps.receipt_lines_tbl.unit_of_measure AS apps_receipt_lines_tbl_unit_of_measure, apps.receipt_lines_tbl.discount AS apps_receipt_lines_tbl_discount, apps.receipt_lines_tbl.created_by AS apps_receipt_lines_tbl_created_by, apps.receipt_lines_tbl.creation_date AS apps_receipt_lines_tbl_creation_date, apps.receipt_lines_tbl.last_update_date AS apps_receipt_lines_tbl_last_update_date, apps.receipt_lines_tbl.last_updated_by AS apps_receipt_lines_tbl_last_updated_by 
+FROM apps.receipt_lines_tbl 
+WHERE %(param_1)s = apps.receipt_lines_tbl.receipt_header_id
+01/08/2019 02:18:56 AM:INFO:{'param_1': 6}
+01/08/2019 02:18:56 AM:INFO:BEGIN (implicit)
+01/08/2019 02:18:56 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 02:18:56 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 02:18:56 AM:INFO:COMMIT
+01/08/2019 02:18:56 AM:INFO:UPDATE apps.receipt_lines_tbl SET item_id=%(item_id)s, last_update_date=%(last_update_date)s WHERE apps.receipt_lines_tbl.receipt_line_id = %(apps_receipt_lines_tbl_receipt_line_id)s
+01/08/2019 02:18:56 AM:INFO:{'item_id': 1, 'last_update_date': datetime.datetime(2019, 7, 31, 20, 48, 56, 782130), 'apps_receipt_lines_tbl_receipt_line_id': 6}
+01/08/2019 02:18:56 AM:INFO:COMMIT
+01/08/2019 02:25:20 AM:INFO:starting gunicorn server
+01/08/2019 02:25:20 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+01/08/2019 02:26:31 AM:INFO:select version()
+01/08/2019 02:26:31 AM:INFO:{}
+01/08/2019 02:26:31 AM:INFO:select current_schema()
+01/08/2019 02:26:31 AM:INFO:{}
+01/08/2019 02:26:31 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 02:26:31 AM:INFO:{}
+01/08/2019 02:26:31 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+01/08/2019 02:26:31 AM:INFO:{}
+01/08/2019 02:26:31 AM:INFO:show standard_conforming_strings
+01/08/2019 02:26:31 AM:INFO:{}
+01/08/2019 02:26:31 AM:INFO:BEGIN (implicit)
+01/08/2019 02:26:31 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 02:26:31 AM:INFO:{'user_name_1': '1', 'param_1': 1}
+01/08/2019 02:26:31 AM:INFO:COMMIT
+01/08/2019 02:26:31 AM:INFO:BEGIN (implicit)
+01/08/2019 02:26:31 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+01/08/2019 02:26:31 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+01/08/2019 02:26:31 AM:INFO:COMMIT
+01/08/2019 02:26:34 AM:INFO:BEGIN (implicit)
+01/08/2019 02:26:34 AM:INFO:SELECT apps.generate_po_number() AS generate_po_number_1 
+ LIMIT %(param_1)s
+01/08/2019 02:26:34 AM:INFO:{'param_1': 1}
+01/08/2019 02:26:34 AM:INFO:INSERT INTO apps.purchase_trx_header_tbl (transaction_header_id, purchase_trx_number, transaction_date, order_status, buyer_id, supplier_id, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.purchase_trx_header_sequence'), %(purchase_trx_number)s, %(transaction_date)s, %(order_status)s, %(buyer_id)s, %(supplier_id)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.purchase_trx_header_tbl.transaction_header_id
+01/08/2019 02:26:34 AM:INFO:{'purchase_trx_number': 'PO_1908000002', 'transaction_date': datetime.datetime(2019, 8, 1, 0, 0), 'order_status': 'BOOKED', 'buyer_id': None, 'supplier_id': 1, 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 20, 56, 34, 183370), 'last_update_date': datetime.datetime(2019, 7, 31, 20, 56, 34, 183422), 'last_updated_by': 6}
+01/08/2019 02:26:34 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, booking_unit_price, booking_quantity, unit_of_measure, created_by, creation_date, last_update_date, last_updated_by, line_number) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(booking_unit_price)s, %(booking_quantity)s, %(unit_of_measure)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+01/08/2019 02:26:34 AM:INFO:{'transaction_header_id': 87, 'item_id': 1, 'booking_unit_price': 100.0, 'booking_quantity': 10.0, 'unit_of_measure': 'KG', 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 20, 56, 34, 199174), 'last_update_date': datetime.datetime(2019, 7, 31, 20, 56, 34, 199224), 'last_updated_by': 6, 'line_number': 1}
+01/08/2019 02:26:34 AM:INFO:INSERT INTO apps.purchase_trx_lines_tbl (transaction_line_id, transaction_header_id, item_id, booking_unit_price, booking_quantity, unit_of_measure, created_by, creation_date, last_update_date, last_updated_by, line_number) VALUES (nextval('apps.purchase_trx_lines_sequence'), %(transaction_header_id)s, %(item_id)s, %(booking_unit_price)s, %(booking_quantity)s, %(unit_of_measure)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s, %(line_number)s) RETURNING apps.purchase_trx_lines_tbl.transaction_line_id
+01/08/2019 02:26:34 AM:INFO:{'transaction_header_id': 87, 'item_id': 2, 'booking_unit_price': 120.0, 'booking_quantity': 10.0, 'unit_of_measure': 'KG', 'created_by': 6, 'creation_date': datetime.datetime(2019, 7, 31, 20, 56, 34, 206836), 'last_update_date': datetime.datetime(2019, 7, 31, 20, 56, 34, 206864), 'last_updated_by': 6, 'line_number': 2}
+01/08/2019 02:26:34 AM:INFO:COMMIT
+01/08/2019 11:59:24 PM:INFO:starting gunicorn server
+01/08/2019 11:59:24 PM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+02/08/2019 12:07:13 AM:INFO:starting gunicorn server
+02/08/2019 12:07:13 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+02/08/2019 12:10:00 AM:INFO:select version()
+02/08/2019 12:10:00 AM:INFO:{}
+02/08/2019 12:10:00 AM:INFO:select current_schema()
+02/08/2019 12:10:00 AM:INFO:{}
+02/08/2019 12:10:00 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+02/08/2019 12:10:00 AM:INFO:{}
+02/08/2019 12:10:00 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+02/08/2019 12:10:00 AM:INFO:{}
+02/08/2019 12:10:00 AM:INFO:show standard_conforming_strings
+02/08/2019 12:10:00 AM:INFO:{}
+02/08/2019 12:10:00 AM:INFO:BEGIN (implicit)
+02/08/2019 12:10:00 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+02/08/2019 12:10:00 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+02/08/2019 12:10:01 AM:INFO:COMMIT
+02/08/2019 12:10:01 AM:INFO:BEGIN (implicit)
+02/08/2019 12:10:01 AM:INFO:SELECT apps.generate_challan_number() AS generate_challan_number_1 
+ LIMIT %(param_1)s
+02/08/2019 12:10:01 AM:INFO:{'param_1': 1}
+02/08/2019 12:10:11 AM:INFO:INSERT INTO apps.receipt_header_tbl (receipt_header_id, receipt_number, challan_number, receipt_date, challan_date, source_transaction_header_id, source_transaction_type, vehicle_number, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.receipt_header_sequence'), %(receipt_number)s, %(challan_number)s, %(receipt_date)s, %(challan_date)s, %(source_transaction_header_id)s, %(source_transaction_type)s, %(vehicle_number)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.receipt_header_tbl.receipt_header_id
+02/08/2019 12:10:11 AM:INFO:{'receipt_number': None, 'challan_number': 'CHALLAN_1908000005', 'receipt_date': None, 'challan_date': datetime.datetime(2019, 8, 2, 0, 0), 'source_transaction_header_id': None, 'source_transaction_type': None, 'vehicle_number': 'WB-16A-9161', 'created_by': 6, 'creation_date': datetime.datetime(2019, 8, 1, 18, 40, 11, 183854), 'last_update_date': datetime.datetime(2019, 8, 1, 18, 40, 11, 183924), 'last_updated_by': 6}
+02/08/2019 12:10:11 AM:INFO:COMMIT
+02/08/2019 12:13:30 AM:INFO:BEGIN (implicit)
+02/08/2019 12:13:30 AM:INFO:SELECT apps.receipt_header_tbl.receipt_header_id AS apps_receipt_header_tbl_receipt_header_id, apps.receipt_header_tbl.receipt_number AS apps_receipt_header_tbl_receipt_number, apps.receipt_header_tbl.challan_number AS apps_receipt_header_tbl_challan_number, apps.receipt_header_tbl.receipt_date AS apps_receipt_header_tbl_receipt_date, apps.receipt_header_tbl.challan_date AS apps_receipt_header_tbl_challan_date, apps.receipt_header_tbl.source_transaction_header_id AS apps_receipt_header_tbl_source_transaction_header_id, apps.receipt_header_tbl.source_transaction_type AS apps_receipt_header_tbl_source_transaction_type, apps.receipt_header_tbl.vehicle_number AS apps_receipt_header_tbl_vehicle_number, apps.receipt_header_tbl.created_by AS apps_receipt_header_tbl_created_by, apps.receipt_header_tbl.creation_date AS apps_receipt_header_tbl_creation_date, apps.receipt_header_tbl.last_update_date AS apps_receipt_header_tbl_last_update_date, apps.receipt_header_tbl.last_updated_by AS apps_receipt_header_tbl_last_updated_by 
+FROM apps.receipt_header_tbl 
+WHERE apps.receipt_header_tbl.challan_number = %(challan_number_1)s 
+ LIMIT %(param_1)s
+02/08/2019 12:13:30 AM:INFO:{'challan_number_1': 'CHALLAN_1908000005', 'param_1': 1}
+02/08/2019 12:13:33 AM:INFO:BEGIN (implicit)
+02/08/2019 12:13:33 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+02/08/2019 12:13:33 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+02/08/2019 12:13:33 AM:INFO:COMMIT
+02/08/2019 12:13:37 AM:INFO:BEGIN (implicit)
+02/08/2019 12:13:37 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+02/08/2019 12:13:37 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+02/08/2019 12:13:37 AM:INFO:COMMIT
+02/08/2019 12:13:37 AM:INFO:BEGIN (implicit)
+02/08/2019 12:13:37 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+02/08/2019 12:13:37 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+02/08/2019 12:13:37 AM:INFO:COMMIT
+02/08/2019 12:13:38 AM:INFO:UPDATE apps.receipt_header_tbl SET challan_date=%(challan_date)s, source_transaction_header_id=%(source_transaction_header_id)s, source_transaction_type=%(source_transaction_type)s, vehicle_number=%(vehicle_number)s, last_update_date=%(last_update_date)s WHERE apps.receipt_header_tbl.receipt_header_id = %(apps_receipt_header_tbl_receipt_header_id)s
+02/08/2019 12:13:38 AM:INFO:{'challan_date': datetime.datetime(2019, 7, 31, 0, 0), 'source_transaction_header_id': 28, 'source_transaction_type': 'PURCHASE', 'vehicle_number': 'WB-18W-9162', 'last_update_date': datetime.datetime(2019, 8, 1, 18, 43, 38, 920291), 'apps_receipt_header_tbl_receipt_header_id': 7}
+02/08/2019 12:13:38 AM:INFO:SELECT apps.receipt_lines_tbl.receipt_line_id AS apps_receipt_lines_tbl_receipt_line_id, apps.receipt_lines_tbl.receipt_header_id AS apps_receipt_lines_tbl_receipt_header_id, apps.receipt_lines_tbl.line_number AS apps_receipt_lines_tbl_line_number, apps.receipt_lines_tbl.item_id AS apps_receipt_lines_tbl_item_id, apps.receipt_lines_tbl.load_unload_number AS apps_receipt_lines_tbl_load_unload_number, apps.receipt_lines_tbl.load_unload_area AS apps_receipt_lines_tbl_load_unload_area, apps.receipt_lines_tbl.weighing_number AS apps_receipt_lines_tbl_weighing_number, apps.receipt_lines_tbl.receipt_line_status AS apps_receipt_lines_tbl_receipt_line_status, apps.receipt_lines_tbl.quantity AS apps_receipt_lines_tbl_quantity, apps.receipt_lines_tbl.unit_price AS apps_receipt_lines_tbl_unit_price, apps.receipt_lines_tbl.unit_of_measure AS apps_receipt_lines_tbl_unit_of_measure, apps.receipt_lines_tbl.discount AS apps_receipt_lines_tbl_discount, apps.receipt_lines_tbl.created_by AS apps_receipt_lines_tbl_created_by, apps.receipt_lines_tbl.creation_date AS apps_receipt_lines_tbl_creation_date, apps.receipt_lines_tbl.last_update_date AS apps_receipt_lines_tbl_last_update_date, apps.receipt_lines_tbl.last_updated_by AS apps_receipt_lines_tbl_last_updated_by 
+FROM apps.receipt_lines_tbl 
+WHERE %(param_1)s = apps.receipt_lines_tbl.receipt_header_id
+02/08/2019 12:13:38 AM:INFO:{'param_1': 7}
+02/08/2019 12:13:39 AM:INFO:INSERT INTO apps.receipt_lines_tbl (receipt_line_id, receipt_header_id, line_number, item_id, load_unload_number, load_unload_area, weighing_number, receipt_line_status, quantity, unit_price, unit_of_measure, discount, created_by, creation_date, last_update_date, last_updated_by) VALUES (nextval('apps.receipt_lines_sequence'), %(receipt_header_id)s, %(line_number)s, %(item_id)s, %(load_unload_number)s, %(load_unload_area)s, %(weighing_number)s, %(receipt_line_status)s, %(quantity)s, %(unit_price)s, %(unit_of_measure)s, %(discount)s, %(created_by)s, %(creation_date)s, %(last_update_date)s, %(last_updated_by)s) RETURNING apps.receipt_lines_tbl.receipt_line_id
+02/08/2019 12:13:39 AM:INFO:{'receipt_header_id': 7, 'line_number': 1, 'item_id': 1, 'load_unload_number': '10288384', 'load_unload_area': 'PRIMARY WBAY1', 'weighing_number': 'WEIGHTING NUMBER2', 'receipt_line_status': 'WEIGHING', 'quantity': 20.0, 'unit_price': 150.0, 'unit_of_measure': 'KG', 'discount': 10.0, 'created_by': 6, 'creation_date': datetime.datetime(2019, 8, 1, 18, 43, 39, 366567), 'last_update_date': datetime.datetime(2019, 8, 1, 18, 43, 39, 366656), 'last_updated_by': 6}
+02/08/2019 12:13:39 AM:INFO:COMMIT
+02/08/2019 12:16:45 AM:INFO:BEGIN (implicit)
+02/08/2019 12:16:45 AM:INFO:SELECT apps.receipt_header_tbl.receipt_header_id AS apps_receipt_header_tbl_receipt_header_id, apps.receipt_header_tbl.receipt_number AS apps_receipt_header_tbl_receipt_number, apps.receipt_header_tbl.challan_number AS apps_receipt_header_tbl_challan_number, apps.receipt_header_tbl.receipt_date AS apps_receipt_header_tbl_receipt_date, apps.receipt_header_tbl.challan_date AS apps_receipt_header_tbl_challan_date, apps.receipt_header_tbl.source_transaction_header_id AS apps_receipt_header_tbl_source_transaction_header_id, apps.receipt_header_tbl.source_transaction_type AS apps_receipt_header_tbl_source_transaction_type, apps.receipt_header_tbl.vehicle_number AS apps_receipt_header_tbl_vehicle_number, apps.receipt_header_tbl.created_by AS apps_receipt_header_tbl_created_by, apps.receipt_header_tbl.creation_date AS apps_receipt_header_tbl_creation_date, apps.receipt_header_tbl.last_update_date AS apps_receipt_header_tbl_last_update_date, apps.receipt_header_tbl.last_updated_by AS apps_receipt_header_tbl_last_updated_by 
+FROM apps.receipt_header_tbl 
+WHERE apps.receipt_header_tbl.challan_number = %(challan_number_1)s 
+ LIMIT %(param_1)s
+02/08/2019 12:16:45 AM:INFO:{'challan_number_1': 'CHALLAN_1908000005', 'param_1': 1}
+02/08/2019 12:16:45 AM:INFO:SELECT apps.generate_receipt_number() AS generate_receipt_number_1 
+ LIMIT %(param_1)s
+02/08/2019 12:16:45 AM:INFO:{'param_1': 1}
+02/08/2019 12:16:45 AM:INFO:BEGIN (implicit)
+02/08/2019 12:16:45 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+02/08/2019 12:16:45 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+02/08/2019 12:16:45 AM:INFO:COMMIT
+02/08/2019 12:16:45 AM:INFO:UPDATE apps.receipt_header_tbl SET receipt_number=%(receipt_number)s, receipt_date=%(receipt_date)s, last_update_date=%(last_update_date)s WHERE apps.receipt_header_tbl.receipt_header_id = %(apps_receipt_header_tbl_receipt_header_id)s
+02/08/2019 12:16:45 AM:INFO:{'receipt_number': 'RCPT_1908000001', 'receipt_date': datetime.datetime(2019, 8, 1, 0, 0), 'last_update_date': datetime.datetime(2019, 8, 1, 18, 46, 45, 379474), 'apps_receipt_header_tbl_receipt_header_id': 7}
+02/08/2019 12:16:45 AM:INFO:SELECT apps.receipt_lines_tbl.receipt_line_id AS apps_receipt_lines_tbl_receipt_line_id, apps.receipt_lines_tbl.receipt_header_id AS apps_receipt_lines_tbl_receipt_header_id, apps.receipt_lines_tbl.line_number AS apps_receipt_lines_tbl_line_number, apps.receipt_lines_tbl.item_id AS apps_receipt_lines_tbl_item_id, apps.receipt_lines_tbl.load_unload_number AS apps_receipt_lines_tbl_load_unload_number, apps.receipt_lines_tbl.load_unload_area AS apps_receipt_lines_tbl_load_unload_area, apps.receipt_lines_tbl.weighing_number AS apps_receipt_lines_tbl_weighing_number, apps.receipt_lines_tbl.receipt_line_status AS apps_receipt_lines_tbl_receipt_line_status, apps.receipt_lines_tbl.quantity AS apps_receipt_lines_tbl_quantity, apps.receipt_lines_tbl.unit_price AS apps_receipt_lines_tbl_unit_price, apps.receipt_lines_tbl.unit_of_measure AS apps_receipt_lines_tbl_unit_of_measure, apps.receipt_lines_tbl.discount AS apps_receipt_lines_tbl_discount, apps.receipt_lines_tbl.created_by AS apps_receipt_lines_tbl_created_by, apps.receipt_lines_tbl.creation_date AS apps_receipt_lines_tbl_creation_date, apps.receipt_lines_tbl.last_update_date AS apps_receipt_lines_tbl_last_update_date, apps.receipt_lines_tbl.last_updated_by AS apps_receipt_lines_tbl_last_updated_by 
+FROM apps.receipt_lines_tbl 
+WHERE %(param_1)s = apps.receipt_lines_tbl.receipt_header_id
+02/08/2019 12:16:45 AM:INFO:{'param_1': 7}
+02/08/2019 12:16:45 AM:INFO:BEGIN (implicit)
+02/08/2019 12:16:45 AM:INFO:SELECT apps.user_tbl.user_id AS apps_user_tbl_user_id, apps.user_tbl.user_name AS apps_user_tbl_user_name, apps.user_tbl.description AS apps_user_tbl_description, apps.user_tbl.phone_number1 AS apps_user_tbl_phone_number1, apps.user_tbl.phone_number2 AS apps_user_tbl_phone_number2, apps.user_tbl.email AS apps_user_tbl_email, apps.user_tbl.password AS apps_user_tbl_password, apps.user_tbl.user_type AS apps_user_tbl_user_type, apps.user_tbl.effective_from AS apps_user_tbl_effective_from, apps.user_tbl.effective_to AS apps_user_tbl_effective_to, apps.user_tbl.created_by AS apps_user_tbl_created_by, apps.user_tbl.creation_date AS apps_user_tbl_creation_date, apps.user_tbl.last_update_date AS apps_user_tbl_last_update_date, apps.user_tbl.last_updated_by AS apps_user_tbl_last_updated_by, apps.user_tbl.password_life_span AS apps_user_tbl_password_life_span, apps.user_tbl.employee_id AS apps_user_tbl_employee_id 
+FROM apps.user_tbl 
+WHERE apps.user_tbl.user_name = %(user_name_1)s 
+ LIMIT %(param_1)s
+02/08/2019 12:16:45 AM:INFO:{'user_name_1': 'ARITRATEWARY', 'param_1': 1}
+02/08/2019 12:16:45 AM:INFO:COMMIT
+02/08/2019 12:16:45 AM:INFO:UPDATE apps.receipt_lines_tbl SET item_id=%(item_id)s, last_update_date=%(last_update_date)s WHERE apps.receipt_lines_tbl.receipt_line_id = %(apps_receipt_lines_tbl_receipt_line_id)s
+02/08/2019 12:16:45 AM:INFO:{'item_id': 1, 'last_update_date': datetime.datetime(2019, 8, 1, 18, 46, 45, 402828), 'apps_receipt_lines_tbl_receipt_line_id': 7}
+02/08/2019 12:16:45 AM:INFO:COMMIT
+02/08/2019 12:18:08 AM:INFO:BEGIN (implicit)
+02/08/2019 12:18:08 AM:INFO:SELECT apps.receipt_header_tbl.receipt_number AS apps_receipt_header_tbl_receipt_number, apps.receipt_header_tbl.challan_number AS apps_receipt_header_tbl_challan_number, apps.receipt_header_tbl.receipt_date AS apps_receipt_header_tbl_receipt_date, apps.receipt_header_tbl.challan_date AS apps_receipt_header_tbl_challan_date 
+FROM apps.receipt_header_tbl 
+ LIMIT %(param_1)s
+02/08/2019 12:18:08 AM:INFO:{'param_1': 500}
+02/08/2019 12:18:08 AM:INFO:ROLLBACK
+02/08/2019 12:18:08 AM:ERROR:None
+02/08/2019 12:21:33 AM:INFO:starting gunicorn server
+02/08/2019 12:21:33 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+02/08/2019 12:21:44 AM:INFO:select version()
+02/08/2019 12:21:44 AM:INFO:{}
+02/08/2019 12:21:44 AM:INFO:select current_schema()
+02/08/2019 12:21:44 AM:INFO:{}
+02/08/2019 12:21:44 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+02/08/2019 12:21:44 AM:INFO:{}
+02/08/2019 12:21:44 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+02/08/2019 12:21:44 AM:INFO:{}
+02/08/2019 12:21:44 AM:INFO:show standard_conforming_strings
+02/08/2019 12:21:44 AM:INFO:{}
+02/08/2019 12:21:44 AM:INFO:BEGIN (implicit)
+02/08/2019 12:21:44 AM:INFO:SELECT apps.receipt_header_tbl.receipt_number AS apps_receipt_header_tbl_receipt_number, apps.receipt_header_tbl.challan_number AS apps_receipt_header_tbl_challan_number, apps.receipt_header_tbl.receipt_date AS apps_receipt_header_tbl_receipt_date, apps.receipt_header_tbl.challan_date AS apps_receipt_header_tbl_challan_date 
+FROM apps.receipt_header_tbl 
+ LIMIT %(param_1)s
+02/08/2019 12:21:44 AM:INFO:{'param_1': 500}
+02/08/2019 12:21:44 AM:INFO:ROLLBACK
+02/08/2019 12:21:44 AM:ERROR:None
+02/08/2019 12:23:43 AM:INFO:starting gunicorn server
+02/08/2019 12:23:43 AM:INFO:loading app - %(prog)s [OPTIONS] [APP_MODULE]
+02/08/2019 12:23:51 AM:INFO:select version()
+02/08/2019 12:23:51 AM:INFO:{}
+02/08/2019 12:23:51 AM:INFO:select current_schema()
+02/08/2019 12:23:51 AM:INFO:{}
+02/08/2019 12:23:51 AM:INFO:SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+02/08/2019 12:23:51 AM:INFO:{}
+02/08/2019 12:23:51 AM:INFO:SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+02/08/2019 12:23:51 AM:INFO:{}
+02/08/2019 12:23:51 AM:INFO:show standard_conforming_strings
+02/08/2019 12:23:51 AM:INFO:{}
+02/08/2019 12:23:51 AM:INFO:BEGIN (implicit)
+02/08/2019 12:23:51 AM:INFO:SELECT apps.receipt_header_tbl.receipt_header_id AS apps_receipt_header_tbl_receipt_header_id, apps.receipt_header_tbl.receipt_number AS apps_receipt_header_tbl_receipt_number, apps.receipt_header_tbl.challan_number AS apps_receipt_header_tbl_challan_number, apps.receipt_header_tbl.receipt_date AS apps_receipt_header_tbl_receipt_date, apps.receipt_header_tbl.challan_date AS apps_receipt_header_tbl_challan_date, apps.receipt_header_tbl.vehicle_number AS apps_receipt_header_tbl_vehicle_number 
+FROM apps.receipt_header_tbl 
+ LIMIT %(param_1)s
+02/08/2019 12:23:51 AM:INFO:{'param_1': 500}
+02/08/2019 12:23:51 AM:INFO:COMMIT
+02/08/2019 12:25:32 AM:INFO:BEGIN (implicit)
+02/08/2019 12:25:32 AM:INFO:SELECT apps.receipt_header_tbl.receipt_header_id AS apps_receipt_header_tbl_receipt_header_id, apps.receipt_header_tbl.receipt_number AS apps_receipt_header_tbl_receipt_number, apps.receipt_header_tbl.challan_number AS apps_receipt_header_tbl_challan_number, apps.receipt_header_tbl.receipt_date AS apps_receipt_header_tbl_receipt_date, apps.receipt_header_tbl.challan_date AS apps_receipt_header_tbl_challan_date, apps.receipt_header_tbl.source_transaction_header_id AS apps_receipt_header_tbl_source_transaction_header_id, apps.receipt_header_tbl.source_transaction_type AS apps_receipt_header_tbl_source_transaction_type, apps.receipt_header_tbl.vehicle_number AS apps_receipt_header_tbl_vehicle_number, apps.receipt_header_tbl.created_by AS apps_receipt_header_tbl_created_by, apps.receipt_header_tbl.creation_date AS apps_receipt_header_tbl_creation_date, apps.receipt_header_tbl.last_update_date AS apps_receipt_header_tbl_last_update_date, apps.receipt_header_tbl.last_updated_by AS apps_receipt_header_tbl_last_updated_by 
+FROM apps.receipt_header_tbl 
+WHERE apps.receipt_header_tbl.receipt_number = %(receipt_number_1)s 
+ LIMIT %(param_1)s
+02/08/2019 12:25:32 AM:INFO:{'receipt_number_1': 'RCPT_1908000000', 'param_1': 1}
+02/08/2019 12:25:32 AM:INFO:SELECT apps.receipt_lines_tbl.receipt_line_id AS apps_receipt_lines_tbl_receipt_line_id, apps.receipt_lines_tbl.receipt_header_id AS apps_receipt_lines_tbl_receipt_header_id, apps.receipt_lines_tbl.line_number AS apps_receipt_lines_tbl_line_number, apps.receipt_lines_tbl.item_id AS apps_receipt_lines_tbl_item_id, apps.receipt_lines_tbl.load_unload_number AS apps_receipt_lines_tbl_load_unload_number, apps.receipt_lines_tbl.load_unload_area AS apps_receipt_lines_tbl_load_unload_area, apps.receipt_lines_tbl.weighing_number AS apps_receipt_lines_tbl_weighing_number, apps.receipt_lines_tbl.receipt_line_status AS apps_receipt_lines_tbl_receipt_line_status, apps.receipt_lines_tbl.quantity AS apps_receipt_lines_tbl_quantity, apps.receipt_lines_tbl.unit_price AS apps_receipt_lines_tbl_unit_price, apps.receipt_lines_tbl.unit_of_measure AS apps_receipt_lines_tbl_unit_of_measure, apps.receipt_lines_tbl.discount AS apps_receipt_lines_tbl_discount, apps.receipt_lines_tbl.created_by AS apps_receipt_lines_tbl_created_by, apps.receipt_lines_tbl.creation_date AS apps_receipt_lines_tbl_creation_date, apps.receipt_lines_tbl.last_update_date AS apps_receipt_lines_tbl_last_update_date, apps.receipt_lines_tbl.last_updated_by AS apps_receipt_lines_tbl_last_updated_by 
+FROM apps.receipt_lines_tbl 
+WHERE %(param_1)s = apps.receipt_lines_tbl.receipt_header_id
+02/08/2019 12:25:32 AM:INFO:{'param_1': 6}
+02/08/2019 12:25:32 AM:INFO:COMMIT

@@ -10,13 +10,15 @@ from util.db_helper import db_transaction
 from sqlalchemy.sql.expression import and_
 from falcon.http_error import HTTPError
 from falcon import status_codes
+from sqlalchemy import func
 
 
 
 @db_transaction
 def create_purchase_trx(raw_data, session):
     purchasetrxheader = PurchaseTrxHeader()
-    purchasetrxheader.purchase_trx_number = raw_data['purchase_trx_number']
+    po_number = session.query(func.apps.generate_po_number()).first()
+    purchasetrxheader.purchase_trx_number = po_number[0]
     purchasetrxheader.transaction_date = raw_data['transaction_date']
     purchasetrxheader.order_status = raw_data['order_status']
     purchasetrxheader.buyer_id = raw_data['buyer_id']
@@ -125,7 +127,7 @@ def update_purchase_trx(raw_data,session):
                     trx_line.booking_unit_price = purchase_trx_line['booking_unit_price']
                     trx_line.booking_quantity = purchase_trx_line['booking_quantity']
                     trx_line.unit_of_measure = purchase_trx_line['unit_of_measure']
-                    trx_line.created_by = purchase_trx_line['created_by']
+                    #trx_line.created_by = purchase_trx_line['created_by']
                     trx_line.last_updated_by = purchase_trx_line['last_updated_by']   
                     break
         else:

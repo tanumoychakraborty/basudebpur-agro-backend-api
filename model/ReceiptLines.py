@@ -19,7 +19,7 @@ class ReceiptLines (Base):
     item_id = Column('item_id', Integer)
     load_unload_number =Column('load_unload_number',String)
     load_unload_area = Column('load_unload_area', String)
-    weighting_number = Column('weighting_number', String)
+    weighing_number = Column('weighing_number', String)
     receipt_line_status =Column('receipt_line_status',String)
     quantity =Column('quantity',Float)
     unit_price=Column('unit_price',Float)
