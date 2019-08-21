@@ -67,5 +67,8 @@ class PurchaseTrxLinesUpdateSchema(Schema):
     booking_unit_price = fields.Float(missing=0)
     booking_quantity = fields.Float(missing=0)
     unit_of_measure = fields.Str()
-    created_by = fields.Str()
+    created_by = fields.Str(required=False)
     last_updated_by = fields.Str(required=True)
+    
+    
+    

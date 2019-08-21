@@ -123,7 +123,7 @@ def update_purchase_trx(raw_data,session):
             for trx_line in purchasetrxheader.purchase_trx_lines:
                 if purchase_trx_line["transaction_line_id"] == trx_line.transaction_line_id:
                     trx_line.item_id = purchase_trx_line['item_id']
-                    trx_line.line_number = purchase_trx_line['line_number']
+                    #trx_line.line_number = purchase_trx_line['line_number']
                     trx_line.booking_unit_price = purchase_trx_line['booking_unit_price']
                     trx_line.booking_quantity = purchase_trx_line['booking_quantity']
                     trx_line.unit_of_measure = purchase_trx_line['unit_of_measure']
@@ -157,5 +157,7 @@ def get_purchase_trx_detail(purchase_trx_number,session):
         line_dicts.append(line_dict)
     result['purchase_trx_lines'] = line_dicts
     return result
+                
+                
                 
     

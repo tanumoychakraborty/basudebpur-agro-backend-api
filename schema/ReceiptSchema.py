@@ -32,11 +32,11 @@ class ReceiptLinesSchema(Schema):
         
     item_id = fields.Int(required=False)
     line_number = fields.Int(required=False)
-    load_unload_number = fields.Str(missing='')
-    load_unload_area = fields.Str(missing='')
+    load_unload_number = fields.Str(missing='', required=False)
+    load_unload_area = fields.Str(missing='', required=False)
     weighing_number = fields.Str(missing='')
     unit_of_measure  = fields.Str(required=False)
-    receipt_line_status = fields.Str(missing='')
+    receipt_line_status = fields.Str(missing='OPEN')
     quantity = fields.Float(missing=0)
     unit_price = fields.Float(missing=0)
     discount = fields.Float(missing=0)
@@ -49,18 +49,18 @@ class ReceiptHeaderUpdateSchema(Schema):
     classdocs
     '''
     
-    receipt_header_id = fields.Int()
+    receipt_header_id = fields.Int(required=False)
     receipt_number = fields.Str(required=False)
-    challan_number = fields.Str()
+    challan_number = fields.Str(required=True)
     receipt_date = fields.DateTime('%Y-%m-%d')
     challan_date = fields.DateTime('%Y-%m-%d')
-    source_transaction_header_id = fields.Int(required=False)
+    source_transaction_header_id = fields.Str(required=False)
     source_transaction_type = fields.Str(required=False)
     vehicle_number = fields.Str(required=False)
     #created_by = fields.Str(required=True)
     last_updated_by = fields.Str(required=True)
     
-    receipt_lines = fields.Nested('schema.ReceiptSchema.ReceiptLinesUpdateSchema', many=True, required=True)
+    receipt_lines = fields.Nested('schema.ReceiptSchema.ReceiptLinesUpdateSchema', many=True, required=False)
     
     
     
@@ -70,16 +70,19 @@ class ReceiptLinesUpdateSchema(Schema):
     classdocs
     '''
     receipt_header_id = fields.Int()
-    receipt_line_id = fields.Int()
+    receipt_line_id = fields.Int(required=False)
     item_id = fields.Int(required=False)
     line_number = fields.Int(required=False)
-    load_unload_number = fields.Str(missing='')
-    load_unload_area = fields.Str(missing='')
+    load_unload_number = fields.Str(missing='', required=False)
+    load_unload_area = fields.Str(missing='', required=False)
     unit_of_measure  = fields.Str(required=False)
     weighing_number = fields.Str(missing='')
-    receipt_line_status = fields.Str(missing='')
+    receipt_line_status = fields.Str(missing='OPEN')
     quantity = fields.Float(missing=0)
     unit_price = fields.Float(missing=0)
     discount = fields.Float(missing=0)
     #created_by = fields.Str()
     last_updated_by = fields.Str(required=False)
+    
+    
+    

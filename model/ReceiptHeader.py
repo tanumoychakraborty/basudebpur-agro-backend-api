@@ -19,7 +19,7 @@ class ReceiptHeader (Base):
     challan_number = Column('challan_number', String)
     receipt_date = Column('receipt_date', DateTime)
     challan_date = Column('challan_date', DateTime)
-    source_transaction_header_id = Column('source_transaction_header_id', Integer)
+    source_transaction_header_id = Column('source_transaction_header_id', String)
     source_transaction_type = Column('source_transaction_type',String)
     vehicle_number = Column('vehicle_number', String)
     created_by = Column('created_by', Integer)

@@ -19,15 +19,20 @@ def create_challan(raw_data, session):
     Challan_number = session.query(func.apps.generate_challan_number()).first()
     challanheader.challan_number = Challan_number[0]
     challanheader.created_by = raw_data['created_by']
-    challanheader.challan_date= raw_data['challan_date']
+    #challanheader.challan_date= raw_data['challan_date']
     challanheader.last_updated_by = raw_data['last_updated_by']
-    challanheader.vehicle_number = raw_data['vehicle_number']
-    session.add(challanheader)
+    challanheader.source_transaction_header_id = raw_data['source_transaction_header_id']
+    challanheader.source_transaction_type = raw_data['source_transaction_type']
+    #challanheader.vehicle_number = raw_data['vehicle_number']
+    x = session.add(challanheader)
     
     #Challan_number = dict(Challan_number.__dict__)
     #Challan_number.pop('_sa_instance_state')
     
-    return challanheader
+    challan =  dict(challanheader.__dict__)
+    challan.pop('_sa_instance_state')
+    return challan
+    
 
 @db_transaction
 def update_receipt_data(raw_data, session):
@@ -36,65 +41,12 @@ def update_receipt_data(raw_data, session):
     if challanheader is None:
         raise HTTPError(status=status_codes.HTTP_404, errors="Challan number does not exist")
     
-    receipt_number = session.query(func.apps.generate_receipt_number()).first()
-    challanheader.receipt_number = receipt_number[0]
-    challanheader.receipt_date = raw_data['receipt_date']
-    challanheader.challan_date = raw_data['challan_date']
-    challanheader.source_transaction_header_id = raw_data['source_transaction_header_id']
-    challanheader.source_transaction_type = raw_data['source_transaction_type']
-    challanheader.vehicle_number = raw_data['vehicle_number']
-    challanheader.last_updated_by = get_user_id_by_user_name(raw_data['last_updated_by'])
-    
-    challanLines = []
-    
-    for challan_line in raw_data['receipt_lines']:
-        if 'receipt_line_id' in challan_line.keys():
-            for challanLine in challanheader.receipt_lines:
-                if challan_line["receipt_line_id"] == challanLine.receipt_line_id:
-                    challanLine.item_id = challan_line['item_id']
-                    challanLine.line_number = challan_line['line_number']
-                    challanLine.load_unload_number = challan_line['load_unload_number']
-                    challanLine.load_unload_area = challan_line['load_unload_area']
-                    challanLine.weighing_number = challan_line['weighing_number']
-                    challanLine.receipt_line_status = challan_line['receipt_line_status']
-                    challanLine.quantity = challan_line['quantity']
-                    challanLine.unit_price = challan_line['unit_price']
-                    challanLine.line_number = challan_line['line_number']
-                    challanLine.unit_of_measure = challan_line['unit_of_measure']
-                    challanLine.discount = challan_line['discount']
-                    challanLine.last_updated_by = get_user_id_by_user_name(challan_line['last_updated_by'])   
-                    break
-        else:
-                    chalanLine = ReceiptLines()
-                    chalanLine.item_id = challan_line['item_id']
-                    chalanLine.line_number = challan_line['line_number']
-                    chalanLine.load_unload_number = challan_line['load_unload_number']
-                    chalanLine.load_unload_area = challan_line['load_unload_area']
-                    chalanLine.weighing_number = challan_line['weighing_number']
-                    chalanLine.receipt_line_status = challan_line['receipt_line_status']
-                    chalanLine.quantity = challan_line['quantity']
-                    chalanLine.unit_price = challan_line['unit_price']
-                    chalanLine.line_number = challan_line['line_number']
-                    chalanLine.unit_of_measure = challan_line['unit_of_measure']
-                    chalanLine.discount = challan_line['discount']
-                    chalanLine.last_updated_by = get_user_id_by_user_name(challan_line['last_updated_by'])
-                    chalanLine.created_by = get_user_id_by_user_name(challan_line['last_updated_by'])
-                    challanLines.append(chalanLine)
-    
-    if len(challanLines) > 0:
-        challanheader.receipt_lines.extend(challanLines)
-
-@db_transaction
-def update_challan(raw_data,session):
-    challan_number = raw_data['challan_number']
-    challanheader = session.query(ReceiptHeader).filter_by(challan_number=challan_number).first()
-    if challanheader is None:
-        raise HTTPError(status=status_codes.HTTP_404, errors="Challan number does not exist")
-    #challanheader.challan_number = raw_data['challan_number']
+    #receipt_number = session.query(func.apps.generate_receipt_number()).first()
+    #challanheader.receipt_number = receipt_number[0]
     #challanheader.receipt_date = raw_data['receipt_date']
     challanheader.challan_date = raw_data['challan_date']
-    challanheader.source_transaction_header_id = raw_data['source_transaction_header_id']
-    challanheader.source_transaction_type = raw_data['source_transaction_type']
+    #challanheader.source_transaction_header_id = raw_data['source_transaction_header_id']
+    #challanheader.source_transaction_type = raw_data['source_transaction_type']
     challanheader.vehicle_number = raw_data['vehicle_number']
     challanheader.last_updated_by = get_user_id_by_user_name(raw_data['last_updated_by'])
     
@@ -106,13 +58,12 @@ def update_challan(raw_data,session):
                 if challan_line["receipt_line_id"] == challanLine.receipt_line_id:
                     challanLine.item_id = challan_line['item_id']
                     challanLine.line_number = challan_line['line_number']
-                    challanLine.load_unload_number = challan_line['load_unload_number']
+                    #challanLine.load_unload_number = challan_line['load_unload_number']
                     challanLine.load_unload_area = challan_line['load_unload_area']
                     challanLine.weighing_number = challan_line['weighing_number']
                     challanLine.receipt_line_status = challan_line['receipt_line_status']
                     challanLine.quantity = challan_line['quantity']
                     challanLine.unit_price = challan_line['unit_price']
-                    challanLine.line_number = challan_line['line_number']
                     challanLine.unit_of_measure = challan_line['unit_of_measure']
                     challanLine.discount = challan_line['discount']
                     challanLine.last_updated_by = get_user_id_by_user_name(challan_line['last_updated_by'])   
@@ -121,13 +72,12 @@ def update_challan(raw_data,session):
                     chalanLine = ReceiptLines()
                     chalanLine.item_id = challan_line['item_id']
                     chalanLine.line_number = challan_line['line_number']
-                    chalanLine.load_unload_number = challan_line['load_unload_number']
+                    #chalanLine.load_unload_number = challan_line['load_unload_number']
                     chalanLine.load_unload_area = challan_line['load_unload_area']
                     chalanLine.weighing_number = challan_line['weighing_number']
                     chalanLine.receipt_line_status = challan_line['receipt_line_status']
                     chalanLine.quantity = challan_line['quantity']
                     chalanLine.unit_price = challan_line['unit_price']
-                    chalanLine.line_number = challan_line['line_number']
                     chalanLine.unit_of_measure = challan_line['unit_of_measure']
                     chalanLine.discount = challan_line['discount']
                     chalanLine.last_updated_by = get_user_id_by_user_name(challan_line['last_updated_by'])
@@ -177,9 +127,9 @@ def get_receipt_details(params,page, page_size,session):
         if to_receipt_date:
             conditions.append(ReceiptHeader.creation_date <= to_receipt_date)   
         if source_transaction_header_id:
-            conditions.append(ReceiptHeader.source_transaction_header_id <= source_transaction_header_id)   
+            conditions.append(ReceiptHeader.source_transaction_header_id == source_transaction_header_id)
         if source_transaction_type:
-            conditions.append(ReceiptHeader.source_transaction_type <= source_transaction_type)          
+            conditions.append(ReceiptHeader.source_transaction_type == source_transaction_type)          
                 
             
                 
@@ -222,8 +172,8 @@ def get_receipt_detail(receipt_number,session):
     return result
 
 @db_transaction
-def get_receipt_detail_by_receipt_header_id(receipt_header_id,session):
-    receiptheader = session.query(ReceiptHeader).filter_by(receipt_header_id=receipt_header_id).first()
+def get_receipt_detail_by_challan_number(challan_number,session):
+    receiptheader = session.query(ReceiptHeader).filter_by(challan_number=challan_number).first()
     result = dict(receiptheader.__dict__)
     result.pop('_sa_instance_state')
     line_dicts = []
@@ -233,3 +183,6 @@ def get_receipt_detail_by_receipt_header_id(receipt_header_id,session):
         line_dicts.append(line_dict)
     result['receipt_lines'] = line_dicts
     return result
+
+
+
