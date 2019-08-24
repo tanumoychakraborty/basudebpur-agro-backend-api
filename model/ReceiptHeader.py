@@ -26,5 +26,6 @@ class ReceiptHeader (Base):
     creation_date = Column('creation_date', DateTime,default=datetime.datetime.utcnow)
     last_update_date = Column('last_update_date', DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
     last_updated_by = Column('last_updated_by', Integer)
+    receipt_header_status = Column('receipt_header_status', String)
     
     receipt_lines = relationship('model.ReceiptLines.ReceiptLines', back_populates='receipt_header')

@@ -20,6 +20,7 @@ class ReceiptHeaderSchema(Schema):
     vehicle_number = fields.Str(required=False)
     created_by = fields.Str(required=True)
     last_updated_by = fields.Str(required=False)
+    #receipt_header_status = fields.Str(required=True)
     receipt_lines = fields.Nested('schema.ReceiptSchema.ReceiptLinesSchema', many=True, required=False)
    
     
@@ -57,6 +58,7 @@ class ReceiptHeaderUpdateSchema(Schema):
     source_transaction_header_id = fields.Str(required=False)
     source_transaction_type = fields.Str(required=False)
     vehicle_number = fields.Str(required=False)
+    receipt_header_status = fields.Str(required=False)
     #created_by = fields.Str(required=True)
     last_updated_by = fields.Str(required=True)
     
