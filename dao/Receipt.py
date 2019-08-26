@@ -73,7 +73,7 @@ def update_receipt_data(raw_data, session):
                         challanLine.unit_of_measure = challan_line['unit_of_measure']
                         challanLine.discount = challan_line['discount']
                         challanLine.last_updated_by = get_user_id_by_user_name(challan_line['last_updated_by'])   
-                        if challan_line['receipt_line_status'] = 'COMPLETE':
+                        if challan_line['receipt_line_status'] == 'COMPLETE':
                             is_receipt_complete = is_receipt_complete and True
                             
                         break
@@ -98,7 +98,7 @@ def update_receipt_data(raw_data, session):
     
         if len(challanLines) > 0:
             challanheader.receipt_lines.extend(challanLines)
-        elif:
+        else:
             if is_receipt_complete:
                 challanheader.receipt_header_status = 'COMPLETE'
         
@@ -123,9 +123,10 @@ def get_receipt_details(params,page, page_size,session):
         to_receipt_date = params.get('to_receipt_date',None)
         source_transaction_header_id = params.get('source_transaction_header_id',None)
         source_transaction_type = params.get('source_transaction_type',None)
+        receipt_header_status = params.get('receipt_header_status',None)
         
         receiptDetails = session.query(ReceiptHeader.receipt_header_id,ReceiptHeader.receipt_number,ReceiptHeader.challan_number,
-                                           ReceiptHeader.receipt_date,ReceiptHeader.challan_date, ReceiptHeader.vehicle_number)
+                                           ReceiptHeader.receipt_date,ReceiptHeader.challan_date, ReceiptHeader.vehicle_number, ReceiptHeader.receipt_header_status)
         conditions = []
         if receipt_header_id:
             conditions.append(ReceiptHeader.receipt_header_id == receipt_header_id)
@@ -144,7 +145,9 @@ def get_receipt_details(params,page, page_size,session):
         if source_transaction_header_id:
             conditions.append(ReceiptHeader.source_transaction_header_id == source_transaction_header_id)
         if source_transaction_type:
-            conditions.append(ReceiptHeader.source_transaction_type == source_transaction_type)          
+            conditions.append(ReceiptHeader.source_transaction_type == source_transaction_type) 
+        if receipt_header_status:
+            conditions.append(ReceiptHeader.receipt_header_status == receipt_header_status)          
                 
             
                 
@@ -163,6 +166,7 @@ def get_receipt_details(params,page, page_size,session):
         dict['receipt_date'] = receiptDetail[3]
         dict['challan_date'] = receiptDetail[4]
         dict['vehicle_number'] = receiptDetail[5]
+        dict['receipt_header_status'] = receiptDetail[6]
         
         resultL.append(dict)    
             
