@@ -22,6 +22,7 @@ class ReceiptHeader (Base):
     source_transaction_header_id = Column('source_transaction_header_id', String)
     source_transaction_type = Column('source_transaction_type',String)
     vehicle_number = Column('vehicle_number', String)
+    bata =Column('bata',Float)
     created_by = Column('created_by', Integer)
     creation_date = Column('creation_date', DateTime,default=datetime.datetime.utcnow)
     last_update_date = Column('last_update_date', DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)

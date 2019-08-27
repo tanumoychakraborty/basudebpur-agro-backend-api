@@ -18,6 +18,7 @@ class ReceiptHeaderSchema(Schema):
     source_transaction_header_id = fields.Str(required=False)
     source_transaction_type = fields.Str(required=False)
     vehicle_number = fields.Str(required=False)
+    bata = fields.Float(missing=0)
     created_by = fields.Str(required=True)
     last_updated_by = fields.Str(required=False)
     #receipt_header_status = fields.Str(required=True)
@@ -41,6 +42,7 @@ class ReceiptLinesSchema(Schema):
     quantity = fields.Float(missing=0)
     unit_price = fields.Float(missing=0)
     discount = fields.Float(missing=0)
+    
     created_by = fields.Str(required=True)
     last_updated_by = fields.Str(required=False)
     
@@ -58,6 +60,7 @@ class ReceiptHeaderUpdateSchema(Schema):
     source_transaction_header_id = fields.Str(required=False)
     source_transaction_type = fields.Str(required=False)
     vehicle_number = fields.Str(required=False)
+    bata = fields.Float(missing=0)
     receipt_header_status = fields.Str(required=False)
     #created_by = fields.Str(required=True)
     last_updated_by = fields.Str(required=True)

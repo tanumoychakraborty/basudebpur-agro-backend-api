@@ -23,6 +23,8 @@ def create_challan(raw_data, session):
     challanheader.last_updated_by = raw_data['last_updated_by']
     challanheader.source_transaction_header_id = raw_data['source_transaction_header_id']
     challanheader.source_transaction_type = raw_data['source_transaction_type']
+    challanheader.bata = raw_data['bata']
+    
     challanheader.receipt_header_status = 'OPEN'
     #challanheader.vehicle_number = raw_data['vehicle_number']
     x = session.add(challanheader)
@@ -51,6 +53,8 @@ def update_receipt_data(raw_data, session):
     #challanheader.source_transaction_type = raw_data['source_transaction_type']
     if 'vehicle_number' in raw_data.keys():
         challanheader.vehicle_number = raw_data['vehicle_number']
+    if 'bata' in raw_data.keys():    
+        challanheader.bata = raw_data['bata']    
     if 'receipt_header_status' in raw_data.keys():
         challanheader.receipt_header_status = raw_data['receipt_header_status']
     challanheader.last_updated_by = get_user_id_by_user_name(raw_data['last_updated_by'])
@@ -108,7 +112,7 @@ def get_receipt_details(params,page, page_size,session):
     resultL = []
     if params is None:
         receiptDetails = session.query(ReceiptHeader.receipt_header_id,ReceiptHeader.receipt_number,ReceiptHeader.challan_number,
-                                           ReceiptHeader.receipt_date,ReceiptHeader.challan_date,ReceiptHeader.vehicle_number).limit(500).all()
+                                           ReceiptHeader.receipt_date,ReceiptHeader.challan_date,ReceiptHeader.vehicle_number,ReceiptHeader.bata).limit(500).all()
         if page_size:
             receiptDetails = receiptDetails.limit(page_size)
         if page: 
@@ -121,6 +125,8 @@ def get_receipt_details(params,page, page_size,session):
         challan_date = params.get('challan_date',None)
         from_receipt_date = params.get('from_receipt_date',None)
         to_receipt_date = params.get('to_receipt_date',None)
+        from_challan_date = params.get('from_challan_date',None)
+        to_challan_date = params.get('to_challan_date',None)
         source_transaction_header_id = params.get('source_transaction_header_id',None)
         source_transaction_type = params.get('source_transaction_type',None)
         receipt_header_status = params.get('receipt_header_status',None)
@@ -139,9 +145,13 @@ def get_receipt_details(params,page, page_size,session):
         if challan_date:
             conditions.append(ReceiptHeader.challan_date == challan_date)
         if from_receipt_date:
-            conditions.append(ReceiptHeader.creation_date >= from_receipt_date)
+            conditions.append(ReceiptHeader.receipt_date >= from_receipt_date)
         if to_receipt_date:
-            conditions.append(ReceiptHeader.creation_date <= to_receipt_date)   
+            conditions.append(ReceiptHeader.receipt_date <= to_receipt_date) 
+        if from_challan_date:
+            conditions.append(ReceiptHeader.challan_date >= from_challan_date)
+        if to_challan_date:
+            conditions.append(ReceiptHeader.challan_date <= to_challan_date)      
         if source_transaction_header_id:
             conditions.append(ReceiptHeader.source_transaction_header_id == source_transaction_header_id)
         if source_transaction_type:
@@ -167,6 +177,7 @@ def get_receipt_details(params,page, page_size,session):
         dict['challan_date'] = receiptDetail[4]
         dict['vehicle_number'] = receiptDetail[5]
         dict['receipt_header_status'] = receiptDetail[6]
+        dict['bata'] = receiptDetail[7]
         
         resultL.append(dict)    
             
