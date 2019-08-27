@@ -64,7 +64,7 @@ def get_purchase_transaction_details(params,page, page_size,session):
         order_status = params.get('order_status',None)
         
         purchaseTrxDetails = session.query(PurchaseTrxHeader.purchase_trx_number,PurchaseTrxHeader.transaction_date
-                                           ,SupplierMasterHeader.supplier_name,PurchaseTrxHeader.order_status).join(SupplierMasterHeader,PurchaseTrxHeader.supplier_id==SupplierMasterHeader.supplier_id)
+                                           ,SupplierMasterHeader.supplier_name,PurchaseTrxHeader.order_status).join(SupplierMasterHeader,PurchaseTrxHeader.supplier_id==SupplierMasterHeader.supplier_id).order_by(PurchaseTrxHeader.purchase_trx_number)
          
         conditions = []
         if purchase_trx_number:

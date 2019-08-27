@@ -12,6 +12,7 @@ from sqlalchemy.sql.expression import and_
 from falcon.http_error import HTTPError
 from falcon import status_codes
 from sqlalchemy import func
+import datetime
 
 @db_transaction
 def create_challan(raw_data, session):
@@ -105,6 +106,7 @@ def update_receipt_data(raw_data, session):
         else:
             if is_receipt_complete:
                 challanheader.receipt_header_status = 'COMPLETE'
+                challanheader.receipt_date = datetime.datetime.utcnow
         
 
 @db_transaction
