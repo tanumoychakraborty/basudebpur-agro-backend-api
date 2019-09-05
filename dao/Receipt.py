@@ -20,18 +20,12 @@ def create_challan(raw_data, session):
     Challan_number = session.query(func.apps.generate_challan_number()).first()
     challanheader.challan_number = Challan_number[0]
     challanheader.created_by = raw_data['created_by']
-    #challanheader.challan_date= raw_data['challan_date']
+    challanheader.challan_date = datetime.datetime.utcnow()
     challanheader.last_updated_by = raw_data['last_updated_by']
     challanheader.source_transaction_header_id = raw_data['source_transaction_header_id']
-    challanheader.source_transaction_type = raw_data['source_transaction_type']
-    challanheader.bata = raw_data['bata']
-    
+    challanheader.source_transaction_type = raw_data['source_transaction_type']    
     challanheader.receipt_header_status = 'OPEN'
-    #challanheader.vehicle_number = raw_data['vehicle_number']
-    x = session.add(challanheader)
-    
-    #Challan_number = dict(Challan_number.__dict__)
-    #Challan_number.pop('_sa_instance_state')
+    session.add(challanheader)
     
     challan =  dict(challanheader.__dict__)
     challan.pop('_sa_instance_state')
@@ -44,59 +38,91 @@ def update_receipt_data(raw_data, session):
     challanheader = session.query(ReceiptHeader).filter_by(challan_number=challan_number).first()
     if challanheader is None:
         raise HTTPError(status=status_codes.HTTP_404, errors="Challan number does not exist")
-    
-    #receipt_number = session.query(func.apps.generate_receipt_number()).first()
-    #challanheader.receipt_number = receipt_number[0]
-    #challanheader.receipt_date = raw_data['receipt_date']
-    if 'challan_date' in raw_data.keys():
-        challanheader.challan_date = raw_data['challan_date']
-    #challanheader.source_transaction_header_id = raw_data['source_transaction_header_id']
-    #challanheader.source_transaction_type = raw_data['source_transaction_type']
     if 'vehicle_number' in raw_data.keys():
         challanheader.vehicle_number = raw_data['vehicle_number']
     if 'bata' in raw_data.keys():    
         challanheader.bata = raw_data['bata']    
     if 'receipt_header_status' in raw_data.keys():
         challanheader.receipt_header_status = raw_data['receipt_header_status']
+    if 'net_weight' in raw_data.keys():
+        challanheader.net_weight = raw_data['net_weight']
+    if 'average_weight' in raw_data.keys():
+        challanheader.average_weight = raw_data['average_weight']
+    if 'unit_of_measure' in raw_data.keys():
+        challanheader.unit_of_measure = raw_data['unit_of_measure']
+    if 'total_bags' in raw_data.keys():
+        challanheader.total_bags = raw_data['total_bags']
     challanheader.last_updated_by = get_user_id_by_user_name(raw_data['last_updated_by'])
     
     challanLines = []
-    is_receipt_complete = True
+    is_receipt_complete = False
     if 'receipt_lines' in raw_data.keys():
         for challan_line in raw_data['receipt_lines']:
             if 'receipt_line_id' in challan_line.keys():
                 for challanLine in challanheader.receipt_lines:
                     if challan_line["receipt_line_id"] == challanLine.receipt_line_id:
-                        challanLine.item_id = challan_line['item_id']
-                        challanLine.line_number = challan_line['line_number']
-                        #challanLine.load_unload_number = challan_line['load_unload_number']
-                        challanLine.load_unload_area = challan_line['load_unload_area']
-                        challanLine.weighing_number = challan_line['weighing_number']
-                        challanLine.receipt_line_status = challan_line['receipt_line_status']
-                        challanLine.quantity = challan_line['quantity']
-                        challanLine.unit_price = challan_line['unit_price']
-                        challanLine.unit_of_measure = challan_line['unit_of_measure']
-                        challanLine.discount = challan_line['discount']
-                        challanLine.last_updated_by = get_user_id_by_user_name(challan_line['last_updated_by'])   
+                        if 'item_id' in challan_line.keys():
+                            challanLine.item_id = challan_line['item_id']
+                        if 'description' in challan_line.keys():
+                            challanLine.description = challan_line['description']
+                        if 'line_number' in challan_line.keys():
+                            challanLine.line_number = challan_line['line_number']
+                        if 'load_unload_number' in challan_line.keys():
+                            challanLine.load_unload_number = challan_line['load_unload_number']
+                        if 'load_unload_area' in challan_line.keys():
+                            challanLine.load_unload_area = challan_line['load_unload_area']
+                        if 'weighing_number' in challan_line.keys():
+                            challanLine.weighing_number = challan_line['weighing_number']
+                        if 'receipt_line_status' in challan_line.keys():
+                            challanLine.receipt_line_status = challan_line['receipt_line_status']
+                        if 'quantity' in challan_line.keys():
+                            challanLine.quantity = challan_line['quantity']
+                        if 'number_of_bags' in challan_line.keys():
+                            challanLine.number_of_bags = challan_line['number_of_bags']
+                        if 'unit_price' in challan_line.keys():
+                            challanLine.unit_price = challan_line['unit_price']
+                        if 'unit_of_measure' in challan_line.keys():
+                            challanLine.unit_of_measure = challan_line['unit_of_measure']
+                        if 'discount' in challan_line.keys():
+                            challanLine.discount = challan_line['discount']
+                        if 'last_updated_by' in challan_line.keys():
+                            challanLine.last_updated_by = get_user_id_by_user_name(challan_line['last_updated_by'])   
                         if challan_line['receipt_line_status'] == 'COMPLETE':
-                            is_receipt_complete = is_receipt_complete and True
+                            is_receipt_complete = is_receipt_complete or True
+                        else:
+                            is_receipt_complete = is_receipt_complete and False
                             
                         break
             else:
-                        chalanLine = ReceiptLines()
-                        chalanLine.item_id = challan_line['item_id']
-                        chalanLine.line_number = challan_line['line_number']
-                        #chalanLine.load_unload_number = challan_line['load_unload_number']
-                        chalanLine.load_unload_area = challan_line['load_unload_area']
-                        chalanLine.weighing_number = challan_line['weighing_number']
-                        chalanLine.receipt_line_status = challan_line['receipt_line_status']
-                        chalanLine.quantity = challan_line['quantity']
-                        chalanLine.unit_price = challan_line['unit_price']
-                        chalanLine.unit_of_measure = challan_line['unit_of_measure']
-                        chalanLine.discount = challan_line['discount']
-                        chalanLine.last_updated_by = get_user_id_by_user_name(challan_line['last_updated_by'])
-                        chalanLine.created_by = get_user_id_by_user_name(challan_line['last_updated_by'])
-                        challanLines.append(chalanLine)
+                        challanLine = ReceiptLines()
+                        if 'item_id' in challan_line.keys():
+                            challanLine.item_id = challan_line['item_id']
+                        if 'description' in challan_line.keys():
+                            challanLine.description = challan_line['description']
+                        if 'line_number' in challan_line.keys():
+                            challanLine.line_number = challan_line['line_number']
+                        if 'load_unload_number' in challan_line.keys():
+                            challanLine.load_unload_number = challan_line['load_unload_number']
+                        if 'load_unload_area' in challan_line.keys():
+                            challanLine.load_unload_area = challan_line['load_unload_area']
+                        if 'weighing_number' in challan_line.keys():
+                            challanLine.weighing_number = challan_line['weighing_number']
+                        if 'receipt_line_status' in challan_line.keys():
+                            challanLine.receipt_line_status = challan_line['receipt_line_status']
+                        if 'quantity' in challan_line.keys():
+                            challanLine.quantity = challan_line['quantity']
+                        if 'number_of_bags' in challan_line.keys():
+                            challanLine.number_of_bags = challan_line['number_of_bags']
+                        if 'unit_price' in challan_line.keys():
+                            challanLine.unit_price = challan_line['unit_price']
+                        if 'unit_of_measure' in challan_line.keys():
+                            challanLine.unit_of_measure = challan_line['unit_of_measure']
+                        if 'discount' in challan_line.keys():
+                            challanLine.discount = challan_line['discount']
+                        if 'last_updated_by' in challan_line.keys():
+                            challanLine.last_updated_by = get_user_id_by_user_name(challan_line['last_updated_by'])
+                            challanLine.created_by = get_user_id_by_user_name(challan_line['last_updated_by'])
+                        challanLines.append(challanLine)
                         is_receipt_complete = is_receipt_complete and False
                         
         
@@ -106,15 +132,16 @@ def update_receipt_data(raw_data, session):
         else:
             if is_receipt_complete:
                 challanheader.receipt_header_status = 'COMPLETE'
-                challanheader.receipt_date = datetime.datetime.utcnow
+                challanheader.receipt_date = datetime.datetime.utcnow()
         
 
 @db_transaction
 def get_receipt_details(params,page, page_size,session):
     resultL = []
     if params is None:
-        receiptDetails = session.query(ReceiptHeader.receipt_header_id,ReceiptHeader.receipt_number,ReceiptHeader.challan_number,
-                                           ReceiptHeader.receipt_date,ReceiptHeader.challan_date,ReceiptHeader.vehicle_number,ReceiptHeader.bata).limit(500).all()
+        receiptDetails = session.query(ReceiptHeader.receipt_header_id, ReceiptHeader.receipt_number, ReceiptHeader.challan_number, ReceiptHeader.receipt_date, ReceiptHeader.challan_date, 
+                                           ReceiptHeader.vehicle_number, ReceiptHeader.receipt_header_status, ReceiptHeader.bata, ReceiptHeader.source_transaction_header_id, ReceiptHeader.net_weight, 
+                                           ReceiptHeader.average_weight, ReceiptHeader.unit_of_measure, ReceiptHeader.total_bags).limit(500).all()
         if page_size:
             receiptDetails = receiptDetails.limit(page_size)
         if page: 
@@ -133,8 +160,9 @@ def get_receipt_details(params,page, page_size,session):
         source_transaction_type = params.get('source_transaction_type',None)
         receipt_header_status = params.get('receipt_header_status',None)
         
-        receiptDetails = session.query(ReceiptHeader.receipt_header_id,ReceiptHeader.receipt_number,ReceiptHeader.challan_number,
-                                           ReceiptHeader.receipt_date,ReceiptHeader.challan_date, ReceiptHeader.vehicle_number, ReceiptHeader.receipt_header_status)
+        receiptDetails = session.query(ReceiptHeader.receipt_header_id, ReceiptHeader.receipt_number, ReceiptHeader.challan_number, ReceiptHeader.receipt_date, ReceiptHeader.challan_date, 
+                                           ReceiptHeader.vehicle_number, ReceiptHeader.receipt_header_status, ReceiptHeader.bata, ReceiptHeader.source_transaction_header_id,  
+                                           ReceiptHeader.net_weight, ReceiptHeader.average_weight, ReceiptHeader.unit_of_measure, ReceiptHeader.total_bags)
         conditions = []
         if receipt_header_id:
             conditions.append(ReceiptHeader.receipt_header_id == receipt_header_id)
@@ -180,6 +208,11 @@ def get_receipt_details(params,page, page_size,session):
         dict['vehicle_number'] = receiptDetail[5]
         dict['receipt_header_status'] = receiptDetail[6]
         dict['bata'] = receiptDetail[7]
+        dict['source_transaction_header_id'] = receiptDetail[8]
+        dict['net_weight'] = receiptDetail[9]
+        dict['average_weight'] = receiptDetail[10]
+        dict['unit_of_measure'] = receiptDetail[11]
+        dict['total_bags'] = receiptDetail[12]
         
         resultL.append(dict)    
             

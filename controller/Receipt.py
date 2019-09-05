@@ -58,7 +58,7 @@ class Receipt(object):
             data['last_updated_by'] = user
             data['created_by'] = user
             challan_data = create_challan(data)
-            resp.body = json.dumps(challan_data)
+            resp.body = json.dumps(challan_data, default=str)
             resp.status = falcon.HTTP_200
             return resp
   

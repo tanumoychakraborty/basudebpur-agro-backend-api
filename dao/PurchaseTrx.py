@@ -110,39 +110,45 @@ def update_purchase_trx(raw_data,session):
     purchasetrxheader = session.query(PurchaseTrxHeader).filter_by(purchase_trx_number=purchase_trx_number).first()
     if purchasetrxheader is None:
         raise HTTPError(status=status_codes.HTTP_404, errors="Purchase Transaction number does not exist")
-    purchasetrxheader.transaction_date = raw_data['transaction_date']
-    purchasetrxheader.order_status = raw_data['order_status']
-    purchasetrxheader.buyer_id = raw_data['buyer_id']
-    purchasetrxheader.supplier_id = raw_data['supplier_id']
-    purchasetrxheader.last_updated_by = raw_data['last_updated_by']
+    if 'transaction_date' in raw_data.keys():
+        purchasetrxheader.transaction_date = raw_data['transaction_date']
+    if 'order_status' in raw_data.keys():
+        purchasetrxheader.order_status = raw_data['order_status']
+    if 'buyer_id' in raw_data.keys():
+        purchasetrxheader.buyer_id = raw_data['buyer_id']
+    if 'supplier_id' in raw_data.keys():
+        purchasetrxheader.supplier_id = raw_data['supplier_id']
+    if 'last_updated_by' in raw_data.keys():
+        purchasetrxheader.last_updated_by = raw_data['last_updated_by']
     
     purchasetrxLines = []
     
-    for purchase_trx_line in raw_data['purchase_trx_lines']:
-        if 'transaction_line_id' in purchase_trx_line.keys():
-            for trx_line in purchasetrxheader.purchase_trx_lines:
-                if purchase_trx_line["transaction_line_id"] == trx_line.transaction_line_id:
-                    trx_line.item_id = purchase_trx_line['item_id']
-                    #trx_line.line_number = purchase_trx_line['line_number']
-                    trx_line.booking_unit_price = purchase_trx_line['booking_unit_price']
-                    trx_line.booking_quantity = purchase_trx_line['booking_quantity']
-                    trx_line.unit_of_measure = purchase_trx_line['unit_of_measure']
-                    #trx_line.created_by = purchase_trx_line['created_by']
-                    trx_line.last_updated_by = purchase_trx_line['last_updated_by']   
-                    break
-        else:
-            purchasetrxLine = PurchaseTrxLines()
-            purchasetrxLine.item_id = purchase_trx_line['item_id']
-            purchasetrxLine.line_number = purchase_trx_line['line_number']
-            purchasetrxLine.booking_unit_price = purchase_trx_line['booking_unit_price']
-            purchasetrxLine.booking_quantity = purchase_trx_line['booking_quantity']
-            purchasetrxLine.unit_of_measure = purchase_trx_line['unit_of_measure']
-            purchasetrxLine.created_by = purchase_trx_line['created_by']
-            purchasetrxLine.last_updated_by = purchase_trx_line['last_updated_by']   
-            purchasetrxLines.append(purchasetrxLine)
-    
-    if len(purchasetrxLines) > 0:
-        purchasetrxheader.purchase_trx_lines.extend(purchasetrxLines)
+    if 'purchase_trx_lines' in raw_data.keys():
+        for purchase_trx_line in raw_data['purchase_trx_lines']:
+            if 'transaction_line_id' in purchase_trx_line.keys():
+                for trx_line in purchasetrxheader.purchase_trx_lines:
+                    if purchase_trx_line["transaction_line_id"] == trx_line.transaction_line_id:
+                        trx_line.item_id = purchase_trx_line['item_id']
+                        #trx_line.line_number = purchase_trx_line['line_number']
+                        trx_line.booking_unit_price = purchase_trx_line['booking_unit_price']
+                        trx_line.booking_quantity = purchase_trx_line['booking_quantity']
+                        trx_line.unit_of_measure = purchase_trx_line['unit_of_measure']
+                        #trx_line.created_by = purchase_trx_line['created_by']
+                        trx_line.last_updated_by = purchase_trx_line['last_updated_by']   
+                        break
+            else:
+                purchasetrxLine = PurchaseTrxLines()
+                purchasetrxLine.item_id = purchase_trx_line['item_id']
+                purchasetrxLine.line_number = purchase_trx_line['line_number']
+                purchasetrxLine.booking_unit_price = purchase_trx_line['booking_unit_price']
+                purchasetrxLine.booking_quantity = purchase_trx_line['booking_quantity']
+                purchasetrxLine.unit_of_measure = purchase_trx_line['unit_of_measure']
+                purchasetrxLine.created_by = purchase_trx_line['created_by']
+                purchasetrxLine.last_updated_by = purchase_trx_line['last_updated_by']   
+                purchasetrxLines.append(purchasetrxLine)
+        
+        if len(purchasetrxLines) > 0:
+            purchasetrxheader.purchase_trx_lines.extend(purchasetrxLines)
             
 
 @db_transaction
