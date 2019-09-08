@@ -11,6 +11,7 @@ from sqlalchemy.sql.expression import and_
 from falcon.http_error import HTTPError
 from falcon import status_codes
 from sqlalchemy import func
+from dao.Users import get_user_id_by_user_name
 
 
 
@@ -119,7 +120,7 @@ def update_purchase_trx(raw_data,session):
     if 'supplier_id' in raw_data.keys():
         purchasetrxheader.supplier_id = raw_data['supplier_id']
     if 'last_updated_by' in raw_data.keys():
-        purchasetrxheader.last_updated_by = raw_data['last_updated_by']
+        purchasetrxheader.last_updated_by = get_user_id_by_user_name(raw_data['last_updated_by'])
     
     purchasetrxLines = []
     
@@ -134,7 +135,7 @@ def update_purchase_trx(raw_data,session):
                         trx_line.booking_quantity = purchase_trx_line['booking_quantity']
                         trx_line.unit_of_measure = purchase_trx_line['unit_of_measure']
                         #trx_line.created_by = purchase_trx_line['created_by']
-                        trx_line.last_updated_by = purchase_trx_line['last_updated_by']   
+                        trx_line.last_updated_by = get_user_id_by_user_name(purchase_trx_line['last_updated_by'])   
                         break
             else:
                 purchasetrxLine = PurchaseTrxLines()
@@ -143,8 +144,8 @@ def update_purchase_trx(raw_data,session):
                 purchasetrxLine.booking_unit_price = purchase_trx_line['booking_unit_price']
                 purchasetrxLine.booking_quantity = purchase_trx_line['booking_quantity']
                 purchasetrxLine.unit_of_measure = purchase_trx_line['unit_of_measure']
-                purchasetrxLine.created_by = purchase_trx_line['created_by']
-                purchasetrxLine.last_updated_by = purchase_trx_line['last_updated_by']   
+                purchasetrxLine.created_by = get_user_id_by_user_name(purchase_trx_line['created_by'])
+                purchasetrxLine.last_updated_by = get_user_id_by_user_name(purchase_trx_line['last_updated_by'])   
                 purchasetrxLines.append(purchasetrxLine)
         
         if len(purchasetrxLines) > 0:

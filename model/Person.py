@@ -25,7 +25,7 @@ class Person (Base):
     effective_from = Column('effective_from', DateTime)
     effective_to = Column('effective_to', DateTime)
     created_by = Column('created_by', Integer)
-    creation_date = Column('effective_from', DateTime)
+    creation_date = Column('creation_date', DateTime)
     last_updated_by = Column('last_updated_by', Integer)
     last_update_date = Column('last_update_date', DateTime)
     
