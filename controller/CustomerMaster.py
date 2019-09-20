@@ -77,12 +77,14 @@ class CustomerMaster(object):
             update customer data into database
             """ 
             data = req.context['serialized-data']  
-            data['last_updated_by'] = get_user_id_by_user_name(data['created_by'])
-            for line in data['customer_master_sites']:
-                line['last_updated_by'] = get_user_id_by_user_name(data['created_by'])
-                if 'customer_site_id' not in line.keys():
-                    line['created_by'] = get_user_id_by_user_name(data['created_by'])
-                    line['last_updated_by'] = get_user_id_by_user_name(data['created_by'])
+            user = get_user_id_by_user_name(data['last_updated_by'])
+            data['last_updated_by'] = user
+            if 'customer_master_sites' in data.keys():
+                if len(data['customer_master_sites']) > 0:
+                    for line in data['customer_master_sites']:
+                        line['last_updated_by'] = user
+                        if 'customer_site_id' not in line.keys():
+                            line['created_by'] = user
             update_customer(data)
             output = {'Status': falcon.HTTP_200, 'Message': "Customer data updated successfully for: " + data['customer_code']}
             resp.status = falcon.HTTP_200

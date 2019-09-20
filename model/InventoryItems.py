@@ -5,7 +5,7 @@ Created on 11-Nov-2018
 '''
 from model import Base
 from sqlalchemy.sql.schema import Column, Sequence
-from sqlalchemy.sql.sqltypes import String, Integer, DateTime, Date
+from sqlalchemy.sql.sqltypes import String, Integer, DateTime, Float
 import datetime
 
 class InventoryItems (Base):
@@ -31,6 +31,9 @@ class InventoryItems (Base):
     min_order_quantity = Column('min_order_quantity', String)
     max_order_quantity = Column('max_order_quantity', String)
     planner_code = Column('planner_code', String)
+    transaction_uom = Column('transaction_uom', String)
+    conversion = Column('conversion', Float)
+    base_uom = Column('base_uom', String)
     created_by = Column('created_by', Integer)
     creation_date = Column('creation_date', DateTime,default=datetime.datetime.utcnow)
     last_update_date = Column('last_update_date', DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)

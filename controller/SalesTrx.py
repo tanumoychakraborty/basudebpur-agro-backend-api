@@ -32,7 +32,7 @@ class SalesTrx(object):
             #data['sales_rep_id'] = get_user_id_by_user_name(data['sales_rep_id'])
             user = get_user_id_by_user_name(data['created_by'])
             data['last_updated_by'] = user
-            data['sales_rep_id'] = user
+            data['sales_rep_id'] = get_user_id_by_user_name(data['sales_rep_id'])
             data['created_by'] = user
             for line in data['sales_trx_lines']:
                 line['last_updated_by'] = user

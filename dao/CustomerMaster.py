@@ -69,32 +69,51 @@ def search_customer_details(params,page, page_size,session):
 @db_transaction
 def create_customer(raw_data, session):
     customerMasterHeader = CustomerMasterHeader()
-    customerMasterHeader.customer_code = raw_data['customer_code']
-    customerMasterHeader.customer_name = raw_data['customer_name']
-    customerMasterHeader.description = raw_data['description']
-    customerMasterHeader.customer_type = raw_data['customer_type']
-    customerMasterHeader.remarks = raw_data['remarks']
-    customerMasterHeader.enabled_flag = raw_data['enabled_flag']
-    customerMasterHeader.effective_from = raw_data['effective_from']
-    customerMasterHeader.effective_to = raw_data['effective_to']
-    customerMasterHeader.created_by = raw_data['created_by']
-    customerMasterHeader.last_updated_by = raw_data['last_updated_by'] 
+    if 'customer_code' in raw_data.keys():
+        customerMasterHeader.customer_code = raw_data['customer_code']
+    if 'customer_name' in raw_data.keys():
+        customerMasterHeader.customer_name = raw_data['customer_name']
+    if 'description' in raw_data.keys():
+        customerMasterHeader.description = raw_data['description']
+    if 'customer_type' in raw_data.keys():
+        customerMasterHeader.customer_type = raw_data['customer_type']
+    if 'remarks' in raw_data.keys():
+        customerMasterHeader.remarks = raw_data['remarks']
+    if 'enabled_flag' in raw_data.keys():
+        customerMasterHeader.enabled_flag = raw_data['enabled_flag']
+    if 'effective_from' in raw_data.keys():
+        customerMasterHeader.effective_from = raw_data['effective_from']
+    if 'effective_to' in raw_data.keys():
+        customerMasterHeader.effective_to = raw_data['effective_to']
+    if 'created_by' in raw_data.keys():
+        customerMasterHeader.created_by = raw_data['created_by']
+    if 'last_updated_by' in raw_data.keys():
+        customerMasterHeader.last_updated_by = raw_data['last_updated_by'] 
         
     CustomerMasterSitesList = []
     for customer_master_Site in raw_data['customer_master_sites']:
         CustomerMasterSite = CustomerMasterSites()
-        CustomerMasterSite.customer_site_code = customer_master_Site['customer_site_code']
-        CustomerMasterSite.customer_site_address = customer_master_Site['customer_address']
-        CustomerMasterSite.phone_number1 = customer_master_Site['phone_number1']
-        CustomerMasterSite.phone_number2 = customer_master_Site['phone_number2']
-        CustomerMasterSite.email = customer_master_Site['email']
+        if 'customer_site_code' in customer_master_Site.keys():
+            CustomerMasterSite.customer_site_code = customer_master_Site['customer_site_code']
+        if 'customer_address' in customer_master_Site.keys():
+            CustomerMasterSite.customer_site_address = customer_master_Site['customer_address']
+        if 'phone_number1' in customer_master_Site.keys():
+            CustomerMasterSite.phone_number1 = customer_master_Site['phone_number1']
+        if 'phone_number2' in customer_master_Site.keys():
+            CustomerMasterSite.phone_number2 = customer_master_Site['phone_number2']
+        if 'email' in customer_master_Site.keys():
+            CustomerMasterSite.email = customer_master_Site['email']
         '''
                 other fields also need to include
         '''
-        CustomerMasterSite.effective_from = raw_data['effective_from']
-        CustomerMasterSite.effective_to = raw_data['effective_to']
-        CustomerMasterSite.created_by = customer_master_Site['created_by']
-        CustomerMasterSite.last_updated_by = customer_master_Site['last_updated_by']   
+        if 'effective_from' in customer_master_Site.keys():
+            CustomerMasterSite.effective_from = raw_data['effective_from']
+        if 'effective_to' in customer_master_Site.keys():
+            CustomerMasterSite.effective_to = raw_data['effective_to']
+        if 'created_by' in customer_master_Site.keys():
+            CustomerMasterSite.created_by = customer_master_Site['created_by']
+        if 'last_updated_by' in customer_master_Site.keys():
+            CustomerMasterSite.last_updated_by = customer_master_Site['last_updated_by']   
         CustomerMasterSitesList.append(CustomerMasterSite)
             
     customerMasterHeader.sites = CustomerMasterSitesList
@@ -112,14 +131,22 @@ def update_customer(raw_data,session):
     if customerMasterHeader is None:
         raise HTTPError(status=status_codes.HTTP_404, errors="Customer does not exist")
     
-    customerMasterHeader.customer_name = raw_data['customer_name']
-    customerMasterHeader.description = raw_data['description']
-    customerMasterHeader.customer_type = raw_data['customer_type']
-    customerMasterHeader.remarks = raw_data['remarks']
-    customerMasterHeader.enabled_flag = raw_data['enabled_flag']
-    customerMasterHeader.effective_from = raw_data['effective_from']
-    customerMasterHeader.effective_to = raw_data['effective_to']
-    customerMasterHeader.last_updated_by = raw_data['last_updated_by']
+    if 'customer_name' in raw_data.keys():
+        customerMasterHeader.customer_name = raw_data['customer_name']
+    if 'description' in raw_data.keys():
+        customerMasterHeader.description = raw_data['description']
+    if 'customer_type' in raw_data.keys():
+        customerMasterHeader.customer_type = raw_data['customer_type']
+    if 'remarks' in raw_data.keys():
+        customerMasterHeader.remarks = raw_data['remarks']
+    if 'enabled_flag' in raw_data.keys():
+        customerMasterHeader.enabled_flag = raw_data['enabled_flag']
+    if 'effective_from' in raw_data.keys():
+        customerMasterHeader.effective_from = raw_data['effective_from']
+    if 'effective_to' in raw_data.keys():
+        customerMasterHeader.effective_to = raw_data['effective_to']
+    if 'last_updated_by' in raw_data.keys():
+        customerMasterHeader.last_updated_by = raw_data['last_updated_by']
     
     new_customer_sites = []
     
@@ -127,27 +154,44 @@ def update_customer(raw_data,session):
         for customer_site in customerMasterHeader.sites:
             if 'customer_site_id' in customer_master_site.keys():
                 if customer_master_site["customer_site_id"] == customer_site.customer_site_id:
-                    customer_site.customer_site_code = customer_master_site['customer_site_code']
-                    customer_site.customer_address = customer_master_site['customer_address']
-                    customer_site.phone_number1 = customer_master_site['phone_number1']
-                    customer_site.phone_number2 = customer_master_site['phone_number2']
-                    customer_site.email = customer_master_site['email']
-                    customer_site.effective_from = customer_master_site['effective_from']
-                    customer_site.effective_to = customer_master_site['effective_to']
-                    customer_site.last_updated_by = customer_master_site['last_updated_by'] 
+                    if 'customer_site_code' in customer_master_site.keys():
+                        customer_site.customer_site_code = customer_master_site['customer_site_code']
+                    if 'customer_address' in customer_master_site.keys():
+                        customer_site.customer_address = customer_master_site['customer_address']
+                    if 'phone_number1' in customer_master_site.keys():
+                        customer_site.phone_number1 = customer_master_site['phone_number1']
+                    if 'phone_number2' in customer_master_site.keys():
+                        customer_site.phone_number2 = customer_master_site['phone_number2']
+                    if 'email' in customer_master_site.keys():
+                        customer_site.email = customer_master_site['email']
+                    if 'effective_from' in customer_master_site.keys():
+                        customer_site.effective_from = customer_master_site['effective_from']
+                    if 'effective_to' in customer_master_site.keys():
+                        customer_site.effective_to = customer_master_site['effective_to']
+                    if 'last_updated_by' in customer_master_site.keys():
+                        customer_site.last_updated_by = customer_master_site['last_updated_by'] 
                     break
             else:
-                CustomerMasterSite = CustomerMasterSites()
-                customer_site.customer_site_code = customer_master_site['customer_site_code']
-                customer_site.customer_address = customer_master_site['customer_address']
-                customer_site.phone_number1 = customer_master_site['phone_number1']
-                customer_site.phone_number2 = customer_master_site['phone_number2']
-                customer_site.email = customer_master_site['email']
-                customer_site.effective_from = customer_master_site['effective_from']
-                customer_site.effective_to = customer_master_site['effective_to']
-                CustomerMasterSite.created_by = customer_master_site['created_by']
-                CustomerMasterSite.last_updated_by = customer_master_site['last_updated_by']   
-                new_customer_sites.append(CustomerMasterSite)
+                new_customer_site = CustomerMasterSites()
+                if 'customer_site_code' in customer_master_site.keys():
+                    new_customer_site.customer_site_code = customer_master_site['customer_site_code']
+                if 'customer_address' in customer_master_site.keys():
+                    new_customer_site.customer_address = customer_master_site['customer_address']
+                if 'phone_number1' in customer_master_site.keys():
+                    new_customer_site.phone_number1 = customer_master_site['phone_number1']
+                if 'phone_number2' in customer_master_site.keys():
+                    new_customer_site.phone_number2 = customer_master_site['phone_number2']
+                if 'email' in customer_master_site.keys():
+                    new_customer_site.email = customer_master_site['email']
+                if 'effective_from' in customer_master_site.keys():
+                    new_customer_site.effective_from = customer_master_site['effective_from']
+                if 'effective_to' in customer_master_site.keys():
+                    new_customer_site.effective_to = customer_master_site['effective_to']
+                if 'created_by' in customer_master_site.keys():
+                    new_customer_site.created_by = customer_master_site['created_by']
+                if 'last_updated_by' in customer_master_site.keys():
+                    new_customer_site.last_updated_by = customer_master_site['last_updated_by']   
+                new_customer_sites.append(new_customer_site)
                 break
                 
     if len(new_customer_sites) > 0:

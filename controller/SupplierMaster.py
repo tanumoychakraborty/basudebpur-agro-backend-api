@@ -79,9 +79,10 @@ class SupplierMaster(object):
             user = get_user_id_by_user_name(data['last_updated_by'])
             data['last_updated_by'] = user
             for line in data['supplier_master_sites']:
-                line['last_updated_by'] = user
-                if 'supplier_site_id' not in line.keys():
-                    line['created_by'] = user
+                if len(data['customer_master_sites']) > 0:
+                    line['last_updated_by'] = user
+                    if 'supplier_site_id' not in line.keys():
+                        line['created_by'] = user
             update_supplier(data)
             output = {'Status': falcon.HTTP_200, 'Message': "Supplier data updated successfully for: " + data['supplier_code']}
             resp.status = falcon.HTTP_200

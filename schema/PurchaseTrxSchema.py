@@ -12,12 +12,12 @@ class PurchaseTrxHeaderSchema(Schema):
     '''
     
     transaction_date = fields.DateTime('%Y-%m-%d')#fields.DateTime('%Y-%m-%dT%H:%M:%S+03:00')
-    order_status = fields.Str(required=True)
+    order_status = fields.Str(required=False)
     buyer_id = fields.Str(required=True)
-    supplier_id = fields.Int(required=True)
+    supplier_id = fields.Int(required=False)
     created_by = fields.Str(required=True)
     last_updated_by = fields.Str(required=True)
-    purchase_trx_lines = fields.Nested('schema.PurchaseTrxSchema.PurchaseTrxLinesSchema', many=True, required=True)
+    purchase_trx_lines = fields.Nested('schema.PurchaseTrxSchema.PurchaseTrxLinesSchema', many=True, required=False)
     
     
     
@@ -26,12 +26,12 @@ class PurchaseTrxLinesSchema(Schema):
     classdocs
     '''
         
-    item_id = fields.Int(required=True)
-    line_number = fields.Int(required=True)
-    item_description = fields.Str(missing='')
-    booking_unit_price = fields.Float(missing=0)
-    booking_quantity = fields.Float(missing=0)
-    unit_of_measure = fields.Str(missing='')
+    item_id = fields.Int(required=False)
+    line_number = fields.Int(required=False)
+    item_description = fields.Str(required=False)
+    booking_unit_price = fields.Float(required=False)
+    booking_quantity = fields.Float(required=False)
+    unit_of_measure = fields.Str(required=False)
     created_by = fields.Str(required=True)
     last_updated_by = fields.Str(required=True)
     
@@ -60,13 +60,13 @@ class PurchaseTrxLinesUpdateSchema(Schema):
     '''
     classdocs
     '''
-    transaction_line_id = fields.Int()   
-    transaction_header_id = fields.Int()
-    item_id = fields.Int(required=True)
-    line_number = fields.Int(required=True)
-    booking_unit_price = fields.Float(missing=0)
-    booking_quantity = fields.Float(missing=0)
-    unit_of_measure = fields.Str()
+    transaction_line_id = fields.Int(required=False)   
+    transaction_header_id = fields.Int(required=False)
+    item_id = fields.Int(required=False)
+    line_number = fields.Int(required=False)
+    booking_unit_price = fields.Float(required=False)
+    booking_quantity = fields.Float(required=False)
+    unit_of_measure = fields.Str(required=False)
     created_by = fields.Str(required=False)
     last_updated_by = fields.Str(required=True)
     

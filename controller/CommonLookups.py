@@ -45,6 +45,13 @@ class CommonLookups(object):
                 return
             payload['UnitOfMeasure'] = uom 
             
+        elif lookupName == "SALES_ORDER_TYPE":
+            so_type = get_lookup_values(lookupName)
+            if so_type is None:
+                resp.status = falcon.HTTP_404
+                return
+            payload['salesOrderType'] = so_type 
+            
         else:
             lookup_details = get_lookup_values(lookupName)
             if lookup_details is None:
