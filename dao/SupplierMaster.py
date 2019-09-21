@@ -7,6 +7,8 @@ from model.SupplierMasterHeader import SupplierMasterHeader
 from model.SupplierMasterSites import SupplierMasterSites
 from util.db_helper import db_transaction
 from sqlalchemy.sql.expression import and_
+from falcon import status_codes
+from falcon.http_error import HTTPError
 
 
 @db_transaction
@@ -34,14 +36,22 @@ def get_supplier_details(session):
 @db_transaction
 def create_supplier(raw_data, session):
     supplierMasterHeader = SupplierMasterHeader()
-    supplierMasterHeader.supplier_code = raw_data['supplier_code']
-    supplierMasterHeader.supplier_name = raw_data['supplier_name']
-    supplierMasterHeader.description = raw_data['description']
-    supplierMasterHeader.supplier_type = raw_data['supplier_type']
-    supplierMasterHeader.remarks = raw_data['remarks']
-    supplierMasterHeader.enabled_flag = raw_data['enabled_flag']
-    supplierMasterHeader.effective_from = raw_data['effective_from']
-    supplierMasterHeader.effective_to = raw_data['effective_to']
+    if 'supplier_code' in raw_data:
+        supplierMasterHeader.supplier_code = raw_data['supplier_code']
+    if 'supplier_name' in raw_data:
+        supplierMasterHeader.supplier_name = raw_data['supplier_name']
+    if 'description' in raw_data:
+        supplierMasterHeader.description = raw_data['description']
+    if 'supplier_type' in raw_data:
+        supplierMasterHeader.supplier_type = raw_data['supplier_type']
+    if 'remarks' in raw_data:
+        supplierMasterHeader.remarks = raw_data['remarks']
+    if 'enabled_flag' in raw_data:
+        supplierMasterHeader.enabled_flag = raw_data['enabled_flag']
+    if 'effective_from' in raw_data:
+        supplierMasterHeader.effective_from = raw_data['effective_from']
+    if 'effective_to' in raw_data:
+        supplierMasterHeader.effective_to = raw_data['effective_to']
 #    supplierMasterHeader.employee_id = raw_data['employee_id'] future use
 #    supplierMasterHeader.ship_to_location_code = raw_data['ship_to_location_code']
 #    SupplierMasterHeader.bill_to_location_code = raw_data['bill_to_location_code']
@@ -51,18 +61,24 @@ def create_supplier(raw_data, session):
     SupplierMasterSitesList = []
     for supplier_master_Site in raw_data['supplier_master_sites']:
         SupplierMasterSite = SupplierMasterSites()
-        SupplierMasterSite.supplier_site_code = supplier_master_Site['supplier_site_code']
-        SupplierMasterSite.supplier_site_address = supplier_master_Site['supplier_site_address']
-        SupplierMasterSite.phone_number1 = supplier_master_Site['phone_number1']
-        SupplierMasterSite.phone_number2 = supplier_master_Site['phone_number2']
-        SupplierMasterSite.email = supplier_master_Site['email']
+        if 'supplier_site_code' in supplier_master_Site:
+            SupplierMasterSite.supplier_site_code = supplier_master_Site['supplier_site_code']
+        if 'supplier_site_address' in supplier_master_Site:
+            SupplierMasterSite.supplier_site_address = supplier_master_Site['supplier_site_address']
+        if 'phone_number1' in supplier_master_Site:
+            SupplierMasterSite.phone_number1 = supplier_master_Site['phone_number1']
+        if 'phone_number2' in supplier_master_Site:
+            SupplierMasterSite.phone_number2 = supplier_master_Site['phone_number2']
+        if 'email' in supplier_master_Site:
+            SupplierMasterSite.email = supplier_master_Site['email']
         '''
         SupplierMasterSite.payment_method_lookup_code = Supplier_Master_Site['payment_method_lookup_code']
         SupplierMasterSite.gstin_number = Supplier_Master_Site['gstin_number']
         SupplierMasterSite.pay_group_lookup_code = Supplier_Master_Site['pay_group_lookup_code']
         other fields also need to include
         '''
-        SupplierMasterSite.inactive_date = supplier_master_Site['inactive_date']
+        if 'inactive_date' in supplier_master_Site:
+            SupplierMasterSite.inactive_date = supplier_master_Site['inactive_date']
         SupplierMasterSite.created_by = supplier_master_Site['created_by']
         SupplierMasterSite.last_updated_by = supplier_master_Site['last_updated_by']   
         SupplierMasterSitesList.append(SupplierMasterSite)
@@ -81,13 +97,20 @@ def update_supplier(raw_data,session):
     if supplierMasterHeader is None:
         raise HTTPError(status=status_codes.HTTP_404, errors="Supplier does not exist")
     
-    supplierMasterHeader.supplier_name = raw_data['supplier_name']
-    supplierMasterHeader.description = raw_data['description']
-    supplierMasterHeader.supplier_type = raw_data['supplier_type']
-    supplierMasterHeader.remarks = raw_data['remarks']
-    supplierMasterHeader.enabled_flag = raw_data['enabled_flag']
-    supplierMasterHeader.effective_from = raw_data['effective_from']
-    supplierMasterHeader.effective_to = raw_data['effective_to']
+    if 'supplier_name' in raw_data:
+        supplierMasterHeader.supplier_name = raw_data['supplier_name']
+    if 'description' in raw_data:
+        supplierMasterHeader.description = raw_data['description']
+    if 'supplier_type' in raw_data:
+        supplierMasterHeader.supplier_type = raw_data['supplier_type']
+    if 'remarks' in raw_data:
+        supplierMasterHeader.remarks = raw_data['remarks']
+    if 'enabled_flag' in raw_data:
+        supplierMasterHeader.enabled_flag = raw_data['enabled_flag']
+    if 'effective_from' in raw_data:
+        supplierMasterHeader.effective_from = raw_data['effective_from']
+    if 'effective_to' in raw_data:
+        supplierMasterHeader.effective_to = raw_data['effective_to']
 #    supplierMasterHeader.employee_id = raw_data['employee_id'] future use
 #    supplierMasterHeader.ship_to_location_code = raw_data['ship_to_location_code']
 #    SupplierMasterHeader.bill_to_location_code = raw_data['bill_to_location_code']
@@ -100,35 +123,47 @@ def update_supplier(raw_data,session):
         for supplier_site in supplierMasterHeader.sites:
             if 'supplier_site_id' in supplier_master_site.keys():
                 if supplier_master_site["supplier_site_id"] == supplier_site.supplier_site_id:
-                    supplier_site.supplier_site_code = supplier_master_site['supplier_site_code']
-                    supplier_site.supplier_site_address = supplier_master_site['supplier_site_address']
-                    supplier_site.phone_number1 = supplier_master_site['phone_number1']
-                    supplier_site.phone_number2 = supplier_master_site['phone_number2']
-                    supplier_site.email = supplier_master_site['email']
+                    if 'supplier_site_code' in supplier_master_site.keys():
+                        supplier_site.supplier_site_code = supplier_master_site['supplier_site_code']
+                    if 'supplier_site_address' in supplier_master_site.keys():
+                        supplier_site.supplier_site_address = supplier_master_site['supplier_site_address']
+                    if 'phone_number1' in supplier_master_site.keys():
+                        supplier_site.phone_number1 = supplier_master_site['phone_number1']
+                    if 'phone_number2' in supplier_master_site.keys():
+                        supplier_site.phone_number2 = supplier_master_site['phone_number2']
+                    if 'email' in supplier_master_site.keys():
+                        supplier_site.email = supplier_master_site['email']
                     '''
                     supplier_site.payment_method_lookup_code = Supplier_Master_Site['payment_method_lookup_code']
                     supplier_site.gstin_number = Supplier_Master_Site['gstin_number']
                     supplier_site.pay_group_lookup_code = Supplier_Master_Site['pay_group_lookup_code']
                     other fields also need to include
                     '''
-                    supplier_site.inactive_date = supplier_master_site['inactive_date']
+                    if 'inactive_date' in supplier_master_site.keys():
+                        supplier_site.inactive_date = supplier_master_site['inactive_date']
                     #supplier_site.created_by = supplier_master_site['created_by']
                     supplier_site.last_updated_by = supplier_master_site['last_updated_by'] 
                     break
             else:
                 SupplierMasterSite = SupplierMasterSites()
-                SupplierMasterSite.supplier_site_code = supplier_master_site['supplier_site_code']
-                SupplierMasterSite.supplier_site_address = supplier_master_site['supplier_site_address']
-                SupplierMasterSite.phone_number1 = supplier_master_site['phone_number1']
-                SupplierMasterSite.phone_number2 = supplier_master_site['phone_number2']
-                SupplierMasterSite.email = supplier_master_site['email']
+                if 'supplier_site_code' in supplier_master_site.keys():
+                    SupplierMasterSite.supplier_site_code = supplier_master_site['supplier_site_code']
+                if 'supplier_site_address' in supplier_master_site.keys():
+                    SupplierMasterSite.supplier_site_address = supplier_master_site['supplier_site_address']
+                if 'phone_number1' in supplier_master_site.keys():
+                    SupplierMasterSite.phone_number1 = supplier_master_site['phone_number1']
+                if 'phone_number2' in supplier_master_site.keys():
+                    SupplierMasterSite.phone_number2 = supplier_master_site['phone_number2']
+                if 'email' in supplier_master_site.keys():
+                    SupplierMasterSite.email = supplier_master_site['email']
                 '''
                 SupplierMasterSite.payment_method_lookup_code = Supplier_Master_Site['payment_method_lookup_code']
                 SupplierMasterSite.gstin_number = Supplier_Master_Site['gstin_number']
                 SupplierMasterSite.pay_group_lookup_code = Supplier_Master_Site['pay_group_lookup_code']
                 other fields also need to include
                 '''
-                SupplierMasterSite.inactive_date = supplier_master_site['inactive_date']
+                if 'inactive_date' in supplier_master_site.keys():
+                    SupplierMasterSite.inactive_date = supplier_master_site['inactive_date']
                 SupplierMasterSite.created_by = supplier_master_site['created_by']
                 SupplierMasterSite.last_updated_by = supplier_master_site['last_updated_by']   
                 new_supplier_sites.append(SupplierMasterSite)
