@@ -17,6 +17,6 @@ class dbEngine(object):
     @staticmethod
     def get():
         if not dbEngine.dbengine:
-            dbEngine.dbengine = create_engine('postgresql://basudebpuragrodb:password@localhost:5432/basudebpuragrodb', echo=True)
+            dbEngine.dbengine = create_engine('postgresql://basudebpuragrodb:password@localhost:5432/basudebpuragrodb', pool_size=3, echo=True)
             
         return dbEngine.dbengine
