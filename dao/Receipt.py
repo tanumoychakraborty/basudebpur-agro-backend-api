@@ -17,13 +17,19 @@ import datetime
 @db_transaction
 def create_challan(raw_data, session):
     challanheader = ReceiptHeader()
-    Challan_number = session.query(func.apps.generate_challan_number()).first()
+    challanheader.source_transaction_type = raw_data['source_transaction_type'] 
+        
+    if challanheader.source_transaction_type == 'PURCHASE':
+        Challan_number = session.query(func.apps.generate_purchase_challan_number()).first()
+    if challanheader.source_transaction_type == 'SALES':
+        Challan_number = session.query(func.apps.generate_sales_challan_number()).first()    
+        
     challanheader.challan_number = Challan_number[0]
     challanheader.created_by = raw_data['created_by']
     challanheader.challan_date = datetime.datetime.utcnow()
     challanheader.last_updated_by = raw_data['last_updated_by']
     challanheader.source_transaction_header_id = raw_data['source_transaction_header_id']
-    challanheader.source_transaction_type = raw_data['source_transaction_type']    
+       
     challanheader.receipt_header_status = 'OPEN'
     session.add(challanheader)
     
