@@ -5,7 +5,7 @@ Created on 11-Nov-2018
 '''
 from model import Base
 from sqlalchemy.sql.schema import Column, Sequence
-from sqlalchemy.sql.sqltypes import String, Integer, DateTime, Float
+from sqlalchemy.sql.sqltypes import String, Integer, DateTime, Date,Float
 import datetime
 
 class InventoryItems (Base):

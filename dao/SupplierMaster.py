@@ -171,6 +171,7 @@ def update_supplier(raw_data,session):
                 
     if len(new_supplier_sites) > 0:
         supplierMasterHeader.sites.extend(new_supplier_sites)
+        
                 
 @db_transaction
 def search_supplier_details(params,page, page_size,session):
