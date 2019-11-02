@@ -43,9 +43,13 @@ class InventoryItems(object):
     def on_get(self,req, resp):
         params = req.params
         payload = {}  
-        OperationType = params.get('OperationType',None)     
+        OperationType = params.get('OperationType',None)  
+        source = params.get('source',None)  
         if OperationType == "ITEM_LIST":
-            itemDetails = get_item_details()
+            if source == 'PURCHASE':
+                itemDetails = search_item_details({'item_type':'PADDY'},0,None)
+            elif source == 'SALES':
+                itemDetails = search_item_details({'item_type': ['RICE']},0,None)
             if itemDetails is None:
                 resp.status = falcon.HTTP_404
                 return

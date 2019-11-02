@@ -26,6 +26,10 @@ def search_item_details(params,page, page_size,session):
     if item_number:
             conditions.append(InventoryItems.item_number == item_number)
     if item_type:
+        if type(item_type) == list:
+            for val in item_type:
+                conditions.append(InventoryItems.item_type == val)
+        else:
             conditions.append(InventoryItems.item_type == item_type)
     if description:
             conditions.append(InventoryItems.description == description)
