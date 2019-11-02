@@ -26,7 +26,7 @@ class SalesTrxLinesSchema(Schema):
     classdocs
     '''
         
-    item_id = fields.Int(required=False)
+    item_id = fields.Str(required=False)
     line_number = fields.Int(required=False)
     item_description = fields.Str(required=False)
     booking_unit_price = fields.Float(required=False)
@@ -59,7 +59,7 @@ class SalesTrxLinesUpdateSchema(Schema):
     '''
     transaction_line_id = fields.Int(required=False)   
     transaction_header_id = fields.Int(required=False)
-    item_id = fields.Int(required=False)
+    item_id = fields.Str(required=False)
     line_number = fields.Int(required=False)
     booking_unit_price = fields.Float(required=False)
     booking_quantity = fields.Float(required=False)

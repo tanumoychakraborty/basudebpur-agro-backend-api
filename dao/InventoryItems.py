@@ -42,7 +42,7 @@ def search_item_details(params,page, page_size,session):
                   
     for itemDetail in itemDetails:
         dict ={ }
-        dict['item_id'] = itemDetail[0]
+        dict['item_id'] = str(itemDetail[0])
         dict['item_number'] = itemDetail[1]
         dict['item_type'] = itemDetail[2]
         dict['description'] = itemDetail[3]
@@ -58,10 +58,11 @@ def search_item_details(params,page, page_size,session):
 
 ''' fetch single item details by passing item number '''
 @db_transaction
-def get_item_detail(item_number,session):
-    item = session.query(InventoryItems).filter_by(item_number=item_number).first()
+def get_item_detail(item_id,session):
+    item = session.query(InventoryItems).filter_by(item_id=item_id).first()
     result = dict(item.__dict__)
     result.pop('_sa_instance_state')
+    result['item_id'] = str(result['item_id'])
     return result 
 
 '''drill down to specific item details from search screen'''
@@ -72,7 +73,7 @@ def get_item_details(session):
                   
     for itemDetail in itemDetails:
         dict ={ }
-        dict['item_id'] = itemDetail.item_id
+        dict['item_id'] = str(itemDetail.item_id)
         dict['item_number'] = itemDetail.item_number
         dict['item_type'] = itemDetail.item_type
         dict['description'] = itemDetail.description

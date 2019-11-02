@@ -141,21 +141,30 @@ def update_sales_trx(raw_data,session):
             if 'transaction_line_id' in sales_trx_line.keys():
                 for trx_line in salestrxheader.sales_trx_lines:
                     if sales_trx_line["transaction_line_id"] == trx_line.transaction_line_id:
-                        trx_line.item_id = sales_trx_line['item_id']
+                        if 'item_id' in sales_trx_line:
+                            trx_line.item_id = sales_trx_line['item_id']
                         #trx_line.line_number = sales_trx_line['line_number']
-                        trx_line.booking_unit_price = sales_trx_line['booking_unit_price']
-                        trx_line.booking_quantity = sales_trx_line['booking_quantity']
-                        trx_line.unit_of_measure = sales_trx_line['unit_of_measure']
+                        if 'booking_unit_price' in sales_trx_line:
+                            trx_line.booking_unit_price = sales_trx_line['booking_unit_price']
+                        if 'booking_quantity' in sales_trx_line:
+                            trx_line.booking_quantity = sales_trx_line['booking_quantity']
+                        if 'unit_of_measure' in sales_trx_line:
+                            trx_line.unit_of_measure = sales_trx_line['unit_of_measure']
                         #trx_line.created_by = sales_trx_line['created_by']
                         trx_line.last_updated_by = get_user_id_by_user_name(sales_trx_line['last_updated_by'])    
                         break
             else:
                 salestrxLine = SalesTrxLines()
-                salestrxLine.item_id = sales_trx_line['item_id']
-                salestrxLine.line_number = sales_trx_line['line_number']
-                salestrxLine.booking_unit_price = sales_trx_line['booking_unit_price']
-                salestrxLine.booking_quantity = sales_trx_line['booking_quantity']
-                salestrxLine.unit_of_measure = sales_trx_line['unit_of_measure']
+                if 'item_id' in sales_trx_line:
+                    salestrxLine.item_id = sales_trx_line['item_id']
+                if 'line_number' in sales_trx_line:
+                    salestrxLine.line_number = sales_trx_line['line_number']
+                if 'booking_unit_price' in sales_trx_line:
+                    salestrxLine.booking_unit_price = sales_trx_line['booking_unit_price']
+                if 'booking_quantity' in sales_trx_line:
+                    salestrxLine.booking_quantity = sales_trx_line['booking_quantity']
+                if 'unit_of_measure' in sales_trx_line:
+                    salestrxLine.unit_of_measure = sales_trx_line['unit_of_measure']
                 salestrxLine.created_by = get_user_id_by_user_name(sales_trx_line['created_by'])
                 salestrxLine.last_updated_by = get_user_id_by_user_name(sales_trx_line['last_updated_by'])  
                 salestrxLines.append(salestrxLine)
@@ -173,6 +182,7 @@ def get_sales_trx_detail(sales_trx_number,session):
     for line in salestrxheader.sales_trx_lines:
         line_dict = dict(line.__dict__)
         line_dict.pop('_sa_instance_state')
+        line_dict['item_id'] = str(line_dict['item_id'])
         line_dicts.append(line_dict)
     result['sales_trx_lines'] = line_dicts
     return result

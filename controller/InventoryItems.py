@@ -53,8 +53,8 @@ class InventoryItems(object):
         if OperationType == "ITEM_MASTER_SEARCH":
                 item_details = search_item_details(params,0,None)
                 payload['item_details'] = item_details
-        if list(params.keys()) == ['item_number']:
-                item_details = [get_item_detail(params['item_number'])]        
+        if list(params.keys()) == ['item_id']:
+                item_details = [get_item_detail(params['item_id'])]        
                 for item_detail in item_details:
                     for key, value in item_detail.items():
                         if value is None:
